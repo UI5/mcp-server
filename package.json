@@ -1,0 +1,25 @@
+{
+	"name": "@ui5/mcp-server",
+	"version": "0.0.1",
+	"description": "A MCP server for UI5",
+	"author": {
+		"name": "SAP SE",
+		"email": "openui5@sap.com",
+		"url": "https://www.sap.com"
+	},
+	"license": "Apache-2.0",
+	"keywords": [
+		"openui5",
+		"sapui5",
+		"ui5",
+		"development",
+		"mcp"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/UI5/mcp.git"
+	},
+	"bugs": {
+		"url": "https://github.com/UI5/mcp/issues"
+	}
+}
