@@ -1,0 +1,13 @@
+{
+  "name": "@ui5/mcp-server",
+  "version": "0.0.1",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "@ui5/mcp-server",
+      "version": "0.0.1",
+      "license": "Apache-2.0"
+    }
+  }
+}
