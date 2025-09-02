@@ -1,0 +1,60 @@
+name: release-please
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  pull-request:
+    runs-on: ubuntu-24.04
+    outputs:
+      releases_created: ${{steps.release.outputs.releases_created}}
+      paths_released: ${{steps.release.outputs.paths_released}}
+    steps:
+    - uses: googleapis/release-please-action@v4
+      id: release
+      with:
+        token: ${{secrets.GH_OPENUI5BOT}}
+  publish-package:
+    needs: pull-request
+    if: ${{needs.pull-request.outputs.releases_created && toJson(fromJson(needs.pull-request.outputs.paths_released)) != '[]'}}
+    runs-on: ubuntu-24.04
+    permissions:
+      id-token: write
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v5
+    - name: Node.js LTS
+      uses: actions/setup-node@v4
+      with:
+        node-version: 24.x
+    - name: Install dependencies
+      run: npm ci
+    - name: Run build
+      run: npm run build
+    - name: Remove devDependencies from package.json
+      run: |
+        mv package.json package.json.bak
+        node <<- EOM
+          const fs = require("fs");
+          const pkg = JSON.parse(fs.readFileSync("package.json.bak", {encoding: "utf8"}));
+          pkg.devDependencies = {};
+          fs.writeFileSync("package.json", JSON.stringify(pkg, null, "\t"), {encoding: "utf8"});
+        EOM
+    - name: Pruning extraneous packages (also updates shrinkwrap)
+      run: npm prune --omit=dev
+    - name: Restoring original package.json
+      run: |
+        rm package.json
+        mv package.json.bak package.json
+    - name: Publish to NPM
+      env:
+        NPM_TOKEN: ${{secrets.NPM_UI5BOT}}
+      run: |
+        echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> ./.npmrc
+        npm publish --provenance --access public
