@@ -1,0 +1,103 @@
+{
+	"_version": "1.21.0",
+
+	"sap.app": {
+		"id": "<%= appId %>",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "${version}"
+		}<% if (oDataV4Url) { %>,
+		"dataSources": {
+			"default": {
+				"uri": "<%= oDataV4Url %>",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "4.0"
+				}
+			}
+		}<% } %>
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "<%= appId %>.view.App",
+			"type": "XML",
+			"id": "app"
+		},
+
+		"dependencies": {
+			"minUI5Version": "<%= frameworkVersion %>",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {}<% if (oDataEntitySet) { %>,
+				"sap.ui.layout": {},
+				"sap.f": {},
+				"sap.ui.table": {}<% } %>
+			}
+		},
+
+		"handleValidation": true,
+
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "<%= appId %>.i18n.i18n",
+					"async": true
+				}
+			}<% if (oDataV4Url) { %>,
+			"": {
+				"dataSource": "default",
+				"preload": true,
+				"settings": {
+					"autoExpandSelect": true,<% if (serverRequiresXCSRF) { %>
+					"earlyRequests": true,<% } %>
+					"operationMode": "Server"<% if (lt1_110_0) { %>,
+					"synchronizationMode": "None"<% } %>
+				}
+			}<% } %>
+		},
+
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"type": "View",
+				"viewType": "XML",
+				"path": "<%= appId %>.view",
+				"controlId": "app",
+				"controlAggregation": "pages"
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "main",
+					"target": "main"
+				}
+			],
+			"targets": {
+				"main": {
+					"id": "main",
+					"name": "Main"
+				}
+			}
+		}
+	}
+}

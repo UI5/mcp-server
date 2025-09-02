@@ -17,9 +17,105 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/UI5/mcp.git"
+		"url": "git+https://github.com/UI5/mcp-server.git"
 	},
 	"bugs": {
-		"url": "https://github.com/UI5/mcp/issues"
+		"url": "https://github.com/UI5/mcp-server/issues"
+	},
+	"bin": {
+		"ui5mcp": "bin/ui5mcp.js"
+	},
+	"type": "module",
+	"scripts": {
+		"start": "tsx src/cli.ts",
+		"inspect-mcp-server": "mcp-inspector tsx src/cli.ts",
+		"inspect-mcp-server-debug": "mcp-inspector tsx --inspect src/cli.ts",
+		"build": "npm run clean-lib && tsc -p tsconfig.build.json",
+		"build-test": "tsc --noEmit -p .",
+		"build-watch": "npm run clean-lib && tsc -w -p tsconfig.build.json",
+		"check-licenses": "licensee --errors-only",
+		"depcheck": "depcheck --ignores @commitlint/config-conventional,@istanbuljs/esm-loader-hook,rimraf,@modelcontextprotocol/inspector",
+		"hooks:pre-push": "npm run lint:commit && npm run lint && npm run depcheck",
+		"lint:commit": "commitlint -e",
+		"prepare": "node ./.husky/skip.js || husky",
+		"clean-coverage": "rimraf coverage",
+		"clean-lib": "rimraf lib",
+		"clean-test-tmp": "rimraf test/tmp",
+		"lint": "eslint .",
+		"lint-fix": "eslint . --fix",
+		"test": "npm run lint && npm run build-test && npm run coverage && npm run depcheck && npm run check-licenses",
+		"coverage": "npm run clean-coverage && nyc ava --node-arguments=\"--experimental-loader=@istanbuljs/esm-loader-hook\"",
+		"unit": "ava",
+		"unit-debug": "ava debug",
+		"unit-update-snapshots": "ava --update-snapshots",
+		"unit-watch": "ava --watch",
+		"try-create-ui5-app": "tsx test/runCreateUi5App.ts",
+		"try-create-ui5-ts-app": "tsx test/runCreateUi5TsApp.ts",
+		"update-docs": "tsx scripts/updateDocs.ts"
+	},
+	"files": [
+		"CHANGELOG.md",
+		"LICENSES/**",
+		"bin/**",
+		"lib/**",
+		"resources/**",
+		"npm-shrinkwrap.json",
+		".reuse/**"
+	],
+	"engines": {
+		"node": "^20.11.0 || >=22.0.0",
+		"npm": ">= 8"
+	},
+	"exports": {
+		".": {
+			"import": "./lib/api.js",
+			"types": "./lib/api.d.ts",
+			"default": "./lib/api.js"
+		}
+	},
+	"dependencies": {
+		"@modelcontextprotocol/sdk": "^1.17.4",
+		"@ui5/linter": "^1.19.0",
+		"@ui5/logger": "^4.0.1",
+		"@ui5/project": "^4.0.4",
+		"async-mutex": "^0.5.0",
+		"ejs": "^3.1.10",
+		"execa": "^9.6.0",
+		"fast-xml-parser": "^5.2.5",
+		"globby": "^14.1.0",
+		"lockfile": "^1.0.4",
+		"make-fetch-happen": "^14.0.3",
+		"semver": "^7.7.2",
+		"zod": "^3.25.76"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^19.8.1",
+		"@commitlint/config-conventional": "^19.8.1",
+		"@eslint/js": "^9.34.0",
+		"@istanbuljs/esm-loader-hook": "^0.3.0",
+		"@istanbuljs/nyc-config-typescript": "^1.0.2",
+		"@modelcontextprotocol/inspector": "^0.16.5",
+		"@stylistic/eslint-plugin": "^5.2.3",
+		"@types/ejs": "^3.1.5",
+		"@types/make-fetch-happen": "^10.0.4",
+		"@types/node": "20.16.15",
+		"@types/semver": "^7.7.0",
+		"@types/sinon": "^17.0.4",
+		"@types/yauzl-promise": "^4.0.1",
+		"@ui5-language-assistant/semantic-model-types": "^3.3.1",
+		"ava": "^6.3.0",
+		"depcheck": "^1.4.7",
+		"eslint": "^9.34.0",
+		"eslint-plugin-ava": "^15.0.1",
+		"esmock": "^2.7.2",
+		"husky": "^9.1.7",
+		"licensee": "^11.1.1",
+		"nyc": "^17.1.0",
+		"rimraf": "^6.0.1",
+		"sinon": "^21.0.0",
+		"tsx": "^4.20.5",
+		"typescript": "^5.9.2",
+		"typescript-eslint": "^8.41.0",
+		"yauzl-promise": "^4.0.0"
 	}
 }

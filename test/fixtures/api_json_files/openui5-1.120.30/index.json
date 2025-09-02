@@ -1,0 +1,4886 @@
+{
+	"sap.ui.table": {
+		"name": "sap.ui.table",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.analyticalcolumn": {
+		"name": "sap.ui.table.AnalyticalColumn",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.analyticalcolumnmenu": {
+		"name": "sap.ui.table.AnalyticalColumnMenu",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.analyticaltable": {
+		"name": "sap.ui.table.AnalyticalTable",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.column": {
+		"name": "sap.ui.table.Column",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.columnmenu": {
+		"name": "sap.ui.table.ColumnMenu",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.creationrow": {
+		"name": "sap.ui.table.CreationRow",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.groupeventtype": {
+		"name": "sap.ui.table.GroupEventType",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.navigationmode": {
+		"name": "sap.ui.table.NavigationMode",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.plugins.multiselectionplugin": {
+		"name": "sap.ui.table.plugins.MultiSelectionPlugin",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.plugins.selectionplugin": {
+		"name": "sap.ui.table.plugins.SelectionPlugin",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.resetallmode": {
+		"name": "sap.ui.table.ResetAllMode",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.row": {
+		"name": "sap.ui.table.Row",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.rowaction": {
+		"name": "sap.ui.table.RowAction",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.rowactionitem": {
+		"name": "sap.ui.table.RowActionItem",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.rowactiontype": {
+		"name": "sap.ui.table.RowActionType",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.rowmodes.auto": {
+		"name": "sap.ui.table.rowmodes.Auto",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.rowmodes.fixed": {
+		"name": "sap.ui.table.rowmodes.Fixed",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.rowmodes.interactive": {
+		"name": "sap.ui.table.rowmodes.Interactive",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.rowmodes.rowmode": {
+		"name": "sap.ui.table.rowmodes.RowMode",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.rowmodes.type": {
+		"name": "sap.ui.table.rowmodes.Type",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.rowsettings": {
+		"name": "sap.ui.table.RowSettings",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.selectionbehavior": {
+		"name": "sap.ui.table.SelectionBehavior",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.selectionmode": {
+		"name": "sap.ui.table.SelectionMode",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.shareddomref": {
+		"name": "sap.ui.table.SharedDomRef",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.sortorder": {
+		"name": "sap.ui.table.SortOrder",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.table": {
+		"name": "sap.ui.table.Table",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.tablepersocontroller": {
+		"name": "sap.ui.table.TablePersoController",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.treeautoexpandmode": {
+		"name": "sap.ui.table.TreeAutoExpandMode",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.treetable": {
+		"name": "sap.ui.table.TreeTable",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"sap.ui.table.visiblerowcountmode": {
+		"name": "sap.ui.table.VisibleRowCountMode",
+		"filePath": "sap.ui.table.api.json"
+	},
+	"jquery": {
+		"name": "jQuery",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.device": {
+		"name": "jQuery.device",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.device.is": {
+		"name": "jQuery.device.is",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.event": {
+		"name": "jQuery.Event",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.os": {
+		"name": "jQuery.os",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap": {
+		"name": "jQuery.sap",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.act": {
+		"name": "jQuery.sap.act",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.controlevents": {
+		"name": "jQuery.sap.ControlEvents",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.history": {
+		"name": "jQuery.sap.history",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.history.navtype": {
+		"name": "jQuery.sap.history.NavType",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.interaction": {
+		"name": "jQuery.sap.interaction",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.keycodes": {
+		"name": "jQuery.sap.KeyCodes",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.log": {
+		"name": "jQuery.sap.log",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.log.level": {
+		"name": "jQuery.sap.log.Level",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.log.logger": {
+		"name": "jQuery.sap.log.Logger",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.log.loglevel": {
+		"name": "jQuery.sap.log.LogLevel",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.measure": {
+		"name": "jQuery.sap.measure",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.pseudoevents": {
+		"name": "jQuery.sap.PseudoEvents",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.storage": {
+		"name": "jQuery.sap.storage",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.storage.storage": {
+		"name": "jQuery.sap.storage.Storage",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.storage.type": {
+		"name": "jQuery.sap.storage.Type",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.util": {
+		"name": "jQuery.sap.util",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.util.properties": {
+		"name": "jQuery.sap.util.Properties",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.util.resourcebundle": {
+		"name": "jQuery.sap.util.ResourceBundle",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.util.uriparameters": {
+		"name": "jQuery.sap.util.UriParameters",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"jquery.sap.version": {
+		"name": "jQuery.sap.Version",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.assert": {
+		"name": "module:sap/base/assert",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.config": {
+		"name": "module:sap/base/config",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.config.type": {
+		"name": "module:sap/base/config.Type",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.event": {
+		"name": "module:sap/base/Event",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.eventing": {
+		"name": "module:sap/base/Eventing",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.i18n.date.calendartype": {
+		"name": "module:sap/base/i18n/date/CalendarType",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.i18n.date.calendarweeknumbering": {
+		"name": "module:sap/base/i18n/date/CalendarWeekNumbering",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.i18n.date.timezoneutils": {
+		"name": "module:sap/base/i18n/date/TimezoneUtils",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.i18n.formatting": {
+		"name": "module:sap/base/i18n/Formatting",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.i18n.formatting.customislamiccalendardata": {
+		"name": "module:sap/base/i18n/Formatting.CustomIslamicCalendarData",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.i18n.formatting$changeevent": {
+		"name": "module:sap/base/i18n/Formatting$ChangeEvent",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.i18n.languagetag": {
+		"name": "module:sap/base/i18n/LanguageTag",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.i18n.localization": {
+		"name": "module:sap/base/i18n/Localization",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.i18n.localization$changeevent": {
+		"name": "module:sap/base/i18n/Localization$ChangeEvent",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.i18n.resourcebundle": {
+		"name": "module:sap/base/i18n/ResourceBundle",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.i18n.resourcebundle.configuration": {
+		"name": "module:sap/base/i18n/ResourceBundle.Configuration",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.i18n.resourcebundle.terminologyconfiguration": {
+		"name": "module:sap/base/i18n/ResourceBundle.TerminologyConfiguration",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.log": {
+		"name": "module:sap/base/Log",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.log.entry": {
+		"name": "module:sap/base/Log.Entry",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.log.level": {
+		"name": "module:sap/base/Log.Level",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.log.listener": {
+		"name": "module:sap/base/Log.Listener",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.log.logger": {
+		"name": "module:sap/base/Log.Logger",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.security.encodecss": {
+		"name": "module:sap/base/security/encodeCSS",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.security.encodejs": {
+		"name": "module:sap/base/security/encodeJS",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.security.encodeurl": {
+		"name": "module:sap/base/security/encodeURL",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.security.encodeurlparameters": {
+		"name": "module:sap/base/security/encodeURLParameters",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.security.encodexml": {
+		"name": "module:sap/base/security/encodeXML",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.security.urllistvalidator": {
+		"name": "module:sap/base/security/URLListValidator",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.security.urllistvalidator.entry": {
+		"name": "module:sap/base/security/URLListValidator.Entry",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.security.urlwhitelist.entry": {
+		"name": "module:sap/base/security/URLWhitelist.Entry",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.strings.camelize": {
+		"name": "module:sap/base/strings/camelize",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.strings.capitalize": {
+		"name": "module:sap/base/strings/capitalize",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.strings.escaperegexp": {
+		"name": "module:sap/base/strings/escapeRegExp",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.strings.formatmessage": {
+		"name": "module:sap/base/strings/formatMessage",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.strings.hyphenate": {
+		"name": "module:sap/base/strings/hyphenate",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.strings.whitespacereplacer": {
+		"name": "module:sap/base/strings/whitespaceReplacer",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.array.diff": {
+		"name": "module:sap/base/util/array/diff",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.array.uniquesort": {
+		"name": "module:sap/base/util/array/uniqueSort",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.deepclone": {
+		"name": "module:sap/base/util/deepClone",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.deepequal": {
+		"name": "module:sap/base/util/deepEqual",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.deepextend": {
+		"name": "module:sap/base/util/deepExtend",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.deferred": {
+		"name": "module:sap/base/util/Deferred",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.definecoupledproperty": {
+		"name": "module:sap/base/util/defineCoupledProperty",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.definelazyproperty": {
+		"name": "module:sap/base/util/defineLazyProperty",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.each": {
+		"name": "module:sap/base/util/each",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.each.key": {
+		"name": "module:sap/base/util/each.Key",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.extend": {
+		"name": "module:sap/base/util/extend",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.fetch": {
+		"name": "module:sap/base/util/fetch",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.includes": {
+		"name": "module:sap/base/util/includes",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.isemptyobject": {
+		"name": "module:sap/base/util/isEmptyObject",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.isplainobject": {
+		"name": "module:sap/base/util/isPlainObject",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.jstokenizer": {
+		"name": "module:sap/base/util/JSTokenizer",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.loaderextensions": {
+		"name": "module:sap/base/util/LoaderExtensions",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.merge": {
+		"name": "module:sap/base/util/merge",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.mixedfetch": {
+		"name": "module:sap/base/util/mixedFetch",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.now": {
+		"name": "module:sap/base/util/now",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.objectpath": {
+		"name": "module:sap/base/util/ObjectPath",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.properties": {
+		"name": "module:sap/base/util/Properties",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.resolvereference": {
+		"name": "module:sap/base/util/resolveReference",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.simpleresponse": {
+		"name": "module:sap/base/util/SimpleResponse",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.syncfetch": {
+		"name": "module:sap/base/util/syncFetch",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.uid": {
+		"name": "module:sap/base/util/uid",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.uriparameters": {
+		"name": "module:sap/base/util/UriParameters",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.values": {
+		"name": "module:sap/base/util/values",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.version": {
+		"name": "module:sap/base/util/Version",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.base.util.xmlhelper.xmlparseerrorinfo": {
+		"name": "module:sap/base/util/XMLHelper.XMLParseErrorInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.designtime": {
+		"name": "module:sap/ui/base/DesignTime",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core._urlresolver": {
+		"name": "module:sap/ui/core/_UrlResolver",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.animationmode": {
+		"name": "module:sap/ui/core/AnimationMode",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.componentregistry": {
+		"name": "module:sap/ui/core/ComponentRegistry",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.componentsupport": {
+		"name": "module:sap/ui/core/ComponentSupport",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.controlbehavior": {
+		"name": "module:sap/ui/core/ControlBehavior",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.controlbehavior$changeevent": {
+		"name": "module:sap/ui/core/ControlBehavior$ChangeEvent",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.date.calendarutils": {
+		"name": "module:sap/ui/core/date/CalendarUtils",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.date.ui5date": {
+		"name": "module:sap/ui/core/date/UI5Date",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.date.universaldateutils": {
+		"name": "module:sap/ui/core/date/UniversalDateUtils",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.elementregistry": {
+		"name": "module:sap/ui/core/ElementRegistry",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.format.timezoneutils": {
+		"name": "module:sap/ui/core/format/TimezoneUtils",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.getcompatibilityversion": {
+		"name": "module:sap/ui/core/getCompatibilityVersion",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.invisiblerenderer": {
+		"name": "module:sap/ui/core/InvisibleRenderer",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.message.messagetype": {
+		"name": "module:sap/ui/core/message/MessageType",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.messaging": {
+		"name": "module:sap/ui/core/Messaging",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.rendering": {
+		"name": "module:sap/ui/core/Rendering",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.staticarea": {
+		"name": "module:sap/ui/core/StaticArea",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.support.hotkeys": {
+		"name": "module:sap/ui/core/support/Hotkeys",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.supportability": {
+		"name": "module:sap/ui/core/Supportability",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.syncstyleclass": {
+		"name": "module:sap/ui/core/syncStyleClass",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.theming": {
+		"name": "module:sap/ui/core/Theming",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.theming$appliedevent": {
+		"name": "module:sap/ui/core/Theming$AppliedEvent",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.theming$changeevent": {
+		"name": "module:sap/ui/core/Theming$ChangeEvent",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.theming$themescopingchangedevent": {
+		"name": "module:sap/ui/core/Theming$ThemeScopingChangedEvent",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.containsorequals": {
+		"name": "module:sap/ui/dom/containsOrEquals",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.denormalizescrollbeginrtl": {
+		"name": "module:sap/ui/dom/denormalizeScrollBeginRTL",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.denormalizescrollleftrtl": {
+		"name": "module:sap/ui/dom/denormalizeScrollLeftRTL",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.getownerwindow": {
+		"name": "module:sap/ui/dom/getOwnerWindow",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.getscrollbarsize": {
+		"name": "module:sap/ui/dom/getScrollbarSize",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.includescript": {
+		"name": "module:sap/ui/dom/includeScript",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.includestylesheet": {
+		"name": "module:sap/ui/dom/includeStylesheet",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.ishidden": {
+		"name": "module:sap/ui/dom/isHidden",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.jquery.aria": {
+		"name": "module:sap/ui/dom/jquery/Aria",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.jquery.control": {
+		"name": "module:sap/ui/dom/jquery/control",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.jquery.cursorpos": {
+		"name": "module:sap/ui/dom/jquery/cursorPos",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.jquery.focusable": {
+		"name": "module:sap/ui/dom/jquery/Focusable",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.jquery.getselectedtext": {
+		"name": "module:sap/ui/dom/jquery/getSelectedText",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.jquery.hastabindex": {
+		"name": "module:sap/ui/dom/jquery/hasTabIndex",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.jquery.parentbyattribute": {
+		"name": "module:sap/ui/dom/jquery/parentByAttribute",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.jquery.rect": {
+		"name": "module:sap/ui/dom/jquery/rect",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.jquery.rectcontains": {
+		"name": "module:sap/ui/dom/jquery/rectContains",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.jquery.scrollleftrtl": {
+		"name": "module:sap/ui/dom/jquery/scrollLeftRTL",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.jquery.scrollrightrtl": {
+		"name": "module:sap/ui/dom/jquery/scrollRightRTL",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.jquery.selection": {
+		"name": "module:sap/ui/dom/jquery/Selection",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.jquery.selectors": {
+		"name": "module:sap/ui/dom/jquery/Selectors",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.jquery.selecttext": {
+		"name": "module:sap/ui/dom/jquery/selectText",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.jquery.zindex": {
+		"name": "module:sap/ui/dom/jquery/zIndex",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.dom.units.rem": {
+		"name": "module:sap/ui/dom/units/Rem",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.events.checkmouseenterorleave": {
+		"name": "module:sap/ui/events/checkMouseEnterOrLeave",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.events.controlevents": {
+		"name": "module:sap/ui/events/ControlEvents",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.events.f6navigation": {
+		"name": "module:sap/ui/events/F6Navigation",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.events.ismouseeventdelayed": {
+		"name": "module:sap/ui/events/isMouseEventDelayed",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.events.isspecialkey": {
+		"name": "module:sap/ui/events/isSpecialKey",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.events.jquery.eventextension": {
+		"name": "module:sap/ui/events/jquery/EventExtension",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.events.jquery.eventsimulation": {
+		"name": "module:sap/ui/events/jquery/EventSimulation",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.events.keycodes": {
+		"name": "module:sap/ui/events/KeyCodes",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.events.pseudoevents": {
+		"name": "module:sap/ui/events/PseudoEvents",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.events.touchtomousemapping": {
+		"name": "module:sap/ui/events/TouchToMouseMapping",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.filterprocessor": {
+		"name": "module:sap/ui/model/FilterProcessor",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.performance.measurement": {
+		"name": "module:sap/ui/performance/Measurement",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.performance.measurement.entry": {
+		"name": "module:sap/ui/performance/Measurement.Entry",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.performance.trace.fesr": {
+		"name": "module:sap/ui/performance/trace/FESR",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.performance.trace.fesrhelper": {
+		"name": "module:sap/ui/performance/trace/FESRHelper",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.performance.trace.inittraces": {
+		"name": "module:sap/ui/performance/trace/initTraces",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.performance.trace.interaction": {
+		"name": "module:sap/ui/performance/trace/Interaction",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.performance.trace.interaction.entry": {
+		"name": "module:sap/ui/performance/trace/Interaction.Entry",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.performance.trace.interaction.sapstatistics": {
+		"name": "module:sap/ui/performance/trace/Interaction.SAPStatistics",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.performance.xhrinterceptor": {
+		"name": "module:sap/ui/performance/XHRInterceptor",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.security.frameoptions": {
+		"name": "module:sap/ui/security/FrameOptions",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.security.security": {
+		"name": "module:sap/ui/security/Security",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.opaqunit": {
+		"name": "module:sap/ui/test/opaQunit",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.util.activitydetection": {
+		"name": "module:sap/ui/util/ActivityDetection",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.util.defaultlinktypes": {
+		"name": "module:sap/ui/util/defaultLinkTypes",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.util.iscrossoriginurl": {
+		"name": "module:sap/ui/util/isCrossOriginURL",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.util.mobile": {
+		"name": "module:sap/ui/util/Mobile",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.util.openwindow": {
+		"name": "module:sap/ui/util/openWindow",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.util.storage": {
+		"name": "module:sap/ui/util/Storage",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.util.storage.type": {
+		"name": "module:sap/ui/util/Storage.Type",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.util.xmlhelper": {
+		"name": "module:sap/ui/util/XMLHelper",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.versioninfo": {
+		"name": "module:sap/ui/VersionInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap": {
+		"name": "sap",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui": {
+		"name": "sap.ui",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.app": {
+		"name": "sap.ui.app",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.app.application": {
+		"name": "sap.ui.app.Application",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.app.mockserver": {
+		"name": "sap.ui.app.MockServer",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base": {
+		"name": "sap.ui.base",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.bindinginfo": {
+		"name": "sap.ui.base.BindingInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.datatype": {
+		"name": "sap.ui.base.DataType",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.event": {
+		"name": "sap.ui.base.Event",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.eventprovider": {
+		"name": "sap.ui.base.EventProvider",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.interface": {
+		"name": "sap.ui.base.Interface",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.managedobject": {
+		"name": "sap.ui.base.ManagedObject",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.managedobject.aggregationbindinginfo": {
+		"name": "sap.ui.base.ManagedObject.AggregationBindingInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.managedobject.metadataoptions": {
+		"name": "sap.ui.base.ManagedObject.MetadataOptions",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.managedobject.metadataoptions.aggregation": {
+		"name": "sap.ui.base.ManagedObject.MetadataOptions.Aggregation",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.managedobject.metadataoptions.association": {
+		"name": "sap.ui.base.ManagedObject.MetadataOptions.Association",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.managedobject.metadataoptions.event": {
+		"name": "sap.ui.base.ManagedObject.MetadataOptions.Event",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.managedobject.metadataoptions.property": {
+		"name": "sap.ui.base.ManagedObject.MetadataOptions.Property",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.managedobject.objectbindinginfo": {
+		"name": "sap.ui.base.ManagedObject.ObjectBindingInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.managedobject.propertybindinginfo": {
+		"name": "sap.ui.base.ManagedObject.PropertyBindingInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.managedobjectmetadata": {
+		"name": "sap.ui.base.ManagedObjectMetadata",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.managedobjectmetadata.aggregationforwarder": {
+		"name": "sap.ui.base.ManagedObjectMetadata.AggregationForwarder",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.managedobjectobserver": {
+		"name": "sap.ui.base.ManagedObjectObserver",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.metadata": {
+		"name": "sap.ui.base.Metadata",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.object": {
+		"name": "sap.ui.base.Object",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.object.metadataoptions": {
+		"name": "sap.ui.base.Object.MetadataOptions",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.objectpool": {
+		"name": "sap.ui.base.ObjectPool",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.poolable": {
+		"name": "sap.ui.base.Poolable",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.base.syncpromise": {
+		"name": "sap.ui.base.SyncPromise",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core": {
+		"name": "sap.ui.core",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.absolutecsssize": {
+		"name": "sap.ui.core.AbsoluteCSSSize",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.accessibilityinfo": {
+		"name": "sap.ui.core.AccessibilityInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.accessiblelandmarkrole": {
+		"name": "sap.ui.core.AccessibleLandmarkRole",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.accessiblerole": {
+		"name": "sap.ui.core.AccessibleRole",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.appcachebuster": {
+		"name": "sap.ui.core.AppCacheBuster",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.aria.haspopup": {
+		"name": "sap.ui.core.aria.HasPopup",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.barcolor": {
+		"name": "sap.ui.core.BarColor",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.busyindicator": {
+		"name": "sap.ui.core.BusyIndicator",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.busyindicatorsize": {
+		"name": "sap.ui.core.BusyIndicatorSize",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.busyindicatorutils": {
+		"name": "sap.ui.core.BusyIndicatorUtils",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.cache.cachemanager": {
+		"name": "sap.ui.core.cache.CacheManager",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.cache.lrupersistentcache": {
+		"name": "sap.ui.core.cache.LRUPersistentCache",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.calendartype": {
+		"name": "sap.ui.core.CalendarType",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.collision": {
+		"name": "sap.ui.core.Collision",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.commandexecution": {
+		"name": "sap.ui.core.CommandExecution",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.component": {
+		"name": "sap.ui.core.Component",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.component.metadataoptions": {
+		"name": "sap.ui.core.Component.MetadataOptions",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.component.registry": {
+		"name": "sap.ui.core.Component.registry",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.componentcontainer": {
+		"name": "sap.ui.core.ComponentContainer",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.componentlifecycle": {
+		"name": "sap.ui.core.ComponentLifecycle",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.componentmetadata": {
+		"name": "sap.ui.core.ComponentMetadata",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.configuration": {
+		"name": "sap.ui.core.Configuration",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.configuration.animationmode": {
+		"name": "sap.ui.core.Configuration.AnimationMode",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.configuration.formatsettings": {
+		"name": "sap.ui.core.Configuration.FormatSettings",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.control": {
+		"name": "sap.ui.core.Control",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.controlrenderer": {
+		"name": "sap.ui.core.ControlRenderer",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.core": {
+		"name": "sap.ui.core.Core",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.csscolor": {
+		"name": "sap.ui.core.CSSColor",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.csssize": {
+		"name": "sap.ui.core.CSSSize",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.csssizeshorthand": {
+		"name": "sap.ui.core.CSSSizeShortHand",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.customdata": {
+		"name": "sap.ui.core.CustomData",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.date.calendarweeknumbering": {
+		"name": "sap.ui.core.date.CalendarWeekNumbering",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.date.universaldate": {
+		"name": "sap.ui.core.date.UniversalDate",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.declarativesupport": {
+		"name": "sap.ui.core.DeclarativeSupport",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.delegate": {
+		"name": "sap.ui.core.delegate",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.delegate.itemnavigation": {
+		"name": "sap.ui.core.delegate.ItemNavigation",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.delegate.scrollenablement": {
+		"name": "sap.ui.core.delegate.ScrollEnablement",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.design": {
+		"name": "sap.ui.core.Design",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.dnd": {
+		"name": "sap.ui.core.dnd",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.dnd.dragdropbase": {
+		"name": "sap.ui.core.dnd.DragDropBase",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.dnd.dragdropinfo": {
+		"name": "sap.ui.core.dnd.DragDropInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.dnd.draginfo": {
+		"name": "sap.ui.core.dnd.DragInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.dnd.dragsession": {
+		"name": "sap.ui.core.dnd.DragSession",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.dnd.dropeffect": {
+		"name": "sap.ui.core.dnd.DropEffect",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.dnd.dropinfo": {
+		"name": "sap.ui.core.dnd.DropInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.dnd.droplayout": {
+		"name": "sap.ui.core.dnd.DropLayout",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.dnd.dropposition": {
+		"name": "sap.ui.core.dnd.DropPosition",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.dnd.idraginfo": {
+		"name": "sap.ui.core.dnd.IDragInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.dnd.idropinfo": {
+		"name": "sap.ui.core.dnd.IDropInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.dnd.relativedropposition": {
+		"name": "sap.ui.core.dnd.RelativeDropPosition",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.dock": {
+		"name": "sap.ui.core.Dock",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.element": {
+		"name": "sap.ui.core.Element",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.element.metadataoptions": {
+		"name": "sap.ui.core.Element.MetadataOptions",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.element.metadataoptions.dnd": {
+		"name": "sap.ui.core.Element.MetadataOptions.DnD",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.element.registry": {
+		"name": "sap.ui.core.Element.registry",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.elementmetadata": {
+		"name": "sap.ui.core.ElementMetadata",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.enabledpropagator": {
+		"name": "sap.ui.core.EnabledPropagator",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.eventbus": {
+		"name": "sap.ui.core.EventBus",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.extensionpoint": {
+		"name": "sap.ui.core.ExtensionPoint",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.focusinfo": {
+		"name": "sap.ui.core.FocusInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.format": {
+		"name": "sap.ui.core.format",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.format.dateformat": {
+		"name": "sap.ui.core.format.DateFormat",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.format.dateformat.datetimewithtimezone": {
+		"name": "sap.ui.core.format.DateFormat.DateTimeWithTimezone",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.format.dateformattimezonedisplay": {
+		"name": "sap.ui.core.format.DateFormatTimezoneDisplay",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.format.filesizeformat": {
+		"name": "sap.ui.core.format.FileSizeFormat",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.format.listformat": {
+		"name": "sap.ui.core.format.ListFormat",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.format.numberformat": {
+		"name": "sap.ui.core.format.NumberFormat",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.format.numberformat.roundingmode": {
+		"name": "sap.ui.core.format.NumberFormat.RoundingMode",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.fragment": {
+		"name": "sap.ui.core.Fragment",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.history": {
+		"name": "sap.ui.core.History",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.horizontalalign": {
+		"name": "sap.ui.core.HorizontalAlign",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.html": {
+		"name": "sap.ui.core.HTML",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.hyphenation.hyphenation": {
+		"name": "sap.ui.core.hyphenation.Hyphenation",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.iaccesskeysupport": {
+		"name": "sap.ui.core.IAccessKeySupport",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.iasynccontentcreation": {
+		"name": "sap.ui.core.IAsyncContentCreation",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.icolumnheadermenu": {
+		"name": "sap.ui.core.IColumnHeaderMenu",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.icon": {
+		"name": "sap.ui.core.Icon",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.iconcolor": {
+		"name": "sap.ui.core.IconColor",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.iconpool": {
+		"name": "sap.ui.core.IconPool",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.iconpool.iconinfo": {
+		"name": "sap.ui.core.IconPool.IconInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.icontextmenu": {
+		"name": "sap.ui.core.IContextMenu",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.id": {
+		"name": "sap.ui.core.ID",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.idscope": {
+		"name": "sap.ui.core.IDScope",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.iformcontent": {
+		"name": "sap.ui.core.IFormContent",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.ilabelable": {
+		"name": "sap.ui.core.ILabelable",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.imemode": {
+		"name": "sap.ui.core.ImeMode",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.indicationcolor": {
+		"name": "sap.ui.core.IndicationColor",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.indicationcolorsupport": {
+		"name": "sap.ui.core.IndicationColorSupport",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.intervaltrigger": {
+		"name": "sap.ui.core.IntervalTrigger",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.invisiblemessage": {
+		"name": "sap.ui.core.InvisibleMessage",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.invisiblemessagemode": {
+		"name": "sap.ui.core.InvisibleMessageMode",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.invisibletext": {
+		"name": "sap.ui.core.InvisibleText",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.iplaceholdersupport": {
+		"name": "sap.ui.core.IPlaceholderSupport",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.isemanticformcontent": {
+		"name": "sap.ui.core.ISemanticFormContent",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.ishrinkable": {
+		"name": "sap.ui.core.IShrinkable",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.item": {
+		"name": "sap.ui.core.Item",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.ititlecontent": {
+		"name": "sap.ui.core.ITitleContent",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.label": {
+		"name": "sap.ui.core.Label",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.labelenablement": {
+		"name": "sap.ui.core.LabelEnablement",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.layoutdata": {
+		"name": "sap.ui.core.LayoutData",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.lib": {
+		"name": "sap.ui.core.Lib",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.libraryinfo": {
+		"name": "sap.ui.core.LibraryInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.listitem": {
+		"name": "sap.ui.core.ListItem",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.localbusyindicator": {
+		"name": "sap.ui.core.LocalBusyIndicator",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.locale": {
+		"name": "sap.ui.core.Locale",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.localedata": {
+		"name": "sap.ui.core.LocaleData",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.manifest": {
+		"name": "sap.ui.core.Manifest",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.message": {
+		"name": "sap.ui.core.Message",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.message": {
+		"name": "sap.ui.core.message",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.message.controlmessageprocessor": {
+		"name": "sap.ui.core.message.ControlMessageProcessor",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.message.message": {
+		"name": "sap.ui.core.message.Message",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.message.messagemanager": {
+		"name": "sap.ui.core.message.MessageManager",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.message.messageparser": {
+		"name": "sap.ui.core.message.MessageParser",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.message.messageprocessor": {
+		"name": "sap.ui.core.message.MessageProcessor",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.messagetype": {
+		"name": "sap.ui.core.MessageType",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.mvc": {
+		"name": "sap.ui.core.mvc",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.mvc.controller": {
+		"name": "sap.ui.core.mvc.Controller",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.mvc.controllerextension": {
+		"name": "sap.ui.core.mvc.ControllerExtension",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.mvc.controllerextensionprovider": {
+		"name": "sap.ui.core.mvc.ControllerExtensionProvider",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.mvc.htmlview": {
+		"name": "sap.ui.core.mvc.HTMLView",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.mvc.icontrollerextension": {
+		"name": "sap.ui.core.mvc.IControllerExtension",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.mvc.jsonview": {
+		"name": "sap.ui.core.mvc.JSONView",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.mvc.jsview": {
+		"name": "sap.ui.core.mvc.JSView",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.mvc.overrideexecution": {
+		"name": "sap.ui.core.mvc.OverrideExecution",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.mvc.templateview": {
+		"name": "sap.ui.core.mvc.TemplateView",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.mvc.view": {
+		"name": "sap.ui.core.mvc.View",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.mvc.view.preprocessor": {
+		"name": "sap.ui.core.mvc.View.Preprocessor",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.mvc.view.preprocessor.viewinfo": {
+		"name": "sap.ui.core.mvc.View.Preprocessor.ViewInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.mvc.viewtype": {
+		"name": "sap.ui.core.mvc.ViewType",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.mvc.xmlview": {
+		"name": "sap.ui.core.mvc.XMLView",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.mvc.xmlview.preprocessortype": {
+		"name": "sap.ui.core.mvc.XMLView.PreprocessorType",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.openstate": {
+		"name": "sap.ui.core.OpenState",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.orientation": {
+		"name": "sap.ui.core.Orientation",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.patcher": {
+		"name": "sap.ui.core.Patcher",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.percentage": {
+		"name": "sap.ui.core.Percentage",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.placeholder": {
+		"name": "sap.ui.core.Placeholder",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.popup": {
+		"name": "sap.ui.core.Popup",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.popup.dock": {
+		"name": "sap.ui.core.Popup.Dock",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.popup.positioninfo": {
+		"name": "sap.ui.core.Popup.PositionInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.popupinterface": {
+		"name": "sap.ui.core.PopupInterface",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.postmessage.bus": {
+		"name": "sap.ui.core.postmessage.Bus",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.priority": {
+		"name": "sap.ui.core.Priority",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.renderer": {
+		"name": "sap.ui.core.Renderer",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.rendermanager": {
+		"name": "sap.ui.core.RenderManager",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.resizehandler": {
+		"name": "sap.ui.core.ResizeHandler",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.routing.$routesettings": {
+		"name": "sap.ui.core.routing.$RouteSettings",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.routing.$targetsettings": {
+		"name": "sap.ui.core.routing.$TargetSettings",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.routing.hashchanger": {
+		"name": "sap.ui.core.routing.HashChanger",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.routing.hashchangerbase": {
+		"name": "sap.ui.core.routing.HashChangerBase",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.routing.hashchangereventinfo": {
+		"name": "sap.ui.core.routing.HashChangerEventInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.routing.hashchangereventparametermapping": {
+		"name": "sap.ui.core.routing.HashChangerEventParameterMapping",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.routing.history": {
+		"name": "sap.ui.core.routing.History",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.routing.historydirection": {
+		"name": "sap.ui.core.routing.HistoryDirection",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.routing.route": {
+		"name": "sap.ui.core.routing.Route",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.routing.routeinfo": {
+		"name": "sap.ui.core.routing.RouteInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.routing.router": {
+		"name": "sap.ui.core.routing.Router",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.routing.routerhashchanger": {
+		"name": "sap.ui.core.routing.RouterHashChanger",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.routing.target": {
+		"name": "sap.ui.core.routing.Target",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.routing.targetinfo": {
+		"name": "sap.ui.core.routing.TargetInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.routing.targets": {
+		"name": "sap.ui.core.routing.Targets",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.routing.views": {
+		"name": "sap.ui.core.routing.Views",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.scrollbar": {
+		"name": "sap.ui.core.ScrollBar",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.scrollbaraction": {
+		"name": "sap.ui.core.ScrollBarAction",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.scrolling": {
+		"name": "sap.ui.core.Scrolling",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.search.opensearchprovider": {
+		"name": "sap.ui.core.search.OpenSearchProvider",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.search.searchprovider": {
+		"name": "sap.ui.core.search.SearchProvider",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.separatoritem": {
+		"name": "sap.ui.core.SeparatorItem",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.service.service": {
+		"name": "sap.ui.core.service.Service",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.service.service.context": {
+		"name": "sap.ui.core.service.Service.Context",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.service.servicefactory": {
+		"name": "sap.ui.core.service.ServiceFactory",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.sortorder": {
+		"name": "sap.ui.core.SortOrder",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.support.plugin": {
+		"name": "sap.ui.core.support.Plugin",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.support.ruleengineopaassertions": {
+		"name": "sap.ui.core.support.RuleEngineOpaAssertions",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.support.ruleengineopaextension": {
+		"name": "sap.ui.core.support.RuleEngineOpaExtension",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.support.usage": {
+		"name": "sap.ui.core.support.usage",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.support.usage.eventbroadcaster": {
+		"name": "sap.ui.core.support.usage.EventBroadcaster",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.textalign": {
+		"name": "sap.ui.core.TextAlign",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.textdirection": {
+		"name": "sap.ui.core.TextDirection",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.theming.parameters": {
+		"name": "sap.ui.core.theming.Parameters",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.theming.parameters.value": {
+		"name": "sap.ui.core.theming.Parameters.Value",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.theming.themehelper": {
+		"name": "sap.ui.core.theming.ThemeHelper",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.theming.thememanager": {
+		"name": "sap.ui.core.theming.ThemeManager",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.title": {
+		"name": "sap.ui.core.Title",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.titlelevel": {
+		"name": "sap.ui.core.TitleLevel",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.tmpl.domattribute": {
+		"name": "sap.ui.core.tmpl.DOMAttribute",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.tmpl.domelement": {
+		"name": "sap.ui.core.tmpl.DOMElement",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.tmpl.handlebarstemplate": {
+		"name": "sap.ui.core.tmpl.HandlebarsTemplate",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.tmpl.template": {
+		"name": "sap.ui.core.tmpl.Template",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.tmpl.templatecontrol": {
+		"name": "sap.ui.core.tmpl.TemplateControl",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.toolbar": {
+		"name": "sap.ui.core.Toolbar",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.tooltipbase": {
+		"name": "sap.ui.core.TooltipBase",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.uiarea": {
+		"name": "sap.ui.core.UIArea",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.uiarea.registry": {
+		"name": "sap.ui.core.UIArea.registry",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.uiarearegistry": {
+		"name": "sap.ui.core.UIAreaRegistry",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.uicomponent": {
+		"name": "sap.ui.core.UIComponent",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.uicomponent.routingmetadata": {
+		"name": "sap.ui.core.UIComponent.RoutingMetadata",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.uri": {
+		"name": "sap.ui.core.URI",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.export": {
+		"name": "sap.ui.core.util.Export",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.exportcell": {
+		"name": "sap.ui.core.util.ExportCell",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.exportcolumn": {
+		"name": "sap.ui.core.util.ExportColumn",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.exportrow": {
+		"name": "sap.ui.core.util.ExportRow",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.exporttype": {
+		"name": "sap.ui.core.util.ExportType",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.exporttypecsv": {
+		"name": "sap.ui.core.util.ExportTypeCSV",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.file": {
+		"name": "sap.ui.core.util.File",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.mockserver": {
+		"name": "sap.ui.core.util.MockServer",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.mockserver.httpmethod": {
+		"name": "sap.ui.core.util.MockServer.HTTPMETHOD",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.mockserver.requesthandler": {
+		"name": "sap.ui.core.util.MockServer.RequestHandler",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.mockserver.response": {
+		"name": "sap.ui.core.util.MockServer.Response",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.pastehelper": {
+		"name": "sap.ui.core.util.PasteHelper",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.reflection.basetreemodifier": {
+		"name": "sap.ui.core.util.reflection.BaseTreeModifier",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.reflection.flexdelegateinfo": {
+		"name": "sap.ui.core.util.reflection.FlexDelegateInfo",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.reflection.jscontroltreemodifier": {
+		"name": "sap.ui.core.util.reflection.JsControlTreeModifier",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.reflection.xmltreemodifier": {
+		"name": "sap.ui.core.util.reflection.XmlTreeModifier",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.serializer.delegate.delegate": {
+		"name": "sap.ui.core.util.serializer.delegate.Delegate",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.serializer.delegate.html": {
+		"name": "sap.ui.core.util.serializer.delegate.HTML",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.serializer.delegate.xml": {
+		"name": "sap.ui.core.util.serializer.delegate.XML",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.serializer.htmlviewserializer": {
+		"name": "sap.ui.core.util.serializer.HTMLViewSerializer",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.serializer.serializer": {
+		"name": "sap.ui.core.util.serializer.Serializer",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.serializer.viewserializer": {
+		"name": "sap.ui.core.util.serializer.ViewSerializer",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.serializer.xmlviewserializer": {
+		"name": "sap.ui.core.util.serializer.XMLViewSerializer",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.xmlpreprocessor": {
+		"name": "sap.ui.core.util.XMLPreprocessor",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.util.xmlpreprocessor.icontext": {
+		"name": "sap.ui.core.util.XMLPreprocessor.IContext",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.valuestate": {
+		"name": "sap.ui.core.ValueState",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.valuestatesupport": {
+		"name": "sap.ui.core.ValueStateSupport",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.variantlayoutdata": {
+		"name": "sap.ui.core.VariantLayoutData",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.verticalalign": {
+		"name": "sap.ui.core.VerticalAlign",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.webc.webcomponent": {
+		"name": "sap.ui.core.webc.WebComponent",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.webc.webcomponent.metadataoptions": {
+		"name": "sap.ui.core.webc.WebComponent.MetadataOptions",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.webc.webcomponent.metadataoptions.aggregation": {
+		"name": "sap.ui.core.webc.WebComponent.MetadataOptions.Aggregation",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.webc.webcomponent.metadataoptions.association": {
+		"name": "sap.ui.core.webc.WebComponent.MetadataOptions.Association",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.webc.webcomponent.metadataoptions.association.mapping": {
+		"name": "sap.ui.core.webc.WebComponent.MetadataOptions.Association.Mapping",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.webc.webcomponent.metadataoptions.property": {
+		"name": "sap.ui.core.webc.WebComponent.MetadataOptions.Property",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.webc.webcomponent.metadataoptions.property.mapping": {
+		"name": "sap.ui.core.webc.WebComponent.MetadataOptions.Property.Mapping",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.webc.webcomponent.metadataoptionsassociationmapping": {
+		"name": "sap.ui.core.webc.WebComponent.MetadataOptionsAssociationMapping",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.webc.webcomponent.metadataoptionspropertymapping": {
+		"name": "sap.ui.core.webc.WebComponent.MetadataOptionsPropertyMapping",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.webc.webcomponentmetadata": {
+		"name": "sap.ui.core.webc.WebComponentMetadata",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.wrapping": {
+		"name": "sap.ui.core.Wrapping",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.ws.readystate": {
+		"name": "sap.ui.core.ws.ReadyState",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.ws.sappcpwebsocket": {
+		"name": "sap.ui.core.ws.SapPcpWebSocket",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.ws.sappcpwebsocket.supported_protocols": {
+		"name": "sap.ui.core.ws.SapPcpWebSocket.SUPPORTED_PROTOCOLS",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.ws.websocket": {
+		"name": "sap.ui.core.ws.WebSocket",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.core.xmlcomposite": {
+		"name": "sap.ui.core.XMLComposite",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.device": {
+		"name": "sap.ui.Device",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.device.browser": {
+		"name": "sap.ui.Device.browser",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.device.browser.browser": {
+		"name": "sap.ui.Device.browser.BROWSER",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.device.media": {
+		"name": "sap.ui.Device.media",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.device.media.rangesets": {
+		"name": "sap.ui.Device.media.RANGESETS",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.device.orientation": {
+		"name": "sap.ui.Device.orientation",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.device.os": {
+		"name": "sap.ui.Device.os",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.device.os.os": {
+		"name": "sap.ui.Device.os.OS",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.device.resize": {
+		"name": "sap.ui.Device.resize",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.device.support": {
+		"name": "sap.ui.Device.support",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.device.system": {
+		"name": "sap.ui.Device.system",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.loader": {
+		"name": "sap.ui.loader",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model": {
+		"name": "sap.ui.model",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics": {
+		"name": "sap.ui.model.analytics",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.analyticalbinding": {
+		"name": "sap.ui.model.analytics.AnalyticalBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.analyticaltreebindingadapter": {
+		"name": "sap.ui.model.analytics.AnalyticalTreeBindingAdapter",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.batchresponsecollector": {
+		"name": "sap.ui.model.analytics.BatchResponseCollector",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics": {
+		"name": "sap.ui.model.analytics.odata4analytics",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.dimension": {
+		"name": "sap.ui.model.analytics.odata4analytics.Dimension",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.dimensionattribute": {
+		"name": "sap.ui.model.analytics.odata4analytics.DimensionAttribute",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.dimensionmembersetrequest": {
+		"name": "sap.ui.model.analytics.odata4analytics.DimensionMemberSetRequest",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.entityset": {
+		"name": "sap.ui.model.analytics.odata4analytics.EntitySet",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.entitytype": {
+		"name": "sap.ui.model.analytics.odata4analytics.EntityType",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.filterexpression": {
+		"name": "sap.ui.model.analytics.odata4analytics.FilterExpression",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.measure": {
+		"name": "sap.ui.model.analytics.odata4analytics.Measure",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.model": {
+		"name": "sap.ui.model.analytics.odata4analytics.Model",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.model.referencebymodel": {
+		"name": "sap.ui.model.analytics.odata4analytics.Model.ReferenceByModel",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.model.referencebyuri": {
+		"name": "sap.ui.model.analytics.odata4analytics.Model.ReferenceByURI",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.model.referencewithworkaround": {
+		"name": "sap.ui.model.analytics.odata4analytics.Model.ReferenceWithWorkaround",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.parameter": {
+		"name": "sap.ui.model.analytics.odata4analytics.Parameter",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.parameterization": {
+		"name": "sap.ui.model.analytics.odata4analytics.Parameterization",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.parameterizationrequest": {
+		"name": "sap.ui.model.analytics.odata4analytics.ParameterizationRequest",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.parametervaluesetrequest": {
+		"name": "sap.ui.model.analytics.odata4analytics.ParameterValueSetRequest",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.queryresult": {
+		"name": "sap.ui.model.analytics.odata4analytics.QueryResult",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.queryresultrequest": {
+		"name": "sap.ui.model.analytics.odata4analytics.QueryResultRequest",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.recursivehierarchy": {
+		"name": "sap.ui.model.analytics.odata4analytics.RecursiveHierarchy",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.sortexpression": {
+		"name": "sap.ui.model.analytics.odata4analytics.SortExpression",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.analytics.odata4analytics.sortorder": {
+		"name": "sap.ui.model.analytics.odata4analytics.SortOrder",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.base.managedobjectmodel": {
+		"name": "sap.ui.model.base.ManagedObjectModel",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.binding": {
+		"name": "sap.ui.model.Binding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.bindingmode": {
+		"name": "sap.ui.model.BindingMode",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.changereason": {
+		"name": "sap.ui.model.ChangeReason",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.clientcontextbinding": {
+		"name": "sap.ui.model.ClientContextBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.clientlistbinding": {
+		"name": "sap.ui.model.ClientListBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.clientmodel": {
+		"name": "sap.ui.model.ClientModel",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.clientpropertybinding": {
+		"name": "sap.ui.model.ClientPropertyBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.clienttreebinding": {
+		"name": "sap.ui.model.ClientTreeBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.clienttreebindingadapter": {
+		"name": "sap.ui.model.ClientTreeBindingAdapter",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.compositebinding": {
+		"name": "sap.ui.model.CompositeBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.compositedatastate": {
+		"name": "sap.ui.model.CompositeDataState",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.compositetype": {
+		"name": "sap.ui.model.CompositeType",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.context": {
+		"name": "sap.ui.model.Context",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.contextbinding": {
+		"name": "sap.ui.model.ContextBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.datastate": {
+		"name": "sap.ui.model.DataState",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.filter": {
+		"name": "sap.ui.model.Filter",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.filteroperator": {
+		"name": "sap.ui.model.FilterOperator",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.filtertype": {
+		"name": "sap.ui.model.FilterType",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.formatexception": {
+		"name": "sap.ui.model.FormatException",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.json": {
+		"name": "sap.ui.model.json",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.json.jsonlistbinding": {
+		"name": "sap.ui.model.json.JSONListBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.json.jsonmodel": {
+		"name": "sap.ui.model.json.JSONModel",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.json.jsonpropertybinding": {
+		"name": "sap.ui.model.json.JSONPropertyBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.json.jsontreebinding": {
+		"name": "sap.ui.model.json.JSONTreeBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.listbinding": {
+		"name": "sap.ui.model.ListBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.message": {
+		"name": "sap.ui.model.message",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.message.messagemodel": {
+		"name": "sap.ui.model.message.MessageModel",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.metamodel": {
+		"name": "sap.ui.model.MetaModel",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.model": {
+		"name": "sap.ui.model.Model",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata": {
+		"name": "sap.ui.model.odata",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.annotationhelper": {
+		"name": "sap.ui.model.odata.AnnotationHelper",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.countmode": {
+		"name": "sap.ui.model.odata.CountMode",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.filter": {
+		"name": "sap.ui.model.odata.Filter",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.messagescope": {
+		"name": "sap.ui.model.odata.MessageScope",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odataannotations": {
+		"name": "sap.ui.model.odata.ODataAnnotations",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatacontextbinding": {
+		"name": "sap.ui.model.odata.ODataContextBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatalistbinding": {
+		"name": "sap.ui.model.odata.ODataListBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatamessageparser": {
+		"name": "sap.ui.model.odata.ODataMessageParser",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametadata": {
+		"name": "sap.ui.model.odata.ODataMetadata",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel": {
+		"name": "sap.ui.model.odata.ODataMetaModel",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.abstractproperty": {
+		"name": "sap.ui.model.odata.ODataMetaModel.AbstractProperty",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.annotatable": {
+		"name": "sap.ui.model.odata.ODataMetaModel.Annotatable",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.associationend": {
+		"name": "sap.ui.model.odata.ODataMetaModel.AssociationEnd",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.associationset": {
+		"name": "sap.ui.model.odata.ODataMetaModel.AssociationSet",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.associationsetend": {
+		"name": "sap.ui.model.odata.ODataMetaModel.AssociationSetEnd",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.binaryproperty": {
+		"name": "sap.ui.model.odata.ODataMetaModel.BinaryProperty",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.booleanproperty": {
+		"name": "sap.ui.model.odata.ODataMetaModel.BooleanProperty",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.boolexpression": {
+		"name": "sap.ui.model.odata.ODataMetaModel.BoolExpression",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.byteproperty": {
+		"name": "sap.ui.model.odata.ODataMetaModel.ByteProperty",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.complextype": {
+		"name": "sap.ui.model.odata.ODataMetaModel.ComplexType",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.datetimeoffsetproperty": {
+		"name": "sap.ui.model.odata.ODataMetaModel.DateTimeOffsetProperty",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.datetimeproperty": {
+		"name": "sap.ui.model.odata.ODataMetaModel.DateTimeProperty",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.decimalproperty": {
+		"name": "sap.ui.model.odata.ODataMetaModel.DecimalProperty",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.doubleproperty": {
+		"name": "sap.ui.model.odata.ODataMetaModel.DoubleProperty",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.entitycontainer": {
+		"name": "sap.ui.model.odata.ODataMetaModel.EntityContainer",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.entitykey": {
+		"name": "sap.ui.model.odata.ODataMetaModel.EntityKey",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.entityset": {
+		"name": "sap.ui.model.odata.ODataMetaModel.EntitySet",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.entitytype": {
+		"name": "sap.ui.model.odata.ODataMetaModel.EntityType",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.extension": {
+		"name": "sap.ui.model.odata.ODataMetaModel.Extension",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.functionimport": {
+		"name": "sap.ui.model.odata.ODataMetaModel.FunctionImport",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.functionimportparameter": {
+		"name": "sap.ui.model.odata.ODataMetaModel.FunctionImportParameter",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.guidproperty": {
+		"name": "sap.ui.model.odata.ODataMetaModel.GuidProperty",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.int16property": {
+		"name": "sap.ui.model.odata.ODataMetaModel.Int16Property",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.int32property": {
+		"name": "sap.ui.model.odata.ODataMetaModel.Int32Property",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.int64property": {
+		"name": "sap.ui.model.odata.ODataMetaModel.Int64Property",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.navigationproperty": {
+		"name": "sap.ui.model.odata.ODataMetaModel.NavigationProperty",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.property": {
+		"name": "sap.ui.model.odata.ODataMetaModel.Property",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.propertypathexpression": {
+		"name": "sap.ui.model.odata.ODataMetaModel.PropertyPathExpression",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.propertyref": {
+		"name": "sap.ui.model.odata.ODataMetaModel.PropertyRef",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.sbyteproperty": {
+		"name": "sap.ui.model.odata.ODataMetaModel.SByteProperty",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.simpleidentifier": {
+		"name": "sap.ui.model.odata.ODataMetaModel.SimpleIdentifier",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.singleproperty": {
+		"name": "sap.ui.model.odata.ODataMetaModel.SingleProperty",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.streamproperty": {
+		"name": "sap.ui.model.odata.ODataMetaModel.StreamProperty",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.stringexpression": {
+		"name": "sap.ui.model.odata.ODataMetaModel.StringExpression",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.stringproperty": {
+		"name": "sap.ui.model.odata.ODataMetaModel.StringProperty",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.timeproperty": {
+		"name": "sap.ui.model.odata.ODataMetaModel.TimeProperty",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.valuelistparameter": {
+		"name": "sap.ui.model.odata.ODataMetaModel.ValueListParameter",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.valuelistparameterconstant": {
+		"name": "sap.ui.model.odata.ODataMetaModel.ValueListParameterConstant",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.valuelistparameterdisplayonly": {
+		"name": "sap.ui.model.odata.ODataMetaModel.ValueListParameterDisplayOnly",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.valuelistparameterin": {
+		"name": "sap.ui.model.odata.ODataMetaModel.ValueListParameterIn",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.valuelistparameterinout": {
+		"name": "sap.ui.model.odata.ODataMetaModel.ValueListParameterInOut",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.valuelistparameterout": {
+		"name": "sap.ui.model.odata.ODataMetaModel.ValueListParameterOut",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.valuelistproperty": {
+		"name": "sap.ui.model.odata.ODataMetaModel.ValueListProperty",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatametamodel.valuelisttype": {
+		"name": "sap.ui.model.odata.ODataMetaModel.ValueListType",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatamodel": {
+		"name": "sap.ui.model.odata.ODataModel",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatapropertybinding": {
+		"name": "sap.ui.model.odata.ODataPropertyBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.odatautils": {
+		"name": "sap.ui.model.odata.ODataUtils",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.operationmode": {
+		"name": "sap.ui.model.odata.OperationMode",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type": {
+		"name": "sap.ui.model.odata.type",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.boolean": {
+		"name": "sap.ui.model.odata.type.Boolean",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.byte": {
+		"name": "sap.ui.model.odata.type.Byte",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.currency": {
+		"name": "sap.ui.model.odata.type.Currency",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.date": {
+		"name": "sap.ui.model.odata.type.Date",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.datetime": {
+		"name": "sap.ui.model.odata.type.DateTime",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.datetimebase": {
+		"name": "sap.ui.model.odata.type.DateTimeBase",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.datetimeoffset": {
+		"name": "sap.ui.model.odata.type.DateTimeOffset",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.datetimewithtimezone": {
+		"name": "sap.ui.model.odata.type.DateTimeWithTimezone",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.decimal": {
+		"name": "sap.ui.model.odata.type.Decimal",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.double": {
+		"name": "sap.ui.model.odata.type.Double",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.guid": {
+		"name": "sap.ui.model.odata.type.Guid",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.int": {
+		"name": "sap.ui.model.odata.type.Int",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.int16": {
+		"name": "sap.ui.model.odata.type.Int16",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.int32": {
+		"name": "sap.ui.model.odata.type.Int32",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.int64": {
+		"name": "sap.ui.model.odata.type.Int64",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.odatatype": {
+		"name": "sap.ui.model.odata.type.ODataType",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.raw": {
+		"name": "sap.ui.model.odata.type.Raw",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.sbyte": {
+		"name": "sap.ui.model.odata.type.SByte",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.single": {
+		"name": "sap.ui.model.odata.type.Single",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.stream": {
+		"name": "sap.ui.model.odata.type.Stream",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.string": {
+		"name": "sap.ui.model.odata.type.String",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.time": {
+		"name": "sap.ui.model.odata.type.Time",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.timeofday": {
+		"name": "sap.ui.model.odata.type.TimeOfDay",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.type.unit": {
+		"name": "sap.ui.model.odata.type.Unit",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.updatemethod": {
+		"name": "sap.ui.model.odata.UpdateMethod",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v2": {
+		"name": "sap.ui.model.odata.v2",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v2.batchmode": {
+		"name": "sap.ui.model.odata.v2.BatchMode",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v2.context": {
+		"name": "sap.ui.model.odata.v2.Context",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v2.odataannotations": {
+		"name": "sap.ui.model.odata.v2.ODataAnnotations",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v2.odataannotations.errorparameters": {
+		"name": "sap.ui.model.odata.v2.ODataAnnotations.errorParameters",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v2.odataannotations.failedparameters": {
+		"name": "sap.ui.model.odata.v2.ODataAnnotations.failedParameters",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v2.odataannotations.loadedparameters": {
+		"name": "sap.ui.model.odata.v2.ODataAnnotations.loadedParameters",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v2.odataannotations.source": {
+		"name": "sap.ui.model.odata.v2.ODataAnnotations.Source",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v2.odataannotations.successparameters": {
+		"name": "sap.ui.model.odata.v2.ODataAnnotations.successParameters",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v2.odatacontextbinding": {
+		"name": "sap.ui.model.odata.v2.ODataContextBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v2.odatalistbinding": {
+		"name": "sap.ui.model.odata.v2.ODataListBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v2.odatamodel": {
+		"name": "sap.ui.model.odata.v2.ODataModel",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v2.odatamodel.changegroupdefinition": {
+		"name": "sap.ui.model.odata.v2.ODataModel.ChangeGroupDefinition",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v2.odatatreebinding": {
+		"name": "sap.ui.model.odata.v2.ODataTreeBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v4": {
+		"name": "sap.ui.model.odata.v4",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v4.annotationhelper": {
+		"name": "sap.ui.model.odata.v4.AnnotationHelper",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v4.context": {
+		"name": "sap.ui.model.odata.v4.Context",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v4.odatacontextbinding": {
+		"name": "sap.ui.model.odata.v4.ODataContextBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v4.odatalistbinding": {
+		"name": "sap.ui.model.odata.v4.ODataListBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v4.odatametamodel": {
+		"name": "sap.ui.model.odata.v4.ODataMetaModel",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v4.odatamodel": {
+		"name": "sap.ui.model.odata.v4.ODataModel",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v4.odatapropertybinding": {
+		"name": "sap.ui.model.odata.v4.ODataPropertyBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v4.odatautils": {
+		"name": "sap.ui.model.odata.v4.ODataUtils",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v4.submitmode": {
+		"name": "sap.ui.model.odata.v4.SubmitMode",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v4.ts": {
+		"name": "sap.ui.model.odata.v4.ts",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v4.ts.navigationpropertypathexpression": {
+		"name": "sap.ui.model.odata.v4.ts.NavigationPropertyPathExpression",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v4.ts.propertypathexpression": {
+		"name": "sap.ui.model.odata.v4.ts.PropertyPathExpression",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.odata.v4.valuelisttype": {
+		"name": "sap.ui.model.odata.v4.ValueListType",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.parseexception": {
+		"name": "sap.ui.model.ParseException",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.propertybinding": {
+		"name": "sap.ui.model.PropertyBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.resource": {
+		"name": "sap.ui.model.resource",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.resource.resourcemodel": {
+		"name": "sap.ui.model.resource.ResourceModel",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.selectionmodel": {
+		"name": "sap.ui.model.SelectionModel",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.simpletype": {
+		"name": "sap.ui.model.SimpleType",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.sorter": {
+		"name": "sap.ui.model.Sorter",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.staticbinding": {
+		"name": "sap.ui.model.StaticBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.treeautoexpandmode": {
+		"name": "sap.ui.model.TreeAutoExpandMode",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.treebinding": {
+		"name": "sap.ui.model.TreeBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.treebindingadapter": {
+		"name": "sap.ui.model.TreeBindingAdapter",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.treebindingcompatibilityadapter": {
+		"name": "sap.ui.model.TreeBindingCompatibilityAdapter",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.treebindingutils": {
+		"name": "sap.ui.model.TreeBindingUtils",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.type": {
+		"name": "sap.ui.model.Type",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.type.boolean": {
+		"name": "sap.ui.model.type.Boolean",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.type.currency": {
+		"name": "sap.ui.model.type.Currency",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.type.date": {
+		"name": "sap.ui.model.type.Date",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.type.dateinterval": {
+		"name": "sap.ui.model.type.DateInterval",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.type.datetime": {
+		"name": "sap.ui.model.type.DateTime",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.type.datetimeinterval": {
+		"name": "sap.ui.model.type.DateTimeInterval",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.type.filesize": {
+		"name": "sap.ui.model.type.FileSize",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.type.float": {
+		"name": "sap.ui.model.type.Float",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.type.integer": {
+		"name": "sap.ui.model.type.Integer",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.type.string": {
+		"name": "sap.ui.model.type.String",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.type.time": {
+		"name": "sap.ui.model.type.Time",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.type.timeinterval": {
+		"name": "sap.ui.model.type.TimeInterval",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.type.unit": {
+		"name": "sap.ui.model.type.Unit",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.validateexception": {
+		"name": "sap.ui.model.ValidateException",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.xml": {
+		"name": "sap.ui.model.xml",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.xml.xmlmodel": {
+		"name": "sap.ui.model.xml.XMLModel",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.model.xml.xmltreebinding": {
+		"name": "sap.ui.model.xml.XMLTreeBinding",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.actions.action": {
+		"name": "sap.ui.test.actions.Action",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.actions.drag": {
+		"name": "sap.ui.test.actions.Drag",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.actions.drop": {
+		"name": "sap.ui.test.actions.Drop",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.actions.entertext": {
+		"name": "sap.ui.test.actions.EnterText",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.actions.press": {
+		"name": "sap.ui.test.actions.Press",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.actions.scroll": {
+		"name": "sap.ui.test.actions.Scroll",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.generic.generictestcollection": {
+		"name": "sap.ui.test.generic.GenericTestCollection",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.generic.generictestcollection.excludereason": {
+		"name": "sap.ui.test.generic.GenericTestCollection.ExcludeReason",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.generic.generictestcollection.objectcapabilities": {
+		"name": "sap.ui.test.generic.GenericTestCollection.ObjectCapabilities",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.generic.generictestcollection.test": {
+		"name": "sap.ui.test.generic.GenericTestCollection.Test",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.generic.utils": {
+		"name": "sap.ui.test.generic.Utils",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.gherkin.datatableutils": {
+		"name": "sap.ui.test.gherkin.dataTableUtils",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.gherkin.datatableutils.normalization": {
+		"name": "sap.ui.test.gherkin.dataTableUtils.normalization",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.gherkin.opa5testharness": {
+		"name": "sap.ui.test.gherkin.opa5TestHarness",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.gherkin.qunittestharness": {
+		"name": "sap.ui.test.gherkin.qUnitTestHarness",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.gherkin.stepdefinitions": {
+		"name": "sap.ui.test.gherkin.StepDefinitions",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.matchers.aggregationcontainspropertyequal": {
+		"name": "sap.ui.test.matchers.AggregationContainsPropertyEqual",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.matchers.aggregationempty": {
+		"name": "sap.ui.test.matchers.AggregationEmpty",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.matchers.aggregationfilled": {
+		"name": "sap.ui.test.matchers.AggregationFilled",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.matchers.aggregationlengthequals": {
+		"name": "sap.ui.test.matchers.AggregationLengthEquals",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.matchers.ancestor": {
+		"name": "sap.ui.test.matchers.Ancestor",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.matchers.ancestordefinition": {
+		"name": "sap.ui.test.matchers.AncestorDefinition",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.matchers.bindingpath": {
+		"name": "sap.ui.test.matchers.BindingPath",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.matchers.descendant": {
+		"name": "sap.ui.test.matchers.Descendant",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.matchers.descendantdefinition": {
+		"name": "sap.ui.test.matchers.DescendantDefinition",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.matchers.i18ntext": {
+		"name": "sap.ui.test.matchers.I18NText",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.matchers.i18ntextdefinition": {
+		"name": "sap.ui.test.matchers.I18NTextDefinition",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.matchers.interactable": {
+		"name": "sap.ui.test.matchers.Interactable",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.matchers.labelfor": {
+		"name": "sap.ui.test.matchers.LabelFor",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.matchers.labelfordefinition": {
+		"name": "sap.ui.test.matchers.LabelForDefinition",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.matchers.matcher": {
+		"name": "sap.ui.test.matchers.Matcher",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.matchers.properties": {
+		"name": "sap.ui.test.matchers.Properties",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.matchers.propertystrictequals": {
+		"name": "sap.ui.test.matchers.PropertyStrictEquals",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.matchers.sibling": {
+		"name": "sap.ui.test.matchers.Sibling",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.opa": {
+		"name": "sap.ui.test.Opa",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.opa.baseparameters": {
+		"name": "sap.ui.test.Opa.BaseParameters",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.opa.config": {
+		"name": "sap.ui.test.Opa.Config",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.opa.waitforoptions": {
+		"name": "sap.ui.test.Opa.WaitForOptions",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.opa5": {
+		"name": "sap.ui.test.Opa5",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.opa5.action": {
+		"name": "sap.ui.test.Opa5.Action",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.opa5.baseparameters": {
+		"name": "sap.ui.test.Opa5.BaseParameters",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.opa5.config": {
+		"name": "sap.ui.test.Opa5.Config",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.opa5.controlsbaseselector": {
+		"name": "sap.ui.test.Opa5.ControlsBaseSelector",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.opa5.matcher": {
+		"name": "sap.ui.test.Opa5.Matcher",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.opa5.multicontrolselector": {
+		"name": "sap.ui.test.Opa5.MultiControlSelector",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.opa5.singlecontrolselector": {
+		"name": "sap.ui.test.Opa5.SingleControlSelector",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.opabuilder": {
+		"name": "sap.ui.test.OpaBuilder",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.opabuilder.actions": {
+		"name": "sap.ui.test.OpaBuilder.Actions",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.opabuilder.matchers": {
+		"name": "sap.ui.test.OpaBuilder.Matchers",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.opaextension": {
+		"name": "sap.ui.test.OpaExtension",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.opaplugin": {
+		"name": "sap.ui.test.OpaPlugin",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.pageobjectdefinition": {
+		"name": "sap.ui.test.PageObjectDefinition",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.pageobjectfactory": {
+		"name": "sap.ui.test.PageObjectFactory",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.recordreplay": {
+		"name": "sap.ui.test.RecordReplay",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.recordreplay.controlselector": {
+		"name": "sap.ui.test.RecordReplay.ControlSelector",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.ui.test.recordreplay.interactiontype": {
+		"name": "sap.ui.test.RecordReplay.InteractionType",
+		"filePath": "sap.ui.core.api.json"
+	},
+	"sap.m.table.util": {
+		"name": "module:sap/m/table/Util",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m": {
+		"name": "sap.m",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.actionlistitem": {
+		"name": "sap.m.ActionListItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.actionselect": {
+		"name": "sap.m.ActionSelect",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.actionsheet": {
+		"name": "sap.m.ActionSheet",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.app": {
+		"name": "sap.m.App",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.avatar": {
+		"name": "sap.m.Avatar",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.avatarcolor": {
+		"name": "sap.m.AvatarColor",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.avatarimagefittype": {
+		"name": "sap.m.AvatarImageFitType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.avatarshape": {
+		"name": "sap.m.AvatarShape",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.avatarsize": {
+		"name": "sap.m.AvatarSize",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.avatartype": {
+		"name": "sap.m.AvatarType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.backgrounddesign": {
+		"name": "sap.m.BackgroundDesign",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.backgroundhelper": {
+		"name": "sap.m.BackgroundHelper",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.badgeanimationtype": {
+		"name": "sap.m.BadgeAnimationType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.badgecustomdata": {
+		"name": "sap.m.BadgeCustomData",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.badgeenabler": {
+		"name": "sap.m.BadgeEnabler",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.badgestate": {
+		"name": "sap.m.BadgeState",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.bar": {
+		"name": "sap.m.Bar",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.barcontext": {
+		"name": "sap.m.BarContext",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.barcontexts": {
+		"name": "sap.m.BarContexts",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.bardesign": {
+		"name": "sap.m.BarDesign",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.barinpageenabler": {
+		"name": "sap.m.BarInPageEnabler",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.borderdesign": {
+		"name": "sap.m.BorderDesign",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.breadcrumbs": {
+		"name": "sap.m.Breadcrumbs",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.breadcrumbsseparatorstyle": {
+		"name": "sap.m.BreadcrumbsSeparatorStyle",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.busydialog": {
+		"name": "sap.m.BusyDialog",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.busyindicator": {
+		"name": "sap.m.BusyIndicator",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.button": {
+		"name": "sap.m.Button",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.buttonaccessiblerole": {
+		"name": "sap.m.ButtonAccessibleRole",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.buttontype": {
+		"name": "sap.m.ButtonType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.carousel": {
+		"name": "sap.m.Carousel",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.carouselarrowsplacement": {
+		"name": "sap.m.CarouselArrowsPlacement",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.carousellayout": {
+		"name": "sap.m.CarouselLayout",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.checkbox": {
+		"name": "sap.m.CheckBox",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.colorpalette": {
+		"name": "sap.m.ColorPalette",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.colorpalettepopover": {
+		"name": "sap.m.ColorPalettePopover",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.column": {
+		"name": "sap.m.Column",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.columnlistitem": {
+		"name": "sap.m.ColumnListItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.combobox": {
+		"name": "sap.m.ComboBox",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.comboboxbase": {
+		"name": "sap.m.ComboBoxBase",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.comboboxtextfield": {
+		"name": "sap.m.ComboBoxTextField",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.customlistitem": {
+		"name": "sap.m.CustomListItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.customtile": {
+		"name": "sap.m.CustomTile",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.customtreeitem": {
+		"name": "sap.m.CustomTreeItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.datepicker": {
+		"name": "sap.m.DatePicker",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.daterangeselection": {
+		"name": "sap.m.DateRangeSelection",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.datetimefield": {
+		"name": "sap.m.DateTimeField",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.datetimeinput": {
+		"name": "sap.m.DateTimeInput",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.datetimeinputtype": {
+		"name": "sap.m.DateTimeInputType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.datetimepicker": {
+		"name": "sap.m.DateTimePicker",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.deviationindicator": {
+		"name": "sap.m.DeviationIndicator",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.dialog": {
+		"name": "sap.m.Dialog",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.dialogroletype": {
+		"name": "sap.m.DialogRoleType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.dialogtype": {
+		"name": "sap.m.DialogType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.displaylistitem": {
+		"name": "sap.m.DisplayListItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.draftindicator": {
+		"name": "sap.m.DraftIndicator",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.draftindicatorstate": {
+		"name": "sap.m.DraftIndicatorState",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.dynamicdate": {
+		"name": "sap.m.DynamicDate",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.dynamicdateformat": {
+		"name": "sap.m.DynamicDateFormat",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.dynamicdateformatoptions": {
+		"name": "sap.m.DynamicDateFormatOptions",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.dynamicdateoption": {
+		"name": "sap.m.DynamicDateOption",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.dynamicdaterange": {
+		"name": "sap.m.DynamicDateRange",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.dynamicdaterangegroups": {
+		"name": "sap.m.DynamicDateRangeGroups",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.dynamicdaterangevalue": {
+		"name": "sap.m.DynamicDateRangeValue",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.dynamicdateutil": {
+		"name": "sap.m.DynamicDateUtil",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.dynamicdatevaluehelpuitype": {
+		"name": "sap.m.DynamicDateValueHelpUIType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.emptyindicatormode": {
+		"name": "sap.m.EmptyIndicatorMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.expandabletext": {
+		"name": "sap.m.ExpandableText",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.expandabletextoverflowmode": {
+		"name": "sap.m.ExpandableTextOverflowMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.facetfilter": {
+		"name": "sap.m.FacetFilter",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.facetfilteritem": {
+		"name": "sap.m.FacetFilterItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.facetfilterlist": {
+		"name": "sap.m.FacetFilterList",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.facetfilterlistdatatype": {
+		"name": "sap.m.FacetFilterListDataType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.facetfiltertype": {
+		"name": "sap.m.FacetFilterType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.feedcontent": {
+		"name": "sap.m.FeedContent",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.feedinput": {
+		"name": "sap.m.FeedInput",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.feedlistitem": {
+		"name": "sap.m.FeedListItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.feedlistitemaction": {
+		"name": "sap.m.FeedListItemAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.filterpanelfield": {
+		"name": "sap.m.FilterPanelField",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.flexaligncontent": {
+		"name": "sap.m.FlexAlignContent",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.flexalignitems": {
+		"name": "sap.m.FlexAlignItems",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.flexalignself": {
+		"name": "sap.m.FlexAlignSelf",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.flexbox": {
+		"name": "sap.m.FlexBox",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.flexdirection": {
+		"name": "sap.m.FlexDirection",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.flexitemdata": {
+		"name": "sap.m.FlexItemData",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.flexjustifycontent": {
+		"name": "sap.m.FlexJustifyContent",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.flexrendertype": {
+		"name": "sap.m.FlexRendertype",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.flexwrap": {
+		"name": "sap.m.FlexWrap",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.formattedtext": {
+		"name": "sap.m.FormattedText",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.frametype": {
+		"name": "sap.m.FrameType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.generictag": {
+		"name": "sap.m.GenericTag",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.generictagdesign": {
+		"name": "sap.m.GenericTagDesign",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.generictagvaluestate": {
+		"name": "sap.m.GenericTagValueState",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.generictile": {
+		"name": "sap.m.GenericTile",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.generictilemode": {
+		"name": "sap.m.GenericTileMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.generictilescope": {
+		"name": "sap.m.GenericTileScope",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.groupheaderlistitem": {
+		"name": "sap.m.GroupHeaderListItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.growingenablement": {
+		"name": "sap.m.GrowingEnablement",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.growinglist": {
+		"name": "sap.m.GrowingList",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.hbox": {
+		"name": "sap.m.HBox",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.headercontainer": {
+		"name": "sap.m.HeaderContainer",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.headerlevel": {
+		"name": "sap.m.HeaderLevel",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.ibadge": {
+		"name": "sap.m.IBadge",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.ibar": {
+		"name": "sap.m.IBar",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.ibarhtmltag": {
+		"name": "sap.m.IBarHTMLTag",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.ibreadcrumbs": {
+		"name": "sap.m.IBreadcrumbs",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.icontab": {
+		"name": "sap.m.IconTab",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.icontabbar": {
+		"name": "sap.m.IconTabBar",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.icontabdensitymode": {
+		"name": "sap.m.IconTabDensityMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.icontabfilter": {
+		"name": "sap.m.IconTabFilter",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.icontabfilterdesign": {
+		"name": "sap.m.IconTabFilterDesign",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.icontabheader": {
+		"name": "sap.m.IconTabHeader",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.icontabheadermode": {
+		"name": "sap.m.IconTabHeaderMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.icontabseparator": {
+		"name": "sap.m.IconTabSeparator",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.ihyphenation": {
+		"name": "sap.m.IHyphenation",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.illustratedmessage": {
+		"name": "sap.m.IllustratedMessage",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.illustratedmessagesize": {
+		"name": "sap.m.IllustratedMessageSize",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.illustratedmessagetype": {
+		"name": "sap.m.IllustratedMessageType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.illustration": {
+		"name": "sap.m.Illustration",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.illustrationpool": {
+		"name": "sap.m.IllustrationPool",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.image": {
+		"name": "sap.m.Image",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.imagecontent": {
+		"name": "sap.m.ImageContent",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.imagemode": {
+		"name": "sap.m.ImageMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.input": {
+		"name": "sap.m.Input",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.inputbase": {
+		"name": "sap.m.InputBase",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.inputbaseaccessibilitystate": {
+		"name": "sap.m.InputBaseAccessibilityState",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.inputbaserenderer": {
+		"name": "sap.m.InputBaseRenderer",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.inputlistitem": {
+		"name": "sap.m.InputListItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.inputodatasuggestprovider": {
+		"name": "sap.m.InputODataSuggestProvider",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.inputrenderer": {
+		"name": "sap.m.InputRenderer",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.inputtextformatmode": {
+		"name": "sap.m.InputTextFormatMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.inputtype": {
+		"name": "sap.m.InputType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.instancemanager": {
+		"name": "sap.m.InstanceManager",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.ioverflowtoolbarcontent": {
+		"name": "sap.m.IOverflowToolbarContent",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.ioverflowtoolbarflexiblecontent": {
+		"name": "sap.m.IOverflowToolbarFlexibleContent",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.iscale": {
+		"name": "sap.m.IScale",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.itableitem": {
+		"name": "sap.m.ITableItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.label": {
+		"name": "sap.m.Label",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.labeldesign": {
+		"name": "sap.m.LabelDesign",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.lightbox": {
+		"name": "sap.m.LightBox",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.lightboxitem": {
+		"name": "sap.m.LightBoxItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.lightboxloadingstates": {
+		"name": "sap.m.LightBoxLoadingStates",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.link": {
+		"name": "sap.m.Link",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.linkaccessiblerole": {
+		"name": "sap.m.LinkAccessibleRole",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.linkconversion": {
+		"name": "sap.m.LinkConversion",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.linktilecontent": {
+		"name": "sap.m.LinkTileContent",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.list": {
+		"name": "sap.m.List",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.listbase": {
+		"name": "sap.m.ListBase",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.listgrowingdirection": {
+		"name": "sap.m.ListGrowingDirection",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.listheaderdesign": {
+		"name": "sap.m.ListHeaderDesign",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.listitembase": {
+		"name": "sap.m.ListItemBase",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.listkeyboardmode": {
+		"name": "sap.m.ListKeyboardMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.listmode": {
+		"name": "sap.m.ListMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.listseparators": {
+		"name": "sap.m.ListSeparators",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.listtype": {
+		"name": "sap.m.ListType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.loadstate": {
+		"name": "sap.m.LoadState",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.maskinput": {
+		"name": "sap.m.MaskInput",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.maskinputrule": {
+		"name": "sap.m.MaskInputRule",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.menu": {
+		"name": "sap.m.Menu",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.menubutton": {
+		"name": "sap.m.MenuButton",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.menubuttonmode": {
+		"name": "sap.m.MenuButtonMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.menuitem": {
+		"name": "sap.m.MenuItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.messagebox": {
+		"name": "sap.m.MessageBox",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.messagebox.action": {
+		"name": "sap.m.MessageBox.Action",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.messagebox.icon": {
+		"name": "sap.m.MessageBox.Icon",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.messageitem": {
+		"name": "sap.m.MessageItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.messagepage": {
+		"name": "sap.m.MessagePage",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.messagepopover": {
+		"name": "sap.m.MessagePopover",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.messagepopoveritem": {
+		"name": "sap.m.MessagePopoverItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.messagestrip": {
+		"name": "sap.m.MessageStrip",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.messagetoast": {
+		"name": "sap.m.MessageToast",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.messageview": {
+		"name": "sap.m.MessageView",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.multicombobox": {
+		"name": "sap.m.MultiComboBox",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.multieditfield": {
+		"name": "sap.m.MultiEditField",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.multiinput": {
+		"name": "sap.m.MultiInput",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.multiselectmode": {
+		"name": "sap.m.MultiSelectMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.navcontainer": {
+		"name": "sap.m.NavContainer",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.navcontainerchild": {
+		"name": "sap.m.NavContainerChild",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.newscontent": {
+		"name": "sap.m.NewsContent",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.notificationlist": {
+		"name": "sap.m.NotificationList",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.notificationlistbase": {
+		"name": "sap.m.NotificationListBase",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.notificationlistgroup": {
+		"name": "sap.m.NotificationListGroup",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.notificationlistitem": {
+		"name": "sap.m.NotificationListItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.numericcontent": {
+		"name": "sap.m.NumericContent",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.objectattribute": {
+		"name": "sap.m.ObjectAttribute",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.objectheader": {
+		"name": "sap.m.ObjectHeader",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.objectheadercontainer": {
+		"name": "sap.m.ObjectHeaderContainer",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.objectheaderpictureshape": {
+		"name": "sap.m.ObjectHeaderPictureShape",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.objectidentifier": {
+		"name": "sap.m.ObjectIdentifier",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.objectlistitem": {
+		"name": "sap.m.ObjectListItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.objectmarker": {
+		"name": "sap.m.ObjectMarker",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.objectmarkertype": {
+		"name": "sap.m.ObjectMarkerType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.objectmarkervisibility": {
+		"name": "sap.m.ObjectMarkerVisibility",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.objectnumber": {
+		"name": "sap.m.ObjectNumber",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.objectstatus": {
+		"name": "sap.m.ObjectStatus",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.overflowtoolbar": {
+		"name": "sap.m.OverflowToolbar",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.overflowtoolbarbutton": {
+		"name": "sap.m.OverflowToolbarButton",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.overflowtoolbarconfig": {
+		"name": "sap.m.OverflowToolbarConfig",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.overflowtoolbarlayoutdata": {
+		"name": "sap.m.OverflowToolbarLayoutData",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.overflowtoolbarmenubutton": {
+		"name": "sap.m.OverflowToolbarMenuButton",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.overflowtoolbarpriority": {
+		"name": "sap.m.OverflowToolbarPriority",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.overflowtoolbartogglebutton": {
+		"name": "sap.m.OverflowToolbarToggleButton",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n": {
+		"name": "sap.m.p13n",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.abstractcontainer": {
+		"name": "sap.m.p13n.AbstractContainer",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.abstractcontaineritem": {
+		"name": "sap.m.p13n.AbstractContainerItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.basepanel": {
+		"name": "sap.m.p13n.BasePanel",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.container": {
+		"name": "sap.m.p13n.Container",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.engine": {
+		"name": "sap.m.p13n.Engine",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.engineregistrationconfig": {
+		"name": "sap.m.p13n.EngineRegistrationConfig",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.enum": {
+		"name": "sap.m.p13n.enum",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.enum.persistencemode": {
+		"name": "sap.m.p13n.enum.PersistenceMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.enum.processingstrategy": {
+		"name": "sap.m.p13n.enum.ProcessingStrategy",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.groupcontroller": {
+		"name": "sap.m.p13n.GroupController",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.groupitem": {
+		"name": "sap.m.p13n.GroupItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.grouppanel": {
+		"name": "sap.m.p13n.GroupPanel",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.groupstate": {
+		"name": "sap.m.p13n.GroupState",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.icontent": {
+		"name": "sap.m.p13n.IContent",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.item": {
+		"name": "sap.m.p13n.Item",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.metadatahelper": {
+		"name": "sap.m.p13n.MetadataHelper",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.metadataobject": {
+		"name": "sap.m.p13n.MetadataObject",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.modules.adaptationprovider": {
+		"name": "sap.m.p13n.modules.AdaptationProvider",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.popup": {
+		"name": "sap.m.p13n.Popup",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.querypanel": {
+		"name": "sap.m.p13n.QueryPanel",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.selectioncontroller": {
+		"name": "sap.m.p13n.SelectionController",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.selectionpanel": {
+		"name": "sap.m.p13n.SelectionPanel",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.selectionstate": {
+		"name": "sap.m.p13n.SelectionState",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.sortcontroller": {
+		"name": "sap.m.p13n.SortController",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.sortitem": {
+		"name": "sap.m.p13n.SortItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.sortpanel": {
+		"name": "sap.m.p13n.SortPanel",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.sortstate": {
+		"name": "sap.m.p13n.SortState",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13n.state": {
+		"name": "sap.m.p13n.State",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13ncolumnsitem": {
+		"name": "sap.m.P13nColumnsItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13ncolumnspanel": {
+		"name": "sap.m.P13nColumnsPanel",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13nconditionoperation": {
+		"name": "sap.m.P13nConditionOperation",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13nconditionpanel": {
+		"name": "sap.m.P13nConditionPanel",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13ndialog": {
+		"name": "sap.m.P13nDialog",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13ndimmeasureitem": {
+		"name": "sap.m.P13nDimMeasureItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13ndimmeasurepanel": {
+		"name": "sap.m.P13nDimMeasurePanel",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13nfilteritem": {
+		"name": "sap.m.P13nFilterItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13nfilterpanel": {
+		"name": "sap.m.P13nFilterPanel",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13ngroupitem": {
+		"name": "sap.m.P13nGroupItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13ngrouppanel": {
+		"name": "sap.m.P13nGroupPanel",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13nitem": {
+		"name": "sap.m.P13nItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13noperationshelper": {
+		"name": "sap.m.P13nOperationsHelper",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13npanel": {
+		"name": "sap.m.P13nPanel",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13npaneltype": {
+		"name": "sap.m.P13nPanelType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13npopupmode": {
+		"name": "sap.m.P13nPopupMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13nsortitem": {
+		"name": "sap.m.P13nSortItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.p13nsortpanel": {
+		"name": "sap.m.P13nSortPanel",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.page": {
+		"name": "sap.m.Page",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.pageaccessiblelandmarkinfo": {
+		"name": "sap.m.PageAccessibleLandmarkInfo",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.pagebackgrounddesign": {
+		"name": "sap.m.PageBackgroundDesign",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.pagingbutton": {
+		"name": "sap.m.PagingButton",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.panel": {
+		"name": "sap.m.Panel",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.panelaccessiblerole": {
+		"name": "sap.m.PanelAccessibleRole",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.pdfviewer": {
+		"name": "sap.m.PDFViewer",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.pdfviewerdisplaytype": {
+		"name": "sap.m.PDFViewerDisplayType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.placementtype": {
+		"name": "sap.m.PlacementType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.planningcalendar": {
+		"name": "sap.m.PlanningCalendar",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.planningcalendar.appointmentssortercallback": {
+		"name": "sap.m.PlanningCalendar.appointmentsSorterCallback",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.planningcalendarbuiltinview": {
+		"name": "sap.m.PlanningCalendarBuiltInView",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.planningcalendarlegend": {
+		"name": "sap.m.PlanningCalendarLegend",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.planningcalendarrow": {
+		"name": "sap.m.PlanningCalendarRow",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.planningcalendarstickymode": {
+		"name": "sap.m.PlanningCalendarStickyMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.planningcalendarview": {
+		"name": "sap.m.PlanningCalendarView",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.plugins.cellselector": {
+		"name": "sap.m.plugins.CellSelector",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.plugins.columnresizer": {
+		"name": "sap.m.plugins.ColumnResizer",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.plugins.copypreference": {
+		"name": "sap.m.plugins.CopyPreference",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.plugins.copyprovider": {
+		"name": "sap.m.plugins.CopyProvider",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.plugins.copyprovider.excludecontexthandler": {
+		"name": "sap.m.plugins.CopyProvider.excludeContextHandler",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.plugins.copyprovider.extractdatahandler": {
+		"name": "sap.m.plugins.CopyProvider.extractDataHandler",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.plugins.datastateindicator": {
+		"name": "sap.m.plugins.DataStateIndicator",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.plugins.pasteprovider": {
+		"name": "sap.m.plugins.PasteProvider",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.popindisplay": {
+		"name": "sap.m.PopinDisplay",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.popinlayout": {
+		"name": "sap.m.PopinLayout",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.popover": {
+		"name": "sap.m.Popover",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.popuphelper": {
+		"name": "sap.m.PopupHelper",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.priority": {
+		"name": "sap.m.Priority",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.progressindicator": {
+		"name": "sap.m.ProgressIndicator",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.pulltorefresh": {
+		"name": "sap.m.PullToRefresh",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.quickview": {
+		"name": "sap.m.QuickView",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.quickviewbase": {
+		"name": "sap.m.QuickViewBase",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.quickviewcard": {
+		"name": "sap.m.QuickViewCard",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.quickviewgroup": {
+		"name": "sap.m.QuickViewGroup",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.quickviewgroupelement": {
+		"name": "sap.m.QuickViewGroupElement",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.quickviewgroupelementtype": {
+		"name": "sap.m.QuickViewGroupElementType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.quickviewpage": {
+		"name": "sap.m.QuickViewPage",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.radiobutton": {
+		"name": "sap.m.RadioButton",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.radiobuttongroup": {
+		"name": "sap.m.RadioButtonGroup",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.rangeslider": {
+		"name": "sap.m.RangeSlider",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.ratingindicator": {
+		"name": "sap.m.RatingIndicator",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.ratingindicatorvisualmode": {
+		"name": "sap.m.RatingIndicatorVisualMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.resetallmode": {
+		"name": "sap.m.ResetAllMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.responsivepopover": {
+		"name": "sap.m.ResponsivePopover",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.responsivescale": {
+		"name": "sap.m.ResponsiveScale",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.routing.routematchedhandler": {
+		"name": "sap.m.routing.RouteMatchedHandler",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.routing.router": {
+		"name": "sap.m.routing.Router",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.routing.targethandler": {
+		"name": "sap.m.routing.TargetHandler",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.routing.targets": {
+		"name": "sap.m.routing.Targets",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.screensize": {
+		"name": "sap.m.ScreenSize",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.scrollcontainer": {
+		"name": "sap.m.ScrollContainer",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.searchfield": {
+		"name": "sap.m.SearchField",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.segmentedbutton": {
+		"name": "sap.m.SegmentedButton",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.segmentedbuttonitem": {
+		"name": "sap.m.SegmentedButtonItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.select": {
+		"name": "sap.m.Select",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.selectcolumnratio": {
+		"name": "sap.m.SelectColumnRatio",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.selectdialog": {
+		"name": "sap.m.SelectDialog",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.selectdialogbase": {
+		"name": "sap.m.SelectDialogBase",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.selectdialoginitialfocus": {
+		"name": "sap.m.SelectDialogInitialFocus",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.selectedfilterkeys": {
+		"name": "sap.m.SelectedFilterKeys",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.selectiondetails": {
+		"name": "sap.m.SelectionDetails",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.selectiondetailsactionlevel": {
+		"name": "sap.m.SelectionDetailsActionLevel",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.selectiondetailsfacade": {
+		"name": "sap.m.SelectionDetailsFacade",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.selectiondetailsitem": {
+		"name": "sap.m.SelectionDetailsItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.selectiondetailsitemfacade": {
+		"name": "sap.m.SelectionDetailsItemFacade",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.selectiondetailsitemline": {
+		"name": "sap.m.SelectionDetailsItemLine",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.selectlist": {
+		"name": "sap.m.SelectList",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.selectlistkeyboardnavigationmode": {
+		"name": "sap.m.SelectListKeyboardNavigationMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.selecttype": {
+		"name": "sap.m.SelectType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.addaction": {
+		"name": "sap.m.semantic.AddAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.cancelaction": {
+		"name": "sap.m.semantic.CancelAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.deleteaction": {
+		"name": "sap.m.semantic.DeleteAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.detailpage": {
+		"name": "sap.m.semantic.DetailPage",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.discussinjamaction": {
+		"name": "sap.m.semantic.DiscussInJamAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.editaction": {
+		"name": "sap.m.semantic.EditAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.favoriteaction": {
+		"name": "sap.m.semantic.FavoriteAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.filteraction": {
+		"name": "sap.m.semantic.FilterAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.filterselect": {
+		"name": "sap.m.semantic.FilterSelect",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.flagaction": {
+		"name": "sap.m.semantic.FlagAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.forwardaction": {
+		"name": "sap.m.semantic.ForwardAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.fullscreenpage": {
+		"name": "sap.m.semantic.FullscreenPage",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.groupaction": {
+		"name": "sap.m.semantic.GroupAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.groupselect": {
+		"name": "sap.m.semantic.GroupSelect",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.ifilter": {
+		"name": "sap.m.semantic.IFilter",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.igroup": {
+		"name": "sap.m.semantic.IGroup",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.isort": {
+		"name": "sap.m.semantic.ISort",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.mainaction": {
+		"name": "sap.m.semantic.MainAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.masterpage": {
+		"name": "sap.m.semantic.MasterPage",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.messagesindicator": {
+		"name": "sap.m.semantic.MessagesIndicator",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.multiselectaction": {
+		"name": "sap.m.semantic.MultiSelectAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.negativeaction": {
+		"name": "sap.m.semantic.NegativeAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.openinaction": {
+		"name": "sap.m.semantic.OpenInAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.positiveaction": {
+		"name": "sap.m.semantic.PositiveAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.printaction": {
+		"name": "sap.m.semantic.PrintAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.saveaction": {
+		"name": "sap.m.semantic.SaveAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.semanticbutton": {
+		"name": "sap.m.semantic.SemanticButton",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.semanticcontrol": {
+		"name": "sap.m.semantic.SemanticControl",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.semanticpage": {
+		"name": "sap.m.semantic.SemanticPage",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.semanticrulesettype": {
+		"name": "sap.m.semantic.SemanticRuleSetType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.semanticselect": {
+		"name": "sap.m.semantic.SemanticSelect",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.semantictogglebutton": {
+		"name": "sap.m.semantic.SemanticToggleButton",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.sendemailaction": {
+		"name": "sap.m.semantic.SendEmailAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.sendmessageaction": {
+		"name": "sap.m.semantic.SendMessageAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.shareinjamaction": {
+		"name": "sap.m.semantic.ShareInJamAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.sharemenupage": {
+		"name": "sap.m.semantic.ShareMenuPage",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.sortaction": {
+		"name": "sap.m.semantic.SortAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.semantic.sortselect": {
+		"name": "sap.m.semantic.SortSelect",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.shell": {
+		"name": "sap.m.Shell",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.singleplanningcalendar": {
+		"name": "sap.m.SinglePlanningCalendar",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.singleplanningcalendardayview": {
+		"name": "sap.m.SinglePlanningCalendarDayView",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.singleplanningcalendarmonthview": {
+		"name": "sap.m.SinglePlanningCalendarMonthView",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.singleplanningcalendarselectionmode": {
+		"name": "sap.m.SinglePlanningCalendarSelectionMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.singleplanningcalendarview": {
+		"name": "sap.m.SinglePlanningCalendarView",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.singleplanningcalendarweekview": {
+		"name": "sap.m.SinglePlanningCalendarWeekView",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.singleplanningcalendarworkweekview": {
+		"name": "sap.m.SinglePlanningCalendarWorkWeekView",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.size": {
+		"name": "sap.m.Size",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.slider": {
+		"name": "sap.m.Slider",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.slidertooltipbase": {
+		"name": "sap.m.SliderTooltipBase",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.slidetile": {
+		"name": "sap.m.SlideTile",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.splitapp": {
+		"name": "sap.m.SplitApp",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.splitappmode": {
+		"name": "sap.m.SplitAppMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.splitbutton": {
+		"name": "sap.m.SplitButton",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.splitcontainer": {
+		"name": "sap.m.SplitContainer",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.standarddynamicdaterangekeys": {
+		"name": "sap.m.StandardDynamicDateRangeKeys",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.standardlistitem": {
+		"name": "sap.m.StandardListItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.standardtile": {
+		"name": "sap.m.StandardTile",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.standardtiletype": {
+		"name": "sap.m.StandardTileType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.standardtreeitem": {
+		"name": "sap.m.StandardTreeItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.stepinput": {
+		"name": "sap.m.StepInput",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.stepinputstepmodetype": {
+		"name": "sap.m.StepInputStepModeType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.stepinputvalidationmode": {
+		"name": "sap.m.StepInputValidationMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.sticky": {
+		"name": "sap.m.Sticky",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.stringfilteroperator": {
+		"name": "sap.m.StringFilterOperator",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.suggestionitem": {
+		"name": "sap.m.SuggestionItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.swipedirection": {
+		"name": "sap.m.SwipeDirection",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.switch": {
+		"name": "sap.m.Switch",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.switchtype": {
+		"name": "sap.m.SwitchType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.tabcontainer": {
+		"name": "sap.m.TabContainer",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.tabcontaineritem": {
+		"name": "sap.m.TabContainerItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.table": {
+		"name": "sap.m.Table",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.table.columnmenu.actionitem": {
+		"name": "sap.m.table.columnmenu.ActionItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.table.columnmenu.category": {
+		"name": "sap.m.table.columnmenu.Category",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.table.columnmenu.entry": {
+		"name": "sap.m.table.columnmenu.Entry",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.table.columnmenu.item": {
+		"name": "sap.m.table.columnmenu.Item",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.table.columnmenu.itembase": {
+		"name": "sap.m.table.columnmenu.ItemBase",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.table.columnmenu.menu": {
+		"name": "sap.m.table.columnmenu.Menu",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.table.columnmenu.quickaction": {
+		"name": "sap.m.table.columnmenu.QuickAction",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.table.columnmenu.quickactionbase": {
+		"name": "sap.m.table.columnmenu.QuickActionBase",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.table.columnmenu.quickactionitem": {
+		"name": "sap.m.table.columnmenu.QuickActionItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.table.columnmenu.quickgroup": {
+		"name": "sap.m.table.columnmenu.QuickGroup",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.table.columnmenu.quickgroupitem": {
+		"name": "sap.m.table.columnmenu.QuickGroupItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.table.columnmenu.quicksort": {
+		"name": "sap.m.table.columnmenu.QuickSort",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.table.columnmenu.quicksortitem": {
+		"name": "sap.m.table.columnmenu.QuickSortItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.table.columnmenu.quicktotal": {
+		"name": "sap.m.table.columnmenu.QuickTotal",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.table.columnmenu.quicktotalitem": {
+		"name": "sap.m.table.columnmenu.QuickTotalItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.table.columnwidthcontroller": {
+		"name": "sap.m.table.ColumnWidthController",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.tablepersocontroller": {
+		"name": "sap.m.TablePersoController",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.tablepersodialog": {
+		"name": "sap.m.TablePersoDialog",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.tablepersoprovider": {
+		"name": "sap.m.TablePersoProvider",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.tableselectdialog": {
+		"name": "sap.m.TableSelectDialog",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.tabsoverflowmode": {
+		"name": "sap.m.TabsOverflowMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.text": {
+		"name": "sap.m.Text",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.textarea": {
+		"name": "sap.m.TextArea",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.tile": {
+		"name": "sap.m.Tile",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.tilecontainer": {
+		"name": "sap.m.TileContainer",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.tilecontent": {
+		"name": "sap.m.TileContent",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.tilesizebehavior": {
+		"name": "sap.m.TileSizeBehavior",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.timepicker": {
+		"name": "sap.m.TimePicker",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.timepickerclocks": {
+		"name": "sap.m.TimePickerClocks",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.timepickerinputs": {
+		"name": "sap.m.TimePickerInputs",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.timepickermaskmode": {
+		"name": "sap.m.TimePickerMaskMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.timepickersliders": {
+		"name": "sap.m.TimePickerSliders",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.title": {
+		"name": "sap.m.Title",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.titlealignment": {
+		"name": "sap.m.TitleAlignment",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.togglebutton": {
+		"name": "sap.m.ToggleButton",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.token": {
+		"name": "sap.m.Token",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.tokenizer": {
+		"name": "sap.m.Tokenizer",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.tokenizerrendermode": {
+		"name": "sap.m.TokenizerRenderMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.toolbar": {
+		"name": "sap.m.Toolbar",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.toolbardesign": {
+		"name": "sap.m.ToolbarDesign",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.toolbarlayoutdata": {
+		"name": "sap.m.ToolbarLayoutData",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.toolbarseparator": {
+		"name": "sap.m.ToolbarSeparator",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.toolbarspacer": {
+		"name": "sap.m.ToolbarSpacer",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.toolbarstyle": {
+		"name": "sap.m.ToolbarStyle",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.touch": {
+		"name": "sap.m.touch",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.tree": {
+		"name": "sap.m.Tree",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.treeitembase": {
+		"name": "sap.m.TreeItemBase",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.upload.actionsplaceholder": {
+		"name": "sap.m.upload.ActionsPlaceholder",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.upload.column": {
+		"name": "sap.m.upload.Column",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.upload.filepreviewdialog": {
+		"name": "sap.m.upload.FilePreviewDialog",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.upload.p13n.mediator.basemediator": {
+		"name": "sap.m.upload.p13n.mediator.BaseMediator",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.upload.uploader": {
+		"name": "sap.m.upload.Uploader",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.upload.uploaderhttprequestmethod": {
+		"name": "sap.m.upload.UploaderHttpRequestMethod",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.upload.uploadertableitem": {
+		"name": "sap.m.upload.UploaderTableItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.upload.uploadset": {
+		"name": "sap.m.upload.UploadSet",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.upload.uploadsetitem": {
+		"name": "sap.m.upload.UploadSetItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.upload.uploadsettoolbarplaceholder": {
+		"name": "sap.m.upload.UploadSetToolbarPlaceholder",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.upload.uploadsetwithtable": {
+		"name": "sap.m.upload.UploadSetwithTable",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.upload.uploadsetwithtable.iteminfo": {
+		"name": "sap.m.upload.UploadSetwithTable.ItemInfo",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.upload.uploadsetwithtable.itemvalidationhandler": {
+		"name": "sap.m.upload.UploadSetwithTable.itemValidationHandler",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.upload.uploadsetwithtableitem": {
+		"name": "sap.m.upload.UploadSetwithTableItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.uploadcollection": {
+		"name": "sap.m.UploadCollection",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.uploadcollectionitem": {
+		"name": "sap.m.UploadCollectionItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.uploadcollectionparameter": {
+		"name": "sap.m.UploadCollectionParameter",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.uploadcollectiontoolbarplaceholder": {
+		"name": "sap.m.UploadCollectionToolbarPlaceholder",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.uploadsetwithtableactionplaceholder": {
+		"name": "sap.m.UploadSetwithTableActionPlaceHolder",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.uploadstate": {
+		"name": "sap.m.UploadState",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.uploadtype": {
+		"name": "sap.m.UploadType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.urlhelper": {
+		"name": "sap.m.URLHelper",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.valuecolor": {
+		"name": "sap.m.ValueColor",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.valuecsscolor": {
+		"name": "sap.m.ValueCSSColor",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.variantitem": {
+		"name": "sap.m.VariantItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.variantmanagement": {
+		"name": "sap.m.VariantManagement",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.vbox": {
+		"name": "sap.m.VBox",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.verticalplacementtype": {
+		"name": "sap.m.VerticalPlacementType",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.viewsettingscustomitem": {
+		"name": "sap.m.ViewSettingsCustomItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.viewsettingscustomtab": {
+		"name": "sap.m.ViewSettingsCustomTab",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.viewsettingsdialog": {
+		"name": "sap.m.ViewSettingsDialog",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.viewsettingsfilteritem": {
+		"name": "sap.m.ViewSettingsFilterItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.viewsettingsitem": {
+		"name": "sap.m.ViewSettingsItem",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.wheelslider": {
+		"name": "sap.m.WheelSlider",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.wheelslidercontainer": {
+		"name": "sap.m.WheelSliderContainer",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.wizard": {
+		"name": "sap.m.Wizard",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.wizardrendermode": {
+		"name": "sap.m.WizardRenderMode",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.wizardstep": {
+		"name": "sap.m.WizardStep",
+		"filePath": "sap.m.api.json"
+	},
+	"sap.m.wrappingtype": {
+		"name": "sap.m.WrappingType",
+		"filePath": "sap.m.api.json"
+	}
+}
