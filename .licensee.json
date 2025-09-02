@@ -1,0 +1,24 @@
+{
+  "licenses": {
+    "spdx": [
+      "CC-BY-3.0",
+      "CC-BY-4.0",
+      "BSD"
+    ],
+    "blueOak": "bronze"
+  },
+  "packages": {
+    "@sapui5/types": "*",
+    "callsite": "1.0.0",
+    "deep-freeze-strict": "1.1.1",
+    "optimist": "<=0.6.1",
+    "yesno": "0.4.0",
+    "map-stream": "0.1.0",
+    "pause-stream": "0.0.11",
+    "cli-table": "0.3.11",
+    "which-package-manager": "0.0.1",
+    "fly-import": "0.4.1",
+    "pad-component": "0.0.1"
+  },
+  "corrections": true
+}

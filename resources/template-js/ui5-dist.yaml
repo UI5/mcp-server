@@ -1,0 +1,18 @@
+specVersion: "4.0"
+metadata:
+  name: <%= appId %>
+type: application
+resources:
+  configuration:
+    paths:
+      webapp: dist
+framework:
+  name: <%= framework %>
+  version: "<%= frameworkVersion %>"
+  libraries:
+    - name: sap.m<%if (oDataEntitySet) { %>
+    - name: sap.f
+    - name: sap.ui.layout
+    - name: sap.ui.table<% } %>
+    - name: sap.ui.core
+    - name: themelib_<%= defaultTheme %>

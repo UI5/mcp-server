@@ -1,0 +1,38 @@
+{
+	"name": "com.test.apiapp",
+	"version": "1.0.0",
+	"description": "UI5 Application: com.test.apiapp",
+	"author": "API Test",
+	"license": "Apache-2.0",
+	"scripts": {
+		"clean": "rimraf dist coverage",
+		"build": "ui5 build --clean-dest",
+		"build:opt": "ui5 build self-contained --clean-dest --all",
+		"start": "ui5 serve --port 8080 -o index.html",
+		"start-cdn": "ui5 serve --port 8080 -o index-cdn.html",
+		"start-coverage": "ui5 serve --port 8080 --config ui5-coverage.yaml",
+		"start:dist": "npm start -- --config ui5-dist.yaml",
+		"start:dist-cdn": "npm run start-cdn -- --config ui5-dist.yaml",
+		"ts-typecheck": "tsc --noEmit",
+		"lint": "eslint webapp",
+		"ui5lint": "ui5lint",
+		"test-runner": "ui5-test-runner --url http://localhost:8080/test/testsuite.qunit.html",
+		"test-runner-coverage": "ui5-test-runner --url http://localhost:8080/test/testsuite.qunit.html --coverage -ccb 50 -ccf 50 -ccl 50 -ccs 50",
+		"test-ui5": "ui5-test-runner --start start-coverage --url http://localhost:8080/test/testsuite.qunit.html --coverage -ccb 50 -ccf 50 -ccl 50 -ccs 50",
+		"test": "npm run lint && npm run test-ui5"
+	},
+	"devDependencies": {
+		"@sapui5/types": "1.136.0",
+		"@ui5/cli": "^4.0.22",
+		"@ui5/linter": "^1.16.1",
+		"babel-plugin-istanbul": "^7.0.0",
+		"eslint": "^9.31.0",
+		"typescript-eslint": "^8.38.0",
+		"globals": "^16.3.0",
+		"rimraf": "^6.0.1",
+		"typescript": "^5.8.3",
+		"ui5-middleware-livereload": "^3.1.2",
+		"ui5-test-runner": "^5.8.1",
+		"ui5-tooling-transpile": "^3.9.0"
+	}
+}

@@ -1,17 +1,17 @@
 name: Feature Request
-description: Request a new feature for UI5 MCP
+description: Request a new feature for UI5 MCP server
 type: Feature
 body:
   - type: markdown
     attributes:
       value: | 
-        Please have a look at our [contributing guidelines](https://github.com/UI5/mcp/blob/main/CONTRIBUTING.md#request-features) on requesting features to be added to UI5 MCP.
+        Please have a look at our [contributing guidelines](https://github.com/UI5/mcp-server/blob/main/CONTRIBUTING.md#request-features) on requesting features to be added to UI5 MCP server.
   - type: textarea
     id: background-information
     attributes:
       label: Why are you proposing this feature?
-      description: A clear and concise description of the underlying scenario to be covered and whats's missing in UI5 MCP. Provide any relevant background information that helps explain why this feature would be beneficial.
-      placeholder: A clear and concise description of the underlying scenario to be covered and whats's missing in UI5 MCP. Provide any relevant background information that helps explain why this feature would be beneficial.
+      description: A clear and concise description of the underlying scenario to be covered and whats's missing in UI5 MCP server. Provide any relevant background information that helps explain why this feature would be beneficial.
+      placeholder: A clear and concise description of the underlying scenario to be covered and whats's missing in UI5 MCP server. Provide any relevant background information that helps explain why this feature would be beneficial.
     validations:
       required: true
   - type: textarea

@@ -1,11 +1,11 @@
 name: Bug Report
-description: Report a bug in UI5 MCP
+description: Report a bug in UI5 MCP server
 type: Bug
 body:
   - type: markdown
     attributes:
       value: | 
-        Please have a look at our [contributing guidelines](https://github.com/UI5/mcp/blob/main/CONTRIBUTING.md#report-bugs) on reporting issues.
+        Please have a look at our [contributing guidelines](https://github.com/UI5/mcp-server/blob/main/CONTRIBUTING.md#report-bugs) on reporting issues.
   - type: textarea
     id: steps-to-reproduce
     attributes:
@@ -25,10 +25,10 @@ body:
     validations:
       required: true
   - type: input
-    id: version-ui5-mcp
+    id: version-ui5-mcp-server
     attributes:
-      label: Which UI5 MCP version is your project targeting?
-      description: Share the UI5 MCP version where the issue occurs.
+      label: Which UI5 MCP server version is your project targeting?
+      description: Share the UI5 MCP server version where the issue occurs.
     validations:
       required: true
   - type: checkboxes

@@ -1,0 +1,58 @@
+[
+  {
+    "shortIdentifier": "0187ea5",
+    "identifier": "0187ea5e2eff4166b0453b9dcc8fc64f",
+    "uri": "https://ui5.sap.com/1.136.7/topic/0187ea5e2eff4166b0453b9dcc8fc64f",
+    "title": "Component Metadata",
+    "filePath": "0187ea5e2eff4166b0453b9dcc8fc64f.md"
+  },
+  {
+    "shortIdentifier": "00737d6",
+    "identifier": "00737d6c1b864dc3ab72ef56611491c4",
+    "uri": "https://ui5.sap.com/1.136.7/topic/00737d6c1b864dc3ab72ef56611491c4",
+    "title": "Best Practices for Loading Modules",
+    "filePath": "00737d6c1b864dc3ab72ef56611491c4.md"
+  },
+  {
+    "shortIdentifier": "28fcd55",
+    "identifier": "28fcd55b04654977b63dacbee0552712",
+    "uri": "https://ui5.sap.com/1.136.7/topic/28fcd55b04654977b63dacbee0552712",
+    "title": "Best Practices for Developers",
+    "filePath": "28fcd55b04654977b63dacbee0552712.md"
+  },
+  {
+    "shortIdentifier": "a87ca84",
+    "identifier": "a87ca843bcee469f82a9072927a7dcdb",
+    "uri": "https://ui5.sap.com/1.136.7/topic/a87ca843bcee469f82a9072927a7dcdb",
+    "title": "Deprecated Themes and Libraries",
+    "filePath": "a87ca843bcee469f82a9072927a7dcdb.md"
+  },
+  {
+    "shortIdentifier": "676b636",
+    "identifier": "676b636446c94eada183b1218a824717",
+    "uri": "https://ui5.sap.com/1.136.7/topic/676b636446c94eada183b1218a824717",
+    "title": "Use Asynchronous Loading",
+    "filePath": "676b636446c94eada183b1218a824717.md"
+  },
+  {
+    "shortIdentifier": "fe1a6db",
+    "identifier": "fe1a6dba940e479fb7c3bc753f92b28c",
+    "uri": "https://ui5.sap.com/1.136.7/topic/fe1a6dba940e479fb7c3bc753f92b28c",
+    "title": "Content Security Policy",
+    "filePath": "fe1a6dba940e479fb7c3bc753f92b28c.md"
+  },
+  {
+    "shortIdentifier": "b0fb4de",
+    "identifier": "b0fb4de7364f4bcbb053a99aa645affe",
+    "uri": "https://ui5.sap.com/1.136.7/topic/b0fb4de7364f4bcbb053a99aa645affe",
+    "title": "Handling Events in XML Views",
+    "filePath": "b0fb4de7364f4bcbb053a99aa645affe.md"
+  },
+  {
+    "shortIdentifier": "032be2c",
+    "identifier": "032be2cb2e1d4115af20862673bedcdb",
+    "uri": "https://ui5.sap.com/1.136.7/topic/032be2cb2e1d4115af20862673bedcdb",
+    "title": "Test Starter",
+    "filePath": "032be2cb2e1d4115af20862673bedcdb.md"
+  }
+]
