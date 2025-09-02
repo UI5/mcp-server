@@ -39,5 +39,5 @@ jobs:
     - name: Run unit tests
       run: npm run coverage
 
-    # - name: Send report to Coveralls
-    #   uses: coverallsapp/github-action@v2.3.6
+    - name: Send report to Coveralls
+      uses: coverallsapp/github-action@v2.3.6
