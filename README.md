@@ -115,6 +115,17 @@ code --add-mcp '{"name":"@ui5/mcp-server","type": "stdio","command":"npx","args"
 2. Below the prompt/task input field, click on the "Manage MCP servers" icon and select the gear button in the popup.
 3. Click "Configure MCP servers" and add the above configuration.
 
+## Rules
+The following rules help guide the LLM to use the server correctly:
+
+```markdown
+## Guidelines for UI5
+
+Use the `get_guidelines` tool of the UI5 MCP server to retrieve the latest coding standards and best practices for UI5 development.
+```
+
+Add these rules to your existing global or project-specific [`AGENTS.md`](https://agents.md/) (specifics may vary based on respective MCP client).
+
 ## Support, Feedback, Contributing
 
 This project is open to feature requests/suggestions, bug reports etc. via [GitHub issues](https://github.com/UI5/mcp-server/issues). Contribution and feedback are encouraged and always welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contribution Guidelines](CONTRIBUTING.md).
