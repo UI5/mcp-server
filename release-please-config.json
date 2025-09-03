@@ -6,7 +6,6 @@
 			"include-component-in-tag": false,
 			"bump-minor-pre-major": true,
 			"bump-patch-for-minor-pre-major": true,
-			"release-as": "0.1.0",
 			"changelog-sections": [
 				{
 					"type": "feat",
