@@ -45,7 +45,8 @@ This configuration works in most tools:
 ```json
 {
 	"mcpServers": {
-		"ui5mcp": {
+		"@ui5/mcp-server": {
+			"type": "stdio",
 			"command": "npx",
 			"args": [
 				"@ui5/mcp-server"
@@ -79,7 +80,8 @@ The UI5 MCP server can be configured using the following environment variables. 
 ```json
 {
 	"mcpServers": {
-		"ui5mcp": {
+		"@ui5/mcp-server": {
+			"type": "stdio",
 			"command": "npx",
 			"args": [
 				"@ui5/mcp-server"
@@ -103,8 +105,8 @@ Follow the MCP installation [guide](https://code.visualstudio.com/docs/copilot/c
 Or use the VS Code CLI:
 
 ```bash
-# Using VSCode CLI
-code --add-mcp '{"name":"ui5mcp","command":"npx","args":["@ui5/mcp-server"]}'
+# Using VS Code CLI
+code --add-mcp '{"name":"@ui5/mcp-server","type": "stdio","command":"npx","args":["@ui5/mcp-server"]}'
 ```
 
 #### Cline
