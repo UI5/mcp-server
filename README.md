@@ -2,12 +2,11 @@
 
 A [Model Context Protocol](https://modelcontextprotocol.io/) server for UI5 development.
 
-<!-- Comment this out as soon as repository is available on github.com -->
-<!-- [![OpenUI5 Community Slack (#tooling channel)](https://img.shields.io/badge/slack-join-44cc11.svg)](https://ui5-slack-invite.cfapps.eu10.hana.ondemand.com/)
+[![OpenUI5 Community Slack (#tooling channel)](https://img.shields.io/badge/slack-join-44cc11.svg)](https://ui5-slack-invite.cfapps.eu10.hana.ondemand.com/)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.1%20adopted-ff69b4.svg)](https://github.com/UI5/mcp-server?tab=coc-ov-file#readme)
 [![REUSE status](https://api.reuse.software/badge/github.com/UI5/mcp-server)](https://api.reuse.software/info/github.com/UI5/mcp-server)
 [![npm Package Version](https://badge.fury.io/js/%40ui5%mcp-server.svg)](https://www.npmjs.com/package/@ui5/mcp-server)
-[![Coverage Status](https://coveralls.io/repos/github/UI5/mcp-server/badge.svg)](https://coveralls.io/github/UI5/mcp-server) -->
+[![Coverage Status](https://coveralls.io/repos/github/UI5/mcp-server/badge.svg)](https://coveralls.io/github/UI5/mcp-server)
 
 ## Description
 
