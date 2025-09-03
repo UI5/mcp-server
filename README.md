@@ -19,6 +19,9 @@ The UI5 [Model Context Protocol](https://modelcontextprotocol.io/) server offers
 - Supports the developer to detect and fix UI5-specific errors in the code
 - Provides additional UI5-specific information for agentic AI tools
 
+> [!TIP]
+> Make sure to also check out our [announcement blog post](https://community.sap.com/t5/technology-blog-posts-by-sap/give-your-ai-agent-some-tools-introducing-the-ui5-mcp-server/ba-p/14200825) in the SAP Community!
+
 ## Available Tools
 
 - `create_ui5_app`: Scaffolds a new UI5 application based on a set of templates.
