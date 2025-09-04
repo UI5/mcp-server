@@ -25,7 +25,7 @@ export default function registerTool(registerTool: RegisterTool, context: Contex
 		const projectInfo = await getProjectInfo(resolvedProjectDir);
 		const frameworkName = projectInfo.frameworkName ?? "OpenUI5";
 		const frameworkVersion =
-			projectInfo.frameworkVersion ?? (projectInfo.frameworkName === "OpenUI5" ? "1.136.5" : "1.136.7");
+			projectInfo.frameworkVersion ?? (frameworkName === "OpenUI5" ? "1.136.5" : "1.136.7");
 		const apiRef = await getApiReference(query, frameworkName, frameworkVersion);
 
 		return {
