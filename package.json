@@ -77,7 +77,7 @@
 		"@modelcontextprotocol/sdk": "^1.17.5",
 		"@ui5/linter": "^1.19.0",
 		"@ui5/logger": "^4.0.2",
-		"@ui5/project": "^4.0.5",
+		"@ui5/project": "^4.0.6",
 		"async-mutex": "^0.5.0",
 		"ejs": "^3.1.10",
 		"execa": "^9.6.0",
