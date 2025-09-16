@@ -45,7 +45,7 @@
 				"depcheck": "^1.4.7",
 				"eslint": "^9.35.0",
 				"eslint-plugin-ava": "^15.0.1",
-				"esmock": "^2.7.2",
+				"esmock": "^2.7.3",
 				"husky": "^9.1.7",
 				"licensee": "^11.1.1",
 				"nyc": "^17.1.0",
@@ -11826,9 +11826,9 @@
 			}
 		},
 		"node_modules/esmock": {
-			"version": "2.7.2",
-			"resolved": "https://registry.npmjs.org/esmock/-/esmock-2.7.2.tgz",
-			"integrity": "sha512-/ilhkWbW4FXgQpRbS0LZpKG1AFkiFZkmapP/868Lqa4hSKgKVtMilFXlQrIMssLzyvpeDVg2Q9L3VInnqYoTAg==",
+			"version": "2.7.3",
+			"resolved": "https://registry.npmjs.org/esmock/-/esmock-2.7.3.tgz",
+			"integrity": "sha512-/M/YZOjgyLaVoY6K83pwCsGE1AJQnj4S4GyXLYgi/Y79KL8EeW6WU7Rmjc89UO7jv6ec8+j34rKeWOfiLeEu0A==",
 			"dev": true,
 			"license": "ISC",
 			"engines": {

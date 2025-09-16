@@ -107,7 +107,7 @@
 		"depcheck": "^1.4.7",
 		"eslint": "^9.35.0",
 		"eslint-plugin-ava": "^15.0.1",
-		"esmock": "^2.7.2",
+		"esmock": "^2.7.3",
 		"husky": "^9.1.7",
 		"licensee": "^11.1.1",
 		"nyc": "^17.1.0",
