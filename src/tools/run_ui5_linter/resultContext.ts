@@ -252,4 +252,16 @@ or \`odata\` globals are used implicitly in bindings (missing an explicit import
 	},
 	"ui5-class-declaration": `UI5 classes are not declared correctly. This rule only applies to TypeScript code where built-in ECMAScript classes are used instead of an \`.extend()\` call`,
 	"unsupported-api-usage": `UI5 API is not used correctly. For example, a formatter declared in a binding declaration in JavaScript is not of type \`function\``,
+	"no-outdated-manifest-version": {
+		text: `The \`manifest.json\` or \`Component.js\` file must declare the latest supported manifest version`,
+		topics: ["be0cf40f61184b358b5faedaec98b2da"],
+	},
+	"no-legacy-ui5-version-in-manifest": {
+		text: `The \`manifest.json\` file must not declare a UI5 version that is older than 1.136.0`,
+		topics: ["be0cf40f61184b358b5faedaec98b2da"],
+	},
+	"no-removed-manifest-property": {
+		text: `The \`manifest.json\` file must not contain properties that have been removed from the manifest specification`,
+		topics: ["be0cf40f61184b358b5faedaec98b2da"],
+	},
 };
