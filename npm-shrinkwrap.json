@@ -10,7 +10,7 @@
 			"license": "Apache-2.0",
 			"dependencies": {
 				"@modelcontextprotocol/sdk": "^1.18.0",
-				"@ui5/linter": "^1.20.0",
+				"@ui5/linter": "^1.20.1",
 				"@ui5/logger": "^4.0.2",
 				"@ui5/project": "^4.0.6",
 				"async-mutex": "^0.5.0",
@@ -5352,18 +5352,18 @@
 			}
 		},
 		"node_modules/@ui5/linter": {
-			"version": "1.20.0",
-			"resolved": "https://registry.npmjs.org/@ui5/linter/-/linter-1.20.0.tgz",
-			"integrity": "sha512-gv6A0lkHgQuSdla4ydnsRZqXq3eyv9soIPaxf0gTVqS4AEhz8vnEr3yNrq/x35vp689OC/+EuWa8BJ28wqHbVQ==",
+			"version": "1.20.1",
+			"resolved": "https://registry.npmjs.org/@ui5/linter/-/linter-1.20.1.tgz",
+			"integrity": "sha512-tNm8hRzMeRPE+7iAfbn0bSB9xHDAu74806vv8FHNvLwX2/jmFyaICHzjdJZ8nfFkFlnairA1vNVBtbNwyeu5TQ==",
 			"hasShrinkwrap": true,
 			"license": "Apache-2.0",
 			"dependencies": {
 				"@jridgewell/sourcemap-codec": "^1.5.5",
 				"@jridgewell/trace-mapping": "^0.3.31",
 				"@sapui5/types": "1.136.8",
-				"@ui5/fs": "^4.0.1",
+				"@ui5/fs": "^4.0.2",
 				"@ui5/logger": "^4.0.1",
-				"@ui5/project": "^4.0.4",
+				"@ui5/project": "^4.0.5",
 				"chalk": "^5.6.2",
 				"data-with-position": "^0.5.0",
 				"fast-xml-parser": "^5.2.5",
@@ -5856,17 +5856,18 @@
 			"integrity": "sha512-tUPMzKooKDvMOhqcNVUPwkt+JNnF8ASgWSsrLgleVd0SjLj4boJhteSsF9f6YDjye0mmUjO+BDMWW83F97ehXA=="
 		},
 		"node_modules/@ui5/linter/node_modules/@ui5/fs": {
-			"version": "4.0.1",
-			"resolved": "https://registry.npmjs.org/@ui5/fs/-/fs-4.0.1.tgz",
-			"integrity": "sha512-vVphxHk0yywJ0eseBNQ2rd1JdUZSUUZ0CAjZ3ghttqD8hx8elJjc7UllpOduysDcdaH3+Km2oLw9yumz14+lgg==",
+			"version": "4.0.2",
+			"resolved": "https://registry.npmjs.org/@ui5/fs/-/fs-4.0.2.tgz",
+			"integrity": "sha512-0R7eb9xEMswvkN2wIiyYJtQY83evQJ7LQhTnRf5Ms0o2R29twGLP4XewqH+IoGWyT3T4SuDNTWmUU2UaTRY4zg==",
+			"license": "Apache-2.0",
 			"dependencies": {
 				"@ui5/logger": "^4.0.1",
 				"clone": "^2.1.2",
 				"escape-string-regexp": "^5.0.0",
-				"globby": "^14.0.2",
+				"globby": "^14.1.0",
 				"graceful-fs": "^4.2.11",
 				"micromatch": "^4.0.8",
-				"minimatch": "^10.0.1",
+				"minimatch": "^10.0.3",
 				"pretty-hrtime": "^1.0.3",
 				"random-int": "^3.0.0"
 			},
@@ -5876,11 +5877,12 @@
 			}
 		},
 		"node_modules/@ui5/linter/node_modules/@ui5/logger": {
-			"version": "4.0.1",
-			"resolved": "https://registry.npmjs.org/@ui5/logger/-/logger-4.0.1.tgz",
-			"integrity": "sha512-M6ftnWiUXq3SVLLQ5XTBoJNdxzDvu71FoGh4iIR2kpaDCgpQ5DbHuBRhKAlrUB6EmIFzOxKepgYN95z09xbCbA==",
+			"version": "4.0.2",
+			"resolved": "https://registry.npmjs.org/@ui5/logger/-/logger-4.0.2.tgz",
+			"integrity": "sha512-uscDCQyHFeenh4r2RbYuffTMn6IQdcNC1tXrQ4BF+apAFjmDGP11IHdAwVCKwxgyPrIC17HT2gub3ZugGM8kpQ==",
+			"license": "Apache-2.0",
 			"dependencies": {
-				"chalk": "^5.3.0",
+				"chalk": "^5.6.0",
 				"cli-progress": "^3.12.0",
 				"figures": "^6.1.0"
 			},
@@ -5890,18 +5892,19 @@
 			}
 		},
 		"node_modules/@ui5/linter/node_modules/@ui5/project": {
-			"version": "4.0.4",
-			"resolved": "https://registry.npmjs.org/@ui5/project/-/project-4.0.4.tgz",
-			"integrity": "sha512-uSIypfUFtLCND2mDWP+6Btr3Gk/+zuMmG5px+WiH1BkV8NoIJcD/3XZPzj1lYnaCJxwVTLPyfzTUl5xZBL4ryg==",
+			"version": "4.0.5",
+			"resolved": "https://registry.npmjs.org/@ui5/project/-/project-4.0.5.tgz",
+			"integrity": "sha512-EGY4YqvPc218Ldc08prYkEc+h9eXjfJp1lBOWjAM5ee22NYBPo2wF9W6r7C5J+BovXiPlh26c7+jIhR1wHlh2Q==",
+			"license": "Apache-2.0",
 			"dependencies": {
 				"@npmcli/config": "^9.0.0",
-				"@ui5/fs": "^4.0.1",
-				"@ui5/logger": "^4.0.1",
+				"@ui5/fs": "^4.0.2",
+				"@ui5/logger": "^4.0.2",
 				"ajv": "^6.12.6",
 				"ajv-errors": "^1.0.1",
-				"chalk": "^5.3.0",
+				"chalk": "^5.6.2",
 				"escape-string-regexp": "^5.0.0",
-				"globby": "^14.0.2",
+				"globby": "^14.1.0",
 				"graceful-fs": "^4.2.11",
 				"js-yaml": "^4.1.0",
 				"lockfile": "^1.0.4",
@@ -5911,8 +5914,8 @@
 				"pretty-hrtime": "^1.0.3",
 				"read-package-up": "^11.0.0",
 				"read-pkg": "^9.0.1",
-				"resolve": "^1.22.8",
-				"semver": "^7.6.3",
+				"resolve": "^1.22.10",
+				"semver": "^7.7.2",
 				"xml2js": "^0.6.2",
 				"yesno": "^0.4.0"
 			},
@@ -5921,7 +5924,7 @@
 				"npm": ">= 8"
 			},
 			"peerDependencies": {
-				"@ui5/builder": "^4.0.4"
+				"@ui5/builder": "^4.0.11"
 			},
 			"peerDependenciesMeta": {
 				"@ui5/builder": {
