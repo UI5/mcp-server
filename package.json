@@ -25,6 +25,7 @@
 	"bin": {
 		"ui5mcp": "bin/ui5mcp.js"
 	},
+	"mcpName": "io.github.UI5/mcp-server",
 	"type": "module",
 	"scripts": {
 		"start": "tsx src/cli.ts",
