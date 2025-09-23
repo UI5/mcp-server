@@ -301,3 +301,21 @@ test("normalizePath throws error when realpath fails", async (t) => {
 	const error = await t.throwsAsync(() => context.normalizePath(inputPath));
 	t.is(error, fsError);
 });
+
+test("isInsideRoots compares Windows drive letter case-insensitively", (t) => {
+	const {Context} = t.context;
+	const context = new Context();
+
+	// Only a meaningful assertion on Windows. On other platforms just mark as passed.
+	if (process.platform !== "win32") {
+		t.pass();
+		return;
+	}
+
+	// Lowercase root, uppercase path
+	const lowerRoot = "c:\\caseinsensitive\\root";
+	context.setRoots([{uri: pathToFileURL(lowerRoot).toString()}]);
+
+	const upperPath = "C:\\CaseInsensitive\\Root\\subdir\\file.txt";
+	t.true(context.isInsideRoots(upperPath));
+});

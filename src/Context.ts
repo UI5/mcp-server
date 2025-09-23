@@ -84,6 +84,9 @@ export default class Context {
 		}
 
 		return this.allowedRootPaths.some((rootPath) => {
+			if (process.platform === "win32") {
+				return absolutePath.toUpperCase().startsWith(rootPath.toUpperCase()); // case-insensitive due to Windows
+			}
 			return absolutePath.startsWith(rootPath);
 		});
 	}
