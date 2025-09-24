@@ -1,5 +1,28 @@
 # Changelog
 
+## [0.1.2](https://github.com/UI5/mcp-server/compare/v0.1.1...v0.1.2) (2025-09-24)
+
+
+### Features
+
+* **ui5-linter:** Enable Manifest 2 checks ([#37](https://github.com/UI5/mcp-server/issues/37)) ([88f7db9](https://github.com/UI5/mcp-server/commit/88f7db9eeb53ce75af7060ae57f4c862629ebc49))
+
+
+### Bug Fixes
+
+* Root path check on Windows is now case-insensitive ([#49](https://github.com/UI5/mcp-server/issues/49)) ([12e9b7d](https://github.com/UI5/mcp-server/commit/12e9b7d352dec3e2f8748ecf88f0ec0c970beea5)), closes [#17](https://github.com/UI5/mcp-server/issues/17)
+
+
+### Dependencies
+
+* Bump @modelcontextprotocol/sdk from 1.17.5 to 1.18.0 ([d0bf5a3](https://github.com/UI5/mcp-server/commit/d0bf5a3ecf1b8171df95a9c4b76de11959688909))
+* Bump @modelcontextprotocol/sdk from 1.18.0 to 1.18.1 ([6164c52](https://github.com/UI5/mcp-server/commit/6164c523137f3db5a6ffb4e8096b674a2b2a447d))
+* Bump @ui5/linter from 1.19.0 to 1.20.0 ([#30](https://github.com/UI5/mcp-server/issues/30)) ([155f3cf](https://github.com/UI5/mcp-server/commit/155f3cfb9c669eeef377b6e96bd146e562f06303))
+* Bump @ui5/linter from 1.20.0 to 1.20.1 ([e2bc8b0](https://github.com/UI5/mcp-server/commit/e2bc8b07b97be8bcc032f5703cad993c73534266))
+* Bump @ui5/logger from 4.0.1 to 4.0.2 ([84a66d8](https://github.com/UI5/mcp-server/commit/84a66d8bc76265695ae7a8ba053369392aed4368))
+* Bump @ui5/project from 4.0.4 to 4.0.5 ([1a49b8c](https://github.com/UI5/mcp-server/commit/1a49b8c4456125c273d04c441f42934710efe555))
+* Bump @ui5/project from 4.0.5 to 4.0.6 ([d304cdb](https://github.com/UI5/mcp-server/commit/d304cdb03f58164f198f71d2bf045ee806bd4036))
+
 ## [0.1.1](https://github.com/UI5/mcp-server/compare/v0.1.0...v0.1.1) (2025-09-04)
 
 
