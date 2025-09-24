@@ -70,7 +70,7 @@
 				"dataSource": "default",
 				"preload": true,
 				"settings": {
-					"autoExpandSelect": true,<% if (serverRequiresXCSRF) { %>
+					"autoExpandSelect": true,<% if (serverRequiresXCSRF || gte1_141_0) { %>
 					"earlyRequests": true,<% } %>
 					"operationMode": "Server"<% if (lt1_110_0) { %>,
 					"synchronizationMode": "None"<% } %>

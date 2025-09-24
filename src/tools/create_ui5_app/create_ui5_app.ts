@@ -237,6 +237,7 @@ The minimum version for ${framework} is ${minFwkVersionToUse}.`
 		gte1_115_0: semver.gte(frameworkVersion, "1.115.0"),
 		gte1_120_0: semver.gte(frameworkVersion, "1.120.0"),
 		lt1_124_0: semver.lt(frameworkVersion, "1.124.0"),
+		gte1_141_0: semver.gte(frameworkVersion, "1.141.0"),
 	};
 
 	// Process template files
