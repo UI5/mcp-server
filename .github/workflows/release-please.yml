@@ -25,7 +25,7 @@ jobs:
     if: ${{needs.pull-request.outputs.releases_created && toJson(fromJson(needs.pull-request.outputs.paths_released)) != '[]'}}
     runs-on: ubuntu-24.04
     permissions:
-      id-token: write
+      id-token: write # Required for trusted publishing via OIDC (https://docs.npmjs.com/trusted-publishers)
     steps:
     - name: Checkout
       uses: actions/checkout@v5
@@ -52,9 +52,5 @@ jobs:
       run: |
         rm package.json
         mv package.json.bak package.json
-    - name: Publish to NPM
-      env:
-        NPM_TOKEN: ${{secrets.NPM_UI5BOT}}
-      run: |
-        echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> ./.npmrc
-        npm publish --provenance --access public
+    - name: Publish to npm
+      run: npm publish --access public
