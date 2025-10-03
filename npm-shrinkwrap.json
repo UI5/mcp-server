@@ -16,7 +16,7 @@
 				"async-mutex": "^0.5.0",
 				"ejs": "^3.1.10",
 				"execa": "^9.6.0",
-				"fast-xml-parser": "^5.2.5",
+				"fast-xml-parser": "^5.3.0",
 				"globby": "^14.1.0",
 				"lockfile": "^1.0.4",
 				"make-fetch-happen": "^14.0.3",
@@ -12198,9 +12198,9 @@
 			"license": "BSD-3-Clause"
 		},
 		"node_modules/fast-xml-parser": {
-			"version": "5.2.5",
-			"resolved": "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-5.2.5.tgz",
-			"integrity": "sha512-pfX9uG9Ki0yekDHx2SiuRIyFdyAr1kMIMitPvb0YBo8SUfKvia7w7FIyd/l6av85pFYRhZscS75MwMnbvY+hcQ==",
+			"version": "5.3.0",
+			"resolved": "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-5.3.0.tgz",
+			"integrity": "sha512-gkWGshjYcQCF+6qtlrqBqELqNqnt4CxruY6UVAWWnqb3DQ6qaNFEIKqzYep1XzHLM/QtrHVCxyPOtTk4LTQ7Aw==",
 			"funding": [
 				{
 					"type": "github",
