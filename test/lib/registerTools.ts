@@ -19,6 +19,7 @@ const test = anyTest as TestFn<{
 		registerProjectInfoTool: sinonGlobal.SinonStub;
 		registerCreateUi5AppTool: sinonGlobal.SinonStub;
 		registerGetVersionInfoTool: sinonGlobal.SinonStub;
+		registerGetIntegrationCardsGuidelinesTool: sinonGlobal.SinonStub;
 	};
 }>;
 
@@ -32,6 +33,7 @@ test.beforeEach(async (t) => {
 	const registerProjectInfoToolStub = t.context.sinon.stub();
 	const registerCreateUi5AppToolStub = t.context.sinon.stub();
 	const registerGetVersionInfoToolStub = t.context.sinon.stub();
+	const registerGetIntegrationCardsGuidelinesToolStub = t.context.sinon.stub();
 
 	// Store the tool stubs in the context for assertions
 	t.context.toolStubs = {
@@ -41,6 +43,7 @@ test.beforeEach(async (t) => {
 		registerProjectInfoTool: registerProjectInfoToolStub,
 		registerCreateUi5AppTool: registerCreateUi5AppToolStub,
 		registerGetVersionInfoTool: registerGetVersionInfoToolStub,
+		registerGetIntegrationCardsGuidelinesTool: registerGetIntegrationCardsGuidelinesToolStub,
 	};
 	const mockMcpServer = t.context.sinon.createStubInstance(McpServer);
 	t.context.mockMcpServer = mockMcpServer;
@@ -64,6 +67,9 @@ test.beforeEach(async (t) => {
 		},
 		"../../src/tools/get_version_info/index.js": {
 			default: registerGetVersionInfoToolStub,
+		},
+		"../../src/tools/get_integration_cards_guidelines/index.js": {
+			default: registerGetIntegrationCardsGuidelinesToolStub,
 		},
 	});
 
@@ -104,6 +110,7 @@ test("All tools are registered in the correct order", (t) => {
 	t.true(toolStubs.registerProjectInfoTool.calledOnce);
 	t.true(toolStubs.registerCreateUi5AppTool.calledOnce);
 	t.true(toolStubs.registerGetVersionInfoTool.calledOnce);
+	t.true(toolStubs.registerGetIntegrationCardsGuidelinesTool.calledOnce);
 });
 
 test("processResponse: Default behavior", (t) => {

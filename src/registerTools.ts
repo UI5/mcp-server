@@ -9,6 +9,7 @@ import registerUi5LinterTool from "./tools/run_ui5_linter/index.js";
 import registerApiRefTool from "./tools/get_api_reference/index.js";
 import registerGetGuidelinesTool from "./tools/get_guidelines/index.js";
 import registerGetVersionInfoTool from "./tools/get_version_info/index.js";
+import registerGetIntegrationCardsGuidelinesTool from "./tools/get_integration_cards_guidelines/index.js";
 
 interface Options {
 	useStructuredContentInResponse: boolean;
@@ -45,6 +46,8 @@ export default function (server: McpServer, context: Context, options: Options) 
 	registerCreateUi5AppTool(registerTool, context);
 
 	registerGetVersionInfoTool(registerTool, context);
+
+	registerGetIntegrationCardsGuidelinesTool(registerTool, context);
 }
 
 export function _processResponse({content, structuredContent}: CallToolResult, options: Options) {
