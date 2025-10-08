@@ -47,6 +47,7 @@ export interface TemplateVars {
 	gte1_120_0: boolean;
 	lt1_124_0: boolean;
 	gte1_141_0: boolean;
+	gte1_136_0: boolean;
 }
 
 /**
