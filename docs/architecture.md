@@ -12,9 +12,9 @@ The project is still in development. While features can be proposed (for example
 
 # 3. Introduction
 
-The UI5 MCP server is built on top of the official [TypeScript SDK for Model Context Protocol servers](https://github.com/modelcontextprotocol/typescript-sdk) and exposes a collection of tools, each designed to address a specific aspect of UI5 development. These tools include project creation, code linting, API reference lookup, and documentation search. The architecture is modular, with each tool implemented as a self-contained unit, which promotes maintainability and extensibility.
+The UI5 MCP server is built on top of the official [TypeScript SDK for Model Context Protocol servers](https://github.com/modelcontextprotocol/typescript-sdk) and exposes a collection of tools, each designed to address a specific aspect of UI5 development. These tools include project creation, code linting, API reference lookup, and framework version retrieval.
 
-This document outlines the architecture of the UI5 MCP server, detailing the system's components, key technical decisions, and the overall design. It serves as a guide for both developers contributing to the project and users who want to understand its inner workings.
+This document outlines the architecture of the UI5 MCP server, detailing the package's components, key technical decisions, and the overall design. It serves as a guide for both developers contributing to the project and users who want to understand its inner workings.
 
 # 4. Architecture Input
 
