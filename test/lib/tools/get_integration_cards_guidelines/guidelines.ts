@@ -40,7 +40,7 @@ test("getGuidelines returns guidelines content", async (t) => {
 	const callArg = t.context.readFileStub.firstCall.args[0];
 
 	t.true(
-		callArg.toString().includes("integration_cards_guidelines`.md"),
-		"readFile should be called with a path containing 'guidelines.md'"
+		callArg.toString().includes("integration_cards_guidelines.md"),
+		"readFile should be called with a path containing 'integration_cards_guidelines.md'"
 	);
 });
