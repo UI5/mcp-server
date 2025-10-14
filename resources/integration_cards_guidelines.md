@@ -8,7 +8,6 @@
 - **ALWAYS** refer to parameters using correct syntax - `{parameters>/parameterKey/value}`.
 - **ALWAYS** perform validation of the integration card as described in [2. Validation](#2-validation).
 - **ALWAYS** show a preview of the generated card following the [4. Preview Instructions](#4-preview).
-- **ALWAYS** generate new declarative integration cards using the `create_integration_card` tool.
 
 ### 1.1 Data
 - **NEVER** modify the given data under any circumstances
@@ -41,7 +40,6 @@
 
 ## 2. Validation
 - **ALWAYS** ensure that `manifest.json` file is valid JSON.
-- **ALWAYS** validate the `manifest.json` against the UI5 Manifest Schema. You must do it using the `run_schema_validation` tool.
 - **ALWAYS** ensure that in `manifest.json` file the property `sap.app/type` is set to `"card"`.
 - **ALWAYS** avoid deprecated properties in `manifest.json` and other places.
 - **NEVER** treat Integration Cards project as UI5 project, except for cards of type "Component".
