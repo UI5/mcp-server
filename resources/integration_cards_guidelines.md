@@ -318,7 +318,8 @@
           "dimensions": [
             {
               "name": "Date",
-              "value": "{dateField}"
+              "value": "{dateField}",
+              "dataType": "date"
             }
           ],
           "feeds": [
@@ -455,7 +456,8 @@
           "dimensions": [
             {
               "name": "Year",
-              "value": "{yearField}"
+              "value": "{yearField}",
+              "dataType": "date"
             }
           ],
           "feeds": [
@@ -551,7 +553,8 @@
           "dimensions": [
             {
               "name": "Year",
-              "value": "{yearField}"
+              "value": "{yearField}",
+              "dataType": "date"
             }
           ],
           "feeds": [
@@ -820,7 +823,8 @@
           "dimensions": [
             {
               "name": "Date",
-              "value": "{dateField}"
+              "value": "{dateField}",
+              "dataType": "date"
             }
           ],
           "feeds": [
@@ -942,7 +946,8 @@
           "dimensions": [
             {
               "name": "Year",
-              "value": "{yearField}"
+              "value": "{yearField}",
+              "dataType": "date"
             },
             {
               "name": "Sector",
@@ -1029,7 +1034,8 @@
           "dimensions": [
             {
               "name": "Year",
-              "value": "{yearField}"
+              "value": "{yearField}",
+              "dataType": "date"
             }
           ],
           "feeds": [
@@ -1189,7 +1195,8 @@
           "dimensions": [
             {
               "name": "Date",
-              "value": "{dateField}"
+              "value": "{dateField}",
+              "dataType": "date"
             }
           ],
           "feeds": [
@@ -1253,7 +1260,8 @@
           "dimensions": [
             {
               "name": "Year",
-              "value": "{yearField}"
+              "value": "{yearField}",
+              "dataType": "date"
             }
           ],
           "feeds": [
@@ -1577,7 +1585,8 @@
           "dimensions": [
             {
               "name": "Month",
-              "value": "{monthField}"
+              "value": "{monthField}",
+              "dataType": "date"
             }
           ],
           "feeds": [
@@ -1613,7 +1622,8 @@
           "dimensions": [
             {
               "name": "Month",
-              "value": "{monthField}"
+              "value": "{monthField}",
+              "dataType": "date"
             }
           ],
           "feeds": [
@@ -1650,7 +1660,8 @@
           "dimensions": [
             {
               "name": "Year",
-              "value": "{yearField}"
+              "value": "{yearField}",
+              "dataType": "date"
             }
           ],
           "feeds": [
