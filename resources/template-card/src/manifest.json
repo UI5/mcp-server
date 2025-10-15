@@ -1,0 +1,42 @@
+{
+	"_version": "1.78.0",
+	"sap.app": {
+		"id": "sample.integration.card",
+		"type": "card",
+		"title": "Sample Integration Card",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.card": {
+		"type": "<%= cardType %>",
+		"configuration": {
+			"editor": "./dt/Configuration"
+		},
+		"header": {
+			"title": "{i18n>title}",
+			"subtitle": "{i18n>subtitle}"
+		},
+		<% if (cardType === "Analytical") { %>
+		<%- include('analytical.ejs') %>
+		<% } else if (cardType === "Calendar") { %>
+		<%- include('calendar.ejs') %>
+		<% } else if (cardType === "List") { %>
+		<%- include('list.ejs') %>
+		<% } else if (cardType === "Object") { %>
+		<%- include('object.ejs') %>
+		<% } else if (cardType === "Table") { %>
+		<%- include('table.ejs') %>
+		<% } else if (cardType === "Timeline") { %>
+		<%- include('timeline.ejs') %>
+		<% } %>
+	}
+}

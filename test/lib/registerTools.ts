@@ -20,6 +20,7 @@ const test = anyTest as TestFn<{
 		registerCreateUi5AppTool: sinonGlobal.SinonStub;
 		registerGetVersionInfoTool: sinonGlobal.SinonStub;
 		registerGetIntegrationCardsGuidelinesTool: sinonGlobal.SinonStub;
+		registerCreateIntegrationCardTool: sinonGlobal.SinonStub;
 	};
 }>;
 
@@ -34,6 +35,7 @@ test.beforeEach(async (t) => {
 	const registerCreateUi5AppToolStub = t.context.sinon.stub();
 	const registerGetVersionInfoToolStub = t.context.sinon.stub();
 	const registerGetIntegrationCardsGuidelinesToolStub = t.context.sinon.stub();
+	const registerCreateIntegrationCardToolStub = t.context.sinon.stub();
 
 	// Store the tool stubs in the context for assertions
 	t.context.toolStubs = {
@@ -44,6 +46,7 @@ test.beforeEach(async (t) => {
 		registerCreateUi5AppTool: registerCreateUi5AppToolStub,
 		registerGetVersionInfoTool: registerGetVersionInfoToolStub,
 		registerGetIntegrationCardsGuidelinesTool: registerGetIntegrationCardsGuidelinesToolStub,
+		registerCreateIntegrationCardTool: registerCreateIntegrationCardToolStub,
 	};
 	const mockMcpServer = t.context.sinon.createStubInstance(McpServer);
 	t.context.mockMcpServer = mockMcpServer;
@@ -70,6 +73,9 @@ test.beforeEach(async (t) => {
 		},
 		"../../src/tools/get_integration_cards_guidelines/index.js": {
 			default: registerGetIntegrationCardsGuidelinesToolStub,
+		},
+		"../../src/tools/create_integration_card/index.js": {
+			default: registerCreateIntegrationCardToolStub,
 		},
 	});
 
@@ -100,7 +106,8 @@ test("All tools are registered in the correct order", (t) => {
 		toolStubs.registerApiRefTool,
 		toolStubs.registerProjectInfoTool,
 		toolStubs.registerCreateUi5AppTool,
-		toolStubs.registerGetVersionInfoTool
+		toolStubs.registerGetVersionInfoTool,
+		toolStubs.registerCreateIntegrationCardTool
 	);
 
 	// Verify each tool was called exactly once
@@ -111,6 +118,7 @@ test("All tools are registered in the correct order", (t) => {
 	t.true(toolStubs.registerCreateUi5AppTool.calledOnce);
 	t.true(toolStubs.registerGetVersionInfoTool.calledOnce);
 	t.true(toolStubs.registerGetIntegrationCardsGuidelinesTool.calledOnce);
+	t.true(toolStubs.registerCreateIntegrationCardTool.calledOnce);
 });
 
 test("processResponse: Default behavior", (t) => {

@@ -1,0 +1,118 @@
+"data": {
+	"json": {
+		"dimensions": {
+			"weekLabel": "Weeks"
+		},
+		"measures": {
+			"revenueLabel": "Revenue",
+			"costLabel": "Costs"
+		},
+		"legend": {
+			"visible": true,
+			"position": "bottom",
+			"alignment": "topLeft"
+		},
+		"list": [
+			{
+				"Week": "CW14",
+				"Revenue": 431000.22,
+				"Cost": 230000.00,
+				"Cost1": 24800.63,
+				"Cost2": 205199.37,
+				"Cost3": 199999.37,
+				"Target": 500000.00,
+				"Budget": 210000.00
+			},
+			{
+				"Week": "CW15",
+				"Revenue": 494000.30,
+				"Cost": 238000.00,
+				"Cost1": 99200.39,
+				"Cost2": 138799.61,
+				"Cost3": 200199.37,
+				"Target": 500000.00,
+				"Budget": 224000.00
+			},
+			{
+				"Week": "CW16",
+				"Revenue": 491000.17,
+				"Cost": 221000.00,
+				"Cost1": 70200.54,
+				"Cost2": 150799.46,
+				"Cost3": 80799.46,
+				"Target": 500000.00,
+				"Budget": 238000.00
+			}
+		]
+	}
+},
+"content": {
+	"data": {
+		"path": "/list"
+	},
+	"chartType": "line",
+	"chartProperties": {
+		"title": {
+			"text": "Line chart",
+			"visible": true,
+			"alignment": "left"
+		},
+		"legend": {
+			"visible": "{legend/visible}"
+		},
+		"legendGroup": {
+			"layout": {
+				"position": "{legend/position}",
+				"alignment": "{legend/alignment}"
+			}
+		},
+		"plotArea": {
+			"dataLabel": {
+				"visible": true
+			}
+		},
+		"categoryAxis": {
+			"title": {
+				"visible": false
+			}
+		},
+		"valueAxis": {
+			"title": {
+				"visible": false
+			}
+		}
+	},
+	"dimensions": [
+		{
+			"name": "{dimensions/weekLabel}",
+			"value": "{Week}"
+		}
+	],
+	"measures": [
+		{
+			"name": "{measures/revenueLabel}",
+			"value": "{Revenue}"
+		},
+		{
+			"name": "{measures/costLabel}",
+			"value": "{Cost}"
+		}
+	],
+	"feeds": [
+		{
+			"uid": "valueAxis",
+			"type": "Measure",
+			"values": [
+				"{measures/revenueLabel}",
+				"{measures/costLabel}"
+			]
+		},
+		{
+			"uid": "categoryAxis",
+			"type": "Dimension",
+			"values": [
+				"{dimensions/weekLabel}"
+			]
+		}
+	]
+}

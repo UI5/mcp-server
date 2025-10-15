@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Integration Card Preview</title>
+	<link rel="stylesheet" href="./index.css">
+	<script
+		src="https://ui5.sap.com/resources/sap-ui-integration.js"
+		id="sap-ui-bootstrap"
+		data-sap-ui-compat-version="edge"
+		data-sap-ui-resource-roots='{"preview": "./"}'
+		data-sap-ui-on-init="module:preview/App"
+		data-sap-ui-theme="sap_horizon">
+		</script>
+	<script src="https://ui5.sap.com/resources/sap-ui-integration-card-editor.js"></script>
+</head>
+
+<body>
+	<h1>Preview</h1>
+	<div class="container">
+		<div class="card-section">
+			<h2>Integration Card</h2>
+			<ui-integration-card
+				id="card"
+				width="300px"
+				height="400px">
+			</ui-integration-card>
+		</div>
+		<div id="editorSection"
+			class="card-section hidden">
+			<h2>Configuration Editor</h2>
+			<ui-integration-card-editor
+				id="editor">
+			</ui-integration-card-editor>
+			<div class="button-container">
+				<button id="applyChangesBtn" class="config-button primary">Apply Changes</button>
+				<button id="resetBtn" class="config-button secondary">Reset</button>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

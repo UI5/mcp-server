@@ -20,6 +20,7 @@ export default tseslint.config(
 			"tmp/*",
 
 			// Exclude app templates
+			"resources/template-card/*",
 			"resources/template-js/*",
 			"resources/template-ts/*",
 
