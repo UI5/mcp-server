@@ -67,8 +67,9 @@ supportedCardTypes.forEach((cardType) => {
 		const targetDir = path.join(__dirname, "..", "..", "..", "tmp", "create_integration_card");
 		await rm(targetDir, {recursive: true, force: true});
 		const result = await t.context.createIntegrationCard(targetDir, cardType);
-
-		t.snapshot(result.sort(), "Result of createIntegrationCard should match expected structure");
+		// Normalize paths for snapshot consistency across OSes
+		const normalizedResult = result.map((filePath) => filePath.replaceAll(path.sep, "/")).sort();
+		t.snapshot(normalizedResult, "Result of createIntegrationCard should match expected structure");
 
 		const commonFilesPath = path.join(expectedBasePath, "common");
 		const expectedPath = path.join(expectedBasePath, cardType);

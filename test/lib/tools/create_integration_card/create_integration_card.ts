@@ -2,6 +2,7 @@ import anyTest, {TestFn} from "ava";
 import esmock from "esmock";
 import sinonGlobal from "sinon";
 import {InvalidInputError} from "../../../../src/utils.js";
+import path from "node:path";
 
 // Define test context type
 const test = anyTest as TestFn<{
@@ -109,9 +110,9 @@ test("createIntegrationCard executes successfully", async (t) => {
 
 	t.is(mkdirStub.callCount, 4);
 	t.deepEqual(mkdirStub.getCall(0).args, [folderPath, {recursive: true}]);
-	t.deepEqual(mkdirStub.getCall(1).args, [folderPath + "/src", {recursive: true}]);
-	t.deepEqual(mkdirStub.getCall(2).args, [folderPath + "/src/i18n", {recursive: true}]);
-	t.deepEqual(mkdirStub.getCall(3).args, [folderPath + "/test", {recursive: true}]);
+	t.deepEqual(mkdirStub.getCall(1).args, [`${folderPath}/src`.replace(/\//g, path.sep), {recursive: true}]);
+	t.deepEqual(mkdirStub.getCall(2).args, [`${folderPath}/src/i18n`.replace(/\//g, path.sep), {recursive: true}]);
+	t.deepEqual(mkdirStub.getCall(3).args, [`${folderPath}/test`.replace(/\//g, path.sep), {recursive: true}]);
 
 	// Verify that globby was called with correct parameters
 	t.is(t.context.globbyStub.callCount, 1, "globby should be called once");
@@ -120,7 +121,7 @@ test("createIntegrationCard executes successfully", async (t) => {
 		["**", "!**/*.ejs"],
 		"globby should be called with correct pattern"
 	);
-	t.true(t.context.globbyStub.firstCall.args[1].cwd.endsWith("resources/template-card"));
+	t.true(t.context.globbyStub.firstCall.args[1].cwd.endsWith("resources/template-card".replace(/\//g, path.sep)));
 
 	// Verify that ejs.render was called with correct parameters
 	t.is(renderStub.callCount, t.context.staticFiles.length, "ejs.render should be called for each template file");
@@ -131,7 +132,11 @@ test("createIntegrationCard executes successfully", async (t) => {
 		});
 	});
 
-	t.deepEqual(result, t.context.staticFiles, "Result contains list of generated files");
+	t.deepEqual(
+		result,
+		t.context.staticFiles.map((file) => file.replace(/\//g, path.sep)),
+		"Result contains list of generated files"
+	);
 });
 
 test("Target path already exists", async (t) => {

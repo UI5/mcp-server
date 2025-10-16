@@ -72,7 +72,7 @@ test("create_integration_card tool returns success message on success", async (t
 
 	t.true(createIntegrationCard.calledOnce);
 	t.deepEqual(createIntegrationCard.firstCall.args, [
-		"/projects/mycards/mycard",
+		"/projects/mycards/mycard".replace(/\//g, path.sep),
 		"List",
 	]);
 
