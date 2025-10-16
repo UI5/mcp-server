@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.1.3](https://github.com/UI5/mcp-server/compare/v0.1.2...v0.1.3) (2025-10-16)
+
+
+### Features
+
+* **templates:** Use manifest.json v2 ([#75](https://github.com/UI5/mcp-server/issues/75)) ([8b201ec](https://github.com/UI5/mcp-server/commit/8b201eccab8a0f4d93cda4c3c5eba8f641eb7b10))
+* **ui5_create_app:** Always set "earlyRequests": true in UI5 &gt;=1.141 ([#52](https://github.com/UI5/mcp-server/issues/52)) ([8b010ee](https://github.com/UI5/mcp-server/commit/8b010ee5dd3c76274c7699197bf91f8d125af8d5))
+
+
+### Dependencies
+
+* Bump @modelcontextprotocol/sdk from 1.18.1 to 1.18.2 ([d0dd2de](https://github.com/UI5/mcp-server/commit/d0dd2de03cefbab7d3ad135306928ee50779f89a))
+* Bump @modelcontextprotocol/sdk from 1.18.2 to 1.19.1 ([da1f821](https://github.com/UI5/mcp-server/commit/da1f82173c74e3aa1159ab8210fc88a9e71f0d7e))
+* Bump @modelcontextprotocol/sdk from 1.19.1 to 1.20.0 ([ab8def0](https://github.com/UI5/mcp-server/commit/ab8def008e55fc7241781f461efb3d2019dd8c20))
+* Bump @ui5/linter from 1.20.1 to 1.20.2 ([a4f5c16](https://github.com/UI5/mcp-server/commit/a4f5c168bd62ef9614899ed73234e8aee84ec93f))
+* Bump fast-xml-parser from 5.2.5 to 5.3.0 ([c17e08c](https://github.com/UI5/mcp-server/commit/c17e08c08aa716d8c55f1caac05e0a0b6a5708c3))
+* Bump semver from 7.7.2 to 7.7.3 ([39692d2](https://github.com/UI5/mcp-server/commit/39692d2fdc697c32a37b59da14f78113eb656fbb))
+
 ## [0.1.2](https://github.com/UI5/mcp-server/compare/v0.1.1...v0.1.2) (2025-09-24)
 
 
