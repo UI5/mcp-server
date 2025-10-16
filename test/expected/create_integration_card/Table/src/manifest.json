@@ -1,0 +1,60 @@
+{
+	"_version": "1.78.0",
+	"sap.app": {
+		"id": "sample.integration.card",
+		"type": "card",
+		"title": "Sample Integration Card",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.card": {
+		"type": "Table",
+		"configuration": {
+			"editor": "./dt/Configuration"
+		},
+		"header": {
+			"title": "{i18n>title}",
+			"subtitle": "{i18n>subtitle}"
+		},
+		"data": {
+			"json": {
+				"items": [
+					{
+						"title": "Item 1",
+						"description": "Description for Item 1"
+					},
+					{
+						"title": "Item 2",
+						"description": "Description for Item 2"
+					}
+				]
+			}
+		},
+		"content": {
+			"data": {
+				"path": "/items"
+			},
+			"row": {
+				"columns": [
+					{
+						"title": "Title",
+						"value": "{title}"
+					},
+					{
+						"title": "Description",
+						"value": "{description}"
+					}
+				]
+			}
+		}
+	}
+}

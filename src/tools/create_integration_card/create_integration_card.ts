@@ -5,12 +5,12 @@ import path from "path";
 import {fileURLToPath} from "url";
 import ejs from "ejs";
 import {getLogger} from "@ui5/logger";
-import {DeclarativeCardTypes} from "./schema.js";
+import {SupportedCardType} from "./schema.js";
 
 const log = getLogger("tools:create_integration_card:create_integration_card");
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-export async function createIntegrationCard(folderPath: string, cardType: DeclarativeCardTypes) {
+export async function createIntegrationCard(folderPath: string, cardType: SupportedCardType) {
 	if (await dirExists(folderPath)) {
 		throw new InvalidInputError(
 			`The target directory '${folderPath}' already exists. ` +

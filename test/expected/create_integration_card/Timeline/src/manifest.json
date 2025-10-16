@@ -1,0 +1,67 @@
+{
+	"_version": "1.78.0",
+	"sap.app": {
+		"id": "sample.integration.card",
+		"type": "card",
+		"title": "Sample Integration Card",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.card": {
+		"type": "Timeline",
+		"configuration": {
+			"editor": "./dt/Configuration"
+		},
+		"header": {
+			"title": "{i18n>title}",
+			"subtitle": "{i18n>subtitle}"
+		},
+		"data": {
+			"json": {
+				"items": [
+					{
+						"Title": "Weekly sync: Marketplace / Design Stream",
+						"Description": "MRR WDF18 C3.2(GLASSBOX)",
+						"Icon": "sap-icon://appointment-2",
+						"Time": "2021-10-25T10:00:00.000Z",
+						"Url": "/activity1"
+					},
+					{
+						"Title": "Video Conference for FLP@SF, S4,Hybris",
+						"Icon": "sap-icon://my-view",
+						"Time": "2021-10-25T14:00:00.000Z",
+						"Url": "/activity2"
+					}
+				]
+			}
+		},
+		"content": {
+			"data": {
+				"path": "/items"
+			},
+			"item": {
+				"dateTime": {
+					"value": "{Time}"
+				},
+				"description": {
+					"value": "{Description}"
+				},
+				"title": {
+					"value": "{Title}"
+				},
+				"icon": {
+					"src": "{Icon}"
+				}
+			}
+		}
+	}
+}
