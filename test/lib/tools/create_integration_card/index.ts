@@ -22,6 +22,9 @@ test.beforeEach(async (t) => {
 		"../../../../src/tools/create_integration_card/create_integration_card.js": {
 			createIntegrationCard: createIntegrationCardStub,
 		},
+		"../../../../src/utils/ui5Manifest.js": {
+			getLatestManifestVersion: t.context.sinon.stub().resolves("1.78.0"),
+		},
 	}));
 });
 
@@ -71,10 +74,11 @@ test("create_integration_card tool returns success message on success", async (t
 	const result = await executeFunction(params, mockExtra);
 
 	t.true(createIntegrationCard.calledOnce);
-	t.deepEqual(createIntegrationCard.firstCall.args, [
-		"/projects/mycards/mycard".replace(/\//g, path.sep),
-		"List",
-	]);
+	t.deepEqual(createIntegrationCard.firstCall.args, [{
+		folderPath: "/projects/mycards/mycard".replace(/\//g, path.sep),
+		cardType: "List",
+		manifestVersion: "1.78.0",
+	}]);
 
 	const message = `Successfully created Integration Card ${params.cardFolderName} at ${params.basePath}\n` +
 		`The generated files inside ${path.join(params.basePath, params.cardFolderName)} are:\n` +

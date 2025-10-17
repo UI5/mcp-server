@@ -106,7 +106,11 @@ test("createIntegrationCard executes successfully", async (t) => {
 	} = t.context;
 	const folderPath = "some/folder/path/card";
 
-	const result = await createIntegrationCard(folderPath, "List");
+	const result = await createIntegrationCard({
+		folderPath,
+		cardType: "List",
+		manifestVersion: "1.78.0",
+	});
 
 	t.is(mkdirStub.callCount, 4);
 	t.deepEqual(mkdirStub.getCall(0).args, [folderPath, {recursive: true}]);
@@ -129,6 +133,7 @@ test("createIntegrationCard executes successfully", async (t) => {
 		const templateVars = renderStub.getCall(index).args[1];
 		t.deepEqual(templateVars, {
 			cardType: "List",
+			manifestVersion: "1.78.0",
 		});
 	});
 
@@ -141,13 +146,17 @@ test("createIntegrationCard executes successfully", async (t) => {
 
 test("Target path already exists", async (t) => {
 	const {createIntegrationCard, dirExistsStub, mkdirStub} = t.context;
-	const dirName = "path/to/dir_that_exists";
+	const folderPath = "path/to/dir_that_exists";
 	dirExistsStub.resolves(true);
 	await t.throwsAsync(async () => {
-		return await createIntegrationCard(dirName, "List");
+		return await createIntegrationCard({
+			folderPath,
+			cardType: "List",
+			manifestVersion: "1.78.0",
+		});
 	}, {
 		message:
-			`The target directory '${dirName}' already exists. Please choose a ` +
+			`The target directory '${folderPath}' already exists. Please choose a ` +
 			`different path or remove the existing directory.`,
 		instanceOf: InvalidInputError,
 	});
@@ -157,22 +166,26 @@ test("Target path already exists", async (t) => {
 
 test("Error creating target directory", async (t) => {
 	const {createIntegrationCard, mkdirStub} = t.context;
-	const dirName = "path/to/dir_with_error";
+	const folderPath = "path/to/dir_with_error";
 	const errorMessage = "Simulated mkdir error";
 	mkdirStub.rejects(new Error(errorMessage));
 
 	await t.throwsAsync(async () => {
-		return await createIntegrationCard(dirName, "List");
+		return await createIntegrationCard({
+			folderPath,
+			cardType: "List",
+			manifestVersion: "1.78.0",
+		});
 	}, {
 		message:
-			`Failed to create directory '${dirName}': ` +
+			`Failed to create directory '${folderPath}': ` +
 			`${errorMessage} ` +
 			`Please ensure the path is valid and as intended and you have write permissions.`,
 		instanceOf: InvalidInputError,
 	});
 
 	t.true(mkdirStub.calledOnce);
-	t.deepEqual(mkdirStub.firstCall.args, [dirName, {recursive: true}]);
+	t.deepEqual(mkdirStub.firstCall.args, [folderPath, {recursive: true}]);
 });
 
 test("Error processing template file", async (t) => {
@@ -182,7 +195,11 @@ test("Error processing template file", async (t) => {
 	readFileStub.rejects(new Error(errorMessage));
 
 	await t.throwsAsync(async () => {
-		return await createIntegrationCard(folderPath, "List");
+		return await createIntegrationCard({
+			folderPath,
+			cardType: "List",
+			manifestVersion: "1.78.0",
+		});
 	}, {
 		message: `Failed to process template file 'src/manifest.json': ${errorMessage}`,
 		instanceOf: Error,

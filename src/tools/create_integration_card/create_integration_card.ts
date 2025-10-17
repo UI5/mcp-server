@@ -10,7 +10,13 @@ import {SupportedCardType} from "./schema.js";
 const log = getLogger("tools:create_integration_card:create_integration_card");
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-export async function createIntegrationCard(folderPath: string, cardType: SupportedCardType) {
+interface CreateIntegrationCardParams {
+	folderPath: string;
+	cardType: SupportedCardType;
+	manifestVersion: string;
+};
+
+export async function createIntegrationCard({folderPath, cardType, manifestVersion}: CreateIntegrationCardParams) {
 	if (await dirExists(folderPath)) {
 		throw new InvalidInputError(
 			`The target directory '${folderPath}' already exists. ` +
@@ -54,6 +60,7 @@ export async function createIntegrationCard(folderPath: string, cardType: Suppor
 			const templateContent = await readFile(sourcePath, "utf8");
 			const templateVars = {
 				cardType,
+				manifestVersion,
 			};
 			let processedContent = ejs.render(templateContent, templateVars, {filename: sourcePath});
 

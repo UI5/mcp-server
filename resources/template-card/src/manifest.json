@@ -1,5 +1,5 @@
 {
-	"_version": "1.78.0",
+	"_version": "<%= manifestVersion %>",
 	"sap.app": {
 		"id": "sample.integration.card",
 		"type": "card",

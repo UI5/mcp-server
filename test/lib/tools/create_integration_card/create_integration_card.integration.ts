@@ -64,9 +64,13 @@ test.afterEach.always((t) => {
 
 supportedCardTypes.forEach((cardType) => {
 	test.serial(`Generate ${cardType} card template`, async (t) => {
-		const targetDir = path.join(__dirname, "..", "..", "..", "tmp", "create_integration_card");
-		await rm(targetDir, {recursive: true, force: true});
-		const result = await t.context.createIntegrationCard(targetDir, cardType);
+		const folderPath = path.join(__dirname, "..", "..", "..", "tmp", "create_integration_card");
+		await rm(folderPath, {recursive: true, force: true});
+		const result = await t.context.createIntegrationCard({
+			folderPath,
+			cardType,
+			manifestVersion: "1.78.0",
+		});
 		// Normalize paths for snapshot consistency across OSes
 		const normalizedResult = result.map((filePath) => filePath.replaceAll(path.sep, "/")).sort();
 		t.snapshot(normalizedResult, "Result of createIntegrationCard should match expected structure");
@@ -93,10 +97,10 @@ supportedCardTypes.forEach((cardType) => {
 		const expectedFiles = await findFiles(expectedPath);
 
 		// Check for all directories and files
-		await directoryDeepEqual(t, targetDir, expectedPath);
+		await directoryDeepEqual(t, folderPath, expectedPath);
 
 		// Check for all file contents
-		await checkFileContentsIgnoreLineFeeds(t, expectedFiles, expectedPath, targetDir);
+		await checkFileContentsIgnoreLineFeeds(t, expectedFiles, expectedPath, folderPath);
 
 		// Clean up only the copied common files
 		for (const copiedFile of copiedFiles) {
@@ -109,20 +113,3 @@ supportedCardTypes.forEach((cardType) => {
 		}
 	});
 });
-
-// test("Generate Analytical template", async (t) => {
-// 	const targetDir = path.join(__dirname, "..", "..", "..", "tmp", "create_integration_card");
-// 	await rm(targetDir, {recursive: true, force: true});
-// 	const result = await t.context.createIntegrationCard(targetDir, "Analytical");
-
-// 	t.snapshot(result.sort(), "Result of createIntegrationCard should match expected structure");
-
-// 	const expectedPath = path.join(expectedBasePath, "analytical");
-// 	const expectedFiles = await findFiles(expectedPath);
-
-// 	// Check for all directories and files
-// 	await directoryDeepEqual(t, targetDir, expectedPath);
-
-// 	// Check for all file contents
-// 	await checkFileContentsIgnoreLineFeeds(t, expectedFiles, expectedPath, targetDir);
-// });
