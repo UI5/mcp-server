@@ -38,9 +38,9 @@ The UI5 [Model Context Protocol](https://modelcontextprotocol.io/) server offers
 
 ## Setup
 
-### Standard setup for most clients
+### Standard Configuration for Most Clients
 
-This configuration works in most tools:
+This configuration works for most MCP clients:
 
 ```json
 {
@@ -60,6 +60,29 @@ This configuration works in most tools:
 
 The UI5 MCP server can be configured using the following environment variables. It does not accept any command-line arguments.
 
+**Custom Configuration Example:**
+
+```json
+{
+	"mcpServers": {
+		"@ui5/mcp-server": {
+			"type": "stdio",
+			"command": "npx",
+			"args": [
+				"@ui5/mcp-server"
+			],
+			"env": {
+				"UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS": "localhost, services.odata.org",
+				"UI5_LOG_LVL": "verbose",
+				"UI5_DATA_DIR": "/change-me/to/some/other/path",
+			}
+		}
+	}
+}
+```
+
+**Configuration Options:**
+
 * **`UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS`**:
 	* Default Value: `localhost, services.odata.org`
 	* Description: A comma-separated list of domains that are allowed to be used in the `oDataV4Url` parameter of the `create_ui5_app` tool, for example: `localhost, example.com, sub.example.com`. Set to an empty string to allow any domains.  
@@ -75,26 +98,6 @@ The UI5 MCP server can be configured using the following environment variables. 
 	* Default Value: The `.ui5` directory in the user's home directory
 	* Description: Directory where the MCP server stores its data, such as cached API references
 
-**Example Configuration:**
-
-```json
-{
-	"mcpServers": {
-		"@ui5/mcp-server": {
-			"type": "stdio",
-			"command": "npx",
-			"args": [
-				"@ui5/mcp-server"
-			],
-			"env": {
-				"UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS": "localhost, services.odata.org",
-				"UI5_LOG_LVL": "verbose",
-				"UI5_DATA_DIR": "/path/to/custom/data/dir"
-			}
-		}
-	}
-}
-```
 
 ### Specific MCP Clients
 
