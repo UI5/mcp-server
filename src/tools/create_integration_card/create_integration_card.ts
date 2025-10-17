@@ -6,6 +6,7 @@ import {fileURLToPath} from "url";
 import ejs from "ejs";
 import {getLogger} from "@ui5/logger";
 import {SupportedCardType} from "./schema.js";
+import semver from "semver";
 
 const log = getLogger("tools:create_integration_card:create_integration_card");
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -22,6 +23,10 @@ export async function createIntegrationCard({folderPath, cardType, manifestVersi
 			`The target directory '${folderPath}' already exists. ` +
 			"Please choose a different path or remove the existing directory."
 		);
+	}
+
+	if (!semver.valid(manifestVersion)) {
+		throw new InvalidInputError("The provided manifest version is not valid!");
 	}
 
 	try {

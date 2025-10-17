@@ -149,7 +149,7 @@ test("Target path already exists", async (t) => {
 	const folderPath = "path/to/dir_that_exists";
 	dirExistsStub.resolves(true);
 	await t.throwsAsync(async () => {
-		return await createIntegrationCard({
+		await createIntegrationCard({
 			folderPath,
 			cardType: "List",
 			manifestVersion: "1.78.0",
@@ -171,7 +171,7 @@ test("Error creating target directory", async (t) => {
 	mkdirStub.rejects(new Error(errorMessage));
 
 	await t.throwsAsync(async () => {
-		return await createIntegrationCard({
+		await createIntegrationCard({
 			folderPath,
 			cardType: "List",
 			manifestVersion: "1.78.0",
@@ -188,6 +188,23 @@ test("Error creating target directory", async (t) => {
 	t.deepEqual(mkdirStub.firstCall.args, [folderPath, {recursive: true}]);
 });
 
+test("Invalid manifest version", async (t) => {
+	const {createIntegrationCard} = t.context;
+	const folderPath = "some/folder/path/card";
+	const invalidManifestVersion = "invalid_version";
+
+	await t.throwsAsync(async () => {
+		return await createIntegrationCard({
+			folderPath,
+			cardType: "List",
+			manifestVersion: invalidManifestVersion,
+		});
+	}, {
+		message: "The provided manifest version is not valid!",
+		instanceOf: InvalidInputError,
+	});
+});
+
 test("Error processing template file", async (t) => {
 	const {createIntegrationCard, readFileStub} = t.context;
 	const folderPath = "some/folder/path/card";
@@ -195,7 +212,7 @@ test("Error processing template file", async (t) => {
 	readFileStub.rejects(new Error(errorMessage));
 
 	await t.throwsAsync(async () => {
-		return await createIntegrationCard({
+		await createIntegrationCard({
 			folderPath,
 			cardType: "List",
 			manifestVersion: "1.78.0",
