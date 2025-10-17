@@ -54,5 +54,19 @@
     "uri": "https://ui5.sap.com/1.136.7/topic/032be2cb2e1d4115af20862673bedcdb",
     "title": "Test Starter",
     "filePath": "032be2cb2e1d4115af20862673bedcdb.md"
+  },
+  {
+    "shortIdentifier": "22f50c0",
+    "identifier": "22f50c0f0b104bf3ba84620880793d3f",
+    "uri": "https://ui5.sap.com/1.136.7/topic/22f50c0f0b104bf3ba84620880793d3f",
+    "title": "Concept and Basic Setup",
+    "filePath": "22f50c0f0b104bf3ba84620880793d3f.md"
+  },
+  {
+    "shortIdentifier": "738ed02",
+    "identifier": "738ed025b36e484fa99046d0f80552fd",
+    "uri": "https://ui5.sap.com/1.136.7/topic/738ed025b36e484fa99046d0f80552fd",
+    "title": "Configuration Options",
+    "filePath": "738ed025b36e484fa99046d0f80552fd.md"
   }
 ]

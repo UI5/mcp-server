@@ -15,14 +15,16 @@ const docs: Record<string, DocsRequest> = {
 	"1.136.7": {
 		revisionSha: "606268961ecee7b810a1a860bebe0eb7bdc68c23",
 		loios: [
-			"0187ea5e2eff4166b0453b9dcc8fc64f",
-			"00737d6c1b864dc3ab72ef56611491c4",
-			"28fcd55b04654977b63dacbee0552712",
-			"a87ca843bcee469f82a9072927a7dcdb",
-			"676b636446c94eada183b1218a824717",
-			"fe1a6dba940e479fb7c3bc753f92b28c",
-			"b0fb4de7364f4bcbb053a99aa645affe",
-			"032be2cb2e1d4115af20862673bedcdb",
+			"0187ea5e2eff4166b0453b9dcc8fc64f", // Component Metadata
+			"00737d6c1b864dc3ab72ef56611491c4", // Best Practices for Loading Modules
+			"28fcd55b04654977b63dacbee0552712", // Best Practices for Developers
+			"a87ca843bcee469f82a9072927a7dcdb", // Deprecated Themes and Libraries
+			"676b636446c94eada183b1218a824717", // Use Asynchronous Loading
+			"fe1a6dba940e479fb7c3bc753f92b28c", // Content Security Policy
+			"b0fb4de7364f4bcbb053a99aa645affe", // Handling Events in XML Views
+			"032be2cb2e1d4115af20862673bedcdb", // Test Starter
+			"22f50c0f0b104bf3ba84620880793d3f", // Test Starter: Concept and Basic Setup
+			"738ed025b36e484fa99046d0f80552fd", // Test Starter: Configuration Options
 		],
 	},
 };

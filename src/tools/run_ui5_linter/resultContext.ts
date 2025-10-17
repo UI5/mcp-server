@@ -248,7 +248,7 @@ or \`odata\` globals are used implicitly in bindings (missing an explicit import
 	"parsing-error": `During the linting process a syntax or parsing error occured`,
 	"prefer-test-starter": {
 		text: `Test-related files should be using the Test Starter concept`,
-		topics: ["032be2cb2e1d4115af20862673bedcdb"],
+		topics: ["032be2cb2e1d4115af20862673bedcdb", "22f50c0f0b104bf3ba84620880793d3f", "738ed025b36e484fa99046d0f80552fd"],
 	},
 	"ui5-class-declaration": `UI5 classes are not declared correctly. This rule only applies to TypeScript code where built-in ECMAScript classes are used instead of an \`.extend()\` call`,
 	"unsupported-api-usage": `UI5 API is not used correctly. For example, a formatter declared in a binding declaration in JavaScript is not of type \`function\``,
