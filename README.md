@@ -30,6 +30,7 @@ The UI5 [Model Context Protocol](https://modelcontextprotocol.io/) server offers
 - `get_version_info`: Retrieves version information for the UI5 framework.
 - `run_ui5_linter`: Integrates with [`@ui5/linter`](https://github.com/UI5/linter) to analyze and report issues in UI5 code.
 - `get_integration_cards_guidelines`: Provides access to UI Integration Cards development best practices.
+- `create_integration_card`: Scaffolds a new UI Integration Card.
 
 ## Requirements
 
