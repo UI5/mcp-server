@@ -1,8 +1,8 @@
-# Integration Cards Development Guidelines
+# UI Integration Cards Development Guidelines
 
-> *This document outlines the fundamental rules and best practices an AI agent must follow when developing or modifying Integration Cards. Adherence to these guidelines is critical for creating modern, maintainable, and performant applications.*
+> *This document outlines the fundamental rules and best practices an AI agent must follow when developing or modifying Integration Cards. Adherence to these guidelines is critical for creating modern, maintainable, and performant UI Integration Cards.*
 ## 1. Coding Guidelines
-- **ALWAYS** attempt to make declarative Integration Card, such as "List", "Table", "Timeline", "Object" or "Analytical".
+- **ALWAYS** attempt to make declarative Integration Card, such as "Calendar", "List", "Table", "Timeline", "Object" or "Analytical".
   - in rare cases, you can also create Integration Card Extension.
 - **ALWAYS** create links using the `actions` property.
 - **ALWAYS** refer to parameters using correct syntax - `{parameters>/parameterKey/value}`.
