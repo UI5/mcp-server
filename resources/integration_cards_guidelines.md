@@ -8,6 +8,7 @@
 - **ALWAYS** refer to parameters using correct syntax - `{parameters>/parameterKey/value}`.
 - **ALWAYS** perform validation of the integration card as described in [2. Validation](#2-validation).
 - **ALWAYS** show a preview of the generated card following the [4. Preview Instructions](#4-preview-instructions).
+- **ALWAYS** generate new declarative integration cards using the `create_integration_card` tool.
 
 ### 1.1 Data
 - **NEVER** modify the given data under any circumstances
