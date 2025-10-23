@@ -25,6 +25,7 @@ const test = anyTest as TestFn<{
 	createIntegrationCard: typeof import(
 		"../../../../src/tools/create_integration_card/create_integration_card.js"
 	).createIntegrationCard;
+	copiedFiles: string[];
 }>;
 
 // Setup test context before each test
@@ -55,11 +56,17 @@ test.beforeEach(async (t) => {
 	);
 
 	t.context.createIntegrationCard = createIntegrationCard;
+	t.context.copiedFiles = [];
 });
 
 // Clean up after each test
-test.afterEach.always((t) => {
+test.afterEach.always(async (t) => {
 	t.context.sinon.restore();
+
+	// Clean up any copied common files
+	for (const copiedFile of t.context.copiedFiles) {
+		await rm(copiedFile, {force: true});
+	}
 });
 
 supportedCardTypes.forEach((cardType) => {
@@ -77,9 +84,6 @@ supportedCardTypes.forEach((cardType) => {
 
 		const commonFilesPath = path.join(expectedBasePath, "common");
 		const expectedPath = path.join(expectedBasePath, cardType);
-
-		// Track which files were copied from common folder
-		const copiedFiles: string[] = [];
 		const commonFiles = await findFiles(commonFilesPath);
 
 		// Copy common files into the card-specific expected folder so findFiles(expectedPath)
@@ -91,7 +95,7 @@ supportedCardTypes.forEach((cardType) => {
 		for (const commonFile of commonFiles) {
 			const relativePath = path.relative(commonFilesPath, commonFile);
 			const destFilePath = path.join(destExpectedPath, relativePath);
-			copiedFiles.push(destFilePath);
+			t.context.copiedFiles.push(destFilePath);
 		}
 
 		const expectedFiles = await findFiles(expectedPath);
@@ -101,15 +105,5 @@ supportedCardTypes.forEach((cardType) => {
 
 		// Check for all file contents
 		await checkFileContentsIgnoreLineFeeds(t, expectedFiles, expectedPath, folderPath);
-
-		// Clean up only the copied common files
-		for (const copiedFile of copiedFiles) {
-			try {
-				await rm(copiedFile, {force: true});
-			} catch (error) {
-				// Ignore errors if file doesn't exist or already cleaned up
-				t.log(`Warning: Could not clean up copied file ${copiedFile}:`, error);
-			}
-		}
 	});
 });

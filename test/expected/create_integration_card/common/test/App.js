@@ -23,14 +23,6 @@ sap.ui.define(["sap/ui/integration/Host"], async (Host) => {
 				action: () => {
 					document.getElementById("editorSection").classList.remove("hidden");
 				}
-			},
-			{
-				text: "Deploy",
-				type: "Custom",
-				icon: "sap-icon://upload",
-				action: () => {
-					alert("Deploy action triggered");
-				}
 			}
 		]
 	});

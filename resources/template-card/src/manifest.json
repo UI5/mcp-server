@@ -21,10 +21,6 @@
 		"configuration": {
 			"editor": "./dt/Configuration"
 		},
-		"header": {
-			"title": "{i18n>title}",
-			"subtitle": "{i18n>subtitle}"
-		},
 		<% if (cardType === "Analytical") { %>
 		<%- include('analytical.ejs') %>
 		<% } else if (cardType === "Calendar") { %>

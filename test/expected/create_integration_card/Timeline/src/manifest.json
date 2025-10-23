@@ -21,10 +21,6 @@
 		"configuration": {
 			"editor": "./dt/Configuration"
 		},
-		"header": {
-			"title": "{i18n>title}",
-			"subtitle": "{i18n>subtitle}"
-		},
 		"data": {
 			"json": {
 				"items": [
@@ -43,6 +39,10 @@
 					}
 				]
 			}
+		},
+		"header": {
+			"title": "{i18n>title}",
+			"subtitle": "{i18n>subtitle}"
 		},
 		"content": {
 			"data": {

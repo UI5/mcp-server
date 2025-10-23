@@ -1,8 +1,16 @@
 "data": {
 	"json": {
 		"firstName": "John",
-		"lastName": "Doe"
+		"lastName": "Doe",
+		"company": {
+			"name": "Some Corp",
+			"address": "123 Main St, Anytown"
+		}
 	}
+},
+"header": {
+	"title": "{i18n>title}",
+	"subtitle": "{i18n>subtitle}"
 },
 "content": {
 	"groups": [
@@ -16,6 +24,19 @@
 				{
 					"label": "Last Name",
 					"value": "{lastName}"
+				}
+			]
+		},
+		{
+			"title": "Company Details",
+			"items": [
+				{
+					"label": "Company Name",
+					"value": "{company/name}"
+				},
+				{
+					"label": "Address",
+					"value": "{company/address}"
 				}
 			]
 		}

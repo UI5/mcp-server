@@ -50,12 +50,13 @@
 - can be found at https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html
 
 ## 4. Preview Instructions
-- To show a preview of the card, you need an html page, that contains a `ui-integration` card element that uses the card manifest.
-- **ALWAYS** search the existing card folder for preview file and instructions and use them, if available. 
+- **ALWAYS** search the existing card folder for preview instructions and use them, if available.
+  * for example, in NodeJS based projects, search the `package.json` file for `start` or similar script.
+  * also search in the `README.md` file.
+- If preview instructions are not available, you have to create an html page, that contains a `ui-integration` card element that uses the card manifest. Then serve the html page using `http` server.
 
 ## 5. Configuration Editor
 - When there is Configuration Editor, always try to make most of the integration card fields editable.
-
 
 ## 6. Analytical Cards Coding Guidelines
 - **ALWAYS** set `sap.card/content/chartType` property.
