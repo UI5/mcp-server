@@ -25,7 +25,8 @@ export default function registerTool(registerTool: RegisterTool, context: Contex
 		log.info(`Using manifest version: ${latestManifestVersion}`);
 
 		const normalizedBasePath = await context.normalizePath(params.basePath);
-		const normalizedCardFolderName = path.join(normalizedBasePath, params.cardFolderName);
+		const normalizedCardFolderName = await context.normalizePath(
+			path.join(normalizedBasePath, params.cardFolderName));
 		const generatedFiles = await createIntegrationCard({
 			folderPath: normalizedCardFolderName,
 			cardType: params.cardType,

@@ -1,7 +1,7 @@
 import {mkdir, readFile, writeFile} from "fs/promises";
 import {dirExists, InvalidInputError} from "../../utils.js";
 import {globby} from "globby";
-import path from "path";
+import path, {isAbsolute} from "path";
 import {fileURLToPath} from "url";
 import ejs from "ejs";
 import {getLogger} from "@ui5/logger";
@@ -18,6 +18,12 @@ interface CreateIntegrationCardParams {
 };
 
 export async function createIntegrationCard({folderPath, cardType, manifestVersion}: CreateIntegrationCardParams) {
+	if (!isAbsolute(folderPath)) {
+		throw new InvalidInputError(
+			"The provided folder path is not valid! Please provide an absolute path to the target directory."
+		);
+	}
+
 	if (await dirExists(folderPath)) {
 		throw new InvalidInputError(
 			`The target directory '${folderPath}' already exists. ` +
