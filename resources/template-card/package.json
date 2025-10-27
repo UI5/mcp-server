@@ -8,8 +8,5 @@
 	},
 	"devDependencies": {
 		"http-server": "^14.1.1"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC"
+	}
 }
