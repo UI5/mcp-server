@@ -50,8 +50,8 @@
 - can be found at https://ui5.sap.com/test-resources/sap/ui/integration/demokit/cardExplorer/webapp/index.html
 
 ## 4. Preview Instructions
-- **ALWAYS** search the existing card folder for preview instructions and use them, if available.
-  * for example, in NodeJS based projects, search the `package.json` file for `start` or similar script.
+- **ALWAYS** search the existing card folder for preview instructions or scripts and use them, if available.
+  * for example, in NodeJS-based projects, search the `package.json` file for `start` or similar script. If such is available, use it
   * also search in the `README.md` file.
 - If preview instructions are not available, you have to create an html page, that contains a `ui-integration` card element that uses the card manifest. Then serve the html page using `http` server.
 
