@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "A basic template card project",
 	"scripts": {
-		"start": "npx http-server ./ -c-1 -o test/index.html",
+		"start": "http-server ./ -c-1 -o test/index.html",
 		"test": "echo \"No tests specified\" && exit 0"
 	},
 	"devDependencies": {
