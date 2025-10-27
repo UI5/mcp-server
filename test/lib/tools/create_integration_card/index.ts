@@ -61,7 +61,7 @@ test("create_integration_card tool returns success message on success", async (t
 	registerTool(registerToolCallback, ctx);
 	const executeFunction = registerToolCallback.firstCall.args[2];
 	const params = {
-		basePath: "/projects/mycards",
+		basePath: "/projects/mycards".replace(/\//g, path.sep),
 		cardFolderName: "mycard",
 		cardType: "List",
 	};
@@ -100,7 +100,7 @@ test("create_integration_card tool throws error on failure", async (t) => {
 	registerTool(registerToolCallback, ctx);
 	const executeFunction = registerToolCallback.firstCall.args[2];
 	const params = {
-		basePath: "/projects/mycards",
+		basePath: "/projects/mycards".replace(/\//g, path.sep),
 		cardFolderName: "mycard",
 		cardType: "List",
 	};
@@ -117,6 +117,36 @@ test("create_integration_card tool throws error on failure", async (t) => {
 		},
 		{
 			message: "Simulated failure",
+		}
+	);
+});
+
+test("create_integration_card tool throws error if card folder is outside base path", async (t) => {
+	const {registerToolCallback, registerTool} = t.context;
+
+	const ctx = new TestContext();
+	registerTool(registerToolCallback, ctx);
+	const executeFunction = registerToolCallback.firstCall.args[2];
+	const basePath = "/projects/mycards".replace(/\//g, path.sep);
+	const cardFolderName = "../otherdir/mycard".replace(/\//g, path.sep);
+	const params = {
+		basePath,
+		cardFolderName,
+		cardType: "List",
+	};
+	const mockExtra = {
+		signal: new AbortController().signal,
+		requestId: "test-request-id",
+		sendNotification: t.context.sinon.stub(),
+		sendRequest: t.context.sinon.stub(),
+	};
+
+	await t.throwsAsync(
+		async () => {
+			await executeFunction(params, mockExtra);
+		},
+		{
+			message: `Card folder path ${path.join(basePath, cardFolderName)} is not within base path ${basePath}`,
 		}
 	);
 });

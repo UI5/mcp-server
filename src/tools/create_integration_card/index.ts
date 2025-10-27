@@ -25,8 +25,14 @@ export default function registerTool(registerTool: RegisterTool, context: Contex
 		log.info(`Using manifest version: ${latestManifestVersion}`);
 
 		const normalizedBasePath = await context.normalizePath(params.basePath);
-		const normalizedCardFolderName = await context.normalizePath(
-			path.join(normalizedBasePath, params.cardFolderName));
+		const normalizedCardFolderName = path.join(normalizedBasePath, params.cardFolderName);
+
+		if (!normalizedCardFolderName.startsWith(normalizedBasePath)) {
+			throw new Error(
+				`Card folder path ${normalizedCardFolderName} is not within base path ${normalizedBasePath}`
+			);
+		}
+
 		const generatedFiles = await createIntegrationCard({
 			folderPath: normalizedCardFolderName,
 			cardType: params.cardType,

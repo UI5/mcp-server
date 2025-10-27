@@ -36,7 +36,7 @@ export async function createIntegrationCard({folderPath, cardType, manifestVersi
 	}
 
 	try {
-		// if the directory does not exist, create it
+		// create target directory
 		await mkdir(folderPath, {recursive: true});
 	} catch (dirError) {
 		throw new InvalidInputError(
