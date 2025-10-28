@@ -27,7 +27,7 @@ export default function registerTool(registerTool: RegisterTool, context: Contex
 		const normalizedBasePath = await context.normalizePath(params.basePath);
 		const normalizedCardFolderName = path.join(normalizedBasePath, params.cardFolderName);
 
-		if (!normalizedCardFolderName.startsWith(normalizedBasePath)) {
+		if (!normalizedCardFolderName.startsWith(normalizedBasePath + path.sep)) {
 			throw new Error(
 				`Card folder path ${normalizedCardFolderName} is not within base path ${normalizedBasePath}`
 			);
