@@ -34,7 +34,7 @@ jobs:
       with:
         node-version: 24.x
     - name: Install dependencies
-      run: npm ci --engine-strict # --engine-strict is used to fail-fast if deps require node versions unsupported by the repo
+      run: npm ci
     - name: Run build
       run: npm run build
     - name: Remove devDependencies from package.json
