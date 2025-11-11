@@ -45,10 +45,9 @@
   - Find more information on the UI5 documentation page "Declarative API for Initial Components"
 - **ALWAYS** use data binding in views to connect UI controls to data or i18n models.
 - **ALWAYS** prefer built-in data types with format options for formatting in data binding:
-  1. Built-in Data Types with Format Options: Use built-in data types (e.g., `sap.ui.model.type.Integer`, `sap.ui.model.type.Currency`) with `formatOptions` to handle standard formatting needs. For OData models, the types in the odata namespace are used (e.g., `sap.ui.model.odata.type.Decimal`).
-     - Example: `sap.ui.model.type.Integer` with `formatOptions: {groupingEnabled: true}` for number formatting with thousands separator.
-  2. Custom Formatters: Only write custom formatter functions for unique business logic that cannot be handled by built-in data types and their format options.
-  - This applies to **ALL** data sources (OData models, JSON models, etc.). Built-in data types can handle standard data types (dates, numbers, currencies, etc.) and should always be preferred over custom solutions.
+  - To handle standard formatting needs, use **built-in data types with format options**, for example `sap.ui.model.type.Integer` or `sap.ui.model.type.Currency` with a `formatOptions` object. For OData models, use the types provided in the `sap.ui.model.odata.type` namespace, for example `sap.ui.model.odata.type.Decimal`.
+    Example: For number formatting with a thousands separator, use `sap.ui.model.type.Integer` with `formatOptions: {groupingEnabled: true}`.
+  - Only write **custom formatter functions** for unique business logic that cannot be handled by the built-in data types and their format options. This applies to **ALL** data sources, including OData models, JSON models, and others. Our built-in data types can handle standard data types, such as dates, numbers, and currencies. You should always prefer them over custom solutions.
 - When making changes to `*.properties` files, **ALWAYS** apply the changes to all relevant locales. This ensures consistency across different language versions of the application.
   - **Example:** If you add a new key to `i18n.properties`, also add it to existing translation files like e.g `i18n_en.properties`, `i18n_de.properties`, etc.
 - **NEVER** use inline script in HTML
