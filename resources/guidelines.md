@@ -102,3 +102,9 @@ When creating a new UI5 project within a CAP project, a specific set of rules ap
     - **NEVER** configure a `ui5-middleware-simpleproxy` in the `ui5.yaml` file to connect to the local CAP service.
     - **Why:** The `cds watch` command ensures the UI and the service are served from the same origin (`http://localhost:4004`), making a proxy unnecessary.
 - **Accessing the App:** Check the CAP launch page (typically `http://localhost:4004`) for a list of available services and links to the UI5 applications.
+
+## 4. Rules to create a Form
+
+- **Never** use sap.ui.layout.form.SimpleForm unless requested explicitly
+- **Always** use a sap.ui.layout.form.Form. Use sap.ui.layout.form.ColumnLayout as layout for the Form.
+- **Always** use 2 columns as default for M-size, 3 columns as default for L-size, 4 columns as default for XL-size if not requested differently.
