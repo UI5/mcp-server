@@ -14,7 +14,6 @@ on:
         description: 'MCP Publisher version to use'
         required: false
         type: string
-        default: '${{ env.DEFAULT_MCP_PUBLISHER_VERSION }}'
       dry_run:
         description: 'Run in dry-run mode (install and login only, no publishing)'
         required: false
