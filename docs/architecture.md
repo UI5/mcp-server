@@ -35,7 +35,7 @@ The UI5 MCP server must meet the following requirements:
 
 ## Given / Existing Technology, Components and Services
 
-The server is implementing the evolving [MCP specification](https://modelcontextprotocol.io/specification/2025-06-18), which defines a standard protocol for AI agents to interact with development tools. It is built using Node.js and TypeScript, leveraging the official TypeScript SDK for Model Context Protocol servers. The server also integrates with various UI5 tools, such as the [UI5 CLI](https://sap.github.io/ui5-tooling/stable/) and [UI5 linter](https://github.com/SAP/ui5-linter).
+The server is implementing the evolving [MCP specification](https://modelcontextprotocol.io/specification/2025-06-18), which defines a standard protocol for AI agents to interact with development tools. It is built using Node.js and TypeScript, leveraging the official TypeScript SDK for Model Context Protocol servers. The server also integrates with various UI5 tools, such as the [UI5 CLI](https://ui5.github.io/cli/stable/) and [UI5 linter](https://github.com/UI5/linter).
 
 This allows for wide usage of the server in different environments, including local development setups and cloud-based AI platforms.
 
@@ -90,7 +90,7 @@ Note that the templates taken from that project have been extended in the UI5 MC
 
 The `get_api_reference` tool fetches and formats API reference documentation for the UI5 framework. It provides agents with streamlined access to relevant API information, helping them to understand and utilize UI5 components effectively.
 
-For a given UI5 version it fetches all available `api.json` resources (one per library) from either the SAPUI5- or OpenUI5 CDN. For the sap.ui.core library, the SAPUI5-CDN-URL would be for example [`https://ui5.sap.com/1.136.7/test-resources/sap/ui/core/designtime/api.json`](https://ui5.sap.com/1.136.7/test-resources/sap/ui/core/designtime/api.json). The UI5 framework and version is [derived](https://sap.github.io/ui5-tooling/stable/pages/Configuration/#framework-configuration) from the `ui5-local.yaml` or `ui5.yaml` file of a given project. Therefore a project path must be provided in the tool call. If the project does not configure framework information, OpenUI5 version `1.136.5` will be used.
+For a given UI5 version it fetches all available `api.json` resources (one per library) from either the SAPUI5- or OpenUI5 CDN. For the sap.ui.core library, the SAPUI5-CDN-URL would be for example [`https://ui5.sap.com/1.136.7/test-resources/sap/ui/core/designtime/api.json`](https://ui5.sap.com/1.136.7/test-resources/sap/ui/core/designtime/api.json). The UI5 framework and version is [derived](https://ui5.github.io/cli/stable/pages/Configuration/#framework-configuration) from the `ui5-local.yaml` or `ui5.yaml` file of a given project. Therefore a project path must be provided in the tool call. If the project does not configure framework information, OpenUI5 version `1.136.5` will be used.
 
 The list of libraries is determined using the `sap-ui-version.json` resource (e.g. [`https://ui5.sap.com/1.136.7/resources/sap-ui-version.json`](https://ui5.sap.com/1.136.7/resources/sap-ui-version.json)), excluding libraries that start with the name `themelib_` (indicating theme libraries, which do not contain API references). Not all libraries provide `api.json` files, so 404 errors are expected for some libraries. The tool will handle these gracefully, except for the sap.ui.core library. The core library's `api.json` file is expected to always be present, so a 404 error for this resource indicates an incorrect version or a problem with the CDN.
 
@@ -545,7 +545,7 @@ The [MCP specification](https://modelcontextprotocol.io/specification/2025-06-18
 
 By default, `@ui5/logger` is using `stderr`. It is therefore adhering to the MCP specification.
 
-The log level can be configured using the `UI5_LOG_LVL` environment variable. For details, refer to the [UI5 CLI documentation](https://sap.github.io/ui5-tooling/stable/pages/Troubleshooting/#changing-the-log-level).
+The log level can be configured using the `UI5_LOG_LVL` environment variable. For details, refer to the [UI5 CLI documentation]((https://ui5.github.io/cli/stable/pages/Troubleshooting/#changing-the-log-level)).
 
 For traceability, **every tool invocation should be logged**. The log should contain the tool name and relevant parameters passed to the tool.
 
@@ -574,7 +574,7 @@ It is to be discussed whether the content of internal errors should be communica
 
 ## Cache Management
 
-The UI5 MCP server uses a local cache to store downloaded resources, such as API reference files. This cache is located in the `~/.ui5/` directory on the user's machine. This directory can be configured by setting the environment variable `UI5_DATA_DIR`. This concept is aligned with the [UI5 CLI's "Data Directory"](https://sap.github.io/ui5-tooling/stable/pages/Troubleshooting/#changing-ui5-toolings-data-directory).
+The UI5 MCP server uses a local cache to store downloaded resources, such as API reference files. This cache is located in the `~/.ui5/` directory on the user's machine. This directory can be configured by setting the environment variable `UI5_DATA_DIR`. This concept is aligned with the [UI5 CLI's "Data Directory"](https://ui5.github.io/cli/stable/pages/Troubleshooting/#changing-ui5-clis-data-directory).
 
 ## Security
 
