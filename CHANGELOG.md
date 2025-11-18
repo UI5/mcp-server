@@ -1,5 +1,30 @@
 # Changelog
 
+## [0.1.4](https://github.com/UI5/mcp-server/compare/v0.1.3...v0.1.4) (2025-11-18)
+
+
+### Features
+
+* Add rule for creating a Form ([c4146e1](https://github.com/UI5/mcp-server/commit/c4146e1e1f422933dd2cba6551f0292c5fbc7b06))
+* Add tool for creating Integration Cards ([#84](https://github.com/UI5/mcp-server/issues/84)) ([a456ef2](https://github.com/UI5/mcp-server/commit/a456ef235bc10d86814798e4acf2c1db3c9ebbdc))
+* Add UI Integration Cards guidelines tool ([#69](https://github.com/UI5/mcp-server/issues/69)) ([731dbdd](https://github.com/UI5/mcp-server/commit/731dbdd9950977b5f52bc3d4acf569f452141335))
+* **docs:** Add documentation resources for Test Starter ([3a9dd3b](https://github.com/UI5/mcp-server/commit/3a9dd3baab1fde98d9d30407b8098d750d3f782c))
+
+
+### Dependencies
+
+* Bump @modelcontextprotocol/sdk from 1.20.0 to 1.20.1 ([58eeb24](https://github.com/UI5/mcp-server/commit/58eeb247824adc18376c465f89ac5f1d3032b29a))
+* Bump @modelcontextprotocol/sdk from 1.20.1 to 1.20.2 ([4359a2a](https://github.com/UI5/mcp-server/commit/4359a2a979631e59132c1b7c20ea8593ea2b4126))
+* Bump @ui5/linter from 1.20.2 to 1.20.3 ([44439bc](https://github.com/UI5/mcp-server/commit/44439bc771658f5ad0909e4f04f18a2424c53522))
+* Bump @ui5/linter from 1.20.3 to 1.20.5 ([3501b17](https://github.com/UI5/mcp-server/commit/3501b175384dd2758e12d24384c86f8483260bc0))
+* Bump @ui5/project from 4.0.6 to 4.0.7 ([f636716](https://github.com/UI5/mcp-server/commit/f63671617f81b1d4e41acc57e21c6c4da89a21f6))
+* Bump @ui5/project from 4.0.7 to 4.0.8 ([4748204](https://github.com/UI5/mcp-server/commit/4748204e1d3524b634965062ef77b5d5f7665e31))
+* Bump fast-xml-parser from 5.3.0 to 5.3.1 ([f5035db](https://github.com/UI5/mcp-server/commit/f5035db83d6838c76d57cdb32ce62089b8184b89))
+* Bump fast-xml-parser from 5.3.1 to 5.3.2 ([cad8306](https://github.com/UI5/mcp-server/commit/cad8306c1ba14ebe1dbf92932693bf58949a4ece))
+* Bump glob to 10.5.0 / 11.1.1 ([2a36fe0](https://github.com/UI5/mcp-server/commit/2a36fe043e2b7f2cdcdf7d8d0903e1199e35951e))
+* Bump globby from 14.1.0 to 16.0.0 ([c696424](https://github.com/UI5/mcp-server/commit/c696424c8f4d870117c12c02ae90271a3a28b569))
+* Bump js-yaml to 4.1.1 ([5e37c51](https://github.com/UI5/mcp-server/commit/5e37c513325a8a1d10bb56a555feaf17be8f70d5))
+
 ## [0.1.3](https://github.com/UI5/mcp-server/compare/v0.1.2...v0.1.3) (2025-10-16)
 
 
