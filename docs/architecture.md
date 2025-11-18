@@ -545,7 +545,7 @@ The [MCP specification](https://modelcontextprotocol.io/specification/2025-06-18
 
 By default, `@ui5/logger` is using `stderr`. It is therefore adhering to the MCP specification.
 
-The log level can be configured using the `UI5_LOG_LVL` environment variable. For details, refer to the [UI5 CLI documentation]((https://ui5.github.io/cli/stable/pages/Troubleshooting/#changing-the-log-level)).
+The log level can be configured using the `UI5_LOG_LVL` environment variable. For details, refer to the [UI5 CLI documentation](https://ui5.github.io/cli/stable/pages/Troubleshooting/#changing-the-log-level).
 
 For traceability, **every tool invocation should be logged**. The log should contain the tool name and relevant parameters passed to the tool.
 
