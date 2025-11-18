@@ -1,6 +1,6 @@
 # UI5 MCP Server
 
-A [Model Context Protocol](https://modelcontextprotocol.io/) server for UI5 development.
+A [Model Context Protocol](https://modelcontextprotocol.io/) server for UI5 application development.
 
 [![OpenUI5 Community Slack (#tooling channel)](https://img.shields.io/badge/slack-join-44cc11.svg)](https://ui5-slack-invite.cfapps.eu10.hana.ondemand.com/)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.1%20adopted-ff69b4.svg)](https://github.com/UI5/mcp-server?tab=coc-ov-file#readme)

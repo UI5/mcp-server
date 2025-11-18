@@ -1,7 +1,7 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
   "name": "io.github.UI5/mcp-server",
-  "description": "A MCP server for UI5",
+  "description": "MCP server for UI5 application development",
   "repository": {
     "url": "https://github.com/UI5/mcp-server",
     "source": "github"
