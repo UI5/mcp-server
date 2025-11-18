@@ -59,3 +59,5 @@ jobs:
     needs: [pull-request, publish-package]
     if: ${{needs.pull-request.outputs.releases_created && toJson(fromJson(needs.pull-request.outputs.paths_released)) != '[]'}}
     uses: ./.github/workflows/publish-mcp-registry.yml
+    permissions:
+      id-token: write # Required for login via github-oidc
