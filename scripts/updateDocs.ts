@@ -12,7 +12,7 @@ interface DocsRequest {
 }
 
 const docs: Record<string, DocsRequest> = {
-	"1.136.7": {
+	"1.136.11": {
 		revisionSha: "606268961ecee7b810a1a860bebe0eb7bdc68c23",
 		loios: [
 			"0187ea5e2eff4166b0453b9dcc8fc64f", // Component Metadata

@@ -5,9 +5,9 @@ import {readFile} from "fs/promises";
 import {Mutex} from "async-mutex";
 
 export enum AvailableVersions {
-	"1.136.7" = "1.136.7",
+	"1.136.11" = "1.136.11",
 }
-const defaultVersion = AvailableVersions["1.136.7"];
+const defaultVersion = AvailableVersions["1.136.11"];
 
 export interface DocumentationResource {
 	title: string;
