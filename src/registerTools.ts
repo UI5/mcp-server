@@ -11,6 +11,7 @@ import registerGetGuidelinesTool from "./tools/get_guidelines/index.js";
 import registerGetVersionInfoTool from "./tools/get_version_info/index.js";
 import registerGetIntegrationCardsGuidelinesTool from "./tools/get_integration_cards_guidelines/index.js";
 import registerCreateIntegrationCardTool from "./tools/create_integration_card/index.js";
+import registerConvertToTypescriptTool from "./tools/convert_to_typescript/index.js";
 
 interface Options {
 	useStructuredContentInResponse: boolean;
@@ -54,6 +55,8 @@ export default function (server: McpServer, context: Context, options: Options) 
 	registerGetIntegrationCardsGuidelinesTool(registerTool, context);
 
 	registerCreateIntegrationCardTool(registerTool, context);
+
+	registerConvertToTypescriptTool(registerTool, context);
 }
 
 export function _processResponse({content, structuredContent}: CallToolResult, options: Options) {
