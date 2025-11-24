@@ -52,20 +52,11 @@ async function getLatestVersions(dependencies: Record<string, string>) {
 const getLatestDependencies = async () => {
 	const packages = await getLatestVersions({
 		"@ui5/cli": "^4.0.36",
-		"ts-node": "^10.9.2",
 		"typescript": "^5.9.3",
 		"typescript-eslint": "^8.47.0",
 		"ui5-middleware-livereload": "^3.1.4",
 		"ui5-tooling-transpile": "^3.9.2",
-		"wdio-ui5-service": "^3.0.2",
 	});
-
-	// TODO install the same type as the ui5 project is configured to be --> fallback to latest version if not defined
-	// TODO: packages['@sapui5/types'] = ui5yaml?.['framework']?.['version']
-	//       || (await getLatestVersion('@sapui5/types'));
-	// TODO: ideally, it should also be the right framework, not always sapui5
-	packages["@sapui5/types"] = await getLatestVersion("@sapui5/types");
-
 	return JSON.stringify({
 		devDependencies: packages,
 	});

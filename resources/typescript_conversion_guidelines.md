@@ -5,12 +5,14 @@
 ## Project Setup Conversion
 
 ### 1. package.json
-You must add the following dependencies in the package.json file (very important) if they are not already present:
+You must add the following dev dependencies in the package.json file (very important) if they are not already present:
 
 {{dependencies}}
 
 However, if a dependency is already present in package.json, do not increase the major version number of it
 Do not remove existing dependencies, you must only add new configuration.
+
+**IMPORTANT**: In addition, you **MUST** also add the `@sapui5/types` (or `@openui5/types`) package in a version matching the UI5 project as dev dependency. Framework type and version can be found in ui5.yaml or using the `get_project_info` MCP tool.
 
 In addition, if (and ONLY if) dependencies or their versions changed, ensure (or tell the user) to execute npm install / yarn install (whatever is used in the project) to get the changed dependencies in the project.
 
