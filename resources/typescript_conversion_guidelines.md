@@ -178,6 +178,45 @@ function getPopup(): Popup  { ... }
 Hint: use the actual UI5 control events, not browser events like `Event` or `MouseEvent`, in event handlers of UI5 controls. UI5 events are different. E.g. use the `Button$PressEvent` and `Button$PressEventParameters` from the `sap/m/Button` module when the `press` event of the `sap/m/Button` is handled.
 
 > Note: for any event XYZ of a UI5 control ABC, types like `ABC$XYZEvent` and `ABC$XYZEventParameters` are available!
+
+
+Example:
+
+Before:
+
+```js
+sap.ui.define(["./BaseController"], function (BaseController) {
+    return BaseController.extend("my.app.controller.Main", {
+        onPress: function(oEvent) {
+            const button = oEvent.getSource();
+        },
+        
+        onSelectionChange: function(oEvent) {
+            const items = oEvent.getParameter("selectedItems");
+        }
+    });
+});
+```
+
+After:
+
+```ts
+import BaseController from "./BaseController";
+import Button from "sap/m/Button";
+import {Button$PressEvent} from "sap/m/Button";
+import {Table$RowSelectionChangeEvent} from "sap/ui/table/Table";
+
+export default class Main extends BaseController {
+    onPress(oEvent: Button$PressEvent): void {
+        const button = oEvent.getSource() as Button;
+    }
+    
+    onRowSelectionChange(oEvent: Table$RowSelectionChangeEvent): void {
+        const selectedContext = oEvent.getParameter("rowContext");
+    }
+}
+```
+
  
 Hint: use the most specific type which does provide all needed properties. Examples:
 - Use specific types like `KeyboardEvent` or `MouseEvent`, not just `Event` for browser events.
@@ -295,3 +334,169 @@ export default class BaseController extends Controller {
     }
 }
 ```
+
+## Test Conversion
+
+
+> *There are critical, non-obvious patterns for converting UI5 test code from JavaScript to TypeScript. Standard ES6 module/class conversions and renaming of files to `*.ts` also applies, like for regular application code.*
+
+### Explicit QUnit Import Required
+
+Unlike JavaScript where QUnit is often used as a global, TypeScript requires explicit import:
+
+```typescript
+import QUnit from "sap/ui/thirdparty/qunit-2";
+```
+
+### Test Registration in testsuite.qunit.ts
+
+The testsuite configuration uses plain `export default` (no sap.ui.define wrapper):
+
+```typescript
+export default {
+    name: "Testsuite for the com/myorg/myapp app",
+    defaults: {
+        page: "ui5://test-resources/...",
+        loader: {
+            paths: {
+                "com/myorg/myapp": "../",
+                "integration": "./integration",
+                "unit": "./unit"
+            }
+        }
+    },
+    tests: {
+        "unit/unitTests": { title: "..." },
+        "integration/opaTests": { title: "..." }
+    }
+};
+```
+
+### tsconfig.json Path Mappings for Tests
+
+**Essential**: Add path mappings and QUnit types (like in this sample, but adapt to the specific app which is converted):
+
+```json
+{
+    "compilerOptions": {
+        "types": ["@sapui5/types", "@types/qunit"],
+        "paths": {
+            "com/myorg/myapp/*": ["./webapp/*"],
+            "unit/*": ["./webapp/test/unit/*"],
+            "integration/*": ["./webapp/test/integration/*"]
+        }
+    }
+}
+```
+
+### OPA Integration Tests - Fundamental Architecture Change
+
+JavaScript Pattern (OLD) - NOT USED IN TYPESCRIPT:
+
+```javascript
+sap.ui.define(["sap/ui/test/opaQunit", "./pages/App"], (opaTest) => {
+    opaTest("should add an item", (Given, When, Then) => {
+        Given.iStartMyApp();
+        When.onTheAppPage.iEnterText("test");
+        Then.onTheAppPage.iShouldSeeItem("test");
+        Then.iTeardownMyApp();
+    });
+});
+```
+
+TypeScript Pattern (NEW) - MUST BE USED:
+
+```typescript
+import opaTest from "sap/ui/test/opaQunit";
+import AppPage from "./pages/AppPage";
+import QUnit from "sap/ui/thirdparty/qunit-2";
+
+const onTheAppPage = new AppPage();
+
+QUnit.module("Test Module");
+
+opaTest("Should open dialog", function () {
+    onTheAppPage.iStartMyUIComponent({
+        componentConfig: { name: "ui5.typescript.helloworld" }
+    });
+    
+    onTheAppPage.iPressButton();
+    onTheAppPage.iShouldSeeDialog();
+    onTheAppPage.iTeardownMyApp();
+});
+```
+
+Critical Rules:
+1. **NO Given/When/Then parameters** in the opaTest callback
+2. **Create page instances BEFORE tests**: `const onTheAppPage = new AppPage();`
+3. **Call all methods directly on the page instance** (arrangements, actions, assertions, cleanup)
+
+### OPA Page Objects - Class-Based Only
+
+JavaScript uses createPageObjects() - DO NOT USE IN TYPESCRIPT
+
+TypeScript uses classes extending Opa5:
+
+```typescript
+import Opa5 from "sap/ui/test/Opa5";
+import Press from "sap/ui/test/actions/Press";
+
+const viewName = "ui5.typescript.helloworld.view.App";
+
+export default class AppPage extends Opa5 {
+    iPressButton() {
+        return this.waitFor({
+            id: "myButton",
+            viewName,
+            actions: new Press(),
+            errorMessage: "Did not find button"
+        });
+    }
+    
+    iShouldSeeDialog() {
+        return this.waitFor({
+            controlType: "sap.m.Dialog",
+            success: function () {
+                Opa5.assert.ok(true, "Dialog is open");
+            },
+            errorMessage: "Did not find dialog"
+        });
+    }
+}
+```
+
+Key Points:
+- **NO createPageObjects()** - use ES6 class extending Opa5
+- **NO separation** between actions and assertions objects. They are regular class methods
+- All lifecycle methods (iStartMyUIComponent, iTeardownMyApp) are inherited from Opa5
+
+### Arrangements Pattern - Eliminated
+
+DO NOT create separate Arrangements classes in TypeScript.
+
+JavaScript often uses:
+```javascript
+sap.ui.define(["sap/ui/test/Opa5"], (Opa5) => {
+    return Opa5.extend("namespace.Startup", {
+        iStartMyApp() { this.iStartMyUIComponent({...}); }
+    });
+});
+```
+
+TypeScript eliminates this - call `iStartMyUIComponent()` directly on the page instance in the journey.
+
+### OPA Test Registration (opaTests.qunit.ts)
+
+JavaScript typically has:
+```javascript
+sap.ui.define(["sap/ui/test/Opa5", "./arrangements/Startup", "./Journey1"], (Opa5, Startup) => {
+    Opa5.extendConfig({ arrangements: new Startup(), autoWait: true });
+});
+```
+TypeScript simplifies to:
+```typescript
+// import all your OPA tests here
+import "integration/HelloJourney";
+```
+
+No Opa5.extendConfig() needed, just import the journeys.
