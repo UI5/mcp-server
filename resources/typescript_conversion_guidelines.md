@@ -168,8 +168,8 @@ function getPopup(): sap.ui.core.Popup  { ... }
  
 Correct:
 ```ts
-import Button from `sap/m/Button`;
-import Popup from `sap/ui/core/Popup`;
+import Button from "sap/m/Button";
+import Popup from "sap/ui/core/Popup";
  
 const b: Button;
 function getPopup(): Popup  { ... }
@@ -240,7 +240,7 @@ The same is valid for several UI5 methods, most prominently the following:
  
 This cast will sometimes also require an additional module import to make the type (like `ODataModel` above) known.
  
-In the app controller example above, this step would add an additional import of the app's component needed (called `AppComponent`), so within the `onInit` implementation the required typecast can be done. Without this typecast, the return type of `getOwnerComponent` would be a `sap.ui.core.Component`, which does not have the `getContentDensityClass` method defined in the app component.
+In the app controller example above, this step would add an additional import of the app's component (called `AppComponent`), so within the `onInit` implementation the required typecast can be done. Without this typecast, the return type of `getOwnerComponent` would be a `sap.ui.core.Component`, which does not have the `getContentDensityClass` method defined in the app component.
  
 Before:
 ```js
@@ -281,7 +281,7 @@ export default class App extends Controller {
 (Note: the "void" definition of the method return type is not strictly demanded by TypeScript, but is beneficial e.g. depending on the linting settings.)
 
 
-### 5. Solving any Remaining Issues
+### Step 5: Solving any Remaining Issues
  
 At this point, the number of remaining TypeScript errors should be vastly reduced.
 If you clearly recognize some, fix them, but in case of doubt mention the last needed fixes to the developer.
@@ -289,11 +289,14 @@ If you clearly recognize some, fix them, but in case of doubt mention the last n
 
 ### General Conversion Rules
 
-You must preserve existing JSDoc, documentation and comments - never remove JSDoc or comments during the migration.
+You must preserve existing JSDoc, documentation and comments - never remove JSDoc or comments during the conversion.
 
 Example input:
 
 ```js
+/**
+ * My cool controller, it does things.
+ */
 return Controller.extend("com.myorg.myapp.controller.BaseController", {
     /**
      * Convenience method for accessing the component of the controller's view.
@@ -321,6 +324,7 @@ Correct output:
 
 ```ts
 /**
+ * My cool controller, it does things.
  * @namespace com.myorg.myapp.controller
  */
 export default class BaseController extends Controller {
@@ -335,10 +339,359 @@ export default class BaseController extends Controller {
 }
 ```
 
+
+## UI5 Control TypeScript Conversion Guidelines
+
+> *This section covers the conversion of UI5 custom controls from JavaScript to TypeScript. This applies both to single custom controls within applications and to control libraries.*
+
+Converting custom UI5 controls to TypeScript requires specific patterns in addition to the general TypeScript conversion (converting the proprietary UI5 class and syntax).
+
+### The Runtime-Generated Methods Problem (CRITICAL)
+
+**This is the most important aspect to understand.**
+
+UI5 generates getter/setter (and more) methods for all properties, aggregations, associations, and events at **runtime**. This means TypeScript cannot see these methods at development time, causing type errors.
+
+#### The Problem
+
+In a control with a `text` property defined in metadata:
+
+```typescript
+static readonly metadata: MetadataOptions = {
+    properties: {
+        "text": "string"
+    }
+};
+```
+
+TypeScript will show errors when trying to use the generated methods:
+
+```typescript
+rm.text(control.getText());  // ERROR: Property 'getText' does not exist on type 'MyControl'
+```
+
+Additionally, TypeScript doesn't know the constructor signature structure for initializing controls:
+
+```typescript
+new MyControl("myId", {text: "Hello"}); // TypeScript doesn't know about the settings object structure
+```
+
+This affects:
+- Property getters/setters: `getText()`, `setText()`, `bindText()`
+- Aggregation methods: `addItem()`, `removeItem()`, `getItems()`, ...
+- Association methods: `getLabel()`, `setLabel()`
+- Event methods: `attachPress()`, `detachPress()`, `firePress()`
+- Constructor settings object structure
+
+#### The Solution: @ui5/ts-interface-generator
+
+Install the interface generator tool as a dev dependency:
+
+```sh
+npm install --save-dev @ui5/ts-interface-generator
+```
+
+To make subsequent development easier, add a script like this to `package.json`:
+
+```json
+{
+    "scripts": {
+        "watch:controls": "npx @ui5/ts-interface-generator --watch"
+    }
+}
+```
+
+After TypeScript conversion of all controls, run the generator once to generate the needed control interfaces:
+
+```bash
+npm run watch:controls
+```
+
+This generates a `*.gen.d.ts` file (e.g., `MyControl.gen.d.ts`) containing TypeScript interfaces with all the runtime-generated methods. TypeScript merges these interfaces with the control class.
+
+These generated files should be committed to version control and never edited manually.
+
+#### Required Constructor Signatures (CRITICAL MANUAL STEP)
+
+After running the interface generator, you must manually copy the constructor signatures from the terminal output into the respective control class.
+
+The generator outputs something like:
+
+```
+===== BEGIN =====
+// The following three lines were generated and should remain as-is to make TypeScript aware of the constructor signatures 
+constructor(id?: string | $MyControlSettings);
+constructor(id?: string, settings?: $MyControlSettings);
+constructor(id?: string, settings?: $MyControlSettings) { super(id, settings); }
+===== END =====
+```
+
+**Copy these lines into the beginning of the class body**, before the metadata definition:
+
+```typescript
+export default class MyControl extends Control {
+    // The following three lines were generated and should remain as-is to make TypeScript aware of the constructor signatures 
+    constructor(id?: string | $MyControlSettings);
+    constructor(id?: string, settings?: $MyControlSettings);
+    constructor(id?: string, settings?: $MyControlSettings) { super(id, settings); }
+
+    static readonly metadata: MetadataOptions = {
+        // ...
+    };
+}
+```
+
+### Control Metadata Typing
+
+The control metadata must be typed as `MetadataOptions`:
+
+```typescript
+import type { MetadataOptions } from "sap/ui/core/Element";
+
+export default class MyControl extends Control {
+    static readonly metadata: MetadataOptions = {
+        properties: {
+            "text": "string"
+        }
+    };
+}
+```
+
+**Important points:**
+- Import `MetadataOptions` from `sap/ui/core/Element` for controls (or closest base class - also available for `sap/ui/core/Object`, `sap/ui/core/ManagedObject`, and `sap/ui/core/Component`)
+- Use `import type` instead of `import` (design-time only, no runtime impact)
+- `MetadataOptions` available since UI5 1.110; use `object` for earlier versions
+- Typing prevents issues when inheriting from the control (inherited properties should not be repeated)
+
+### Namespace Annotation Required
+
+The `@namespace` JSDoc annotation is **required** for the transformer to generate correct UI5 class names:
+
+```typescript
+/**
+ * @namespace ui5.typescript.helloworld.control
+ */
+export default class MyControl extends Control {
+    // ...
+}
+```
+
+### Export Pattern
+
+**Must use `export default` immediately when defining the class**, otherwise ts-interface-generator will fail:
+
+```typescript
+// CORRECT:
+export default class MyControl extends Control {
+    // ...
+}
+
+// WRONG - separate export:
+class MyControl extends Control {
+    // ...
+}
+export default MyControl;
+```
+
+### Static Members for Metadata and Renderer
+
+Both metadata and renderer are defined as `static` class members:
+
+```typescript
+import RenderManager from "sap/ui/core/RenderManager";
+
+export default class MyControl extends Control {
+    static readonly metadata: MetadataOptions = {
+        properties: {
+            "text": "string"
+        }
+    };
+
+    static renderer = {
+        apiVersion: 2,
+        render: function (rm: RenderManager, control: MyControl): void {
+            rm.openStart("div", control);
+            rm.openEnd();
+            rm.text(control.getText());
+            rm.close("div");
+        }
+    };
+}
+```
+
+The renderer can also be in a separate file (common in libraries) and should in this case stay separate when converting to TypeScript.
+
+The following JavaScript code:
+
+```javascript
+sap.ui.define([
+    "sap/ui/core/Control",
+    "./MyControlRenderer"
+], function (Control, MyControlRenderer) {
+    "use strict";
+
+    return Control.extend("com.myorg.myapp.control.MyControl", {
+        ...
+        renderer: MyControlRenderer,
+        ...
+```
+
+is then converted to this TypeScript code:
+
+```typescript
+import Control from "sap/ui/core/Control";
+import type { MetadataOptions } from "sap/ui/core/Element";
+import MyControlRenderer from "./MyControlRenderer";
+
+/**
+ * @namespace com.myorg.myapp.control
+ */
+export default class MyControl extends Control {
+    ...
+    static renderer = MyControlRenderer;
+    ...
+```
+
+### Complete Control Example
+
+#### JavaScript (Before):
+
+```javascript
+sap.ui.define([
+    "sap/ui/core/Control",
+    "sap/ui/core/RenderManager"
+], function (Control, RenderManager) {
+    "use strict";
+    
+    var MyControl = Control.extend("ui5.typescript.helloworld.control.MyControl", {
+        metadata: {
+            properties: {
+                "text": "string"
+            },
+            events: {
+                "press": {}
+            }
+        },
+        
+        renderer: function (rm, control) {
+            rm.openStart("div", control);
+            rm.openEnd();
+            rm.text(control.getText());
+            rm.close("div");
+        },
+        
+        onclick: function() {
+            this.firePress();
+        }
+    });
+
+    return MyControl;
+});
+```
+
+#### TypeScript (After):
+
+```typescript
+import Control from "sap/ui/core/Control";
+import type { MetadataOptions } from "sap/ui/core/Element";
+import RenderManager from "sap/ui/core/RenderManager";
+
+/**
+ * @namespace ui5.typescript.helloworld.control
+ */
+export default class MyControl extends Control {
+    // The following three lines were generated and should remain as-is to make TypeScript aware of the constructor signatures 
+    constructor(id?: string | $MyControlSettings);
+    constructor(id?: string, settings?: $MyControlSettings);
+    constructor(id?: string, settings?: $MyControlSettings) { super(id, settings); }
+
+    static readonly metadata: MetadataOptions = {
+        properties: {
+            "text": "string"
+        },
+        events: {
+            "press": {}
+        }
+    };
+
+    static renderer = {
+        apiVersion: 2,
+        render: function (rm: RenderManager, control: MyControl): void {
+            rm.openStart("div", control);
+            rm.openEnd();
+            rm.text(control.getText());
+            rm.close("div");
+        }
+    };
+
+    onclick(): void {
+        this.firePress();
+    }
+}
+```
+
+### Library-Specific Guidelines
+
+When converting entire control libraries (not just single controls in apps), additional steps are required:
+
+#### Library Module with Enums (CRITICAL to avoid XSS issues!)
+
+In `library.ts`, enums must be attached to the global library object for UI5 runtime compatibility:
+
+```typescript
+import ObjectPath from "sap/base/util/ObjectPath";
+
+// Define enum as TypeScript enum
+export enum ExampleColor {
+    Red = "Red",
+    Green = "Green",
+    Blue = "Blue"
+}
+
+// CRITICAL: Attach to global library object
+const thisLib = ObjectPath.get("com.myorg.myui5lib") as {[key: string]: unknown};
+thisLib.ExampleColor = ExampleColor;
+```
+
+**Why this is critical for every enum in the library:**
+- Control properties reference types as global names: `type: "com.myorg.myui5lib.ExampleColor"`
+- UI5 runtime needs to find the enum via this global path
+- Without this, UI5 cannot validate the property type
+- This breaks type checking and can create XSS vulnerabilities as unchecked content can be written to HTML unexpectedly
+
+
+#### Path Mapping in tsconfig.json
+
+For libraries, add path mappings for the library namespace:
+
+```json
+{
+    "compilerOptions": {
+        "paths": {
+            "com/myorg/mylib/*": ["./src/*"]
+        }
+    }
+}
+```
+
+### Control Conversion Checklist
+
+When converting a control from JavaScript to TypeScript:
+
+1. Convert to ES6 class/module like regular UI5 modules
+2. Add `@namespace` JSDoc annotation
+3. Use `export default` **immediately** with class definition
+4. Type metadata as `MetadataOptions` (import from appropriate base class)
+5. Define metadata and renderer as `static` members
+6. Install and run `@ui5/ts-interface-generator`
+7. Copy constructor signatures from generator output into class
+8. If in a library: manually attach enums to global library object
+9. Preserve all JSDoc comments and documentation
+
+
 ## Test Conversion
 
-
-> *There are critical, non-obvious patterns for converting UI5 test code from JavaScript to TypeScript. Standard ES6 module/class conversions and renaming of files to `*.ts` also applies, like for regular application code.*
+> *There are critical, non-obvious patterns for converting UI5 test code from JavaScript to TypeScript. Standard ES6 module/class conversions and renaming of files to `*.ts` also applies, like for regular application code and controls.*
 
 ### Explicit QUnit Import Required
 
