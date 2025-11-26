@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5](https://github.com/UI5/mcp-server/compare/v0.1.4...v0.1.5) (2025-11-26)
+
+
+### Features
+
+* Add format options to llm guidelines ([#108](https://github.com/UI5/mcp-server/issues/108)) ([f943588](https://github.com/UI5/mcp-server/commit/f94358822174b9265aa041dc4000fffae24d6655))
+
 ## [0.1.4](https://github.com/UI5/mcp-server/compare/v0.1.3...v0.1.4) (2025-11-18)
 
 
