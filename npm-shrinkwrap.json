@@ -9,7 +9,7 @@
 			"version": "0.1.5",
 			"license": "Apache-2.0",
 			"dependencies": {
-				"@modelcontextprotocol/sdk": "^1.20.2",
+				"@modelcontextprotocol/sdk": "^1.23.0",
 				"@ui5/linter": "^1.20.5",
 				"@ui5/logger": "^4.0.2",
 				"@ui5/project": "^4.0.9",
@@ -2076,12 +2076,13 @@
 			}
 		},
 		"node_modules/@modelcontextprotocol/sdk": {
-			"version": "1.20.2",
-			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/sdk/-/sdk-1.20.2.tgz",
-			"integrity": "sha512-6rqTdFt67AAAzln3NOKsXRmv5ZzPkgbfaebKBqUbts7vK1GZudqnrun5a8d3M/h955cam9RHZ6Jb4Y1XhnmFPg==",
+			"version": "1.23.0",
+			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/sdk/-/sdk-1.23.0.tgz",
+			"integrity": "sha512-MCGd4K9aZKvuSqdoBkdMvZNcYXCkZRYVs/Gh92mdV5IHbctX9H9uIvd4X93+9g8tBbXv08sxc/QHXTzf8y65bA==",
 			"license": "MIT",
 			"dependencies": {
-				"ajv": "^6.12.6",
+				"ajv": "^8.17.1",
+				"ajv-formats": "^3.0.1",
 				"content-type": "^1.0.5",
 				"cors": "^2.8.5",
 				"cross-spawn": "^7.0.5",
@@ -2091,34 +2092,24 @@
 				"express-rate-limit": "^7.5.0",
 				"pkce-challenge": "^5.0.0",
 				"raw-body": "^3.0.0",
-				"zod": "^3.23.8",
-				"zod-to-json-schema": "^3.24.1"
+				"zod": "^3.25 || ^4.0",
+				"zod-to-json-schema": "^3.25.0"
 			},
 			"engines": {
 				"node": ">=18"
-			}
-		},
-		"node_modules/@modelcontextprotocol/sdk/node_modules/ajv": {
-			"version": "6.12.6",
-			"resolved": "https://registry.npmjs.org/ajv/-/ajv-6.12.6.tgz",
-			"integrity": "sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==",
-			"license": "MIT",
-			"dependencies": {
-				"fast-deep-equal": "^3.1.1",
-				"fast-json-stable-stringify": "^2.0.0",
-				"json-schema-traverse": "^0.4.1",
-				"uri-js": "^4.2.2"
 			},
-			"funding": {
-				"type": "github",
-				"url": "https://github.com/sponsors/epoberezkin"
+			"peerDependencies": {
+				"@cfworker/json-schema": "^4.1.1",
+				"zod": "^3.25 || ^4.0"
+			},
+			"peerDependenciesMeta": {
+				"@cfworker/json-schema": {
+					"optional": true
+				},
+				"zod": {
+					"optional": false
+				}
 			}
-		},
-		"node_modules/@modelcontextprotocol/sdk/node_modules/json-schema-traverse": {
-			"version": "0.4.1",
-			"resolved": "https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-0.4.1.tgz",
-			"integrity": "sha512-xbbCH5dCYU5T8LcEhhuh7HJ88HXuW3qsI3Y0zOZFKfZEHcpWiHU/Jxzk629Brsab/mMiHQti9wMP+845RPe3Vg==",
-			"license": "MIT"
 		},
 		"node_modules/@modelcontextprotocol/sdk/node_modules/pkce-challenge": {
 			"version": "5.0.0",
@@ -9516,6 +9507,23 @@
 			"license": "MIT",
 			"peerDependencies": {
 				"ajv": ">=5.0.0"
+			}
+		},
+		"node_modules/ajv-formats": {
+			"version": "3.0.1",
+			"resolved": "https://registry.npmjs.org/ajv-formats/-/ajv-formats-3.0.1.tgz",
+			"integrity": "sha512-8iUql50EUR+uUcdRQ3HDqa6EVyo3docL8g5WJ3FNcWmu62IbkGUue/pEyLBW8VGKKucTPgqeks4fIU1DA4yowQ==",
+			"license": "MIT",
+			"dependencies": {
+				"ajv": "^8.0.0"
+			},
+			"peerDependencies": {
+				"ajv": "^8.0.0"
+			},
+			"peerDependenciesMeta": {
+				"ajv": {
+					"optional": true
+				}
 			}
 		},
 		"node_modules/ansi-regex": {
@@ -19779,12 +19787,12 @@
 			}
 		},
 		"node_modules/zod-to-json-schema": {
-			"version": "3.24.6",
-			"resolved": "https://registry.npmjs.org/zod-to-json-schema/-/zod-to-json-schema-3.24.6.tgz",
-			"integrity": "sha512-h/z3PKvcTcTetyjl1fkj79MHNEjm+HpD6NXheWjzOekY7kV+lwDYnHw+ivHkijnCSMz1yJaWBD9vu/Fcmk+vEg==",
+			"version": "3.25.0",
+			"resolved": "https://registry.npmjs.org/zod-to-json-schema/-/zod-to-json-schema-3.25.0.tgz",
+			"integrity": "sha512-HvWtU2UG41LALjajJrML6uQejQhNJx+JBO9IflpSja4R03iNWfKXrj6W2h7ljuLyc1nKS+9yDyL/9tD1U/yBnQ==",
 			"license": "ISC",
 			"peerDependencies": {
-				"zod": "^3.24.1"
+				"zod": "^3.25 || ^4"
 			}
 		}
 	}
