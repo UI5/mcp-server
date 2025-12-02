@@ -81,7 +81,7 @@
 		"@ui5/project": "^4.0.9",
 		"async-mutex": "^0.5.0",
 		"ejs": "^3.1.10",
-		"execa": "^9.6.0",
+		"execa": "^9.6.1",
 		"fast-xml-parser": "^5.3.2",
 		"globby": "^16.0.0",
 		"lockfile": "^1.0.4",
