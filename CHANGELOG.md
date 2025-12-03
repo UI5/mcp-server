@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.1.6](https://github.com/UI5/mcp-server/compare/v0.1.5...v0.1.6) (2025-12-03)
+
+
+### Bug Fixes
+
+* Add dot prefix to event handlers in application templates ([#142](https://github.com/UI5/mcp-server/issues/142)) ([d554850](https://github.com/UI5/mcp-server/commit/d55485099f4c55e864cae3bb2038df299113bc30))
+
+
+### Dependencies
+
+* Bump @modelcontextprotocol/sdk from 1.20.2 to 1.24.2 ([3e44813](https://github.com/UI5/mcp-server/commit/3e448132c9fb102fcda456c4af7f5956adb433b6))
+* Bump @ui5/project from 4.0.8 to 4.0.9 ([bca8f7a](https://github.com/UI5/mcp-server/commit/bca8f7ab80825eae39859f70f346150ca9f5d9b4))
+* Bump body-parser from 2.2.0 to 2.2.1 ([f0f43cb](https://github.com/UI5/mcp-server/commit/f0f43cb78b51c0b53ed6cbc0d025437f64c47696))
+* Bump execa from 9.6.0 to 9.6.1 ([f6fc3c8](https://github.com/UI5/mcp-server/commit/f6fc3c85b36993cb45d3547ef3e66a3e2dfb548f))
+* Bump zod from 3.25.76 to 4.1.13 ([7db5273](https://github.com/UI5/mcp-server/commit/7db5273e3afd60ac26aa3458b7eeb59f955be3f2))
+
 ## [0.1.5](https://github.com/UI5/mcp-server/compare/v0.1.4...v0.1.5) (2025-11-26)
 
 
