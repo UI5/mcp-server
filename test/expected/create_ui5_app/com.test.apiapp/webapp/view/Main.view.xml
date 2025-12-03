@@ -21,7 +21,7 @@
 					<Button
 						id="helloButton"
 						text="{formatter: 'formatter.formatValue', path: 'i18n>btnText'}"
-						press="sayHello" />
+						press=".sayHello" />
 				</additionalContent>
 			</IllustratedMessage>
 		</content>
