@@ -11,5 +11,10 @@
 
 		// Generate d.ts files
 		"declaration": true,
+
+		// Needed as workaround for the missing module error
+		// of the optional peer dependency "@cfworker/json-schema" in
+		// node_modules/@modelcontextprotocol/sdk/dist/esm/validation/types.d.ts
+		"skipLibCheck": true,
 	}
 }

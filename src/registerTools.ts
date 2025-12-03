@@ -28,8 +28,11 @@ export default function (server: McpServer, context: Context, options: Options) 
 		// @ts-expect-error -- Generic type handling
 		return server.registerTool(name, config, async (...args) => {
 			try {
-				const res = await Promise.resolve(callback(...args));
-				return _processResponse(res, options);
+				// @ts-expect-error -- Generic type handling
+				// eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- Generic type handling
+				const toolResult = callback(...args);
+				const response = await Promise.resolve(toolResult);
+				return _processResponse(response, options);
 			} catch (error) {
 				handleError(error);
 			}
@@ -57,14 +60,16 @@ export function _processResponse({content, structuredContent}: CallToolResult, o
 	if (!options.useResourcesInResponse) {
 		content = content.map((item) => {
 			if (item.type === "resource") {
-				let text = item.resource.text as string;
-				if (item.resource.title && typeof item.resource.title === "string") {
-					text = `# ${item.resource.title}\n\n${text}`;
+				if ("text" in item.resource && typeof item.resource.text === "string") {
+					return {
+						type: "text" as const,
+						text: item.resource.text,
+					};
+				} else {
+					throw new Error(
+						`Unable to convert resource without text content to text content: ${JSON.stringify(item)}`
+					);
 				}
-				return {
-					type: "text",
-					text,
-				};
 			}
 			return item;
 		});

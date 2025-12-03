@@ -144,7 +144,6 @@ test("processResponse: Default behavior", (t) => {
 			type: "resource",
 			resource: {
 				uri: pathToFileURL(path.join("/", "path", "to", "resource")).toString(),
-				title: "Resource Title",
 				text: "This is the resource content.",
 				mimeType: "text/plain",
 			},
@@ -198,8 +197,7 @@ test("processResponse: Do not use resources", (t) => {
 			type: "resource",
 			resource: {
 				uri: pathToFileURL(path.join("/", "path", "to", "resource")).toString(),
-				title: "Resource Title",
-				text: "This is the resource content.",
+				text: "# Resource Title\n\nThis is the resource content.",
 				mimeType: "text/plain",
 			},
 		},
@@ -255,7 +253,6 @@ test("processResponse: Do not use structured content", (t) => {
 			type: "resource",
 			resource: {
 				uri: pathToFileURL(path.join("/", "path", "to", "resource")).toString(),
-				title: "Resource Title",
 				text: "This is the resource content.",
 				mimeType: "text/plain",
 			},

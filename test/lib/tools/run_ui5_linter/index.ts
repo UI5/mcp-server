@@ -232,7 +232,6 @@ test("run_ui5_linter tool returns linting results with context information", asy
 	t.deepEqual(result.content[2], {
 		type: "resource",
 		resource: {
-			title: sampleResults.contextInformation.migrationGuides[0].title,
 			text: sampleResults.contextInformation.migrationGuides[0].text,
 			uri: sampleResults.contextInformation.migrationGuides[0].uri,
 			mimeType: "text/markdown",
@@ -243,7 +242,6 @@ test("run_ui5_linter tool returns linting results with context information", asy
 	t.deepEqual(result.content[3], {
 		type: "resource",
 		resource: {
-			title: sampleResults.contextInformation.documentationResources[0].title,
 			text: sampleResults.contextInformation.documentationResources[0].text,
 			uri: sampleResults.contextInformation.documentationResources[0].uri,
 			mimeType: "text/markdown",

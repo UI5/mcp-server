@@ -106,10 +106,10 @@ test("Server constructor initializes with correct configuration", (t) => {
 
 	// Verify McpServer was initialized with correct parameters
 	t.is(constructorStub.callCount, 1);
-	const constructorArgs = constructorStub.firstCall.args[0];
-	t.is(constructorArgs.name, "UI5");
-	t.is(constructorArgs.version, PKG_VERSION);
-	t.deepEqual(constructorArgs.capabilities, {tools: {}});
+	const constructorArgs = constructorStub.firstCall.args;
+	t.is(constructorArgs[0].name, "UI5");
+	t.is(constructorArgs[0].version, PKG_VERSION);
+	t.deepEqual(constructorArgs[1].capabilities, {tools: {}});
 
 	t.deepEqual(registerToolsStub.firstCall.args[2], {
 		useStructuredContentInResponse: true,

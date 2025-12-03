@@ -58,18 +58,16 @@ export default function registerTool(registerTool: RegisterTool, context: Contex
 				content.push({
 					type: "resource",
 					resource: {
-						title: migrationGuide.title,
 						text: migrationGuide.text,
 						uri: migrationGuide.uri,
 						mimeType: "text/markdown",
 					},
 				});
-			};
+			}
 			for (const doc of documentationResources) {
 				content.push({
 					type: "resource",
 					resource: {
-						title: doc.title,
 						text: doc.text,
 						uri: doc.uri,
 						mimeType: "text/markdown",

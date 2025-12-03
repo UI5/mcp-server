@@ -29,6 +29,7 @@ export default class Server {
 		this.server = new McpServer({
 			name: "UI5",
 			version: PKG_VERSION,
+		}, {
 			capabilities: {
 				tools: {},
 			},
