@@ -32,7 +32,7 @@
 				"@eslint/js": "^9.39.1",
 				"@istanbuljs/esm-loader-hook": "^0.3.0",
 				"@istanbuljs/nyc-config-typescript": "^1.0.2",
-				"@modelcontextprotocol/inspector": "^0.17.2",
+				"@modelcontextprotocol/inspector": "^0.17.5",
 				"@stylistic/eslint-plugin": "^5.6.1",
 				"@types/ejs": "^3.1.5",
 				"@types/make-fetch-happen": "^10.0.4",
@@ -1931,9 +1931,9 @@
 			}
 		},
 		"node_modules/@modelcontextprotocol/inspector": {
-			"version": "0.17.2",
-			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/inspector/-/inspector-0.17.2.tgz",
-			"integrity": "sha512-ADWwZtbvecKCbLCR7L0Uaa2mPKFDJcTrc9xcE9pdN8gL/jFfzOMrgdNsKt+qBknzMeSQ6mJT+UguJbnQs8n13Q==",
+			"version": "0.17.5",
+			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/inspector/-/inspector-0.17.5.tgz",
+			"integrity": "sha512-4IevkwKP1tvhxO5m48v21PMaxkGvMSHwbTSCW/ZRkYnqJidQDu9eoWaXKa7Q5347767bhi0HAjFfOiEt/r6jQQ==",
 			"dev": true,
 			"license": "MIT",
 			"workspaces": [
@@ -1942,10 +1942,10 @@
 				"cli"
 			],
 			"dependencies": {
-				"@modelcontextprotocol/inspector-cli": "^0.17.2",
-				"@modelcontextprotocol/inspector-client": "^0.17.2",
-				"@modelcontextprotocol/inspector-server": "^0.17.2",
-				"@modelcontextprotocol/sdk": "^1.20.1",
+				"@modelcontextprotocol/inspector-cli": "^0.17.5",
+				"@modelcontextprotocol/inspector-client": "^0.17.5",
+				"@modelcontextprotocol/inspector-server": "^0.17.5",
+				"@modelcontextprotocol/sdk": "^1.23.0",
 				"concurrently": "^9.2.0",
 				"node-fetch": "^3.3.2",
 				"open": "^10.2.0",
@@ -1962,9 +1962,9 @@
 			}
 		},
 		"node_modules/@modelcontextprotocol/inspector-cli": {
-			"version": "0.17.2",
-			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/inspector-cli/-/inspector-cli-0.17.2.tgz",
-			"integrity": "sha512-xXaqZYWJz77xvmfAVlYbvz2/xw9OaalFHq0n5A8PlmZvmhi6akQocIE7ZYaoEBpLbWRSwIZWfsidnfoKb6dO2A==",
+			"version": "0.17.5",
+			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/inspector-cli/-/inspector-cli-0.17.5.tgz",
+			"integrity": "sha512-LoDwYa/lpjug19mvIrqOU1UAmgrnOxToZqa/WCDmFLlo7t2LXMqtWKdw00WHXH7p4knF6CgRNfHSBquUmwBJag==",
 			"dev": true,
 			"license": "MIT",
 			"dependencies": {
@@ -1977,9 +1977,9 @@
 			}
 		},
 		"node_modules/@modelcontextprotocol/inspector-client": {
-			"version": "0.17.2",
-			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/inspector-client/-/inspector-client-0.17.2.tgz",
-			"integrity": "sha512-llC96yU8iMjG7ny2gpjhm+ARQqBRZWeKBCxW+nBErAE43jBqd5DhGuI2abrt499Gd3ByNOImz+Z5mb8YWjRiJA==",
+			"version": "0.17.5",
+			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/inspector-client/-/inspector-client-0.17.5.tgz",
+			"integrity": "sha512-zoSa3LESpaYoRLD+6UNDkjyKtu1oYD3hXOwPegwtpvvLbM3CVj5WSUTXNaqN8UnFtyiQK2hc98IjaDPBkWProw==",
 			"dev": true,
 			"license": "MIT",
 			"dependencies": {
@@ -2048,9 +2048,9 @@
 			}
 		},
 		"node_modules/@modelcontextprotocol/inspector-server": {
-			"version": "0.17.2",
-			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/inspector-server/-/inspector-server-0.17.2.tgz",
-			"integrity": "sha512-+logjB5XXK+8aE+eDl8cLnwY0UhOUh19vo6tg5rFVmLXNQPtxTFyWybcQfgP/cHp76+r5+EMxIpydDYEoasTvg==",
+			"version": "0.17.5",
+			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/inspector-server/-/inspector-server-0.17.5.tgz",
+			"integrity": "sha512-HlCVDPnCXGb/7HWhJ6Yu51YAQ0mgKluRspa+WtR4DnVxkYwrnph2VMJGlnJ3gwBtHlJM1TYpX0nYDcxF6Meu+w==",
 			"dev": true,
 			"license": "MIT",
 			"dependencies": {
@@ -4028,6 +4028,25 @@
 				}
 			}
 		},
+		"node_modules/@radix-ui/react-collection/node_modules/@radix-ui/react-slot": {
+			"version": "1.2.3",
+			"resolved": "https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.2.3.tgz",
+			"integrity": "sha512-aeNmHnBxbi2St0au6VBVC7JXFlhLlOnvIIlePNniyUNAClzmtAUEY8/pBiK3iHjufOlwA+c20/8jngo7xcrg8A==",
+			"dev": true,
+			"license": "MIT",
+			"dependencies": {
+				"@radix-ui/react-compose-refs": "1.1.2"
+			},
+			"peerDependencies": {
+				"@types/react": "*",
+				"react": "^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc"
+			},
+			"peerDependenciesMeta": {
+				"@types/react": {
+					"optional": true
+				}
+			}
+		},
 		"node_modules/@radix-ui/react-compose-refs": {
 			"version": "1.1.2",
 			"resolved": "https://registry.npmjs.org/@radix-ui/react-compose-refs/-/react-compose-refs-1.1.2.tgz",
@@ -4093,6 +4112,25 @@
 					"optional": true
 				},
 				"@types/react-dom": {
+					"optional": true
+				}
+			}
+		},
+		"node_modules/@radix-ui/react-dialog/node_modules/@radix-ui/react-slot": {
+			"version": "1.2.3",
+			"resolved": "https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.2.3.tgz",
+			"integrity": "sha512-aeNmHnBxbi2St0au6VBVC7JXFlhLlOnvIIlePNniyUNAClzmtAUEY8/pBiK3iHjufOlwA+c20/8jngo7xcrg8A==",
+			"dev": true,
+			"license": "MIT",
+			"dependencies": {
+				"@radix-ui/react-compose-refs": "1.1.2"
+			},
+			"peerDependencies": {
+				"@types/react": "*",
+				"react": "^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc"
+			},
+			"peerDependenciesMeta": {
+				"@types/react": {
 					"optional": true
 				}
 			}
@@ -4213,13 +4251,37 @@
 			}
 		},
 		"node_modules/@radix-ui/react-label": {
-			"version": "2.1.7",
-			"resolved": "https://registry.npmjs.org/@radix-ui/react-label/-/react-label-2.1.7.tgz",
-			"integrity": "sha512-YT1GqPSL8kJn20djelMX7/cTRp/Y9w5IZHvfxQTVHrOqa2yMl7i/UfMqKRU5V7mEyKTrUVgJXhNQPVCG8PBLoQ==",
+			"version": "2.1.8",
+			"resolved": "https://registry.npmjs.org/@radix-ui/react-label/-/react-label-2.1.8.tgz",
+			"integrity": "sha512-FmXs37I6hSBVDlO4y764TNz1rLgKwjJMQ0EGte6F3Cb3f4bIuHB/iLa/8I9VKkmOy+gNHq8rql3j686ACVV21A==",
 			"dev": true,
 			"license": "MIT",
 			"dependencies": {
-				"@radix-ui/react-primitive": "2.1.3"
+				"@radix-ui/react-primitive": "2.1.4"
+			},
+			"peerDependencies": {
+				"@types/react": "*",
+				"@types/react-dom": "*",
+				"react": "^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc",
+				"react-dom": "^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc"
+			},
+			"peerDependenciesMeta": {
+				"@types/react": {
+					"optional": true
+				},
+				"@types/react-dom": {
+					"optional": true
+				}
+			}
+		},
+		"node_modules/@radix-ui/react-label/node_modules/@radix-ui/react-primitive": {
+			"version": "2.1.4",
+			"resolved": "https://registry.npmjs.org/@radix-ui/react-primitive/-/react-primitive-2.1.4.tgz",
+			"integrity": "sha512-9hQc4+GNVtJAIEPEqlYqW5RiYdrr8ea5XQ0ZOnD6fgru+83kqT15mq2OCcbe8KnjRZl5vF3ks69AKz3kh1jrhg==",
+			"dev": true,
+			"license": "MIT",
+			"dependencies": {
+				"@radix-ui/react-slot": "1.2.4"
 			},
 			"peerDependencies": {
 				"@types/react": "*",
@@ -4270,6 +4332,25 @@
 					"optional": true
 				},
 				"@types/react-dom": {
+					"optional": true
+				}
+			}
+		},
+		"node_modules/@radix-ui/react-popover/node_modules/@radix-ui/react-slot": {
+			"version": "1.2.3",
+			"resolved": "https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.2.3.tgz",
+			"integrity": "sha512-aeNmHnBxbi2St0au6VBVC7JXFlhLlOnvIIlePNniyUNAClzmtAUEY8/pBiK3iHjufOlwA+c20/8jngo7xcrg8A==",
+			"dev": true,
+			"license": "MIT",
+			"dependencies": {
+				"@radix-ui/react-compose-refs": "1.1.2"
+			},
+			"peerDependencies": {
+				"@types/react": "*",
+				"react": "^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc"
+			},
+			"peerDependenciesMeta": {
+				"@types/react": {
 					"optional": true
 				}
 			}
@@ -4381,6 +4462,25 @@
 				}
 			}
 		},
+		"node_modules/@radix-ui/react-primitive/node_modules/@radix-ui/react-slot": {
+			"version": "1.2.3",
+			"resolved": "https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.2.3.tgz",
+			"integrity": "sha512-aeNmHnBxbi2St0au6VBVC7JXFlhLlOnvIIlePNniyUNAClzmtAUEY8/pBiK3iHjufOlwA+c20/8jngo7xcrg8A==",
+			"dev": true,
+			"license": "MIT",
+			"dependencies": {
+				"@radix-ui/react-compose-refs": "1.1.2"
+			},
+			"peerDependencies": {
+				"@types/react": "*",
+				"react": "^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc"
+			},
+			"peerDependenciesMeta": {
+				"@types/react": {
+					"optional": true
+				}
+			}
+		},
 		"node_modules/@radix-ui/react-roving-focus": {
 			"version": "1.1.11",
 			"resolved": "https://registry.npmjs.org/@radix-ui/react-roving-focus/-/react-roving-focus-1.1.11.tgz",
@@ -4457,10 +4557,29 @@
 				}
 			}
 		},
-		"node_modules/@radix-ui/react-slot": {
+		"node_modules/@radix-ui/react-select/node_modules/@radix-ui/react-slot": {
 			"version": "1.2.3",
 			"resolved": "https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.2.3.tgz",
 			"integrity": "sha512-aeNmHnBxbi2St0au6VBVC7JXFlhLlOnvIIlePNniyUNAClzmtAUEY8/pBiK3iHjufOlwA+c20/8jngo7xcrg8A==",
+			"dev": true,
+			"license": "MIT",
+			"dependencies": {
+				"@radix-ui/react-compose-refs": "1.1.2"
+			},
+			"peerDependencies": {
+				"@types/react": "*",
+				"react": "^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc"
+			},
+			"peerDependenciesMeta": {
+				"@types/react": {
+					"optional": true
+				}
+			}
+		},
+		"node_modules/@radix-ui/react-slot": {
+			"version": "1.2.4",
+			"resolved": "https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.2.4.tgz",
+			"integrity": "sha512-Jl+bCv8HxKnlTLVrcDE8zTMJ09R9/ukw4qBs/oZClOfoQk/cOTbDn+NceXfV7j09YPVQUryJPHurafcSg6EVKA==",
 			"dev": true,
 			"license": "MIT",
 			"dependencies": {
@@ -4603,6 +4722,25 @@
 					"optional": true
 				},
 				"@types/react-dom": {
+					"optional": true
+				}
+			}
+		},
+		"node_modules/@radix-ui/react-tooltip/node_modules/@radix-ui/react-slot": {
+			"version": "1.2.3",
+			"resolved": "https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.2.3.tgz",
+			"integrity": "sha512-aeNmHnBxbi2St0au6VBVC7JXFlhLlOnvIIlePNniyUNAClzmtAUEY8/pBiK3iHjufOlwA+c20/8jngo7xcrg8A==",
+			"dev": true,
+			"license": "MIT",
+			"dependencies": {
+				"@radix-ui/react-compose-refs": "1.1.2"
+			},
+			"peerDependencies": {
+				"@types/react": "*",
+				"react": "^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc"
+			},
+			"peerDependenciesMeta": {
+				"@types/react": {
 					"optional": true
 				}
 			}
@@ -17346,9 +17484,9 @@
 			}
 		},
 		"node_modules/react-remove-scroll": {
-			"version": "2.7.1",
-			"resolved": "https://registry.npmjs.org/react-remove-scroll/-/react-remove-scroll-2.7.1.tgz",
-			"integrity": "sha512-HpMh8+oahmIdOuS5aFKKY6Pyog+FNaZV/XyJOq7b4YFwsFHe5yYfdbIalI4k3vU2nSDql7YskmUseHsRrJqIPA==",
+			"version": "2.7.2",
+			"resolved": "https://registry.npmjs.org/react-remove-scroll/-/react-remove-scroll-2.7.2.tgz",
+			"integrity": "sha512-Iqb9NjCCTt6Hf+vOdNIZGdTiH1QSqr27H/Ek9sv/a97gfueI/5h1s3yRi1nngzMUaOOToin5dI1dXKdXiF+u0Q==",
 			"dev": true,
 			"license": "MIT",
 			"dependencies": {
