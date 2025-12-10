@@ -2,6 +2,70 @@
 
 > *This document outlines how a UI5 (SAPUI5/OpenUI5) project can be converted to TypeScript. The first part explains how the setup of the project needs to be changed, the second part deals with converting the code itself.*
 
+
+## General Conversion Rules
+
+### Preserve ALL comments
+
+You MUST preserve existing JSDoc, documentation and comments - never remove JSDoc or comments during the conversion.
+
+Example input:
+
+```js
+/**
+ * My cool controller, it does things.
+ */
+return Controller.extend("com.myorg.myapp.controller.BaseController", {
+    /**
+     * Convenience method for accessing the component of the controller's view.
+     * @returns {sap.ui.core.Component} The component of the controller's view
+     */
+    getOwnerComponent: function () {
+        // comment
+        return Controller.prototype.getOwnerComponent.call(this);
+    },
+    ...
+});
+```
+
+Wrong output:
+
+```ts
+export default class BaseController extends Controller {
+    public getOwnerComponent(): UIComponent {
+        return super.getOwnerComponent() as UIComponent;
+    }
+}
+```
+
+Correct output:
+
+```ts
+/**
+ * My cool controller, it does things.
+ * @namespace com.myorg.myapp.controller
+ */
+export default class BaseController extends Controller {
+    /**
+     * Convenience method for accessing the component of the controller's view.
+     * @returns {sap.ui.core.Component} The component of the controller's view
+     */
+    public getOwnerComponent(): UIComponent {
+        // comment
+        return super.getOwnerComponent() as UIComponent;
+    }
+}
+```
+
+### Be diligent
+
+Carefully respect all guidelines in this document (and adapt appropriately where required). Before each conversion step, consider all relevant details from this document.
+
+### Go step-by-step
+
+You should convert the project step by step, starting with the TypeScript project setup and then the most central files on which other files depend, so those other files can use the typed version of those central files once they are converted as well. `"allowJs": true` in the `tsconfig.json`'s `compilerOptions` may be useful to run semi-converted projects if needed.
+
+
 ## Project Setup Conversion
 
 ### 1. package.json
@@ -9,12 +73,16 @@ You must add the following dev dependencies in the package.json file (very impor
 
 {{dependencies}}
 
-However, if a dependency is already present in package.json, do not increase the major version number of it
+However, if a dependency is already present in package.json, do not increase the major version number of it.
 Do not remove existing dependencies, you must only add new configuration.
 
 **IMPORTANT**: In addition, you **MUST** also add the `@sapui5/types` (or `@openui5/types`) package in a version matching the UI5 project as dev dependency. Framework type and version can be found in ui5.yaml or using the `get_project_info` MCP tool.
 
 In addition, if (and ONLY if) dependencies or their versions changed, ensure (or tell the user) to execute npm install / yarn install (whatever is used in the project) to get the changed dependencies in the project.
+
+The `typescript-eslint` dependency is only relevant when the project already has an eslint setup (details are below).
+
+Also add the `"ts-typecheck": "tsc --noEmit"` script to `package.json`, so you and the developer can easily check for TypeScript errors.
 
 ### 2. tsconfig.json
 
@@ -64,6 +132,39 @@ server:
 
 Ensure that the generated ui5.yaml file is valid - avoid duplicate entries, each root configuration must only exist once.
 If a configuration like `server` already exists, you must add to it instead of adding a second entry.
+
+### 4. Eslint configuration
+
+Only when the project has eslint set up, enhance the eslint configuration with TypeScript-specific parts. If eslint is not set up with dependency in package.json and an eslint config, then do nothing.
+A complete eslint v9 compatible `eslint.config.mjs` file could e.g. look like this, but the actual content depends on the specific project, so you MUST adapt it!
+
+```js
+import eslint from "@eslint/js";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+
+export default tseslint.config(
+	eslint.configs.recommended,
+	...tseslint.configs.recommended,
+	...tseslint.configs.recommendedTypeChecked,
+	{
+		languageOptions: {
+			globals: {
+				...globals.browser,
+				sap: "readonly"
+			},
+			ecmaVersion: 2023,
+			parserOptions: {
+				project: true,
+				tsconfigRootDir: import.meta.dirname
+			}
+		}
+	},
+	{
+		ignores: ["eslint.config.mjs"]
+	}
+);
+```
 
 
 ## Application Code Conversion
@@ -286,60 +387,7 @@ export default class App extends Controller {
 ### Step 5: Solving any Remaining Issues
  
 At this point, the number of remaining TypeScript errors should be vastly reduced.
-If you clearly recognize some, fix them, but in case of doubt mention the last needed fixes to the developer.
-
-
-### General Conversion Rules
-
-You must preserve existing JSDoc, documentation and comments - never remove JSDoc or comments during the conversion.
-
-Example input:
-
-```js
-/**
- * My cool controller, it does things.
- */
-return Controller.extend("com.myorg.myapp.controller.BaseController", {
-    /**
-     * Convenience method for accessing the component of the controller's view.
-     * @returns {sap.ui.core.Component} The component of the controller's view
-     */
-    getOwnerComponent: function () {
-        // comment
-        return Controller.prototype.getOwnerComponent.call(this);
-    },
-    ...
-});
-```
-
-Wrong output:
-
-```ts
-export default class BaseController extends Controller {
-    public getOwnerComponent(): UIComponent {
-        return super.getOwnerComponent() as UIComponent;
-    }
-}
-```
-
-Correct output:
-
-```ts
-/**
- * My cool controller, it does things.
- * @namespace com.myorg.myapp.controller
- */
-export default class BaseController extends Controller {
-    /**
-     * Convenience method for accessing the component of the controller's view.
-     * @returns {sap.ui.core.Component} The component of the controller's view
-     */
-    public getOwnerComponent(): UIComponent {
-        // comment
-        return super.getOwnerComponent() as UIComponent;
-    }
-}
-```
+If you clearly recognize some, fix them, but in case of doubt mention the last remaining issues to the developer.
 
 
 ## UI5 Control TypeScript Conversion Guidelines
@@ -695,6 +743,10 @@ When converting a control from JavaScript to TypeScript:
 
 > *There are critical, non-obvious patterns for converting UI5 test code from JavaScript to TypeScript. Standard ES6 module/class conversions and renaming of files to `*.ts` also applies, like for regular application code and controls.*
 
+NOTE: The test code file related changes below (especially those for OPA tests) always apply when converting the tests to TypeScript, but the test setup and running (like in `testsuite.qunit.ts`) may depend on how exactly the tests are set up in the project.
+
+Test conversion should only happen once the rest of the application has been converted successfully.
+
 ### Explicit QUnit Import Required
 
 Unlike JavaScript where QUnit is often used as a global, TypeScript requires explicit import:
@@ -855,3 +907,45 @@ import "integration/HelloJourney";
 ```
 
 No Opa5.extendConfig() needed, just import the journeys.
+
+### Code Coverage in case of using `ui5-test-runner`
+
+If (and only if!) the tests are set up using the `ui5-test-runner` tool, then the app must be started with a specific `ui5-coverage.yaml` configuration. Suitable `package.json` scripts may look like this:
+
+```
+    "start-coverage": "ui5 serve --port 8080 --config ui5-coverage.yaml",
+    ...
+    "test-runner-coverage": "ui5-test-runner --url http://localhost:8080/test/testsuite.qunit.html --coverage -ccb 60 -ccf 100 -ccl 80 -ccs 80",
+    "test-ui5": "ui5-test-runner --start start-coverage --url http://localhost:8080/test/testsuite.qunit.html --coverage -ccb 60 -ccf 100 -ccl 80 -ccs 80",
+```
+
+The `test-runner-coverage` script expects `start-coverage` to be executed manually, `test-ui5` does it automatically.
+
+When adding such scripts, explain them to the user!
+
+The `ui5-coverage.yaml` file must configure the `ui5-tooling-transpile-middleware` like this by adding the `babelConfig`:
+
+```yaml
+...
+server:
+  customMiddleware:
+    - name: ui5-tooling-transpile-middleware
+      afterMiddleware: compression
+      configuration:
+        debug: true
+        babelConfig:
+          sourceMaps: true
+          ignore:
+          - "**/*.d.ts"
+          presets:
+          - - "@babel/preset-env"
+            - targets: defaults
+          - - transform-ui5
+          - "@babel/preset-typescript"
+          plugins:
+          - istanbul
+    - name: ui5-middleware-livereload
+      afterMiddleware: compression
+```
+
+In this case, the `babel-plugin-istanbul` package must be added as dev dependency! (The other packages in the config are already required by `ui5-tooling-transpile`).
