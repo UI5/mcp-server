@@ -8,7 +8,8 @@ const test = anyTest as TestFn<{
 	sinon: sinonGlobal.SinonSandbox;
 	registerToolCallback: sinonGlobal.SinonStub;
 	getTypescriptConversionGuidelinesStub: sinonGlobal.SinonStub;
-	registerConvertToTypescriptTool: typeof import("../../../../src/tools/convert_to_typescript/index.js").default;
+	registerGetTypescriptConversionGuidelinesTool:
+		typeof import("../../../../src/tools/get_typescript_conversion_guidelines/index.js").default;
 }>;
 
 test.beforeEach(async (t) => {
@@ -21,29 +22,29 @@ test.beforeEach(async (t) => {
 	t.context.getTypescriptConversionGuidelinesStub = getTypescriptConversionGuidelinesStub;
 
 	// Import the module with mocked dependencies
-	const {default: registerConvertToTypescriptTool} = await esmock(
-		"../../../../src/tools/convert_to_typescript/index.js",
+	const {default: registerGetTypescriptConversionGuidelinesTool} = await esmock(
+		"../../../../src/tools/get_typescript_conversion_guidelines/index.js",
 		{
-			"../../../../src/tools/convert_to_typescript/typescriptConversionGuidelines.js": {
+			"../../../../src/tools/get_typescript_conversion_guidelines/typescriptConversionGuidelines.js": {
 				getTypescriptConversionGuidelines: getTypescriptConversionGuidelinesStub,
 			},
 		}
 	);
 
-	t.context.registerConvertToTypescriptTool = registerConvertToTypescriptTool;
+	t.context.registerGetTypescriptConversionGuidelinesTool = registerGetTypescriptConversionGuidelinesTool;
 });
 
 test.afterEach.always((t) => {
 	t.context.sinon.restore();
 });
 
-test("registerConvertToTypescriptTool registers the tool with correct parameters", (t) => {
-	const {registerToolCallback, registerConvertToTypescriptTool} = t.context;
+test("registerGetTypescriptConversionGuidelinesTool registers the tool with correct parameters", (t) => {
+	const {registerToolCallback, registerGetTypescriptConversionGuidelinesTool} = t.context;
 
-	registerConvertToTypescriptTool(registerToolCallback, new TestContext());
+	registerGetTypescriptConversionGuidelinesTool(registerToolCallback, new TestContext());
 
 	t.true(registerToolCallback.calledOnce);
-	t.is(registerToolCallback.firstCall.args[0], "convert_to_typescript");
+	t.is(registerToolCallback.firstCall.args[0], "get_typescript_conversion_guidelines");
 
 	// Verify tool configuration
 	const toolConfig = registerToolCallback.firstCall.args[1];
@@ -54,15 +55,19 @@ test("registerConvertToTypescriptTool registers the tool with correct parameters
 	t.false(toolConfig?.annotations?.openWorldHint);
 });
 
-test("convert_to_typescript tool returns guidelines content on success", async (t) => {
-	const {registerToolCallback, registerConvertToTypescriptTool, getTypescriptConversionGuidelinesStub} = t.context;
+test("get_typescript_conversion_guidelines tool returns guidelines content on success", async (t) => {
+	const {
+		registerToolCallback,
+		registerGetTypescriptConversionGuidelinesTool,
+		getTypescriptConversionGuidelinesStub,
+	} = t.context;
 
 	// Setup getTypescriptConversionGuidelines to return sample content
 	const sampleGuidelines = "# TypeScript Conversion Guidelines\n\nSample content with dependencies";
 	getTypescriptConversionGuidelinesStub.resolves(sampleGuidelines);
 
 	// Register the tool and capture the execute function
-	registerConvertToTypescriptTool(registerToolCallback, new TestContext());
+	registerGetTypescriptConversionGuidelinesTool(registerToolCallback, new TestContext());
 	const executeFunction = registerToolCallback.firstCall.args[2];
 
 	// Create a mock for the extra parameter
@@ -87,15 +92,19 @@ test("convert_to_typescript tool returns guidelines content on success", async (
 	});
 });
 
-test("convert_to_typescript tool handles errors correctly", async (t) => {
-	const {registerToolCallback, registerConvertToTypescriptTool, getTypescriptConversionGuidelinesStub} = t.context;
+test("get_typescript_conversion_guidelines tool handles errors correctly", async (t) => {
+	const {
+		registerToolCallback,
+		registerGetTypescriptConversionGuidelinesTool,
+		getTypescriptConversionGuidelinesStub,
+	} = t.context;
 
 	// Setup getTypescriptConversionGuidelines to throw an error
 	const errorMessage = "Failed to read guidelines file";
 	getTypescriptConversionGuidelinesStub.rejects(new Error(errorMessage));
 
 	// Register the tool and capture the execute function
-	registerConvertToTypescriptTool(registerToolCallback, new TestContext());
+	registerGetTypescriptConversionGuidelinesTool(registerToolCallback, new TestContext());
 	const executeFunction = registerToolCallback.firstCall.args[2];
 
 	// Create a mock for the extra parameter
@@ -112,15 +121,19 @@ test("convert_to_typescript tool handles errors correctly", async (t) => {
 	}, {message: errorMessage});
 });
 
-test("convert_to_typescript tool passes through SoftError", async (t) => {
-	const {registerToolCallback, registerConvertToTypescriptTool, getTypescriptConversionGuidelinesStub} = t.context;
+test("get_typescript_conversion_guidelines tool passes through SoftError", async (t) => {
+	const {
+		registerToolCallback,
+		registerGetTypescriptConversionGuidelinesTool,
+		getTypescriptConversionGuidelinesStub,
+	} = t.context;
 
 	// Setup getTypescriptConversionGuidelines to throw a SoftError
 	const errorMessage = "Soft error occurred";
 	getTypescriptConversionGuidelinesStub.rejects(new InvalidInputError(errorMessage));
 
 	// Register the tool and capture the execute function
-	registerConvertToTypescriptTool(registerToolCallback, new TestContext());
+	registerGetTypescriptConversionGuidelinesTool(registerToolCallback, new TestContext());
 	const executeFunction = registerToolCallback.firstCall.args[2];
 
 	// Create a mock for the extra parameter

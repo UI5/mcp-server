@@ -18,7 +18,7 @@ async function getMockedModule(httpsStub?: sinonGlobal.SinonStub) {
 	});
 
 	const {getTypescriptConversionGuidelines} = await esmock(
-		"../../../../src/tools/convert_to_typescript/typescriptConversionGuidelines.ts",
+		"../../../../src/tools/get_typescript_conversion_guidelines/typescriptConversionGuidelines.ts",
 		{
 			"node:fs/promises": {
 				readFile: readFileStub,
@@ -36,7 +36,7 @@ async function getMockedModule(httpsStub?: sinonGlobal.SinonStub) {
 const test = anyTest as TestFn<{
 	sinon: sinonGlobal.SinonSandbox;
 	getTypescriptConversionGuidelines: typeof import(
-		"../../../../src/tools/convert_to_typescript/typescriptConversionGuidelines.js"
+		"../../../../src/tools/get_typescript_conversion_guidelines/typescriptConversionGuidelines.js"
 	).getTypescriptConversionGuidelines;
 	readFileStub: sinonGlobal.SinonStub;
 	httpsStub: sinonGlobal.SinonStub;

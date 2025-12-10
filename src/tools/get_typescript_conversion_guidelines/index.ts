@@ -3,10 +3,10 @@ import {getLogger} from "@ui5/logger";
 import Context from "../../Context.js";
 import {RegisterTool} from "../../registerTools.js";
 
-const log = getLogger("tools:convert_to_typescript");
+const log = getLogger("tools:get_typescript_conversion_guidelines");
 
 export default function registerTool(registerTool: RegisterTool, _context: Context) {
-	registerTool("convert_to_typescript", {
+	registerTool("get_typescript_conversion_guidelines", {
 		description: "This tool MUST be called once before converting a " +
 			"UI5 (SAPUI5/OpenUI5) project from JavaScript to TypeScript. " +
 			"The instructions provided by this tool MUST be followed to ensure " +
