@@ -65,6 +65,43 @@ Carefully respect all guidelines in this document (and adapt appropriately where
 
 You should convert the project step by step, starting with the TypeScript project setup and then the most central files on which other files depend, so those other files can use the typed version of those central files once they are converted as well. `"allowJs": true` in the `tsconfig.json`'s `compilerOptions` may be useful to run semi-converted projects if needed.
 
+### Avoid `any` type
+
+Do not take shortcuts, but try to find the proper type or create an interface instead of `any`.
+
+BAD:
+```ts
+(this.getOwnerComponent() as any).getContentDensityClass();
+```
+
+GOOD:
+```ts
+(this.getOwnerComponent() as AppComponent).getContentDensityClass()
+```
+
+### Avoid `unknown` casts
+
+Import and use actual UI5 control types instead (either the base class `sap/ui/core/Control` or more specific classes if needed to access the respective property). Inspect the XMLView to find out which control type you actually get when calling `this.byId(...)` in a controller!
+Don't forget using the specific event types like e.g. `Route$PatternMatchedEvent` for routing events.
+
+#### Casting Example
+ 
+BAD:
+```ts
+(this.byId("form") as unknown as {setVisible: (v: boolean) => void}).setVisible(false);
+```
+ 
+GOOD:
+ 
+```ts
+import SimpleForm from "sap/ui/layout/form/SimpleForm";
+(this.byId("form") as SimpleForm).setVisible(false);
+```
+
+### Create shared type definitions
+
+Many type definitions you create are useful in different files. Create those in a central location like a file in in `src/types/`.
+
 
 ## Project Setup Conversion
 
@@ -74,7 +111,7 @@ You must add the following dev dependencies in the package.json file (very impor
 {{dependencies}}
 
 However, if a dependency is already present in package.json, do not increase the major version number of it.
-Do not remove existing dependencies, you must only add new configuration.
+Do not remove existing dependencies, you must only add new configuration. Install the dependencies early to verify the types are found.
 
 **IMPORTANT**: In addition, you **MUST** also add the `@sapui5/types` (or `@openui5/types`) package in a version matching the UI5 project as dev dependency. Framework type and version can be found in ui5.yaml or using the `get_project_info` MCP tool.
 
@@ -101,7 +138,7 @@ Add a tsconfig.json file. Use the following sample as reference, but adapt to th
 		"strictPropertyInitialization": false,
 		"outDir": "./dist",
 		"rootDir": "./webapp",
-		"types": ["@sapui5/types", "@types/qunit"],
+		"types": ["@sapui5/types", "@types/jquery", "@types/qunit"],
 		"paths": {
 			"com/myorg/myapp/*": ["./webapp/*"],
 			"unit/*": ["./webapp/test/unit/*"],
@@ -438,7 +475,7 @@ This affects:
 Install the interface generator tool as a dev dependency:
 
 ```sh
-npm install --save-dev @ui5/ts-interface-generator
+npm install --save-dev @ui5/ts-interface-generator@{{ts-interface-generator-version}}
 ```
 
 To make subsequent development easier, add a script like this to `package.json`:
@@ -450,6 +487,8 @@ To make subsequent development easier, add a script like this to `package.json`:
     }
 }
 ```
+
+NOTE: the tsconfig file related to the controls must be in the same directory in which the interface generator is launched. If you launch it in the root of your project and the tsconfig covering the TypeScript controls is in a subdirectory or has a different name than `tsconfig.json`, then call it like ` npx @ui5/ts-interface-generator --watch --config path/to/tsconfig.json`.
 
 After TypeScript conversion of all controls, run the generator once to generate the needed control interfaces:
 

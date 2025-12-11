@@ -49,21 +49,30 @@ async function getLatestVersions(dependencies: Record<string, string>) {
 	return latestVersions;
 }
 
-const getLatestDependencies = async () => {
+const getLatestDevDependencies = async () => {
 	const packages = await getLatestVersions({
-		"@ui5/cli": "^4.0.36",
-		"typescript": "^5.9.3",
-		"typescript-eslint": "^8.47.0",
-		"ui5-middleware-livereload": "^3.1.4",
-		"ui5-tooling-transpile": "^3.9.2",
+		"@ui5/cli": "^4",
+		"typescript": "^5",
+		"typescript-eslint": "^8",
+		"ui5-middleware-livereload": "^3",
+		"ui5-tooling-transpile": "^3",
 	});
-	return JSON.stringify({
+	return {
 		devDependencies: packages,
+	};
+};
+
+const getLatestTsInterfaceGeneratorVersion = async () => {
+	const version = await getLatestVersion("@ui5/ts-interface-generator").catch(() => {
+		return "^0";
 	});
+	return version;
 };
 
 export async function getTypescriptConversionGuidelines(): Promise<string> {
 	let guidelines = await readFile(typescriptConversionGuidelinesFileUrl, {encoding: "utf-8"});
-	guidelines = guidelines.replace("{{dependencies}}", JSON.stringify(await getLatestDependencies(), null, 3));
+	guidelines = guidelines
+		.replace("{{dependencies}}", JSON.stringify(await getLatestDevDependencies(), null, 3))
+		.replace("{{ts-interface-generator-version}}", await getLatestTsInterfaceGeneratorVersion());
 	return guidelines;
 }
