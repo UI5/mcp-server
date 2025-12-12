@@ -35,7 +35,7 @@ The UI5 [Model Context Protocol](https://modelcontextprotocol.io/) server offers
 
 ## Requirements
 
-- [Node.js](https://nodejs.org/) Version v20.11.x, v22.0.0, or higher
+- [Node.js](https://nodejs.org/) Version v20.17.0, v22.9.0 or higher
 - [npm](https://www.npmjs.com/) Version v8.0.0 or higher
 - An MCP client such as VS Code, Cline, or any other MCP-compatible client
 
