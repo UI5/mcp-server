@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.2.0](https://github.com/UI5/mcp-server/compare/v0.1.6...v0.2.0) (2025-12-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* Update node engines version range: ^20.17.0 || >=22.9.0 ([#156](https://github.com/UI5/mcp-server/issues/156))
+
+### Features
+
+* Add tool with JavaScript to TypeScript conversion guidelines ([#137](https://github.com/UI5/mcp-server/issues/137)) ([52d7169](https://github.com/UI5/mcp-server/commit/52d7169b6d4dccaddf52ff32ea5f8056a221be06))
+
+
+### Dependencies
+
+* Bump @modelcontextprotocol/sdk from 1.24.2 to 1.24.3 ([ae346e4](https://github.com/UI5/mcp-server/commit/ae346e4910da4bfc1692ac09efb09ad2dd95b802))
+* Bump make-fetch-happen from 14.0.3 to 15.0.3 ([#116](https://github.com/UI5/mcp-server/issues/116)) ([a9aa08a](https://github.com/UI5/mcp-server/commit/a9aa08aac55d2af7c03a02e632b6dfab29738b09))
+* Update node engines version range: ^20.17.0 || &gt;=22.9.0 ([#156](https://github.com/UI5/mcp-server/issues/156)) ([6a84d44](https://github.com/UI5/mcp-server/commit/6a84d443963525e5f0cc24292a50aa90c843c87c))
+
 ## [0.1.6](https://github.com/UI5/mcp-server/compare/v0.1.5...v0.1.6) (2025-12-03)
 
 
