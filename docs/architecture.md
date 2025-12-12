@@ -69,10 +69,13 @@ The UI5 MCP server provides the following tools:
 
 Tool Name | Description
 --------- | --------
+`create_integration_card` | Scaffolds a new UI Integration Card
 `create_ui5_app` | Scaffolds a new UI5 application based on a set of templates
 `get_api_reference` | Fetches and formats UI5 API documentation
 `get_guidelines` | Provides access to UI5 development best practices
+`get_integration_cards_guidelines` | Gives UI Integration Cards development best practices
 `get_project_info` | Extracts metadata and configuration from a UI5 project
+`get_typescript_conversion_guidelines` | Provides guidelines for converting UI5 applications and controls from JavaScript to TypeScript
 `get_version_info` | Retrieves version information for the UI5 framework
 `run_ui5_linter` | Integrates with `@ui5/linter` to analyze and report issues in UI5 code
 
@@ -216,6 +219,12 @@ It also uses functionality provided by the `get_version_info` tool to compile re
 	}
 }
 ```
+
+### get_typescript_conversion_guidelines
+
+The `get_typescript_conversion_guidelines` tool returns a single markdown resource containing best practices and guidelines for the conversion of apps, controls and tests from JavaScript to TypeScript. The content is particularly targeted towards AI agents and the type of support they currently need, as they are not aware of all UI5 specifics in this process. The document can be found in the `resources/` directory of the project.
+
+The markdown document mentions dependencies which need to be added. At tool invocation time, the current version of these packages is retrieved from npm and added to the document using placeholders.
 
 ### get_version_info
 
