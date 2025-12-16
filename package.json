@@ -87,7 +87,7 @@
 		"lockfile": "^1.0.4",
 		"make-fetch-happen": "^15.0.3",
 		"semver": "^7.7.3",
-		"zod": "^4.2.0"
+		"zod": "^4.2.1"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^20.2.0",
