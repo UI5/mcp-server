@@ -95,7 +95,7 @@
 		"@eslint/js": "^9.39.2",
 		"@istanbuljs/esm-loader-hook": "^0.3.0",
 		"@istanbuljs/nyc-config-typescript": "^1.0.2",
-		"@modelcontextprotocol/inspector": "^0.17.5",
+		"@modelcontextprotocol/inspector": "^0.18.0",
 		"@stylistic/eslint-plugin": "^5.6.1",
 		"@types/ejs": "^3.1.5",
 		"@types/make-fetch-happen": "^10.0.4",
