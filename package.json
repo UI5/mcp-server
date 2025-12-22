@@ -83,7 +83,7 @@
 		"ejs": "^3.1.10",
 		"execa": "^9.6.1",
 		"fast-xml-parser": "^5.3.3",
-		"globby": "^16.0.0",
+		"globby": "^16.1.0",
 		"lockfile": "^1.0.4",
 		"make-fetch-happen": "^15.0.3",
 		"semver": "^7.7.3",
