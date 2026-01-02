@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.2.1](https://github.com/UI5/mcp-server/compare/v0.2.0...v0.2.1) (2026-01-02)
+
+
+### Features
+
+* Add manifest validation tool ([#93](https://github.com/UI5/mcp-server/issues/93)) ([01fc0b4](https://github.com/UI5/mcp-server/commit/01fc0b4dcad81accf991b190eba99cdefdabc149))
+
+
+### Dependencies
+
+* Bump @modelcontextprotocol/sdk from 1.24.3 to 1.25.0 ([10250cf](https://github.com/UI5/mcp-server/commit/10250cf2c43e1e93cc3f1afeec6c3a7de7873cb7))
+* Bump @modelcontextprotocol/sdk from 1.25.0 to 1.25.1 ([d7f8fea](https://github.com/UI5/mcp-server/commit/d7f8fea9c3ede27d2379222c3b5cea87766d2aaf))
+* Bump @ui5/linter from 1.20.5 to 1.20.6 ([24de07d](https://github.com/UI5/mcp-server/commit/24de07d4eb4d27669fcc74213dd667269b2a3ab3))
+* Bump @ui5/linter from 1.20.6 to 1.20.7 ([ed52e26](https://github.com/UI5/mcp-server/commit/ed52e2636c2d69e0900e3c5e6041d5b5978759e9))
+* Bump fast-xml-parser from 5.3.2 to 5.3.3 ([709b96b](https://github.com/UI5/mcp-server/commit/709b96bee4a2f6b8bc70c9fd7967f6720d44dea6))
+* Bump globby from 16.0.0 to 16.1.0 ([af274e0](https://github.com/UI5/mcp-server/commit/af274e05c4d6c1ac47950e3abb4b445f835db404))
+* Bump qs from 6.14.0 to 6.14.1 ([cb2871f](https://github.com/UI5/mcp-server/commit/cb2871f985d4086a825cefdf80f596656b5bb43d))
+* Bump zod from 4.1.13 to 4.2.0 ([5888a2b](https://github.com/UI5/mcp-server/commit/5888a2b57efa38da01adea45c51615d8c7114da5))
+* Bump zod from 4.2.0 to 4.2.1 ([d2e746a](https://github.com/UI5/mcp-server/commit/d2e746a1f60c58fe2e74ee08832bc7f578a2980d))
+* Bump zod from 4.2.1 to 4.3.2 ([d34c2ef](https://github.com/UI5/mcp-server/commit/d34c2efa743064f99041eda5943efb9444516e66))
+* Bump zod from 4.3.2 to 4.3.4 ([2e61f66](https://github.com/UI5/mcp-server/commit/2e61f666a2b86369678c984e8a5524ad919aecb4))
+
 ## [0.2.0](https://github.com/UI5/mcp-server/compare/v0.1.6...v0.2.0) (2025-12-12)
 
 

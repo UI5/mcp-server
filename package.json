@@ -1,6 +1,6 @@
 {
 	"name": "@ui5/mcp-server",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "MCP server for UI5 application development",
 	"author": {
 		"name": "SAP SE",
