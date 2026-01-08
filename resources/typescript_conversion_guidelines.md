@@ -100,7 +100,7 @@ import SimpleForm from "sap/ui/layout/form/SimpleForm";
 
 ### Create shared type definitions
 
-Many type definitions you create are useful in different files. Create those in a central location like a file in in `src/types/`.
+Many type definitions you create are useful in different files. Create those in a central location like a file in `src/types/`.
 
 
 ## Project Setup Conversion
@@ -210,7 +210,7 @@ export default tseslint.config(
  
 Every UI5 class definitions (`SuperClass.extend(...)`) must be converted to a standard JavaScript `class`.
 The properties in the UI5 class configuration object (second parameter of `extend`) become members of the standard JavaScript class.
-It is important to annotate the class with the namespace in a JSDoc comment, so the back transformation can re-add it.
+It is important to annotate the class with the namespace in a JSDoc comment, so the back transformation can re-add it. This @namespace comment MUST immediately precede the class declaration.
 The namespace is the part of the full package+class name (first parameter of `extend`) that precedes the class name.
  
 Before (example):
