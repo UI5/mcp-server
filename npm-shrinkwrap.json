@@ -9,7 +9,7 @@
 			"version": "0.2.1",
 			"license": "Apache-2.0",
 			"dependencies": {
-				"@modelcontextprotocol/sdk": "^1.25.1",
+				"@modelcontextprotocol/sdk": "^1.25.2",
 				"@ui5/linter": "^1.20.7",
 				"@ui5/logger": "^4.0.2",
 				"@ui5/project": "^4.0.9",
@@ -2119,9 +2119,9 @@
 			}
 		},
 		"node_modules/@modelcontextprotocol/sdk": {
-			"version": "1.25.1",
-			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/sdk/-/sdk-1.25.1.tgz",
-			"integrity": "sha512-yO28oVFFC7EBoiKdAn+VqRm+plcfv4v0xp6osG/VsCB0NlPZWi87ajbCZZ8f/RvOFLEu7//rSRmuZZ7lMoe3gQ==",
+			"version": "1.25.2",
+			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/sdk/-/sdk-1.25.2.tgz",
+			"integrity": "sha512-LZFeo4F9M5qOhC/Uc1aQSrBHxMrvxett+9KLHt7OhcExtoiRN9DKgbZffMP/nxjutWDQpfMDfP3nkHI4X9ijww==",
 			"license": "MIT",
 			"dependencies": {
 				"@hono/node-server": "^1.19.7",
