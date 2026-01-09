@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.2.2](https://github.com/UI5/mcp-server/compare/v0.2.1...v0.2.2) (2026-01-09)
+
+
+### Bug Fixes
+
+* Fix typo in TS conversion guidelines and enhance them ([#182](https://github.com/UI5/mcp-server/issues/182)) ([5bc8d49](https://github.com/UI5/mcp-server/commit/5bc8d4928c392a9364085c532f5694bdee251391))
+
+
+### Dependencies
+
+* Bump @modelcontextprotocol/sdk from 1.25.1 to 1.25.2 ([c609171](https://github.com/UI5/mcp-server/commit/c609171b20078659b9a1c93b95840810d08e283c))
+* Bump zod from 4.3.4 to 4.3.5 ([645f9af](https://github.com/UI5/mcp-server/commit/645f9af22cb32eca2e40e7932027159d87948b38))
+
 ## [0.2.1](https://github.com/UI5/mcp-server/compare/v0.2.0...v0.2.1) (2026-01-02)
 
 
