@@ -1,3 +1,6 @@
+<% if (gte1_142_0) { -%>
+import type {SuiteConfiguration} from "sap/ui/test/starter/config";
+<% } -%>
 export default {
 	name: "QUnit test suite for the UI5 Application: <%= namespace %>",
 	defaults: {
@@ -30,4 +33,4 @@ export default {
 			title: "Integration tests for <%= namespace %>"
 		}
 	}
-};
+}<% if (gte1_142_0) { -%> satisfies SuiteConfiguration<% }  -%>;
