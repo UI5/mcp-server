@@ -16,8 +16,8 @@ export default {
 			theme: "<%= defaultTheme %>"
 		},
 		coverage: {
-			only: "<%= appURI %>/",
-			never: "test-resources/<%= appURI %>/"
+			only: ["<%= appURI %>/"],
+			never: ["test-resources/<%= appURI %>/"]
 		},
 		loader: {
 			paths: {
