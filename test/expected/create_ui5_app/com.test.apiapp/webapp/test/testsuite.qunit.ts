@@ -13,8 +13,8 @@ export default {
 			theme: "sap_horizon"
 		},
 		coverage: {
-			only: "com/test/apiapp/",
-			never: "test-resources/com/test/apiapp/"
+			only: ["com/test/apiapp/"],
+			never: ["test-resources/com/test/apiapp/"]
 		},
 		loader: {
 			paths: {
