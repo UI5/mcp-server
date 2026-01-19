@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.3](https://github.com/UI5/mcp-server/compare/v0.2.2...v0.2.3) (2026-01-19)
+
+
+### Bug Fixes
+
+* **ui5_create_app:** Add test/preview.html with frame-options="allow" ([4826acd](https://github.com/UI5/mcp-server/commit/4826acd1a33786ad6db3005628bf1c937b131189))
+
+
+### Dependencies
+
+* Bump hono from 4.11.1 to 4.11.4 ([4e9032e](https://github.com/UI5/mcp-server/commit/4e9032e71afcb15d646bcd848de1f580f2837774))
+
 ## [0.2.2](https://github.com/UI5/mcp-server/compare/v0.2.1...v0.2.2) (2026-01-09)
 
 
