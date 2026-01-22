@@ -12,8 +12,8 @@ let UI5ToManifestVersionMapping: Record<string, string> | null = null;
 const MAPPING_URL = "https://raw.githubusercontent.com/UI5/manifest/main/mapping.json";
 const ui5ToManifestVersionMappingMutex = new Mutex();
 
-// Manifests prior to 1.68.0 use older meta-schema, which is not supported by the current implementation
-const LOWEST_SUPPORTED_MANIFEST_VERSION = "1.68.0";
+// Manifests prior to 1.69.0 use older meta-schema, which is not supported by the current implementation
+const LOWEST_SUPPORTED_MANIFEST_VERSION = "1.69.0";
 
 function getSchemaURL(manifestVersion: string) {
 	return `https://raw.githubusercontent.com/UI5/manifest/v${manifestVersion}/schema.json`;

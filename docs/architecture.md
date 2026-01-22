@@ -511,7 +511,7 @@ This tool uses the [Ajv JSON schema validator](https://www.npmjs.com/package/ajv
 **Version Detection:**
 - The tool automatically detects the manifest version from the `_version` property
 - If the `_version` property is missing, malformed, or not a valid semantic version, validation fails with a helpful error message listing supported versions
-- The minimum supported manifest version is **1.68.0** (earlier versions use incompatible meta-schemas)
+- The minimum supported manifest version is **1.69.0** (earlier versions use incompatible meta-schemas)
 
 **Schema Retrieval:**
 - Schemas are fetched from: `https://raw.githubusercontent.com/UI5/manifest/v{version}/schema.json`

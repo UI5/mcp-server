@@ -103,10 +103,10 @@ test("getManifestSchema throws error for unsupported versions 1.x.x versions", a
 
 	await t.throwsAsync(
 		async () => {
-			await getManifestSchema("1.67.0");
+			await getManifestSchema("1.68.0");
 		},
 		{
-			message: "Manifest version '1.67.0' is not supported. Please upgrade to a newer one.",
+			message: "Manifest version '1.68.0' is not supported. Please upgrade to a newer one.",
 		}
 	);
 
@@ -124,12 +124,12 @@ test("getManifestSchema throws error for unsupported versions 1.x.x versions", a
 		},
 		{
 			message: "Manifest version '1.45.0' is not supported. Please upgrade to a newer one." +
-				"\nSupported versions are: 1.68.0, 1.69.0.",
+				"\nSupported versions are: 1.69.0.",
 		}
 	);
 
 	await t.notThrowsAsync(async () => {
-		await getManifestSchema("1.68.0");
+		await getManifestSchema("1.69.0");
 	});
 
 	await t.notThrowsAsync(async () => {
@@ -144,10 +144,10 @@ test("getManifestSchema fetches schema for specific version", async (t) => {
 		type: "object",
 	};
 
-	fetchCdnStub.withArgs("https://raw.githubusercontent.com/UI5/manifest/v1.68.0/schema.json")
+	fetchCdnStub.withArgs("https://raw.githubusercontent.com/UI5/manifest/v1.69.0/schema.json")
 		.resolves(mockSchema);
 
-	const schema = await getManifestSchema("1.68.0");
+	const schema = await getManifestSchema("1.69.0");
 
 	t.deepEqual(schema, mockSchema);
 	t.true(fetchCdnStub.calledOnce);
@@ -160,11 +160,11 @@ test("getManifestSchema uses cache on subsequent calls", async (t) => {
 		type: "object",
 	};
 
-	fetchCdnStub.withArgs("https://raw.githubusercontent.com/UI5/manifest/v1.68.0/schema.json")
+	fetchCdnStub.withArgs("https://raw.githubusercontent.com/UI5/manifest/v1.69.0/schema.json")
 		.resolves(mockSchema);
 
-	const schema1 = await getManifestSchema("1.68.0");
-	const schema2 = await getManifestSchema("1.68.0");
+	const schema1 = await getManifestSchema("1.69.0");
+	const schema2 = await getManifestSchema("1.69.0");
 
 	t.deepEqual(schema1, mockSchema);
 	t.deepEqual(schema2, mockSchema);
@@ -178,15 +178,15 @@ test("getManifestSchema handles fetch errors", async (t) => {
 	fetchCdnStub.withArgs("https://raw.githubusercontent.com/UI5/manifest/main/mapping.json")
 		.rejects(new Error("Mapping.json error"));
 
-	fetchCdnStub.withArgs("https://raw.githubusercontent.com/UI5/manifest/v1.68.0/schema.json")
+	fetchCdnStub.withArgs("https://raw.githubusercontent.com/UI5/manifest/v1.69.0/schema.json")
 		.rejects(new Error("Network error"));
 
 	await t.throwsAsync(
 		async () => {
-			await getManifestSchema("1.68.0");
+			await getManifestSchema("1.69.0");
 		},
 		{
-			message: "Failed to fetch schema for manifest version '1.68.0': Network error",
+			message: "Failed to fetch schema for manifest version '1.69.0': Network error",
 		}
 	);
 	t.true(fetchCdnStub.calledTwice);
