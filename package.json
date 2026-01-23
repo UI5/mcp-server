@@ -76,7 +76,7 @@
 	},
 	"dependencies": {
 		"@modelcontextprotocol/sdk": "^1.25.3",
-		"@ui5/linter": "^1.20.7",
+		"@ui5/linter": "^1.20.8",
 		"@ui5/logger": "^4.0.2",
 		"@ui5/project": "^4.0.9",
 		"ajv": "^8.17.1",
@@ -120,5 +120,16 @@
 		"typescript": "^5.9.3",
 		"typescript-eslint": "^8.53.1",
 		"yauzl-promise": "^4.0.0"
+	},
+	"overrides": {
+		"pacote@<=20": {
+			"tar": "^7.5.6"
+		},
+		"cacache@18": {
+			"tar": "^7.5.6"
+		},
+		"node-gyp@10": {
+			"tar": "^7.5.6"
+		}
 	}
 }
