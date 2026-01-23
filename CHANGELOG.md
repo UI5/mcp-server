@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.2.4](https://github.com/UI5/mcp-server/compare/v0.2.3...v0.2.4) (2026-01-23)
+
+
+### Bug Fixes
+
+* **run_manifest_validation:** Declare manifest schema version 1.68.0 as unsupported ([c477fd9](https://github.com/UI5/mcp-server/commit/c477fd9f197f8093938018b1e8d0ea1f41a00d2c))
+
+
+### Dependencies
+
+* Bump @modelcontextprotocol/sdk from 1.25.2 to 1.25.3 ([ddf6c05](https://github.com/UI5/mcp-server/commit/ddf6c053d6c760176fec9df37170e2722dcbb1f3))
+* Bump tar from 6.2.1 to 7.5.6 ([87ef280](https://github.com/UI5/mcp-server/commit/87ef280c0c500e3effce2ab72f573b4207a3b1fa))
+
 ## [0.2.3](https://github.com/UI5/mcp-server/compare/v0.2.2...v0.2.3) (2026-01-19)
 
 
