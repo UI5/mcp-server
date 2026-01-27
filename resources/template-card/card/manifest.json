@@ -19,6 +19,16 @@
 	"sap.card": {
 		"type": "<%= cardType %>",
 		"configuration": {
+			<% if (destinations && destinations.length > 0) { %>
+			"destinations": {
+				<% destinations.forEach(function(destination, index) { %>
+				"<%= destination.name %>": {
+					"name": "<%= destination.name %>",
+					"defaultUrl": "<%= destination.defaultUrl %>"
+				}<%= index < destinations.length - 1 ? ',' : '' %>
+				<% }); %>
+			},
+			<% } %>
 			"editor": "./dt/Configuration"
 		},
 		<% if (cardType === "Analytical") { %>

@@ -37,6 +37,7 @@ export default function registerTool(registerTool: RegisterTool, context: Contex
 			folderPath: normalizedCardFolderName,
 			cardType: params.cardType,
 			manifestVersion: latestManifestVersion,
+			destinations: params.destinations,
 		});
 		const message = `Successfully created Integration Card ${params.cardFolderName} at ${normalizedBasePath}\n` +
 			`The generated files inside ${normalizedCardFolderName} are:\n${generatedFiles.join("\n")}`;

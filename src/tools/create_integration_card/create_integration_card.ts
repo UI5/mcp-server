@@ -5,7 +5,7 @@ import path, {isAbsolute} from "path";
 import {fileURLToPath} from "url";
 import ejs from "ejs";
 import {getLogger} from "@ui5/logger";
-import {SupportedCardType} from "./schema.js";
+import {Destination, SupportedCardType} from "./schema.js";
 import semver from "semver";
 
 const log = getLogger("tools:create_integration_card:create_integration_card");
@@ -15,9 +15,15 @@ interface CreateIntegrationCardParams {
 	folderPath: string;
 	cardType: SupportedCardType;
 	manifestVersion: string;
+	destinations: Destination[];
 };
 
-export async function createIntegrationCard({folderPath, cardType, manifestVersion}: CreateIntegrationCardParams) {
+export async function createIntegrationCard({
+	folderPath,
+	cardType,
+	manifestVersion,
+	destinations,
+}: CreateIntegrationCardParams) {
 	if (!isAbsolute(folderPath)) {
 		throw new InvalidInputError(
 			"The provided folder path is not valid! Please provide an absolute path to the target directory."
@@ -72,6 +78,7 @@ export async function createIntegrationCard({folderPath, cardType, manifestVersi
 			const templateVars = {
 				cardType,
 				manifestVersion,
+				destinations,
 			};
 			let processedContent = ejs.render(templateContent, templateVars, {filename: sourcePath});
 

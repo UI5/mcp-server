@@ -20,4 +20,11 @@ export const inputSchema = {
 	cardType: z.enum(supportedCardTypes)
 		.describe("Type of the Integration Card to create.")
 		.default("List"),
+	destinations: z.array(z.object({
+		name: z.string().describe("Name of the destination."),
+		defaultUrl: z.url().describe("Default URL of the destination."),
+	})).describe("List of destinations to be included in the card configuration.")
+		.default([]),
 };
+
+export type Destination = z.infer<typeof inputSchema.destinations>[number];
