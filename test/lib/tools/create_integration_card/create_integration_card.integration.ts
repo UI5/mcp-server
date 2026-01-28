@@ -77,6 +77,7 @@ supportedCardTypes.forEach((cardType) => {
 			folderPath,
 			cardType,
 			manifestVersion: "1.78.0",
+			destinations: [],
 		});
 		// Normalize paths for snapshot consistency across OSes
 		const normalizedResult = result.map((filePath) => filePath.replaceAll(path.sep, "/")).sort();
