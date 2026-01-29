@@ -75,7 +75,7 @@ When creating or modifying Integration Cards, follow these guidelines for Config
 - **ALWAYS** remove fields from the editor when removing them from the `manifest.json`.
 - **ALWAYS** add fields in the Configuration Editor when adding them to the `manifest.json`.
 
-Example:
+### 5.1 Example:
 `manifest.json` file:
 ```javascript
 {
