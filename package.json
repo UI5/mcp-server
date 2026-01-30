@@ -84,7 +84,7 @@
 		"async-mutex": "^0.5.0",
 		"ejs": "^4.0.1",
 		"execa": "^9.6.1",
-		"fast-xml-parser": "^5.3.3",
+		"fast-xml-parser": "^5.3.4",
 		"globby": "^16.1.0",
 		"lockfile": "^1.0.4",
 		"make-fetch-happen": "^15.0.3",
