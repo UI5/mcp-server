@@ -60,8 +60,8 @@ test.beforeEach(async (t) => {
 
 	// Stub globby to return a fixed set of files
 	t.context.staticFiles = [
-		"src/manifest.json",
-		"src/i18n/i18n.properties",
+		"card/manifest.json",
+		"card/i18n/i18n.properties",
 		"test/index.html",
 	];
 	t.context.globbyStub = t.context.sinon.stub().resolves(t.context.staticFiles);
@@ -114,8 +114,8 @@ test("createIntegrationCard executes successfully", async (t) => {
 
 	t.is(mkdirStub.callCount, 4);
 	t.deepEqual(mkdirStub.getCall(0).args, [folderPath, {recursive: true}]);
-	t.deepEqual(mkdirStub.getCall(1).args, [`${folderPath}/src`.replace(/\//g, path.sep), {recursive: true}]);
-	t.deepEqual(mkdirStub.getCall(2).args, [`${folderPath}/src/i18n`.replace(/\//g, path.sep), {recursive: true}]);
+	t.deepEqual(mkdirStub.getCall(1).args, [`${folderPath}/card`.replace(/\//g, path.sep), {recursive: true}]);
+	t.deepEqual(mkdirStub.getCall(2).args, [`${folderPath}/card/i18n`.replace(/\//g, path.sep), {recursive: true}]);
 	t.deepEqual(mkdirStub.getCall(3).args, [`${folderPath}/test`.replace(/\//g, path.sep), {recursive: true}]);
 
 	// Verify that globby was called with correct parameters
@@ -218,7 +218,7 @@ test("Error processing template file", async (t) => {
 			manifestVersion: "1.78.0",
 		});
 	}, {
-		message: `Failed to process template file 'src/manifest.json': ${errorMessage}`,
+		message: `Failed to process template file 'card/manifest.json': ${errorMessage}`,
 		instanceOf: Error,
 	});
 });

@@ -28,7 +28,7 @@ sap.ui.define(["sap/ui/integration/Host"], async (Host) => {
 	});
 
 	card.host = host.getId();
-	card.manifest = "../src/manifest.json";
+	card.manifest = "../card/manifest.json";
 
 	editor.host = host.getId();
 	editor.card = "card";
