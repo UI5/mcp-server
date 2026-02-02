@@ -15,7 +15,7 @@ interface CreateIntegrationCardParams {
 	folderPath: string;
 	cardType: SupportedCardType;
 	manifestVersion: string;
-	destinations: Destination[];
+	destinations?: Destination[];
 };
 
 export async function createIntegrationCard({

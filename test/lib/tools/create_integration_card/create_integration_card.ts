@@ -110,7 +110,7 @@ test("createIntegrationCard executes successfully", async (t) => {
 		folderPath,
 		cardType: "List",
 		manifestVersion: "1.78.0",
-		destinations: [],
+		destinations: undefined,
 	});
 
 	t.is(mkdirStub.callCount, 4);
@@ -135,6 +135,7 @@ test("createIntegrationCard executes successfully", async (t) => {
 		t.deepEqual(templateVars, {
 			cardType: "List",
 			manifestVersion: "1.78.0",
+			destinations: undefined,
 		});
 	});
 
@@ -154,7 +155,6 @@ test("Target path already exists", async (t) => {
 			folderPath,
 			cardType: "List",
 			manifestVersion: "1.78.0",
-			destinations: [],
 		});
 	}, {
 		message:
@@ -177,7 +177,6 @@ test("Error creating target directory", async (t) => {
 			folderPath,
 			cardType: "List",
 			manifestVersion: "1.78.0",
-			destinations: [],
 		});
 	}, {
 		message:
@@ -201,7 +200,6 @@ test("Invalid manifest version", async (t) => {
 			folderPath,
 			cardType: "List",
 			manifestVersion: invalidManifestVersion,
-			destinations: [],
 		});
 	}, {
 		message: "The provided manifest version is not valid!",
@@ -220,7 +218,6 @@ test("Error processing template file", async (t) => {
 			folderPath,
 			cardType: "List",
 			manifestVersion: "1.78.0",
-			destinations: [],
 		});
 	}, {
 		message: `Failed to process template file 'card/manifest.json': ${errorMessage}`,

@@ -7,13 +7,16 @@ sap.ui.define(["sap/ui/integration/Host"], async (Host) => {
 	const card = document.getElementById("card");
 	const applyChangesBtn = document.getElementById("applyChangesBtn");
 	const resetBtn = document.getElementById("resetBtn");
+	const destinations = {
+		Northwind: "https://services.odata.org/V4/Northwind/Northwind.svc/"
+	};
 	const host = new Host({
 		resolveDestination: function(sDestinationName) {
-			if (sDestinationName === "Northwind") {
-				return "https://services.odata.org/V4/Northwind/Northwind.svc/";
+			if (destinations[sDestinationName]) {
+				return destinations[sDestinationName];
 			}
 
-			throw new Error("Destination " + sDestinationName + " not found!");
+			return Promise.reject("Destination " + sDestinationName + " not found!");
 		},
 		actions: [
 			{
@@ -26,6 +29,15 @@ sap.ui.define(["sap/ui/integration/Host"], async (Host) => {
 			}
 		]
 	});
+
+	// Called by the Configuration Editor to show a list of available destinations
+	host.getDestinations = function() {
+		return Promise.resolve(Object.entries(destinations).map(([name, url]) => {
+			return {
+				name,
+			};
+		}));
+	};
 
 	card.host = host.getId();
 	card.manifest = "../card/manifest.json";

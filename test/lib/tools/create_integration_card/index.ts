@@ -78,6 +78,7 @@ test("create_integration_card tool returns success message on success", async (t
 		folderPath: "/projects/mycards/mycard".replace(/\//g, path.sep),
 		cardType: "List",
 		manifestVersion: "1.78.0",
+		destinations: undefined,
 	}]);
 
 	const message = `Successfully created Integration Card ${params.cardFolderName} at ${params.basePath}\n` +

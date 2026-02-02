@@ -17,6 +17,10 @@ body {
 	flex-direction: column;
 }
 
+.editor-section {
+	--sapUiIntegrationEditorFormHeight: auto;
+}
+
 .button-container {
 	display: flex;
 	justify-content: flex-end;
