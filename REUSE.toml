@@ -7,15 +7,15 @@ SPDX-PackageComment = "The code in this project may include calls to APIs (“AP
 [[annotations]]
 path = "**"
 precedence = "aggregate"
-SPDX-FileCopyrightText = "2025 SAP SE or an SAP affiliate company and UI5 MCP server contributors"
+SPDX-FileCopyrightText = "2026 SAP SE or an SAP affiliate company and UI5 MCP server contributors"
 SPDX-License-Identifier = "Apache-2.0"
 
 [[annotations]]
 path = "resources/template/**"
 precedence = "aggregate"
 SPDX-FileCopyrightText = [
-    "2025 ui5-community/generator-ui5-app contributors",
-    "2025 SAP SE or an SAP affiliate company and OpenUI5 contributors"
+    "2026 ui5-community/generator-ui5-app contributors",
+    "2026 SAP SE or an SAP affiliate company and OpenUI5 contributors"
 ]
 SPDX-License-Identifier = "Apache-2.0"
 SPDX-PackageDownloadLocation = "https://github.com/ui5-community/generator-ui5-app"
@@ -25,8 +25,8 @@ SPDX-FileComment = "these files contain content from ui5-community/generator-ui5
 path = "resources/template-ts/**"
 precedence = "aggregate"
 SPDX-FileCopyrightText = [
-    "2025 ui5-community/generator-ui5-ts-app contributors",
-    "2025 SAP SE or an SAP affiliate company and OpenUI5 contributors"
+    "2026 ui5-community/generator-ui5-ts-app contributors",
+    "2026 SAP SE or an SAP affiliate company and OpenUI5 contributors"
 ]
 SPDX-License-Identifier = "Apache-2.0"
 SPDX-PackageDownloadLocation = "https://github.com/ui5-community/generator-ui5-ts-app"
@@ -36,8 +36,8 @@ SPDX-FileComment = "these files contain content from ui5-community/generator-ui5
 path = "src/tools/create_ui5_app/ODataMetadata.ts"
 precedence = "aggregate"
 SPDX-FileCopyrightText = [
-    "2025 ui5-community/generator-ui5-ts-app-fcl contributors",
-    "2025 SAP SE or an SAP affiliate company and OpenUI5 contributors"
+    "2026 ui5-community/generator-ui5-ts-app-fcl contributors",
+    "2026 SAP SE or an SAP affiliate company and OpenUI5 contributors"
 ]
 SPDX-License-Identifier = "Apache-2.0"
 SPDX-PackageDownloadLocation = "https://github.com/ui5-community/generator-ui5-ts-app-fcl"
