@@ -77,636 +77,229 @@ When creating or modifying Integration Cards, follow these guidelines for Config
 
 ### 5.1 Example:
 `manifest.json` file:
-```javascript
+```json
 {
-    "sap.app": {
-        "id": "test.editor",
-        "type": "card",
-        "title": "Test Card",
-        "applicationVersion": {
-            "version": "1.0.0"
-        }
-    },
-    "sap.ui": {
-        "technology": "UI5"
-    },
-    "sap.card": {
-        "type": "List",
-        "configuration": {
-            "editor": "./dt/Configuration",
-            "parameters": {
-                "cardTitle": {
-                    "value": "Card Title Default"
-                },
-                "string": {
-                    "value": "StringValue"
-                },
-                "stringWithTranslatedValue": {
-                    "value": "{{TRANSLATED_STRING_VALUE}}"
-                },
-                "stringWithTranslatedValueIni18nFormat": {
-                    "value": "{i18n>TRANSLATED_STRING_VALUE}"
-                },
-                "stringInCols1": {
-                    "value": "stringInCols1"
-                },
-                "stringInCols2": {
-                    "value": ""
-                },
-                "integer": {
-                    "value": 1
-                },
-                "integerLabel": {
-                    "value": 1
-                },
-                "number": {
-                    "value": 1.5
-                },
-                "boolean": {
-                    "value": false
-                },
-                "booleanLabel": {
-                    "value": true
-                },
-                "date": {
-                    "value": "2020-09-02"
-                },
-                "dateTime": {
-                    "value": "2020-09-02T11:21:51.470Z"
-                },
-                "enum": {
-                    "value": "Option B"
-                },
-                "stringWithStaticList": {
-                    "value": "key1"
-                },
-                "stringWithRequestList": {
-                    "value": "key1"
-                },
-                "stringWithRequestDestinationList": {
-                    "value": ""
-                },
-                "string_Select": {
-                    "value": "key2"
-                },
-                "stringArray": {
-                    "value": [
-                        "key1",
-                        "key2"
-                    ]
-                },
-                "stringArrayNoValues": {
-                    "value": [
-                        "key1",
-                        "key2"
-                    ]
-                },
-                "Customers": {
-                    "value": [
-                        "ALFKI"
-                    ]
-                },
-                "iconNotAllowFile": {
-                    "value": "sap-icon://account"
-                },
-                "stringDependent": {
-                    "value": "visible"
-                },
-                "dependentString1": {
-                    "value": "Editable changes depend on string1"
-                },
-                "integerDependent": {
-                    "value": 3
-                },
-                "dependentInteger1": {
-                    "value": "Editable changes depend on integer1"
-                },
-                "booleanDependent": {
-                    "value": true
-                },
-                "dependentBoolean1": {
-                    "value": "Editable changes depend on boolean1"
-                }
-            },
-            "destinations": {
-                "northwind": {
-                    "name": "Northwind_V4",
-                    "defaultUrl": "https://services.odata.org/V4/Northwind/Northwind.svc"
-                },
-                "Northwind_V3": {
-                    "name": "Northwind_V3",
-                    "defaultUrl": "https://services.odata.org/V4/Northwind/Northwind.svc"
-                }
-            }
-        },
-        "header": {
-            "title": "{parameters>/cardTitle/value}",
-            "subtitle": "Card Sub Title",
-            "icon": {
-                "src": "sap-icon://accept",
-                "shape": "Circle",
-                "backgroundColor": ""
-            }
-        },
-        "content": {
-            "data": {
-                "json": [
-                   
-                ],
-                "path": "/"
-            },
-            "item": {
-                "title": "{Name}",
-                "description": "{Description}"
-            },
-            "maxItems": 3
-        }
+  "sap.app": {
+    "id": "test.editor",
+    "type": "card",
+    "title": "Test Card",
+    "applicationVersion": {
+      "version": "1.0.0"
     }
+  },
+  "sap.ui": {
+    "technology": "UI5"
+  },
+  "sap.card": {
+    "type": "List",
+    "configuration": {
+      "editor": "./dt/Configuration",
+      "parameters": {
+        "cardTitle": {
+          "value": "Customers"
+        },
+        "icon": {
+          "value": "sap-icon://account"
+        },
+        "maxItems": {
+          "value": 3
+        },
+        "showDescription": {
+          "value": true
+        },
+        "dateContext": {
+          "value": "2020-09-02"
+        },
+        "Customers": {
+          "value": ["ALFKI"]
+        },
+        "northwindDestination": {
+          "value": "northwind"
+        }
+      },
+      "destinations": {
+        "northwind": {
+          "name": "Northwind_V4",
+          "defaultUrl": "https://services.odata.org/V4/Northwind/Northwind.svc"
+        }
+      }
+    },
+    "data": {
+        "request": {
+          "url": "{{destinations.northwind}}/Customers",
+          "parameters": {
+            "$select": "CustomerID,CompanyName,ContactName",
+            "$top": "{parameters>/maxItems/value}"
+          }
+        }
+      },
+    "header": {
+      "title": "{parameters>/cardTitle/value}",
+      "subtitle": "As of {parameters>/dateContext/value}",
+      "icon": {
+        "src": "{parameters>/icon/value}",
+        "shape": "Circle"
+      }
+    },
+    "content": {
+      "data": {
+        "path": "/value"
+      },
+      "item": {
+        "title": "{CompanyName}",
+        "description": "{= ${parameters>/showDescription/value} ? ${ContactName} : '' }"
+      },
+      "maxItems": "{parameters>/maxItems/value}"
+    }
+  }
 }
 ```
 
 `dt/Configuration.js` file:
 ```javascript
-sap.ui.define(["sap/ui/integration/Designtime"], function (
-	Designtime
-) {
+sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
 	"use strict";
+
 	return function () {
 		return new Designtime({
-			"form": {
-				"items": {
-					"generalGroup": {
-						"type": "group",
-						"label": "General",
-						"hint": "Please refer to the <a href='https://www.sap.com'>documentation</a> lets see how this will behave if the text is wrapping to the next line and has <a href='https://www.sap.com'>two links</a>. good?"
+			form: {
+				items: {
+
+					/* =======================
+					   General
+					======================= */
+					generalGroup: {
+						type: "group",
+						label: "General"
 					},
-					"cardTitle": {
-						"manifestpath": "/sap.card/configuration/parameters/cardTitle/value",
-						"type": "string",
-						"translatable": true,
-						"required": true,
-						"allowDynamicValues": true,
-						"editableToUser": false,
-						"visibleToUser": false
+
+					cardTitle: {
+						manifestpath: "/sap.card/configuration/parameters/cardTitle/value",
+						type: "string",
+						label: "Card Title",
+						translatable: true,
+						required: true,
+						allowDynamicValues: true
 					},
-					"separator1": {
-						"type": "separator"
-					},
-					"string": {
-						"manifestpath": "/sap.card/configuration/parameters/string/value",
-						"type": "string",
-						"label": "String Label",
-						"translatable": true,
-						"required": true,
-						"editableToUser": false
-					},
-					"stringWithTranslatedValue": {
-						"manifestpath": "/sap.card/configuration/parameters/stringWithTranslatedValue/value",
-						"type": "string",
-						"label": "{i18n>TRANSLATED_STRING_LABEL}",
-						"translatable": true,
-						"allowDynamicValues": false
-					},
-					"stringWithTranslatedValueIni18nFormat": {
-						"manifestpath": "/sap.card/configuration/parameters/stringWithTranslatedValueIni18nFormat/value",
-						"type": "string",
-						"label": "String with translated value in i18n format",
-						"description": "A very long description text that should wrap into the next line"
-					},
-					"separator2": {
-						"type": "separator"
-					},
-					"stringInCols1": {
-						"manifestpath": "/sap.card/configuration/parameters/stringInCols1/value",
-						"label": "Column 1",
-						"description": "Two columns in the same line",
-						"type": "string",
-						"cols": 1,
-						"allowSettings": false,
-						"translatable": true
-					},
-					"stringInCols2": {
-						"manifestpath": "/sap.card/configuration/parameters/stringInCols2/value",
-						"label": "Column 2",
-						"type": "string",
-						"cols": 1,
-						"allowSettings": false
-					},
-					"separator3": {
-						"type": "separator"
-					},
-					"integerLabel": {
-						"manifestpath": "/sap.card/configuration/parameters/integerLabel/value",
-						"type": "integer",
-						"label": "Direct Integer Label"
-					},
-					"integer": {
-						"manifestpath": "/sap.card/configuration/parameters/integer/value",
-						"type": "integer",
-						"label": "Integer with Slider",
-						"visualization": {
-							"type": "Slider",
-							"settings": {
-								"value": "{currentSettings>value}",
-								"min": 0,
-								"max": 10,
-								"width": "100%",
-								"showAdvancedTooltip": true,
-								"showHandleTooltip": false,
-								"inputsAsTooltips": true,
-								"enabled": "{currentSettings>editable}"
+
+					icon: {
+						manifestpath: "/sap.card/header/icon/src",
+						type: "string",
+						label: "Icon",
+						visualization: {
+							type: "IconSelect",
+							settings: {
+								value: "{currentSettings>value}",
+								editable: "{currentSettings>editable}"
 							}
 						}
 					},
-					"separator4": {
-						"type": "separator"
-					},
-					"number": {
-						"manifestpath": "/sap.card/configuration/parameters/number/value",
-						"type": "number",
-						"label": "{i18n>TRANSLATED_NUMBER_LABEL}"
-					},
-					"separator5": {
-						"type": "separator"
-					},
-					"booleanLabel": {
-						"manifestpath": "/sap.card/configuration/parameters/booleanLabel/value",
-						"label": "Boolean",
-						"type": "boolean"
-					},
-					"boolean": {
-						"manifestpath": "/sap.card/configuration/parameters/boolean/value",
-						"description": "Description",
-						"label": "Boolean with Switch",
-						"type": "boolean",
-						"visualization": {
-							"type": "Switch",
-							"settings": {
-								"state": "{currentSettings>value}",
-								"customTextOn": "Yes",
-								"customTextOff": "No",
-								"enabled": "{currentSettings>editable}"
-							}
-						}
-					},
-					"separator6": {
-						"type": "separator"
-					},
-					"date": {
-						"manifestpath": "/sap.card/configuration/parameters/date/value",
-						"type": "date",
-						"label": "Date"
-					},
-					"dateTime": {
-						"manifestpath": "/sap.card/configuration/parameters/dateTime/value",
-						"type": "datetime",
-						"label": "Date Time"
-					},
-					"separator7": {
-						"type": "separator"
-					},
-					"enum": {
-						"manifestpath": "/sap.card/configuration/parameters/enum/value",
-						"label": "Enumerations",
-						"type": "enum",
-						"enum": [
-							"Option A",
-							"Option B",
-							"Option C"
-						]
-					},
-					"lists": {
-						"type": "group",
-						"label": "Value Selection"
-					},
-					"stringWithStaticList": {
-						"manifestpath": "/sap.card/configuration/parameters/stringWithStaticList/value",
-						"type": "string",
-						"values": {
-							"data": {
-								"json": {
-									"values": [
-										{ "text": "text1", "key": "key1", "additionalText": "addtext1", "icon": "sap-icon://accept" },
-										{ "text": "text2", "key": "key2", "additionalText": "addtext2", "icon": "sap-icon://cart" },
-										{ "text": "text3", "key": "key3", "additionalText": "addtext3", "icon": "sap-icon://zoom-in" }
-									]
-								},
-								"path": "/values"
-							},
-							"item": {
-								"text": "{text}",
-								"key": "{key}",
-								"additionalText": "{additionalText}",
-								"icon": "{icon}"
-							}
-						}
-					},
-					"stringWithRequestList": {
-						"manifestpath": "/sap.card/configuration/parameters/stringWithRequestList/value",
-						"type": "string",
-						"values": {
-							"data": {
-								"request": {
-									"url": "./stringWithRequestList.json"
-								},
-								"path": "/"
-							},
-							"item": {
-								"text": "{text}",
-								"key": "{key}",
-								"additionalText": "{additionalText}",
-								"icon": "{icon}"
-							}
-						}
-					},
-					"string_Select": {
-						"manifestpath": "/sap.card/configuration/parameters/string_Select/value",
-						"type": "string",
-						"values": {
-							"data": {
-								"json": [
-									{ "text": 0.3, "key": "key1", "additionalText": 1293883200000, "icon": "sap-icon://accept" },
-									{ "text": 0.6, "key": "key2", "additionalText": 1293883200000, "icon": "sap-icon://cart" },
-									{ "text": 0.8, "key": "key3", "additionalText": 1293883200000, "icon": "sap-icon://zoom-in" }
-								],
-								"path": "/"
-							},
-							"item": {
-								"text": "Percent: {= format.percent(${text}) }",
-								"key": "{key}",
-								"additionalText": "datetime: {= format.dateTime(${additionalText}, {style: 'long'}) }",
-								"icon": "{icon}"
+
+					iconShape: {
+						manifestpath: "/sap.card/header/icon/shape",
+						type: "string",
+						label: "Icon Shape",
+						visualization: {
+							type: "ShapeSelect",
+							settings: {
+								value: "{currentSettings>value}",
+								editable: "{currentSettings>editable}"
 							}
 						},
-						"visualization": {
-							"type": "Select",
-							"settings": {
-								"forceSelection": true,
-								"editable": true,
-								"visible": true,
-								"showSecondaryValues": true
-							}
-						}
+						cols: 1
 					},
-					"stringArray": {
-						"manifestpath": "/sap.card/configuration/parameters/stringArray/value",
-						"label": "String Array",
-						"type": "string[]",
-						"values": {
-							"data": {
-								"json": [
-									{ "text": "text1", "key": "key1", "additionalText": "addtext1", "icon": "sap-icon://accept" },
-									{ "text": "text2", "key": "key2", "additionalText": "addtext2", "icon": "sap-icon://cart" },
-									{ "text": "text3", "key": "key3", "additionalText": "addtext3", "icon": "sap-icon://zoom-in" }
-								],
-								"path": "/"
-							},
-							"item": {
-								"text": "{text}",
-								"key": "{key}",
-								"additionalText": "{additionalText}",
-								"icon": "{icon}"
-							}
-						}
-					},
-					"stringArrayNoValues": {
-						"manifestpath": "/sap.card/configuration/parameters/stringArrayNoValues/value",
-						"label": "String Array With Request List",
-						"type": "string[]"
-					},
-					"Customers": {
-						"manifestpath": "/sap.card/configuration/parameters/Customers/value",
-						"type": "string[]",
-						"label": "String Array With No Values",
-						"values": {
-							"data": {
-								"request": {
-									"url": "{{destinations.Northwind_V3}}/Customers",
-									"parameters": {
-										"$select": "CustomerID, CompanyName, Country, City, Address"
-									}
-								},
-								"path": "/value"
-							},
-							"item": {
-								"text": "{CompanyName}",
-								"key": "{CustomerID}",
-								"additionalText": "{= ${CustomerID} !== undefined ? ${Country} + ', ' +  ${City} + ', ' + ${Address} : ''}"
-							}
-						}
-					},
-					"iconNotAllowFile": {
-						"manifestpath": "/sap.card/configuration/parameters/iconNotAllowFile/src",
-						"type": "string",
-						"label": "Icon Selectioin",
-						"visualization": {
-							"type": "IconSelect",
-							"settings": {
-								"value": "{currentSettings>value}",
-								"editable": "{currentSettings>editable}",
-								"allowFile": false,
-								"allowNone": true
-							}
-						}
-					},
-					"icon": {
-						"manifestpath": "/sap.card/header/icon/src",
-						"type": "string",
-						"label": "Icon",
-						"visualization": {
-							"type": "IconSelect",
-							"settings": {
-								"value": "{currentSettings>value}",
-								"editable": "{currentSettings>editable}"
-							}
-						}
-					},
-					"color": {
-						"manifestpath": "/sap.card/header/icon/backgroundColor",
-						"type": "string",
-						"label": "Icon Background",
-						"description": "Description",
-						"visualization": {
-							"type": "ColorSelect",
-							"settings": {
-								"enumValue": "{currentSettings>value}",
-								"editable": "{currentSettings>editable}"
+
+					iconBackground: {
+						manifestpath: "/sap.card/header/icon/backgroundColor",
+						type: "string",
+						label: "Icon Background",
+						visualization: {
+							type: "ColorSelect",
+							settings: {
+								enumValue: "{currentSettings>value}",
+								editable: "{currentSettings>editable}"
 							}
 						},
-						"cols": 1
+						cols: 1
 					},
-					"shape": {
-						"manifestpath": "/sap.card/header/icon/shape",
-						"label": "Icon Shape",
-						"type": "string",
-						"description": "Description",
-						"visualization": {
-							"type": "ShapeSelect",
-							"settings": {
-								"value": "{currentSettings>value}",
-								"editable": "{currentSettings>editable}"
-							}
-						},
-						"cols": 1
+
+					/* =======================
+					   Data & Behavior
+					======================= */
+					dataGroup: {
+						type: "group",
+						label: "Data & Behavior"
 					},
-					"group": {
-						"label": "Dependent",
-						"type": "group"
-					},
-					"stringDependent": {
-						"manifestpath": "/sap.card/configuration/parameters/stringDependent/value",
-						"label": "String: editable, visible, label",
-						"type": "string",
-						"translatable": true
-					},
-					"dependentString1": {
-						"manifestpath": "/sap.card/configuration/parameters/dependentString1/value",
-						"type": "string",
-						"label": "{= ${items>stringDependent/value} === 'label'? 'stringDependent True' : 'stringDependent False' }",
-						"editable": "{= ${items>stringDependent/value} === 'editable'}",
-						"visible": "{= ${items>stringDependent/value} === 'visible'}"
-					},
-					"integerDependent": {
-						"manifestpath": "/sap.card/configuration/parameters/integerDependent/value",
-						"type": "integer",
-						"label": "Integer: 1, 3, 6, 9"
-					},
-					"dependentInteger1": {
-						"manifestpath": "/sap.card/configuration/parameters/dependentInteger1/value",
-						"type": "string",
-						"label": "{= ${items>integerDependent/value} > 8 ? 'integerDependent True' : 'integerDependent False' }",
-						"editable": "{= ${items>integerDependent/value} > 5}",
-						"visible": "{= ${items>integerDependent/value} > 2}"
-					},
-					"booleanDependent": {
-						"manifestpath": "/sap.card/configuration/parameters/booleanDependent/value",
-						"type": "boolean",
-						"label": "Boolean",
-						"visualization": {
-							"type": "Switch",
-							"settings": {
-								"state": "{currentSettings>value}",
-								"customTextOn": "Yes",
-								"customTextOff": "No",
-								"enabled": "{currentSettings>editable}"
+
+					maxItems: {
+						manifestpath: "/sap.card/configuration/parameters/maxItems/value",
+						type: "integer",
+						label: "Maximum Items",
+						visualization: {
+							type: "Slider",
+							settings: {
+								value: "{currentSettings>value}",
+								min: 1,
+								max: 10,
+								width: "100%",
+								enabled: "{currentSettings>editable}"
 							}
 						}
 					},
-					"dependentBoolean1": {
-						"manifestpath": "/sap.card/configuration/parameters/dependentBoolean1/value",
-						"type": "string",
-						"label": "{= ${items>booleanDependent/value} === true ? 'booleanDependent True' : 'booleanDependent False' }",
-						"editable": "{items>booleanDependent/value}",
-						"visible": "{items>booleanDependent/value}"
+
+					showDescription: {
+						manifestpath: "/sap.card/configuration/parameters/showDescription/value",
+						type: "boolean",
+						label: "Show Contact Name",
+						visualization: {
+							type: "Switch",
+							settings: {
+								state: "{currentSettings>value}",
+								customTextOn: "Show",
+								customTextOff: "Hide",
+								enabled: "{currentSettings>editable}"
+							}
+						}
 					},
-					"filterBackendInStringArray": {
-						"label": "Filter backend by input in MultiComboBox",
-						"type": "group"
+
+					dateContext: {
+						manifestpath: "/sap.card/configuration/parameters/dateContext/value",
+						type: "date",
+						label: "Date Context"
 					},
-					"CustomersWithMultiKeys": {
-						"manifestpath": "/sap.card/configuration/parameters/CustomersWithMultiKeys/value",
-						"type": "string[]",
-						"values": {
-							"data": {
-								"request": {
-									"url": "{{destinations.northwind}}/Customers",
-									"parameters": {
-										"$select": "CustomerID, CompanyName, Country, City, Address",
-										"$filter": "startswith(CompanyName,'{currentSettings>suggestValue}')"
+
+					/* =======================
+					   Filtering
+					======================= */
+					filterGroup: {
+						type: "group",
+						label: "Customer Filter"
+					},
+
+					CustomerID: {
+						manifestpath: "/sap.card/configuration/parameters/CustomerID/value",
+						type: "string",
+						label: "Customer ID",
+						values: {
+							data: {
+								request: {
+									url: "{{destinations.northwind}}/Customers",
+									parameters: {
+										"$select": "CustomerID,CompanyName"
 									}
 								},
-								"path": "/value"
+								path: "/value"
 							},
-							"item": {
-								"text": "{CompanyName}",
-								"key": "{CustomerID}/{CompanyName}",
-								"additionalText": "{= ${CustomerID} !== undefined ? ${Country} + ', ' +  ${City} + ', ' + ${Address} : ''}"
-							},
-							"keySeparator": "/"
-						}
-					},
-					"CustomersWithMultiKeysAndSeperator": {
-						"manifestpath": "/sap.card/configuration/parameters/CustomersWithMultiKeysAndSeperator/value",
-						"type": "string[]",
-						"values": {
-							"data": {
-								"request": {
-									"url": "{{destinations.northwind}}/Customers",
-									"parameters": {
-										"$select": "CustomerID, CompanyName, Country, City, Address",
-										"$filter": "startswith(CompanyName,'{currentSettings>suggestValue}')"
-									}
-								},
-								"path": "/value"
-							},
-							"item": {
-								"text": "{CompanyName}",
-								"key": "{CustomerID}#{CompanyName}",
-								"additionalText": "{= ${CustomerID} !== undefined ? ${Country} + ', ' +  ${City} + ', ' + ${Address} : ''}"
+							item: {
+								key: "{CustomerID}",
+								text: "{CompanyName}"
 							}
 						}
-					},
-					"CustomersWithFilterParameter": {
-						"manifestpath": "/sap.card/configuration/parameters/CustomersWithFilterParameter/value",
-						"type": "string[]",
-						"values": {
-							"data": {
-								"request": {
-									"url": "{{destinations.northwind}}/Customers",
-									"parameters": {
-										"$select": "CustomerID, CompanyName, Country, City, Address",
-										"$filter": "startswith(CompanyName,'{currentSettings>suggestValue}')"
-									}
-								},
-								"path": "/value"
-							},
-							"item": {
-								"text": "{CompanyName}",
-								"key": "{CustomerID}",
-								"additionalText": "{= ${CustomerID} !== undefined ? ${Country} + ', ' +  ${City} + ', ' + ${Address} : ''}"
-							}
-						}
-					},
-					"CustomersWithFilterInURL": {
-						"manifestpath": "/sap.card/configuration/parameters/CustomersWithFilterInURL/value",
-						"type": "string[]",
-						"translatable": true,
-						"values": {
-							"data": {
-								"request": {
-									"url": "{{destinations.northwind}}/Customers?$select=CustomerID, CompanyName, Country, City, Address&$filter=contains(CompanyName,'{currentSettings>suggestValue}')"
-								},
-								"path": "/value"
-							},
-							"item": {
-								"text": "{CompanyName}",
-								"key": "{CustomerID}",
-								"additionalText": "{= ${CustomerID} !== undefined ? ${Country} + ', ' +  ${City} + ', ' + ${Address} : ''}"
-							}
-						}
-					},
-					"objectFieldGroup": {
-						"type": "group",
-						"label": "Object Fields"
-					},
-					"object": {
-						"manifestpath": "/sap.card/configuration/parameters/object/value",
-						"type": "object",
-						"label": "Object Field"
-					},
-					"objectListFieldGroup": {
-						"type": "group",
-						"label": "Object List Fields"
-					},
-					"objects": {
-						"manifestpath": "/sap.card/configuration/parameters/objects/value",
-						"type": "object[]",
-						"label": "Object List Field"
 					}
 				}
 			},
-			"preview": {
-				"modes": "None"
+			preview: {
+				modes: "None"
 			}
 		});
 	};
