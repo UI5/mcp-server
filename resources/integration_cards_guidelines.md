@@ -65,7 +65,16 @@ The following roles/personas are supported:
 - Page/Content Administrator
 - Translator
 
-Configuration Editor is usually defined in the "dt/Configuration.js" file and referenced in the manifest file under `sap.card/configuration/editor` property.
+The Configuration Editor is implemented through two key components:
+
+1. **Definition file**: Create a `dt/Configuration.js` file that exports a Designtime definition object
+2. **Manifest reference**: Reference this definition in the `manifest.json` under the `sap.card/configuration/editor` property
+
+The `dt/Configuration.js` file defines the Configuration Editor's structure by specifying:
+- Form layout and field definitions
+- Input controls and visualizations 
+- Validation rules and field relationships
+- Grouping and organization of configuration options
 
 When creating or modifying Integration Cards, follow these guidelines for Configuration Editors:
 - Assume the role of Administrator persona when designing the Configuration Editor.
