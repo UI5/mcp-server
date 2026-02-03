@@ -8,15 +8,14 @@ sap.ui.define(["sap/ui/integration/Host"], async (Host) => {
 	const applyChangesBtn = document.getElementById("applyChangesBtn");
 	const resetBtn = document.getElementById("resetBtn");
 	const destinations = {
-		Northwind: "https://services.odata.org/V4/Northwind/Northwind.svc/"
 	};
 	const host = new Host({
-		resolveDestination: function(sDestinationName) {
-			if (destinations[sDestinationName]) {
-				return destinations[sDestinationName];
+		resolveDestination: function(destinationName) {
+			if (destinations[destinationName]) {
+				return destinations[destinationName];
 			}
 
-			return Promise.reject("Destination " + sDestinationName + " not found!");
+			return Promise.reject("Destination " + destinationName + " not found!");
 		},
 		actions: [
 			{

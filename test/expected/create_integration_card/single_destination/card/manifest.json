@@ -1,0 +1,58 @@
+{
+	"_version": "1.78.0",
+	"sap.app": {
+		"id": "sample.integration.card",
+		"type": "card",
+		"title": "Sample Integration Card",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.card": {
+		"type": "List",
+		"configuration": {
+			"destinations": {
+				"northwind": {
+					"name": "northwind",
+					"defaultUrl": "https://services.odata.org/V4/Northwind/Northwind.svc/"
+				}
+			},
+			"editor": "./dt/Configuration"
+		},
+		"data": {
+			"json": {
+				"items": [
+					{
+						"title": "Item 1",
+						"description": "Description for Item 1"
+					},
+					{
+						"title": "Item 2",
+						"description": "Description for Item 2"
+					}
+				]
+			}
+		},
+		"header": {
+			"title": "{i18n>title}",
+			"subtitle": "{i18n>subtitle}"
+		},
+		"content": {
+			"data": {
+				"path": "/items"
+			},
+			"item": {
+				"title": "{title}",
+				"description": "{description}"
+			}
+		}
+	}
+}

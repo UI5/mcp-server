@@ -8,11 +8,7 @@ sap.ui.define(["sap/ui/integration/Host"], async (Host) => {
 	const applyChangesBtn = document.getElementById("applyChangesBtn");
 	const resetBtn = document.getElementById("resetBtn");
 	const destinations = {
-		<%_ if (destinations && destinations.length > 0) { -%>
-			<%_ destinations.forEach(function(destination, index) { -%>
-		"<%= destination.name %>": "<%= destination.defaultUrl %>"<%= index < destinations.length - 1 ? ',' : '' %>
-			<%_ }); -%>
-		<%_ } -%>
+		"northwind": "https://services.odata.org/V4/Northwind/Northwind.svc/"
 	};
 	const host = new Host({
 		resolveDestination: function(destinationName) {

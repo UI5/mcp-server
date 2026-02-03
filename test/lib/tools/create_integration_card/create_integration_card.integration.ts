@@ -107,3 +107,75 @@ supportedCardTypes.forEach((cardType) => {
 		await checkFileContentsIgnoreLineFeeds(t, expectedFiles, expectedPath, folderPath);
 	});
 });
+
+test.serial("Generate card template with single destination", async (t) => {
+	const folderPath = path.join(
+		__dirname, "..", "..", "..", "tmp", "create_integration_card_single_destination"
+	);
+	await rm(folderPath, {recursive: true, force: true});
+
+	const destinations = [
+		{
+			name: "northwind",
+			defaultUrl: "https://services.odata.org/V4/Northwind/Northwind.svc/",
+		},
+	];
+
+	const result = await t.context.createIntegrationCard({
+		folderPath,
+		cardType: "List",
+		manifestVersion: "1.78.0",
+		destinations,
+	});
+
+	// Normalize paths for snapshot consistency across OSes
+	const normalizedResult = result.map((filePath) => filePath.replaceAll(path.sep, "/")).sort();
+	t.snapshot(
+		normalizedResult,
+		"Result of createIntegrationCard with single destination should match expected structure"
+	);
+
+	const expectedPath = path.join(expectedBasePath, "single_destination");
+	const expectedFiles = await findFiles(expectedPath);
+
+	// Check for all directories and files
+	await directoryDeepEqual(t, folderPath, expectedPath);
+
+	// Check for all file contents
+	await checkFileContentsIgnoreLineFeeds(t, expectedFiles, expectedPath, folderPath);
+});
+
+test.serial("Generate card template with multiple destinations", async (t) => {
+	const folderPath = path.join(__dirname, "..", "..", "..", "tmp", "create_integration_card_destinations");
+	await rm(folderPath, {recursive: true, force: true});
+	const destinations = [
+		{
+			name: "northwind",
+			defaultUrl: "https://services.odata.org/V4/Northwind/Northwind.svc/",
+		},
+		{
+			name: "myapi",
+			defaultUrl: "https://api.example.com/v1/",
+		},
+	];
+
+	const result = await t.context.createIntegrationCard({
+		folderPath,
+		cardType: "List",
+		manifestVersion: "1.78.0",
+		destinations,
+	});
+
+	// Normalize paths for snapshot consistency across OSes
+	const normalizedResult = result.map((filePath) => filePath.replaceAll(path.sep, "/")).sort();
+	t.snapshot(normalizedResult, "Result of createIntegrationCard with destinations should match expected structure");
+
+	const expectedPath = path.join(expectedBasePath, "destinations");
+	const expectedFiles = await findFiles(expectedPath);
+
+	// Check for all directories and files
+	await directoryDeepEqual(t, folderPath, expectedPath);
+
+	// Check for all file contents
+	await checkFileContentsIgnoreLineFeeds(t, expectedFiles, expectedPath, folderPath);
+});
