@@ -14,7 +14,7 @@ SPDX-License-Identifier = "Apache-2.0"
 path = "resources/template/**"
 precedence = "aggregate"
 SPDX-FileCopyrightText = [
-    "2026 ui5-community/generator-ui5-app contributors",
+    "2025 ui5-community/generator-ui5-app contributors",
     "2026 SAP SE or an SAP affiliate company and OpenUI5 contributors"
 ]
 SPDX-License-Identifier = "Apache-2.0"
@@ -25,7 +25,7 @@ SPDX-FileComment = "these files contain content from ui5-community/generator-ui5
 path = "resources/template-ts/**"
 precedence = "aggregate"
 SPDX-FileCopyrightText = [
-    "2026 ui5-community/generator-ui5-ts-app contributors",
+    "2025 ui5-community/generator-ui5-ts-app contributors",
     "2026 SAP SE or an SAP affiliate company and OpenUI5 contributors"
 ]
 SPDX-License-Identifier = "Apache-2.0"
@@ -36,7 +36,7 @@ SPDX-FileComment = "these files contain content from ui5-community/generator-ui5
 path = "src/tools/create_ui5_app/ODataMetadata.ts"
 precedence = "aggregate"
 SPDX-FileCopyrightText = [
-    "2026 ui5-community/generator-ui5-ts-app-fcl contributors",
+    "2025 ui5-community/generator-ui5-ts-app-fcl contributors",
     "2026 SAP SE or an SAP affiliate company and OpenUI5 contributors"
 ]
 SPDX-License-Identifier = "Apache-2.0"
