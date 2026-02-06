@@ -31,7 +31,7 @@ jobs:
       run: npm run check-licenses
 
     - name: Perform dependency check
-      run: npm run depcheck
+      run: npm run knip
 
     - name: Perform build
       run: npm run build-test

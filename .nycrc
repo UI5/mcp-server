@@ -3,7 +3,8 @@
 	"reporter": ["lcov", "text", "text-summary"],
 	"include": ["src/**"],
 	"exclude": [
-		"**/*.d.ts"
+		"**/*.d.ts",
+		"knip.config.js"
 	],
 	"check-coverage": true,
 	"statements": 85,
