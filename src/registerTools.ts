@@ -13,6 +13,7 @@ import registerGetIntegrationCardsGuidelinesTool from "./tools/get_integration_c
 import registerCreateIntegrationCardTool from "./tools/create_integration_card/index.js";
 import registerRunManifestValidationTool from "./tools/run_manifest_validation/index.js";
 import registerGetTypescriptConversionGuidelinesTool from "./tools/get_typescript_conversion_guidelines/index.js";
+import registerSearchUi5DocsTool from "./tools/search_ui5_docs/index.js";
 
 interface Options {
 	useStructuredContentInResponse: boolean;
@@ -46,6 +47,8 @@ export default function (server: McpServer, context: Context, options: Options) 
 	registerUi5LinterTool(registerTool, context);
 
 	registerApiRefTool(registerTool, context);
+
+	registerSearchUi5DocsTool(registerTool, context);
 
 	registerProjectInfoTool(registerTool, context);
 

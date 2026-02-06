@@ -88,6 +88,7 @@
 		"globby": "^16.1.0",
 		"lockfile": "^1.0.4",
 		"make-fetch-happen": "^15.0.3",
+		"onnxruntime-web": "^1.21.0",
 		"semver": "^7.7.3",
 		"zod": "^4.3.5"
 	},
