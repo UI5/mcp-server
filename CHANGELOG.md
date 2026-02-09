@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.5](https://github.com/UI5/mcp-server/compare/v0.2.4...v0.2.5) (2026-02-09)
+
+
+### Dependencies
+
+* Bump @modelcontextprotocol/sdk from 1.25.3 to 1.26.0 ([7d3a5f3](https://github.com/UI5/mcp-server/commit/7d3a5f3b16e5861284dd6b23e8a98fb9633de46f))
+* Bump @ui5/linter from 1.20.8 to 1.20.9 ([d20989d](https://github.com/UI5/mcp-server/commit/d20989dd15a10c033c1fbe0e5e43740650b0ee95))
+* Bump @ui5/linter from 1.20.9 to 1.20.10 ([6a6538c](https://github.com/UI5/mcp-server/commit/6a6538c886431e5904216bbe7e0b839a16485c8c))
+* Bump ejs from 3.1.10 to 4.0.1 ([4731854](https://github.com/UI5/mcp-server/commit/47318546b35075d00c4b42a967aa1f30a9b23385))
+* Bump fast-xml-parser from 5.3.3 to 5.3.4 ([949fb9b](https://github.com/UI5/mcp-server/commit/949fb9b0c73b5df3854f31507b6a450765c5a6c0))
+* Bump semver from 7.7.3 to 7.7.4 ([ac4ed6c](https://github.com/UI5/mcp-server/commit/ac4ed6c0c8c56e3f6e841729eb530d13d5088aff))
+* Bump tar from 7.5.6 to 7.5.7 ([298740b](https://github.com/UI5/mcp-server/commit/298740b41703d1c2b6d3b80f3d5304e8b0ecb8af))
+* Bump zod from 4.3.5 to 4.3.6 ([ef1d703](https://github.com/UI5/mcp-server/commit/ef1d703f95d991a1e283c9668507529c4b84a106))
+
 ## [0.2.4](https://github.com/UI5/mcp-server/compare/v0.2.3...v0.2.4) (2026-01-23)
 
 
