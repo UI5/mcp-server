@@ -32,7 +32,7 @@ export async function fetchCdnRaw(url: string) {
 	try {
 		const response = await fetch(url);
 
-		if (!response.ok) {
+		if (!response.ok || !response.body) {
 			if (response.status === 404) {
 				throw new Error(`The requested resource does not exist`);
 			} else {
@@ -53,5 +53,5 @@ export async function fetchCdnRaw(url: string) {
 
 export async function fetchCdn(url: string): Promise<object> {
 	const res = await fetchCdnRaw(url);
-	return await res.json() as unknown as object;
+	return await res.json() as object;
 }

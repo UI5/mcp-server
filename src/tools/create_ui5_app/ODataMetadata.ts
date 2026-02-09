@@ -114,7 +114,7 @@ export default class ODataMetadata {
 		try {
 			this.serviceUrl = new URL(serviceUrl);
 			const url = `${this.serviceUrl.toString()}$metadata`;
-			const response = await fetch(url, {signal: AbortSignal.timeout(10000)} as fetch.FetchOptions);
+			const response = await fetch(url, {signal: AbortSignal.timeout(10000)} as unknown as fetch.FetchOptions);
 			if (!response.ok) {
 				if (response.status === 404) {
 					log.info(`The requested resource does not exist: ${url}`);

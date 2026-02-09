@@ -6,7 +6,7 @@ import {pipeline} from "node:stream/promises";
 
 export async function downloadFile(url: string, targetDir: string) {
 	const response = await fetch(url);
-	if (!response.ok) {
+	if (!response.ok || !response.body) {
 		if (response.status === 404) {
 			throw new Error(`The requested version does not exist`);
 		} else {

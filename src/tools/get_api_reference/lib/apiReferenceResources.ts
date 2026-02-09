@@ -143,7 +143,7 @@ export async function _createApiIndex(targetDir: string, apiJsonPaths: string[])
 export async function _fetchApiJson(targetPath: string, url: string) {
 	const response = await fetchCdnRaw(url);
 	await pipeline(
-		response.body,
+		response.body!,
 		createWriteStream(targetPath)
 	);
 	return targetPath;
