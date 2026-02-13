@@ -122,6 +122,18 @@ code --add-mcp '{"name":"@ui5/mcp-server","type": "stdio","command":"npx","args"
 2. Below the prompt/task input field, click on the "Manage MCP servers" icon and select the gear button in the popup.
 3. Click "Configure MCP servers" and add the above configuration.
 
+#### GitHub Copilot CLI
+
+Use the Copilot CLI to interactively add the MCP server:
+
+```bash
+/mcp add
+```
+
+Alternatively, create or edit the configuration file `~/.copilot/mcp-config.json` and add the [standard configuration](#standard-configuration-for-most-clients).
+
+For more information, see the [GitHub Copilot CLI documentation](https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli).
+
 ## Rules
 The following rules help guide the LLM to use the server correctly:
 
