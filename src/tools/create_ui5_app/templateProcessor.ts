@@ -38,6 +38,8 @@ export interface TemplateVars {
 	defaultTheme: string;
 	/** QUnit coverage file - depends on UI5 version */
 	qunitCoverageFile: string;
+	/** Version of the MCP server, for source template metadata */
+	mcpServerVersion: string;
 	/** Flags for version-specific features */
 	gte1_98_0: boolean;
 	gte1_100_0: boolean;

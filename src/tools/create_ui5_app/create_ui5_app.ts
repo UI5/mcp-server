@@ -10,7 +10,7 @@ import ODataMetadata from "./ODataMetadata.js";
 import {CreateUi5AppParams, CreateUi5AppResult} from "./schema.js";
 import {getLogger} from "@ui5/logger";
 import {isUi5Framework, Ui5Framework} from "../../utils/ui5Framework.js";
-import {dirExists, InvalidInputError} from "../../utils.js";
+import {dirExists, InvalidInputError, PKG_VERSION} from "../../utils.js";
 import isValidUrl from "./isValidUrl.js";
 
 const log = getLogger("tools:create_ui5_app:create_ui5_app");
@@ -230,6 +230,7 @@ The minimum version for ${framework} is ${minFwkVersionToUse}.`
 		qunitCoverageFile: semver.gte(frameworkVersion, "1.113.0") ?
 			"qunit-coverage-istanbul.js" :
 			"qunit-coverage.js",
+		mcpServerVersion: PKG_VERSION,
 		gte1_98_0: semver.gte(frameworkVersion, "1.98.0"),
 		gte1_100_0: semver.gte(frameworkVersion, "1.100.0"),
 		gte1_104_0: semver.gte(frameworkVersion, "1.104.0"),
