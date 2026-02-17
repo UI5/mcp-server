@@ -43,11 +43,14 @@ test.beforeEach(async (t) => {
 	};
 	t.context.loggerMock = loggerMock;
 
-	// Mock the @ui5/logger module
+	// Mock the @ui5/logger module and PKG_VERSION
 	const {createUi5App} = await esmock("../../../../src/tools/create_ui5_app/create_ui5_app.js", {
 		"@ui5/logger": {
 			getLogger: t.context.sinon.stub().returns(loggerMock),
 			isLogLevelEnabled: t.context.sinon.stub().returns(true),
+		},
+		"../../../../src/utils.js": {
+			PKG_VERSION: "0.0.0-test",
 		},
 	});
 

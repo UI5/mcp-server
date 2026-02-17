@@ -104,6 +104,7 @@ test.beforeEach(async (t) => {
 		},
 		"../../../../src/utils.js": {
 			dirExists: t.context.dirExists,
+			PKG_VERSION: "0.0.0-test",
 		},
 	});
 
@@ -175,7 +176,7 @@ test("All parameters", async (t) => {
 			gte1_142_0: false,
 			lt1_110_0: false,
 			lt1_124_0: false,
-			mcpServerVersion: "0.2.5",
+			mcpServerVersion: "0.0.0-test",
 			namespace: "com.test.apiapp",
 			oDataEntitySet: "Products",
 			oDataV4Url: "https://localhost/odata/v4/service/",

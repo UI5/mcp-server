@@ -12,7 +12,7 @@
 		},
 		"sourceTemplate": {
 			"id": "@ui5/mcp-server:ts",
-			"version": "0.2.5"
+			"version": "0.0.0-test"
 		}
 	},
 
