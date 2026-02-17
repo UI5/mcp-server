@@ -32,13 +32,13 @@ The UI5 [Model Context Protocol](https://modelcontextprotocol.io/) server offers
 - `get_typescript_conversion_guidelines`: Provides guidelines for converting UI5 applications and controls from JavaScript to TypeScript.
 - `get_version_info`: Retrieves version information for the UI5 framework.
 - `run_manifest_validation`: Validates the manifest against the UI5 Manifest schema.
-- `run_ui5_linter`: Integrates with [`@ui5/linter`](https://github.com/UI5/linter) to analyze and report issues in UI5 code.
+- `run_ui5_linter`: Integrates with [`@ui5/linter`](https://github.com/UI5/linter) to analyze and report issues in the UI5 code.
 
 ## Requirements
 
 - [Node.js](https://nodejs.org/) Version v20.17.0, v22.9.0 or higher
 - [npm](https://www.npmjs.com/) Version v8.0.0 or higher
-- An MCP client such as VS Code (GitHub Copilot), Cline, Claude Code, Codex or any other MCP-compatible client
+- An MCP client, such as VS Code (GitHub Copilot), Cline, Claude Code, Codex, or any other MCP-compatible client
 
 ## Setup
 
@@ -89,7 +89,7 @@ Besides the general configuration outlined above, some MCP clients offer shortcu
 
 **Preferred:** Install from the **[GitHub MCP server registry](https://github.com/mcp/UI5/mcp-server)**
 
-_Alternatively you can also use the VS Code CLI:_
+_Alternatively you can use the VS Code CLI:_
 
 ```bash
 # Using VS Code CLI
@@ -99,7 +99,7 @@ code --add-mcp '{"name":"@ui5/mcp-server","type": "stdio","command":"npx","args"
 #### Cline
 
 1. Open the Cline panel in VSCode.
-2. Click on the "MCP Servers" icon at the top, next to the "plus"
+2. Click on the "MCP Servers" icon at the top, next to the "plus" symbol
 3. Change to the "Configure" tab, then click "Configure MCP servers"
 4. In the editor that opens, insert the above [Standard Configuration for Most Clients](#standard-configuration-for-most-clients)
 
@@ -119,7 +119,7 @@ codex mcp add --transport stdio ui5-mcp-server -- npx -y @ui5/mcp-server
 
 ## Adding Rules to your Project
 
-The following rules **help guide the LLM to use the UI5 MCP server correctly**. We recommend adding these rules to your existing global or project-specific [`AGENTS.md`](https://agents.md/). Specifics on where to place them may vary based on the respective MCP client. Claude Code for instance uses `CLAUDE.md` instead of `AGENTS.md`.
+The following rules **guide large language models (LLMs) in using the UI5 MCP server correctly**. Add these rules to your existing global or project-specific [`AGENTS.md`](https://agents.md/) file. The exact location may vary depending on the MCP client. For example, Claude Code uses a `CLAUDE.md` file instead of `AGENTS.md`.
 
 ```markdown
 ## Guidelines for UI5
@@ -146,7 +146,7 @@ The UI5 MCP server can be configured using the following environment variables. 
     * Description: Internal [log level](https://ui5.github.io/cli/stable/pages/Troubleshooting/#changing-the-log-level): `silent`, `error`, `warn`, `info`, `perf`, `verbose`, `silly`
 * **`UI5_DATA_DIR`**:
     * Default Value: The `.ui5` directory in the user's home directory
-    * Description: Directory where the MCP server stores its data, such as cached API references
+    * Description: Directory where the MCP server stores its data, such as cached API references.
 
 ## Support, Feedback, Contributing
 
