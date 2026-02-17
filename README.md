@@ -127,7 +127,7 @@ The following rules **guide large language models (LLMs) in using the UI5 MCP se
 Use the `get_guidelines` tool of the UI5 MCP server to retrieve the latest coding standards and best practices for UI5 development.
 ```
 
-### Advanced Configuration
+### Configuration
 
 The UI5 MCP server can be configured using the following environment variables. It does not accept any command-line arguments.
 
