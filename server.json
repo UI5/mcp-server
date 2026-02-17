@@ -19,7 +19,7 @@
       "environmentVariables": [
         {
           "default": "localhost, services.odata.org",
-          "description": "A comma-separated list of domains that are allowed to be used in the 'oDataV4Url' parameter of the 'create_ui5_app' tool, for example: 'localhost, example.com, sub.example.com'. Set to an empty string to allow any domains. For wildcard subdomains, prefix the domain with a dot: '.example.com'. This will match 'www.example.com' but not 'example.com'.",
+          "description": "A comma-separated list of domains that are allowed to be used in various tools, for example: 'localhost, example.com, sub.example.com'. Set to an empty string to allow any domains. For wildcard subdomains, prefix the domain with a dot: '.example.com'. This will match 'www.example.com' but not 'example.com'.",
           "isRequired": false,
           "format": "string",
           "isSecret": false,
