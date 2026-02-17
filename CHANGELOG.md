@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.6](https://github.com/UI5/mcp-server/compare/v0.2.5...v0.2.6) (2026-02-17)
+
+
+### Features
+
+* Add UI5_MCP_SERVER_ALLOWED_DOMAINS configuration option ([#235](https://github.com/UI5/mcp-server/issues/235)) ([b551473](https://github.com/UI5/mcp-server/commit/b5514733e066cb033384c573f1958d0d2f2f2da0))
+* **ui5_create_app:** Add sourceTemplate section to manifest.json ([#231](https://github.com/UI5/mcp-server/issues/231)) ([9a22531](https://github.com/UI5/mcp-server/commit/9a2253121d6a9d7bc806309f0dcf5d5e317cfe0a))
+
+
+### Dependencies
+
+* Bump @ui5/project from 4.0.9 to 4.0.10 ([35336f3](https://github.com/UI5/mcp-server/commit/35336f3525e3902db6a08bc860e9528480158e48))
+* Bump fast-xml-parser from 5.3.5 to 5.3.6 ([60567db](https://github.com/UI5/mcp-server/commit/60567db072a3e26fd109f443e10a83d2f98f43a2))
+
 ## [0.2.5](https://github.com/UI5/mcp-server/compare/v0.2.4...v0.2.5) (2026-02-09)
 
 
