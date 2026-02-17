@@ -76,7 +76,7 @@ The UI5 MCP server can be configured using the following environment variables. 
 				"@ui5/mcp-server"
 			],
 			"env": {
-				"UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS": "localhost, services.odata.org",
+				"UI5_MCP_SERVER_ALLOWED_DOMAINS": "localhost, services.odata.org",
 				"UI5_LOG_LVL": "verbose",
 				"UI5_DATA_DIR": "/change-me/to/some/other/path",
 			}
@@ -87,9 +87,9 @@ The UI5 MCP server can be configured using the following environment variables. 
 
 **Configuration Options:**
 
-* **`UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS`**:
+* **`UI5_MCP_SERVER_ALLOWED_DOMAINS`**:
 	* Default Value: `localhost, services.odata.org`
-	* Description: A comma-separated list of domains that are allowed to be used in the `oDataV4Url` parameter of the `create_ui5_app` tool, for example: `localhost, example.com, sub.example.com`. Set to an empty string to allow any domains.  
+	* Description: A comma-separated list of domains that are allowed to be used in various tools, for example: `localhost, example.com, sub.example.com`. Set to an empty string to allow any domains.
 	For wildcard subdomains, prefix the domain with a dot: `.example.com`. This will match `www.example.com` but not `example.com`.
 * **`UI5_MCP_SERVER_RESPONSE_NO_STRUCTURED_CONTENT`**:
 	* Description: Set to any value to disable structured content in the MCP server responses.

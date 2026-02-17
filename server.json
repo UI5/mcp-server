@@ -23,7 +23,7 @@
           "isRequired": false,
           "format": "string",
           "isSecret": false,
-          "name": "UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS"
+          "name": "UI5_MCP_SERVER_ALLOWED_DOMAINS"
         },
         {
           "default": "false",
