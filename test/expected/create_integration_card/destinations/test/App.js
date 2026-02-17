@@ -9,7 +9,7 @@ sap.ui.define(["sap/ui/integration/Host"], async (Host) => {
 	const resetBtn = document.getElementById("resetBtn");
 	const destinations = {
 		"northwind": "https://services.odata.org/V4/Northwind/Northwind.svc/",
-		"myapi": "https://api.example.com/v1/"
+		"myapi": "http://localhost:8080/v1/"
 	};
 	const host = new Host({
 		resolveDestination: function(destinationName) {

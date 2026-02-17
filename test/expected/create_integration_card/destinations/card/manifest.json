@@ -26,7 +26,7 @@
 				},
 				"myapi": {
 					"name": "myapi",
-					"defaultUrl": "https://api.example.com/v1/"
+					"defaultUrl": "http://localhost:8080/v1/"
 				}
 			},
 			"editor": "./dt/Configuration"

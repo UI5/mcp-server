@@ -155,7 +155,7 @@ test.serial("Generate card template with multiple destinations", async (t) => {
 		},
 		{
 			name: "myapi",
-			defaultUrl: "https://api.example.com/v1/",
+			defaultUrl: "http://localhost:8080/v1/",
 		},
 	];
 
