@@ -12,7 +12,9 @@ export const supportedCardTypes = [
 export type SupportedCardType = typeof supportedCardTypes[number];
 
 const destinationSchema = z.object({
-	name: z.string().describe("Name of the destination."),
+	name: z.string()
+		.regex(/^[a-zA-Z0-9 .,'@_-]+$/, {message: "Only alphanumeric characters, space, and .,'-@_ are allowed."})
+		.describe("Name of the destination."),
 	defaultUrl: z.url().describe("Default URL of the destination."),
 });
 
