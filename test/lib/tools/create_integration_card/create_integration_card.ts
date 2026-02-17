@@ -3,7 +3,7 @@ import esmock from "esmock";
 import sinonGlobal from "sinon";
 import {InvalidInputError} from "../../../../src/utils.js";
 import path from "node:path";
-import {isValidUrl as realIsValidUrl, getAllowedOdataV4Domains} from "../../../../src/utils/URLHelper.js";
+import {isValidUrl as realIsValidUrl, getAllowedDomains} from "../../../../src/utils/URLHelper.js";
 
 // Define test context type
 const test = anyTest as TestFn<{
@@ -93,7 +93,7 @@ test.beforeEach(async (t) => {
 			},
 			"../../../../src/utils/URLHelper.js": {
 				isValidUrl: t.context.isValidUrlStub,
-				getAllowedOdataV4Domains,
+				getAllowedDomains,
 			},
 		}
 	);
@@ -243,10 +243,9 @@ test.serial("Destinations: Throws error when there is not allowed domain", async
 			defaultUrl: "https://invalid-domain.com/api/v1/",
 		},
 	];
-	const currentAllowedDomains = process.env.UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS;
 	const allowedDomains = ["allowed-domain.com"];
 
-	process.env.UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS = "allowed-domain.com";
+	process.env.UI5_MCP_SERVER_ALLOWED_DOMAINS = "allowed-domain.com";
 
 	await t.throwsAsync(async () => {
 		await createIntegrationCard({
@@ -270,9 +269,6 @@ test.serial("Destinations: Throws error when there is not allowed domain", async
 		[destinations[0].defaultUrl, allowedDomains],
 		"isValidUrl should be called with the destination URL and allowed domains"
 	);
-
-	// Restore original allowed domains after test
-	process.env.UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS = currentAllowedDomains;
 });
 
 test.serial("Destinations: Successfully generates card template with allowed destination domain", async (t) => {
@@ -284,8 +280,7 @@ test.serial("Destinations: Successfully generates card template with allowed des
 			defaultUrl: "https://allowed-domain.com/api/v1/",
 		},
 	];
-	const currentAllowedDomains = process.env.UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS;
-	process.env.UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS = "allowed-domain.com";
+	process.env.UI5_MCP_SERVER_ALLOWED_DOMAINS = "allowed-domain.com";
 
 	await t.notThrowsAsync(async () => {
 		await createIntegrationCard({
@@ -303,7 +298,4 @@ test.serial("Destinations: Successfully generates card template with allowed des
 		[destinations[0].defaultUrl, ["allowed-domain.com"]],
 		"isValidUrl should be called with the destination URL and allowed domains"
 	);
-
-	// Restore original allowed domains after test
-	process.env.UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS = currentAllowedDomains;
 });

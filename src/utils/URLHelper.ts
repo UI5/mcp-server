@@ -71,12 +71,13 @@ export function isValidUrl(
 	return true;
 };
 
-export function getAllowedOdataV4Domains() {
-	if ("UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS" in process.env) {
-		const inputDomainList = process.env.UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS;
+export function getAllowedDomains() {
+	if ("UI5_MCP_SERVER_ALLOWED_DOMAINS" in process.env || "UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS" in process.env) {
+		const inputDomainList = process.env.UI5_MCP_SERVER_ALLOWED_DOMAINS ??
+			process.env.UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS;
 		if (!inputDomainList?.trim()) {
 			// Empty list allows all domains
-			log.verbose("Empty value for UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS, allowing all domains");
+			log.verbose("Empty value for UI5_MCP_SERVER_ALLOWED_DOMAINS, allowing all domains");
 			return [];
 		}
 		// Use the environment variable if set
@@ -88,7 +89,7 @@ export function getAllowedOdataV4Domains() {
 				new URL(`https://${domain}`);
 			} catch (err) {
 				throw new InvalidInputError(
-					`Invalid domain '${domain}' in UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS: ` +
+					`Invalid domain '${domain}' in UI5_MCP_SERVER_ALLOWED_DOMAINS: ` +
 					(err instanceof Error ? err.message : String(err))
 				);
 			}

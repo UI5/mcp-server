@@ -7,7 +7,7 @@ import ejs from "ejs";
 import {getLogger} from "@ui5/logger";
 import {Destination, SupportedCardType} from "./schema.js";
 import semver from "semver";
-import {getAllowedOdataV4Domains, isValidUrl} from "../../utils/URLHelper.js";
+import {getAllowedDomains, isValidUrl} from "../../utils/URLHelper.js";
 
 const log = getLogger("tools:create_integration_card:create_integration_card");
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -43,7 +43,7 @@ export async function createIntegrationCard({
 	}
 
 	if (destinations?.length) {
-		const allowedDomains = getAllowedOdataV4Domains();
+		const allowedDomains = getAllowedDomains();
 
 		for (const destination of destinations) {
 			if (!isValidUrl(destination.defaultUrl, allowedDomains)) {
