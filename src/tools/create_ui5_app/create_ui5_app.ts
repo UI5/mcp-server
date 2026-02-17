@@ -11,7 +11,8 @@ import {CreateUi5AppParams, CreateUi5AppResult} from "./schema.js";
 import {getLogger} from "@ui5/logger";
 import {isUi5Framework, Ui5Framework} from "../../utils/ui5Framework.js";
 import {dirExists, InvalidInputError, PKG_VERSION} from "../../utils.js";
-import isValidUrl from "./isValidUrl.js";
+import getAllowedDomains from "../../utils/getAllowedDomains.js";
+import isValidUrl from "../../utils/isValidUrl.js";
 
 const log = getLogger("tools:create_ui5_app:create_ui5_app");
 
@@ -298,37 +299,4 @@ The minimum version for ${framework} is ${minFwkVersionToUse}.`
 			typescript,
 		},
 	};
-}
-
-function getAllowedDomains() {
-	if ("UI5_MCP_SERVER_ALLOWED_DOMAINS" in process.env || "UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS" in process.env) {
-		const inputDomainList = process.env.UI5_MCP_SERVER_ALLOWED_DOMAINS ??
-			process.env.UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS;
-		if (!inputDomainList?.trim()) {
-			// Empty list allows all domains
-			log.verbose("Empty value for UI5_MCP_SERVER_ALLOWED_DOMAINS, allowing all domains");
-			return [];
-		}
-		// Use the environment variable if set
-		const domainList = inputDomainList.split(",").map((d) => d.trim());
-		// Validate domains to catch user errors
-		for (const domain of domainList) {
-			try {
-				// Note that the dot prefix (which we use for wildcards) is valid in a domain
-				new URL(`https://${domain}`);
-			} catch (err) {
-				throw new InvalidInputError(
-					`Invalid domain '${domain}' in UI5_MCP_SERVER_ALLOWED_DOMAINS: ` +
-					(err instanceof Error ? err.message : String(err))
-				);
-			}
-		}
-		log.verbose(`${domainList.length} allowed OData V4 domains configured: ${domainList.join(", ")}`);
-		return domainList;
-	}
-	return [
-		// Default allowed domains for OData V4 services
-		"localhost",
-		"services.odata.org",
-	];
 }

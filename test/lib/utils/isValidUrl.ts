@@ -1,6 +1,6 @@
 import test from "ava";
-import isValidUrl from "../../../../src/tools/create_ui5_app/isValidUrl.js";
-import {InvalidInputError} from "../../../../src/utils.js";
+import isValidUrl from "../../../src/utils/isValidUrl.js";
+import {InvalidInputError} from "../../../src/utils.js";
 
 test("should return false for non-string or empty input", (t) => {
 	t.false(isValidUrl(""), "Empty string should be invalid");

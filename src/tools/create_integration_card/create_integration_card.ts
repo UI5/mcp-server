@@ -7,7 +7,8 @@ import ejs from "ejs";
 import {getLogger} from "@ui5/logger";
 import {Destination, SupportedCardType} from "./schema.js";
 import semver from "semver";
-import {getAllowedDomains, isValidUrl} from "../../utils/URLHelper.js";
+import getAllowedDomains from "../../utils/getAllowedDomains.js";
+import isValidUrl from "../../utils/isValidUrl.js";
 
 const log = getLogger("tools:create_integration_card:create_integration_card");
 const __dirname = path.dirname(fileURLToPath(import.meta.url));

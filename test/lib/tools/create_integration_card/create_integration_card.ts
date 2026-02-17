@@ -3,7 +3,8 @@ import esmock from "esmock";
 import sinonGlobal from "sinon";
 import {InvalidInputError} from "../../../../src/utils.js";
 import path from "node:path";
-import {isValidUrl as realIsValidUrl, getAllowedDomains} from "../../../../src/utils/URLHelper.js";
+import getAllowedDomains from "../../../../src/utils/getAllowedDomains.js";
+import realIsValidUrl from "../../../../src/utils/isValidUrl.js";
 
 // Define test context type
 const test = anyTest as TestFn<{
@@ -91,9 +92,11 @@ test.beforeEach(async (t) => {
 			"../../../../src/utils.js": {
 				dirExists: t.context.dirExistsStub,
 			},
-			"../../../../src/utils/URLHelper.js": {
-				isValidUrl: t.context.isValidUrlStub,
-				getAllowedDomains,
+			"../../../../src/utils/isValidUrl.js": {
+				default: t.context.isValidUrlStub,
+			},
+			"../../../../src/utils/getAllowedDomains.js": {
+				default: getAllowedDomains,
 			},
 		}
 	);
@@ -261,8 +264,6 @@ test.serial("Destinations: Throws error when there is not allowed domain", async
 	});
 
 	t.true(mkdirStub.notCalled);
-
-	// Assert that isValidUrl from URLHelper was called once
 	t.true(t.context.isValidUrlStub.calledOnce, "isValidUrl should be called once");
 	t.deepEqual(
 		t.context.isValidUrlStub.firstCall.args,
@@ -291,7 +292,6 @@ test.serial("Destinations: Successfully generates card template with allowed des
 		});
 	});
 
-	// Assert that isValidUrl from URLHelper was called once	with the correct parameters
 	t.true(t.context.isValidUrlStub.calledOnce, "isValidUrl should be called once");
 	t.deepEqual(
 		t.context.isValidUrlStub.firstCall.args,
