@@ -411,6 +411,7 @@ test("OData V4 Service URL: Not in allow list", async (t) => {
 test.serial("OData V4 Service URL: Custom allow list", async (t) => {
 	const {createUi5App, mkdirStub, execaStub, staticParams} = t.context;
 
+	const currentAllowedDomains = process.env.UI5_MCP_SERVER_ALLOWED_DOMAINS;
 	process.env.UI5_MCP_SERVER_ALLOWED_DOMAINS = "  .example.com, ui5.sap.com  ";
 
 	await t.throwsAsync(async () => {
@@ -438,11 +439,56 @@ test.serial("OData V4 Service URL: Custom allow list", async (t) => {
 			oDataV4Url: "https://ui5.sap.com/odata/v4/service",
 		});
 	});
+
+	// Restore original allow list after test
+	process.env.UI5_MCP_SERVER_ALLOWED_DOMAINS = currentAllowedDomains;
 });
+
+test.serial(
+	"OData V4 Service URL: Custom allow list using deprecated UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS",
+	async (t) => {
+		const {createUi5App, mkdirStub, execaStub, staticParams} = t.context;
+
+		const currentAllowedDomains = process.env.UI5_MCP_SERVER_ALLOWED_DOMAINS;
+		const currentAllowedOdataDomains = process.env.UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS;
+		delete process.env.UI5_MCP_SERVER_ALLOWED_DOMAINS;
+		process.env.UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS = "  .example.com, ui5.sap.com  ";
+
+		await t.throwsAsync(async () => {
+			return await createUi5App({
+				...staticParams,
+				oDataV4Url: "https://localhost/odata/v4/service",
+			});
+		}, {
+			message: /Domain "localhost" is not allowed/,
+			instanceOf: InvalidInputError,
+		});
+		t.true(mkdirStub.notCalled);
+		t.true(execaStub.notCalled);
+
+		await t.notThrowsAsync(async () => {
+			await createUi5App({
+				...staticParams,
+				oDataV4Url: "https://www.example.com/odata/v4/service",
+			});
+		});
+
+		await t.notThrowsAsync(async () => {
+			await createUi5App({
+				...staticParams,
+				oDataV4Url: "https://ui5.sap.com/odata/v4/service",
+			});
+		});
+
+		// Restore original allow list after test
+		process.env.UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS = currentAllowedOdataDomains;
+		process.env.UI5_MCP_SERVER_ALLOWED_DOMAINS = currentAllowedDomains;
+	});
 
 test.serial("OData V4 Service URL: Invalid entry in allow list", async (t) => {
 	const {createUi5App, mkdirStub, execaStub, staticParams} = t.context;
 
+	const currentAllowedDomains = process.env.UI5_MCP_SERVER_ALLOWED_DOMAINS;
 	process.env.UI5_MCP_SERVER_ALLOWED_DOMAINS = "ex ample.com, ui5/.sap.com  ";
 
 	await t.throwsAsync(async () => {
@@ -456,6 +502,9 @@ test.serial("OData V4 Service URL: Invalid entry in allow list", async (t) => {
 	});
 	t.true(mkdirStub.notCalled);
 	t.true(execaStub.notCalled);
+
+	// Restore original allow list after test
+	process.env.UI5_MCP_SERVER_ALLOWED_DOMAINS = currentAllowedDomains;
 });
 
 test("OData V4 Service URL: Quotes are escaped correctly for templating", async (t) => {

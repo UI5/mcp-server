@@ -300,8 +300,9 @@ The minimum version for ${framework} is ${minFwkVersionToUse}.`
 }
 
 function getAllowedDomains() {
-	if ("UI5_MCP_SERVER_ALLOWED_DOMAINS" in process.env) {
-		const inputDomainList = process.env.UI5_MCP_SERVER_ALLOWED_DOMAINS;
+	if ("UI5_MCP_SERVER_ALLOWED_DOMAINS" in process.env || "UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS" in process.env) {
+		const inputDomainList = process.env.UI5_MCP_SERVER_ALLOWED_DOMAINS ??
+			process.env.UI5_MCP_SERVER_ALLOWED_ODATA_DOMAINS;
 		if (!inputDomainList?.trim()) {
 			// Empty list allows all domains
 			log.verbose("Empty value for UI5_MCP_SERVER_ALLOWED_DOMAINS, allowing all domains");
