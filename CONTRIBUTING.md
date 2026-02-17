@@ -3,14 +3,10 @@
 ## Content
 
 1. [📝 **Reporting Issues**](#-reporting-issues)
+1. [📝 **Reporting Issues**](#-reporting-issues)
 2. [🤩 **Feature Requests**](#-feature-requests)
 3. [🔍 **Analyzing Issues**](#-analyzing-issues)
 4. [💻 **Contributing Code**](#-contributing-code)
-
-### ⚡️ Quick Links for Maintainers
-
-- [All Open Pull Requests](https://github.com/UI5/mcp-server/pulls)
-- [All Open Issues](https://github.com/UI5/mcp-server/issues)
 
 ## 📝 Reporting Issues
 
@@ -95,6 +91,28 @@ Especially check for issues in the **`Needs Triage`** column, or for issues with
 You may be able to add additional or missing information, such as a step-by-step guide on how to reproduce an issue or an analysis of the root cause. In case of the latter, you might even be able to [contribute](#-contributing-code) a bugfix. 🙌
 
 ## 💻 Contributing Code
+
+### Development Setup
+
+1. Clone the repository: `git clone git@github.com:UI5/linter.git ui5-linter`
+2. Navigate to the repository and install dependencies: `cd ui5-linter && npm install`
+3. Build the server: `npm run build`
+    * While developing, you may use `npm run build-watch` to automatically rebuild the server on code changes. Make sure to restart the server in your MCP client to get your changes!
+4. Link it globally: `npm link` - this makes the `ui5mcp` command available globally
+
+In your MCP client, use the following configuration to reference the local server:
+
+```json
+{
+  "mcpServers": {
+    "ui5mcp": {
+      "type": "stdio",
+      "command": "ui5mcp",
+      "args": []
+    }
+  }
+}
+```
 
 ### General Remarks
 
