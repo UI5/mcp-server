@@ -13,7 +13,8 @@ const MAPPING_URL = "https://raw.githubusercontent.com/UI5/manifest/main/mapping
 const ui5ToManifestVersionMappingMutex = new Mutex();
 
 // Manifests prior to 1.69.0 use older meta-schema, which is not supported by the current implementation
-const LOWEST_SUPPORTED_MANIFEST_VERSION = "1.69.0";
+// v1.48.1 to v1.67.1 use Draft-07, v1.67.2 onwards use JSON Schema 2020-12
+const LOWEST_SUPPORTED_MANIFEST_VERSION = "1.48.1";
 
 function getSchemaURL(manifestVersion: string) {
 	return `https://raw.githubusercontent.com/UI5/manifest/v${manifestVersion}/schema.json`;
@@ -76,14 +77,16 @@ async function failWithSupportedVersionsHint(errorMessage: string): Promise<neve
 		];
 	} catch (_) {
 		supportedVersions = null;
-	};
+	}
 
-	throw new Error(
-		errorMessage +
-		(supportedVersions ?
-			`\nSupported versions are: ${supportedVersions.join(", ")}.` :
-			"")
-	);
+	const versionNote = supportedVersions && supportedVersions.length > 0
+		? `\nNote: The mapping file lists these versions: ${supportedVersions.join(", ")}. ` +
+		  `However, schema versions from ${LOWEST_SUPPORTED_MANIFEST_VERSION} onwards are supported ` +
+		  `(v1.48.1-v1.67.1 use Draft-07, v1.67.2+ use JSON Schema 2020-12).`
+		: `\nNote: Schema versions from ${LOWEST_SUPPORTED_MANIFEST_VERSION} onwards are supported ` +
+		  `(v1.48.1-v1.67.1 use Draft-07, v1.67.2+ use JSON Schema 2020-12).`;
+
+	throw new Error(errorMessage + versionNote);
 }
 
 /**

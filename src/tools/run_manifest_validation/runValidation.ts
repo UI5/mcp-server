@@ -1,6 +1,7 @@
 import {fetchCdn} from "../../utils/cdnHelper.js";
 import {RunSchemaValidationResult} from "./schema.js";
 import Ajv2020, {AnySchemaObject} from "ajv/dist/2020.js";
+import Ajv from "ajv";
 import addFormats from "ajv-formats";
 import {readFile} from "fs/promises";
 import {getLogger} from "@ui5/logger";
@@ -14,12 +15,36 @@ const log = getLogger("tools:run_manifest_validation:runValidation");
 const schemaCache = new Map<string, AnySchemaObject>();
 const fetchSchemaMutex = new Mutex();
 
+/*
+ * Returns: -1 if v1 < v2, 0 if v1 === v2, 1 if v1 > v2
+ */
+function compareVersions(v1: string, v2: string): number {
+	// Remove 'v' prefix if present
+	const ver1 = v1.replace(/^v/, "");
+	const ver2 = v2.replace(/^v/, "");
+
+	const parts1 = ver1.split(".").map(Number);
+	const parts2 = ver2.split(".").map(Number);
+
+	const maxLength = Math.max(parts1.length, parts2.length);
+
+	for (let i = 0; i < maxLength; i++) {
+		const num1 = parts1[i] || 0;
+		const num2 = parts2[i] || 0;
+
+		if (num1 < num2) return -1;
+		if (num1 > num2) return 1;
+	}
+
+	return 0;
+}
+
 const AJV_SCHEMA_PATHS = {
 	draft06: fileURLToPath(import.meta.resolve("ajv/dist/refs/json-schema-draft-06.json")),
 	draft07: fileURLToPath(import.meta.resolve("ajv/dist/refs/json-schema-draft-07.json")),
 } as const;
 
-async function createUI5ManifestValidateFunction(ui5Schema: object) {
+async function createUI5ManifestValidateFunction2020(ui5Schema: object) {
 	try {
 		const ajv = new Ajv2020.default({
 			// Collect all errors, not just the first one
@@ -77,12 +102,77 @@ async function createUI5ManifestValidateFunction(ui5Schema: object) {
 		// Add meta-schemas for draft-06 and draft-07.
 		// These are required to support schemas that reference these drafts,
 		// for example the Adaptive Card schema and some sap.bpa.task properties.
+
 		ajv.addMetaSchema(draft06MetaSchema, "http://json-schema.org/draft-06/schema#");
 		ajv.addMetaSchema(draft07MetaSchema, "http://json-schema.org/draft-07/schema#");
 
 		const validate = await ajv.compileAsync(ui5Schema);
-
 		return validate;
+	} catch (error) {
+		throw new Error(`Failed to create UI5 manifest validate function: ` +
+			`${error instanceof Error ? error.message : String(error)}`);
+	}
+}
+
+async function createUI5ManifestValidateFunctionDraft07(ui5Schema: object) {
+	try {
+		const ajv = new Ajv.default({
+			// Collect all errors, not just the first one
+			allErrors: true,
+			// Allow additional properties that are not in schema such as "i18n",
+			// otherwise compilation fails
+			strict: false,
+			// Don't use Unicode-aware regular expressions,
+			// otherwise compilation fails with "Invalid escape" errors
+			unicodeRegExp: false,
+			loadSchema: async (uri) => {
+				const release = await fetchSchemaMutex.acquire();
+
+				try {
+					if (schemaCache.has(uri)) {
+						log.info(`Loading cached schema: ${uri}`);
+						return schemaCache.get(uri)!;
+					}
+
+					log.info(`Loading external schema: ${uri}`);
+					const schema = await fetchCdn(uri) as AnySchemaObject;
+
+					// Special handling for Adaptive Card schema to fix unsupported "id" property
+					// According to the JSON Schema spec Draft 06 (used by Adaptive Card schema),
+					// "$id" should be used instead of "id"
+					// See https://github.com/microsoft/AdaptiveCards/issues/9274
+					if (uri.includes("adaptive-card.json") && typeof schema.id === "string") {
+						schema.$id = schema.id;
+						delete schema.id;
+					}
+
+					schemaCache.set(uri, schema);
+
+					return schema;
+				} catch (error) {
+					log.warn(`Failed to load external schema ${uri}:` +
+						`${error instanceof Error ? error.message : String(error)}`);
+
+					throw error;
+				} finally {
+					release();
+				}
+			},
+		});
+
+	addFormats.default(ajv);
+
+	const draft06MetaSchema = JSON.parse(
+		await readFile(AJV_SCHEMA_PATHS.draft06, "utf-8")
+	) as AnySchemaObject;
+
+	// Add meta-schema for draft-06.
+	// This is required to support schemas that reference this draft,
+	// for example the Adaptive Card schema.
+	ajv.addMetaSchema(draft06MetaSchema, "http://json-schema.org/draft-06/schema#");
+
+	const validate = await ajv.compileAsync(ui5Schema);
+	return validate;
 	} catch (error) {
 		throw new Error(`Failed to create UI5 manifest validate function: ` +
 			`${error instanceof Error ? error.message : String(error)}`);
@@ -121,7 +211,17 @@ export default async function runValidation(manifestPath: string): Promise<RunSc
 	const manifestVersion = await getManifestVersion(manifest);
 	log.info(`Using manifest version: ${manifestVersion}`);
 	const ui5ManifestSchema = await getManifestSchema(manifestVersion);
-	const validate = await createUI5ManifestValidateFunction(ui5ManifestSchema);
+	let validate: Awaited<ReturnType<typeof createUI5ManifestValidateFunction2020>>;
+
+	// v1.67.2 and onwards use JSON Schema 2020-12
+	if (compareVersions(manifestVersion, "v1.67.1") <= 0) {
+		log.info("Using Draft-07 validation (manifest version <= v1.67.1)");
+		validate = await createUI5ManifestValidateFunctionDraft07(ui5ManifestSchema);
+	} else {
+		log.info("Using JSON Schema 2020-12 validation (manifest version >= v1.67.2)");
+		validate = await createUI5ManifestValidateFunction2020(ui5ManifestSchema);
+	}
+
 	const isValid = validate(manifest);
 
 	if (isValid) {
