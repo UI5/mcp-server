@@ -130,6 +130,27 @@
 		},
 		"node-gyp@10": {
 			"tar": "^7.5.7"
+		},
+		"@eslint/config-array": {
+			"minimatch": "^10.2.2"
+		},
+		"@eslint/eslintrc": {
+			"minimatch": "^10.2.2"
+		},
+		"@typescript-eslint/typescript-estree": {
+			"minimatch": "^10.2.2"
+		},
+		"@npmcli/map-workspaces": {
+			"minimatch": "^10.2.2"
+		},
+		"@tufjs/models": {
+			"minimatch": "^10.2.2"
+		},
+		"ignore-walk": {
+			"minimatch": "^10.2.2"
+		},
+		"serve-handler": {
+			"minimatch": "^10.2.2"
 		}
 	}
 }
