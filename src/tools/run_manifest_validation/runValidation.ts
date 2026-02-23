@@ -106,7 +106,35 @@ async function createUI5ManifestValidateFunction2020(ui5Schema: object) {
 		ajv.addMetaSchema(draft06MetaSchema, "http://json-schema.org/draft-06/schema#");
 		ajv.addMetaSchema(draft07MetaSchema, "http://json-schema.org/draft-07/schema#");
 
-		const validate = await ajv.compileAsync(ui5Schema);
+		// Special handling for UI5 manifest schemas (e.g., v1.68.0) that use "items" as an array
+		// In JSON Schema 2020-12, "items" must be an object or boolean, not an array
+		// Arrays should use "prefixItems" instead
+		// See: https://json-schema.org/draft/2020-12/json-schema-core#section-10.3.1.2
+		interface SchemaWithDefs {
+			$defs?: Record<string, {
+				oneOf?: {
+					items?: unknown;
+					prefixItems?: unknown;
+				}[];
+			}>;
+		}
+
+		const schemaToCompile = ui5Schema as SchemaWithDefs & AnySchemaObject;
+		if (schemaToCompile?.$defs) {
+			for (const defKey in schemaToCompile.$defs) {
+				const def = schemaToCompile.$defs[defKey];
+				if (def?.oneOf) {
+					for (const option of def.oneOf) {
+						if (Array.isArray(option?.items)) {
+							option.prefixItems = option.items;
+							delete option.items;
+						}
+					}
+				}
+			}
+		}
+
+		const validate = await ajv.compileAsync(schemaToCompile);
 		return validate;
 	} catch (error) {
 		throw new Error(`Failed to create UI5 manifest validate function: ` +
@@ -160,19 +188,19 @@ async function createUI5ManifestValidateFunctionDraft07(ui5Schema: object) {
 			},
 		});
 
-	addFormats.default(ajv);
+		addFormats.default(ajv);
 
-	const draft06MetaSchema = JSON.parse(
-		await readFile(AJV_SCHEMA_PATHS.draft06, "utf-8")
-	) as AnySchemaObject;
+		const draft06MetaSchema = JSON.parse(
+			await readFile(AJV_SCHEMA_PATHS.draft06, "utf-8")
+		) as AnySchemaObject;
 
-	// Add meta-schema for draft-06.
-	// This is required to support schemas that reference this draft,
-	// for example the Adaptive Card schema.
-	ajv.addMetaSchema(draft06MetaSchema, "http://json-schema.org/draft-06/schema#");
+		// Add meta-schema for draft-06.
+		// This is required to support schemas that reference this draft,
+		// for example the Adaptive Card schema.
+		ajv.addMetaSchema(draft06MetaSchema, "http://json-schema.org/draft-06/schema#");
 
-	const validate = await ajv.compileAsync(ui5Schema);
-	return validate;
+		const validate = await ajv.compileAsync(ui5Schema);
+		return validate;
 	} catch (error) {
 		throw new Error(`Failed to create UI5 manifest validate function: ` +
 			`${error instanceof Error ? error.message : String(error)}`);

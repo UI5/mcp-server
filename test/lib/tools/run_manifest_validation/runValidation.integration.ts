@@ -57,21 +57,22 @@ test("runValidation successfully validates valid manifest", async (t) => {
 	});
 });
 
-test("runValidation fails to validate 1.68.0 manifest", async (t) => {
+test("runValidation successfully validates 1.68.0 manifest (with schema workaround)", async (t) => {
 	const {runValidation, fetchCdnStub} = t.context;
 
 	fetchCdnStub.withArgs("https://raw.githubusercontent.com/UI5/manifest/main/mapping.json")
 		.resolves({
 			"1.68.0": "1.68.0",
-			"1.69.0": "1.69.0",
 		});
 
-	await t.throwsAsync(() => {
-		return runValidation(path.join(fixturesPath, "manifest-168.json"));
-	}, {
-		message: "Manifest version '1.68.0' is not supported. " +
-			"Please upgrade to a newer one." +
-			"\nSupported versions are: 1.69.0.",
+	fetchCdnStub.withArgs("https://raw.githubusercontent.com/UI5/manifest/v1.68.0/schema.json")
+		.resolves(schemaFixture);
+
+	const result = await runValidation(path.join(fixturesPath, "manifest-168.json"));
+
+	t.deepEqual(result, {
+		isValid: true,
+		errors: [],
 	});
 });
 

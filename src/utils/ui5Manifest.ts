@@ -77,16 +77,14 @@ async function failWithSupportedVersionsHint(errorMessage: string): Promise<neve
 		];
 	} catch (_) {
 		supportedVersions = null;
-	}
+	};
 
-	const versionNote = supportedVersions && supportedVersions.length > 0
-		? `\nNote: The mapping file lists these versions: ${supportedVersions.join(", ")}. ` +
-		  `However, schema versions from ${LOWEST_SUPPORTED_MANIFEST_VERSION} onwards are supported ` +
-		  `(v1.48.1-v1.67.1 use Draft-07, v1.67.2+ use JSON Schema 2020-12).`
-		: `\nNote: Schema versions from ${LOWEST_SUPPORTED_MANIFEST_VERSION} onwards are supported ` +
-		  `(v1.48.1-v1.67.1 use Draft-07, v1.67.2+ use JSON Schema 2020-12).`;
-
-	throw new Error(errorMessage + versionNote);
+	throw new Error(
+		errorMessage +
+		(supportedVersions ?
+			`\nSupported versions are: ${supportedVersions.join(", ")}.` :
+			"")
+	);
 }
 
 /**
