@@ -10,34 +10,11 @@ import {getManifestSchema, getManifestVersion} from "../../utils/ui5Manifest.js"
 import {Mutex} from "async-mutex";
 import {fileURLToPath} from "url";
 import {isAbsolute} from "path";
+import semver from "semver";
 
 const log = getLogger("tools:run_manifest_validation:runValidation");
 const schemaCache = new Map<string, AnySchemaObject>();
 const fetchSchemaMutex = new Mutex();
-
-/*
- * Returns: -1 if v1 < v2, 0 if v1 === v2, 1 if v1 > v2
- */
-function compareVersions(v1: string, v2: string): number {
-	// Remove 'v' prefix if present
-	const ver1 = v1.replace(/^v/, "");
-	const ver2 = v2.replace(/^v/, "");
-
-	const parts1 = ver1.split(".").map(Number);
-	const parts2 = ver2.split(".").map(Number);
-
-	const maxLength = Math.max(parts1.length, parts2.length);
-
-	for (let i = 0; i < maxLength; i++) {
-		const num1 = parts1[i] || 0;
-		const num2 = parts2[i] || 0;
-
-		if (num1 < num2) return -1;
-		if (num1 > num2) return 1;
-	}
-
-	return 0;
-}
 
 const AJV_SCHEMA_PATHS = {
 	draft06: fileURLToPath(import.meta.resolve("ajv/dist/refs/json-schema-draft-06.json")),
@@ -242,7 +219,7 @@ export default async function runValidation(manifestPath: string): Promise<RunSc
 	let validate: Awaited<ReturnType<typeof createUI5ManifestValidateFunction2020>>;
 
 	// v1.67.2 and onwards use JSON Schema 2020-12
-	if (compareVersions(manifestVersion, "v1.67.1") <= 0) {
+	if (semver.compare(manifestVersion, "1.67.1") <= 0) {
 		log.info("Using Draft-07 validation (manifest version <= v1.67.1)");
 		validate = await createUI5ManifestValidateFunctionDraft07(ui5ManifestSchema);
 	} else {
