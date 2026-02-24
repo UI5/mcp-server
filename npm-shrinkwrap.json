@@ -12,7 +12,7 @@
 				"@modelcontextprotocol/sdk": "^1.26.0",
 				"@ui5/linter": "^1.20.11",
 				"@ui5/logger": "^4.0.2",
-				"@ui5/project": "^4.0.10",
+				"@ui5/project": "^4.0.11",
 				"ajv": "^8.17.1",
 				"ajv-formats": "^3.0.1",
 				"async-mutex": "^0.5.0",
@@ -9825,15 +9825,15 @@
 			}
 		},
 		"node_modules/@ui5/project": {
-			"version": "4.0.10",
-			"resolved": "https://registry.npmjs.org/@ui5/project/-/project-4.0.10.tgz",
-			"integrity": "sha512-Zp4ezytTUkx11TjaG9SPA+GqzXzoEKSNPy35gVEvN4l8P7eflQthGvo87SszzL+jtbEuruRn+BMSvXo5/xZIUQ==",
+			"version": "4.0.11",
+			"resolved": "https://registry.npmjs.org/@ui5/project/-/project-4.0.11.tgz",
+			"integrity": "sha512-i/xc+AcL/O2oR0x+ZQpXpvfFQW6Dqyo+FIi4WwH5lbSqdhHP6+/9AD3bQvfq5zjwActRvh2MozD8zIzbR5uQ7g==",
 			"license": "Apache-2.0",
 			"dependencies": {
 				"@npmcli/config": "^9.0.0",
 				"@ui5/fs": "^4.0.5",
 				"@ui5/logger": "^4.0.2",
-				"ajv": "^6.12.6",
+				"ajv": "^6.14.0",
 				"ajv-errors": "^1.0.1",
 				"chalk": "^5.6.2",
 				"escape-string-regexp": "^5.0.0",
