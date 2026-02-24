@@ -7,7 +7,11 @@
     ],
     "blueOak": "bronze"
   },
-  "packages": {
+  "packages": { 
+    "@modelcontextprotocol/inspector": "0.x.x",
+    "@modelcontextprotocol/inspector-cli": "0.x.x",
+    "@modelcontextprotocol/inspector-client": "0.x.x",
+    "@modelcontextprotocol/inspector-server": "0.x.x",
     "@sapui5/types": "*",
     "callsite": "1.0.0",
     "deep-freeze-strict": "1.1.1",
