@@ -61,7 +61,8 @@
 		"lib/**",
 		"resources/**",
 		"npm-shrinkwrap.json",
-		".reuse/**"
+		".reuse/**",
+		"icon.png"
 	],
 	"engines": {
 		"node": "^20.17.0 || >=22.9.0",
