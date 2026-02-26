@@ -18,7 +18,7 @@
 				"async-mutex": "^0.5.0",
 				"ejs": "^4.0.1",
 				"execa": "^9.6.1",
-				"fast-xml-parser": "^5.3.7",
+				"fast-xml-parser": "^5.4.1",
 				"globby": "^16.1.1",
 				"lockfile": "^1.0.4",
 				"make-fetch-happen": "^15.0.4",
@@ -12812,10 +12812,22 @@
 			],
 			"license": "BSD-3-Clause"
 		},
+		"node_modules/fast-xml-builder": {
+			"version": "1.0.0",
+			"resolved": "https://registry.npmjs.org/fast-xml-builder/-/fast-xml-builder-1.0.0.tgz",
+			"integrity": "sha512-fpZuDogrAgnyt9oDDz+5DBz0zgPdPZz6D4IR7iESxRXElrlGTRkHJ9eEt+SACRJwT0FNFrt71DFQIUFBJfX/uQ==",
+			"funding": [
+				{
+					"type": "github",
+					"url": "https://github.com/sponsors/NaturalIntelligence"
+				}
+			],
+			"license": "MIT"
+		},
 		"node_modules/fast-xml-parser": {
-			"version": "5.3.7",
-			"resolved": "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-5.3.7.tgz",
-			"integrity": "sha512-JzVLro9NQv92pOM/jTCR6mHlJh2FGwtomH8ZQjhFj/R29P2Fnj38OgPJVtcvYw6SuKClhgYuwUZf5b3rd8u2mA==",
+			"version": "5.4.1",
+			"resolved": "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-5.4.1.tgz",
+			"integrity": "sha512-BQ30U1mKkvXQXXkAGcuyUA/GA26oEB7NzOtsxCDtyu62sjGw5QraKFhx2Em3WQNjPw9PG6MQ9yuIIgkSDfGu5A==",
 			"funding": [
 				{
 					"type": "github",
@@ -12824,6 +12836,7 @@
 			],
 			"license": "MIT",
 			"dependencies": {
+				"fast-xml-builder": "^1.0.0",
 				"strnum": "^2.1.2"
 			},
 			"bin": {
@@ -18711,9 +18724,9 @@
 			}
 		},
 		"node_modules/test-exclude/node_modules/minimatch": {
-			"version": "3.1.4",
-			"resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.1.4.tgz",
-			"integrity": "sha512-twmL+S8+7yIsE9wsqgzU3E8/LumN3M3QELrBZ20OdmQ9jB2JvW5oZtBEmft84k/Gs5CG9mqtWc6Y9vW+JEzGxw==",
+			"version": "3.1.5",
+			"resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.1.5.tgz",
+			"integrity": "sha512-VgjWUsnnT6n+NUk6eZq77zeFdpW2LWDzP6zFGrCbHXiYNul5Dzqk2HHQ5uFH2DNW5Xbp8+jVzaeNt94ssEEl4w==",
 			"dev": true,
 			"license": "ISC",
 			"dependencies": {
