@@ -112,6 +112,7 @@ test("getManifestSchema throws error for unsupported versions 1.x.x versions", a
 
 	fetchCdnStub.withArgs("https://raw.githubusercontent.com/UI5/manifest/main/mapping.json")
 		.resolves({
+			"1.30.0": "1.30.0",
 			"1.55.0": "1.55.0",
 			"1.67.0": "1.67.0",
 			"1.68.0": "1.68.0",

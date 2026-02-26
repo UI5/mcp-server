@@ -36,15 +36,21 @@ test.beforeEach(async (t) => {
 
 	// Import the runValidation function
 	t.context.runValidation = (await esmock(
-		"../../../../src/tools/run_manifest_validation/runValidation.js", {
+		"../../../../src/tools/run_manifest_validation/runValidation.js",
+		{
 			"fs/promises": {
 				readFile: t.context.readFileStub,
 			},
 			"../../../../src/utils/ui5Manifest.js": {
 				getManifestSchema: t.context.getManifestSchemaStub,
 			},
+		},
+		{
 			"../../../../src/utils/cdnHelper.js": {
 				fetchCdn: t.context.fetchCdnStub,
+			},
+			"../../../../src/utils.js": {
+				InvalidInputError,
 			},
 		}
 	)).default;
@@ -68,6 +74,7 @@ test("runValidation successfully validates valid manifest", async (t) => {
 	t.context.manifestFileContent = JSON.stringify(validManifest);
 
 	getManifestSchemaStub.resolves({
+		$schema: "https://json-schema.org/draft/2020-12/schema",
 		type: "object",
 		properties: {
 			"_version": {type: "string"},
@@ -105,6 +112,7 @@ test("runValidation successfully validates invalid manifest", async (t) => {
 	t.context.manifestFileContent = JSON.stringify(invalidManifest);
 
 	getManifestSchemaStub.resolves({
+		$schema: "https://json-schema.org/draft/2020-12/schema",
 		type: "object",
 		properties: {
 			"sap.app": {
@@ -208,6 +216,7 @@ test("runValidation successfully validates valid manifest against external schem
 
 	// Schema that references an external schema
 	getManifestSchemaStub.resolves({
+		$schema: "https://json-schema.org/draft/2020-12/schema",
 		type: "object",
 		properties: {
 			"_version": {type: "string"},
@@ -252,6 +261,7 @@ test("runValidation throws error when external schema cannot be fetched", async 
 
 	// Schema that references an external schema
 	getManifestSchemaStub.resolves({
+		$schema: "https://json-schema.org/draft/2020-12/schema",
 		type: "object",
 		properties: {
 			"_version": {type: "string"},
@@ -288,6 +298,7 @@ test("runValidation uses cache on subsequent calls for external schemas", async 
 
 	// Schema that references an external schema
 	getManifestSchemaStub.resolves({
+		$schema: "https://json-schema.org/draft/2020-12/schema",
 		type: "object",
 		properties: {
 			"_version": {type: "string"},
@@ -337,6 +348,7 @@ test("runValidation patches external adaptive-card.json schema", async (t) => {
 
 	// Schema that references the adaptive-card.json schema
 	getManifestSchemaStub.resolves({
+		$schema: "https://json-schema.org/draft/2020-12/schema",
 		type: "object",
 		properties: {
 			_version: {type: "string"},
@@ -376,6 +388,7 @@ test("runValidation handles properties with 'format=uri'", async (t) => {
 	});
 
 	getManifestSchemaStub.resolves({
+		$schema: "https://json-schema.org/draft/2020-12/schema",
 		type: "object",
 		properties: {
 			_version: {type: "string"},

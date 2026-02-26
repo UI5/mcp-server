@@ -76,22 +76,40 @@ test("runValidation successfully validates 1.68.0 manifest (with schema workarou
 	});
 });
 
-test("runValidation successfully validates 1.69.0 manifest (minimum supported version)", async (t) => {
+test("runValidation fails to validate 1.48.0 manifest", async (t) => {
 	const {runValidation, fetchCdnStub} = t.context;
 
 	fetchCdnStub.withArgs("https://raw.githubusercontent.com/UI5/manifest/main/mapping.json")
 		.resolves({
-			"1.69.0": "1.69.0",
+			"1.48.0": "1.48.0",
+			"1.48.1": "1.48.1",
 		});
 
-	fetchCdnStub.withArgs("https://raw.githubusercontent.com/UI5/manifest/v1.69.0/schema.json")
+	await t.throwsAsync(() => {
+		return runValidation(path.join(fixturesPath, "manifest-148.json"));
+	}, {
+		message: "Manifest version '1.48.0' is not supported. " +
+			"Please upgrade to a newer one." +
+			"\nSupported versions are: 1.48.1.",
+	});
+});
+
+test("runValidation successfully validates 1.49.0 manifest (minimum supported version)", async (t) => {
+	const {runValidation, fetchCdnStub} = t.context;
+
+	fetchCdnStub.withArgs("https://raw.githubusercontent.com/UI5/manifest/main/mapping.json")
+		.resolves({
+			"1.49.0": "1.49.0",
+		});
+
+	fetchCdnStub.withArgs("https://raw.githubusercontent.com/UI5/manifest/v1.49.0/schema.json")
 		.resolves(schemaFixture_169);
 
 	// Stub the fetchCdn function to return the adaptive-card.json schema when requested
 	fetchCdnStub.withArgs("https://adaptivecards.io/schemas/adaptive-card.json")
 		.resolves(adaptiveCardSchema);
 
-	const result = await runValidation(path.join(fixturesPath, "manifest-169.json"));
+	const result = await runValidation(path.join(fixturesPath, "manifest-149.json"));
 
 	t.deepEqual(result, {
 		isValid: false,
