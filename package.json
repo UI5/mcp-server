@@ -77,7 +77,7 @@
 	},
 	"dependencies": {
 		"@modelcontextprotocol/sdk": "^1.27.1",
-		"@ui5/linter": "^1.20.11",
+		"@ui5/linter": "^1.20.12",
 		"@ui5/logger": "^4.0.2",
 		"@ui5/project": "^4.0.11",
 		"ajv": "^8.17.1",
@@ -131,27 +131,6 @@
 		},
 		"node-gyp@10": {
 			"tar": "^7.5.7"
-		},
-		"@eslint/config-array": {
-			"minimatch": "^10.2.2"
-		},
-		"@eslint/eslintrc": {
-			"minimatch": "^10.2.2"
-		},
-		"@typescript-eslint/typescript-estree": {
-			"minimatch": "^10.2.2"
-		},
-		"@npmcli/map-workspaces": {
-			"minimatch": "^10.2.2"
-		},
-		"@tufjs/models": {
-			"minimatch": "^10.2.2"
-		},
-		"ignore-walk": {
-			"minimatch": "^10.2.2"
-		},
-		"serve-handler": {
-			"minimatch": "^10.2.2"
 		}
 	}
 }
