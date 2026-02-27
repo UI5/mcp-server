@@ -1,5 +1,34 @@
 # Changelog
 
+## [0.2.7](https://github.com/UI5/mcp-server/compare/v0.2.6...v0.2.7) (2026-02-27)
+
+
+### Features
+
+* **Integration Cards:** Improve generation of Configuration Editor ([#230](https://github.com/UI5/mcp-server/issues/230)) ([5f67820](https://github.com/UI5/mcp-server/commit/5f678208e3c03f35eaee57c1c6cccfe6ce26c22d))
+
+
+### Bug Fixes
+
+* Add UI5 icon ([c6c7980](https://github.com/UI5/mcp-server/commit/c6c7980b04e2fa7590a50163c484a8e0dcd0d264))
+
+
+### Dependencies
+
+* Bump @modelcontextprotocol/sdk from 1.26.0 to 1.27.0 ([8388270](https://github.com/UI5/mcp-server/commit/8388270369041f6f4b14d3e9f181eed931f3e60e))
+* Bump @modelcontextprotocol/sdk from 1.27.0 to 1.27.1 ([cc1fc8a](https://github.com/UI5/mcp-server/commit/cc1fc8a6343945c1a939c5412eec8b2662390882))
+* Bump @ui5/project from 4.0.10 to 4.0.11 ([32ae81d](https://github.com/UI5/mcp-server/commit/32ae81d94d0f66fabdebf67155d08a606e0c8f80))
+* Bump fast-xml-parser from 5.3.6 to 5.3.7 ([4ac6a44](https://github.com/UI5/mcp-server/commit/4ac6a440709fc699d5cc6bc8b3709caf41390796))
+* Bump fast-xml-parser from 5.3.7 to 5.4.1 ([c8d1bd3](https://github.com/UI5/mcp-server/commit/c8d1bd38fbef03c11e3bc60aa9174aa7bb7faa19))
+* Bump globby from 16.1.0 to 16.1.1 ([e6eb79e](https://github.com/UI5/mcp-server/commit/e6eb79e0efd9898e58f11aa086cd1cdd85fd80fb))
+* Bump make-fetch-happen from 15.0.3 to 15.0.4 ([962b6f7](https://github.com/UI5/mcp-server/commit/962b6f7972520c66e5bc8e43c3edff12838c8f1d))
+
+
+### Reverts
+
+* Bump @modelcontextprotocol/inspector from 0.20.0 to 0.21.0 ([3c30aa4](https://github.com/UI5/mcp-server/commit/3c30aa4446efe1a470ea35ccc388f0181886587f))
+* Bump licensee from 11.1.1 to 12.0.0 ([d0342b0](https://github.com/UI5/mcp-server/commit/d0342b0ed0cbdb4320b0ddfd9b23b9d42efb378b))
+
 ## [0.2.6](https://github.com/UI5/mcp-server/compare/v0.2.5...v0.2.6) (2026-02-17)
 
 
