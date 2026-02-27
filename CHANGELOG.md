@@ -23,12 +23,6 @@
 * Bump globby from 16.1.0 to 16.1.1 ([e6eb79e](https://github.com/UI5/mcp-server/commit/e6eb79e0efd9898e58f11aa086cd1cdd85fd80fb))
 * Bump make-fetch-happen from 15.0.3 to 15.0.4 ([962b6f7](https://github.com/UI5/mcp-server/commit/962b6f7972520c66e5bc8e43c3edff12838c8f1d))
 
-
-### Reverts
-
-* Bump @modelcontextprotocol/inspector from 0.20.0 to 0.21.0 ([3c30aa4](https://github.com/UI5/mcp-server/commit/3c30aa4446efe1a470ea35ccc388f0181886587f))
-* Bump licensee from 11.1.1 to 12.0.0 ([d0342b0](https://github.com/UI5/mcp-server/commit/d0342b0ed0cbdb4320b0ddfd9b23b9d42efb378b))
-
 ## [0.2.6](https://github.com/UI5/mcp-server/compare/v0.2.5...v0.2.6) (2026-02-17)
 
 
