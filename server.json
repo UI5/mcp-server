@@ -50,8 +50,7 @@
           "name": "UI5_LOG_LVL"
         },
         {
-          "default": "The '.ui5' directory in the user's home directory",
-          "description": "Directory where the MCP server stores its data, such as cached API references.",
+          "description": "Directory where the MCP server stores its data, such as cached API references. Defaults to the '.ui5' directory in the user's home directory.",
           "isRequired": false,
           "format": "string",
           "isSecret": false,
