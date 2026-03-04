@@ -26,7 +26,6 @@
           "name": "UI5_MCP_SERVER_ALLOWED_DOMAINS"
         },
         {
-          "default": "false",
           "description": "Set to any value to disable structured content in the MCP server responses.",
           "isRequired": false,
           "format": "boolean",
@@ -34,7 +33,6 @@
           "name": "UI5_MCP_SERVER_RESPONSE_NO_STRUCTURED_CONTENT"
         },
         {
-          "default": "false",
           "description": "Set to any value to disable resources in the MCP server responses, see https://modelcontextprotocol.io/specification/2025-06-18/server/resource. This is useful for clients that do not support resources, see https://modelcontextprotocol.io/clients, such as Cursor or the Gemini CLI.",
           "isRequired": false,
           "format": "string",
