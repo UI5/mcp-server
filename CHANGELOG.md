@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.8](https://github.com/UI5/mcp-server/compare/v0.2.7...v0.2.8) (2026-03-06)
+
+
+### Bug Fixes
+
+* Remove invalid defaults for NO_STRUCTURED_CONTENT and NO_RESOURCES ([d7d4f5d](https://github.com/UI5/mcp-server/commit/d7d4f5d18383a7feed03ccbd3731fc1afac554a4))
+* Remove invalid UI5_DATA_DIR default from server.json ([150b551](https://github.com/UI5/mcp-server/commit/150b551f2644212ed79f6f91e5de2dabe3cf764c))
+
+
+### Dependencies
+
+* Bump fast-xml-parser from 5.4.1 to 5.4.2 ([c02222a](https://github.com/UI5/mcp-server/commit/c02222a3275d5c9cb86a88666052b404a68235f8))
+* Update dependencies ([#277](https://github.com/UI5/mcp-server/issues/277)) ([ee34d14](https://github.com/UI5/mcp-server/commit/ee34d146c88dfe1ff5033a7d82e4efdd160721bc))
+
 ## [0.2.7](https://github.com/UI5/mcp-server/compare/v0.2.6...v0.2.7) (2026-02-27)
 
 
