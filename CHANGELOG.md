@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.9](https://github.com/UI5/mcp-server/compare/v0.2.8...v0.2.9) (2026-03-17)
+
+
+### Bug Fixes
+
+* **run_manifest_validation:** Declare earlier manifest schema versions as now supported ([#250](https://github.com/UI5/mcp-server/issues/250)) ([dfe5c91](https://github.com/UI5/mcp-server/commit/dfe5c915e9c3fc1dce53817865fcdd5aca5651a6))
+
+
+### Dependencies
+
+* **lockfile:** In-range update of npm dependencies ([06b445e](https://github.com/UI5/mcp-server/commit/06b445e7a8ebc47799b690fdd050ff3903d61603))
+
 ## [0.2.8](https://github.com/UI5/mcp-server/compare/v0.2.7...v0.2.8) (2026-03-06)
 
 
