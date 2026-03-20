@@ -112,7 +112,7 @@ test("run_ui5_linter tool returns linting results on success with no context inf
 		content: [
 			{
 				type: "text",
-				text: JSON.stringify(sampleResults.results, null, 2),
+				text: JSON.stringify(sampleResults.results),
 			},
 		],
 	});
@@ -208,7 +208,7 @@ test("run_ui5_linter tool returns linting results with context information", asy
 	// Check the first content item (text with results)
 	t.deepEqual(result.content[0], {
 		type: "text",
-		text: JSON.stringify(sampleResults.results, null, 2),
+		text: JSON.stringify(sampleResults.results),
 	});
 
 	// Check the second content item (extracted API references)
@@ -223,7 +223,7 @@ test("run_ui5_linter tool returns linting results with context information", asy
 		type: "resource",
 		resource: {
 			uri: `ui5-linter-result://${pathToFileURL(path.join(projectDir, "api-reference-extract")).pathname}-<timestamp>.json`,
-			text: JSON.stringify(sampleResults.contextInformation.apiReferences, null, 2),
+			text: JSON.stringify(sampleResults.contextInformation.apiReferences),
 			mimeType: "application/json",
 		},
 	});
@@ -251,7 +251,7 @@ test("run_ui5_linter tool returns linting results with context information", asy
 	// Check the fifth content item (rule descriptions)
 	t.deepEqual(result.content[4], {
 		type: "text",
-		text: JSON.stringify(sampleResults.contextInformation.ruleDescriptions, null, 2),
+		text: JSON.stringify(sampleResults.contextInformation.ruleDescriptions),
 	});
 });
 

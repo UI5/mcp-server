@@ -38,7 +38,7 @@ function createResource(apiRef: FormattedSymbol, frameworkName: string, framewor
 	return {
 		type: "resource",
 		resource: {
-			text: JSON.stringify(apiRef, null, 2),
+			text: JSON.stringify(apiRef),
 			uri: createUriForSymbol(apiRef, frameworkName, frameworkVersion),
 			mimeType: "application/json",
 		},

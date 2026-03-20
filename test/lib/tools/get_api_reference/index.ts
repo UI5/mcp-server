@@ -134,7 +134,7 @@ test("get_api_reference tool returns API reference on success", async (t) => {
 		content: [{
 			type: "resource",
 			resource: {
-				text: JSON.stringify(sampleApiRef, null, 2),
+				text: JSON.stringify(sampleApiRef),
 				uri: sampleUri,
 				mimeType: "application/json",
 			},

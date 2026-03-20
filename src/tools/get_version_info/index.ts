@@ -29,7 +29,7 @@ export default function registerTool(registerTool: RegisterTool, _context: Conte
 		return {
 			content: [{
 				type: "text",
-				text: JSON.stringify(versionInfo, null, 2),
+				text: JSON.stringify(versionInfo),
 			}],
 			structuredContent: versionInfo,
 		};

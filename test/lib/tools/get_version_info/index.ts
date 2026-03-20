@@ -89,7 +89,7 @@ test("get_version_info tool returns version information on success", async (t) =
 		content: [
 			{
 				type: "text",
-				text: JSON.stringify(sampleVersionInfo, null, 2),
+				text: JSON.stringify(sampleVersionInfo),
 			},
 		],
 	});

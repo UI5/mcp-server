@@ -37,7 +37,7 @@ export default function registerTool(registerTool: RegisterTool, context: Contex
 		});
 		const content: (TextContent | EmbeddedResource)[] = [{
 			type: "text",
-			text: JSON.stringify(results.results, null, 2),
+			text: JSON.stringify(results.results),
 		}];
 		if (results.contextInformation) {
 			const {ruleDescriptions, documentationResources, migrationGuides, apiReferences} =
@@ -49,7 +49,7 @@ export default function registerTool(registerTool: RegisterTool, context: Contex
 					type: "resource",
 					resource: {
 						uri: `ui5-linter-result://${projectUri.pathname}/api-reference-extract-${timestamp}.json`,
-						text: JSON.stringify(apiReferences, null, 2),
+						text: JSON.stringify(apiReferences),
 						mimeType: "application/json",
 					},
 				});
@@ -77,7 +77,7 @@ export default function registerTool(registerTool: RegisterTool, context: Contex
 			if (ruleDescriptions.length) {
 				content.push({
 					type: "text",
-					text: JSON.stringify(ruleDescriptions, null, 2),
+					text: JSON.stringify(ruleDescriptions),
 				});
 			}
 		}
