@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.10](https://github.com/UI5/mcp-server/compare/v0.2.9...v0.2.10) (2026-04-02)
+
+
+### Features
+
+* Reduce whitespace in tool responses by not formatting JSON ([#284](https://github.com/UI5/mcp-server/issues/284)) ([d436789](https://github.com/UI5/mcp-server/commit/d436789d35fa5deada38af6573ae1269b8ff0a5c))
+
+
+### Dependencies
+
+* **lockfile:** In-range update of npm dependencies ([44c972c](https://github.com/UI5/mcp-server/commit/44c972c3ba1e9b5f45c90baf1dc751e01838155d))
+* **lockfile:** In-range update of npm dependencies ([#291](https://github.com/UI5/mcp-server/issues/291)) ([e50018b](https://github.com/UI5/mcp-server/commit/e50018b21638bface8afe881224a5b1bde67650a))
+* **lockfile:** In-range update of npm dependencies ([#292](https://github.com/UI5/mcp-server/issues/292)) ([299a087](https://github.com/UI5/mcp-server/commit/299a087cd01884d91a40ada991cb0255b4967e50))
+
 ## [0.2.9](https://github.com/UI5/mcp-server/compare/v0.2.8...v0.2.9) (2026-03-17)
 
 
