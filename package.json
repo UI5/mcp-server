@@ -38,7 +38,7 @@
 		"knip": "knip --config knip.config.js",
 		"hooks:pre-push": "npm run lint:commit && npm run lint && npm run knip",
 		"lint:commit": "commitlint -e",
-		"prepare": "node ./.husky/skip.js || husky",
+		"prepare": "test -f ./.husky/skip.js && node ./.husky/skip.js || test -d ./.git && husky || true",
 		"clean-coverage": "rimraf coverage",
 		"clean-lib": "rimraf lib",
 		"clean-test-tmp": "rimraf test/tmp",
