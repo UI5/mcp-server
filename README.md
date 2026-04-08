@@ -141,6 +141,9 @@ The UI5 MCP server can be configured using the following environment variables. 
     * Description: Set to any value to disable structured content in the MCP server responses.
 * **`UI5_MCP_SERVER_RESPONSE_NO_RESOURCES`**:
     * Description: Set to any value to disable [resources](https://modelcontextprotocol.io/specification/2025-06-18/server/resources) in the MCP server responses. This is useful for [clients that do not support resources](https://modelcontextprotocol.io/clients), such as Cursor or the Gemini CLI.
+* **`UI5_MCP_SERVER_CDN_URL`**:
+    * Default Value: `https://sdk.openui5.org` for OpenUI5 and `https://ui5.sap.com` for SAPUI5
+    * Description: Override the base URL used for fetching UI5 resources from the CDN. For example: `https://example.com`. When set, this URL is used for both OpenUI5 and SAPUI5 resources. The value must be a valid URL. Note that the project's version will appended to the URL automatically. This means that at runtime, the URL might look like this: `https://example.com/1.120.0/resources/[...]`.
 * **`UI5_LOG_LVL`**:
     * Default Value: `info`
     * Description: Internal [log level](https://ui5.github.io/cli/stable/pages/Troubleshooting/#changing-the-log-level): `silent`, `error`, `warn`, `info`, `perf`, `verbose`, `silly`

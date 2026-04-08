@@ -10,18 +10,31 @@ const test = anyTest as TestFn<{
 	fetchCdn: typeof import("../../../src/utils/cdnHelper.js").fetchCdn;
 	fetchCdnRaw: typeof import("../../../src/utils/cdnHelper.js").fetchCdnRaw;
 	fetchStub: sinonGlobal.SinonStub;
+	loggerMock: {
+		info: sinonGlobal.SinonStub;
+	};
+	originalEnv: NodeJS.ProcessEnv;
 }>;
 
 test.beforeEach(async (t) => {
 	t.context.sinon = sinonGlobal.createSandbox();
+	t.context.originalEnv = {...process.env};
 
 	// Create a stub for global fetch
 	const fetchStub = t.context.sinon.stub();
 	t.context.fetchStub = fetchStub;
 
+	const loggerMock = {
+		info: t.context.sinon.stub(),
+	};
+	t.context.loggerMock = loggerMock;
+
 	// Import the module with mocked dependencies
 	const {getBaseUrl, fetchCdn, fetchCdnRaw} = await esmock("../../../src/utils/cdnHelper.js", {
 		"make-fetch-happen": fetchStub,
+		"@ui5/logger": {
+			getLogger: t.context.sinon.stub().returns(loggerMock),
+		},
 	});
 
 	t.context.getBaseUrl = getBaseUrl;
@@ -30,11 +43,13 @@ test.beforeEach(async (t) => {
 });
 
 test.afterEach.always((t) => {
+	process.env = t.context.originalEnv;
 	t.context.sinon.restore();
 });
 
 test.serial("getBaseUrl returns correct URL for OpenUI5", (t) => {
 	const {getBaseUrl} = t.context;
+	delete process.env.UI5_MCP_SERVER_CDN_URL;
 
 	const url = getBaseUrl("OpenUI5");
 	t.is(url, "https://sdk.openui5.org");
@@ -42,6 +57,7 @@ test.serial("getBaseUrl returns correct URL for OpenUI5", (t) => {
 
 test.serial("getBaseUrl returns correct URL for SAPUI5", (t) => {
 	const {getBaseUrl} = t.context;
+	delete process.env.UI5_MCP_SERVER_CDN_URL;
 
 	const url = getBaseUrl("SAPUI5");
 	t.is(url, "https://ui5.sap.com");
@@ -49,6 +65,7 @@ test.serial("getBaseUrl returns correct URL for SAPUI5", (t) => {
 
 test.serial("getBaseUrl throws for unknown framework", (t) => {
 	const {getBaseUrl} = t.context;
+	delete process.env.UI5_MCP_SERVER_CDN_URL;
 
 	const error = t.throws(() => getBaseUrl("unknown-framework" as Ui5Framework));
 	t.true(error instanceof InvalidInputError);
@@ -57,9 +74,74 @@ test.serial("getBaseUrl throws for unknown framework", (t) => {
 
 test.serial("getBaseUrl appends version when provided", (t) => {
 	const {getBaseUrl} = t.context;
+	delete process.env.UI5_MCP_SERVER_CDN_URL;
 
 	const url = getBaseUrl("OpenUI5", "1.120.0");
 	t.is(url, "https://sdk.openui5.org/1.120.0");
+});
+
+test.serial("getBaseUrl uses custom CDN URL for OpenUI5", (t) => {
+	const {getBaseUrl, loggerMock} = t.context;
+	process.env.UI5_MCP_SERVER_CDN_URL = "https://internal-mirror.corp.com";
+
+	const url = getBaseUrl("OpenUI5");
+	t.is(url, "https://internal-mirror.corp.com");
+	t.true(loggerMock.info.calledWith(
+		"Using custom CDN URL from UI5_MCP_SERVER_CDN_URL: https://internal-mirror.corp.com"
+	));
+});
+
+test.serial("getBaseUrl uses custom CDN URL for SAPUI5", (t) => {
+	const {getBaseUrl, loggerMock} = t.context;
+	process.env.UI5_MCP_SERVER_CDN_URL = "https://internal-mirror.corp.com";
+
+	const url = getBaseUrl("SAPUI5");
+	t.is(url, "https://internal-mirror.corp.com");
+	t.true(loggerMock.info.calledWith(
+		"Using custom CDN URL from UI5_MCP_SERVER_CDN_URL: https://internal-mirror.corp.com"
+	));
+});
+
+test.serial("getBaseUrl appends version to custom CDN URL", (t) => {
+	const {getBaseUrl} = t.context;
+	process.env.UI5_MCP_SERVER_CDN_URL = "https://internal-mirror.corp.com";
+
+	const url = getBaseUrl("OpenUI5", "1.120.0");
+	t.is(url, "https://internal-mirror.corp.com/1.120.0");
+});
+
+test.serial("getBaseUrl strips trailing slashes from custom CDN URL", (t) => {
+	const {getBaseUrl} = t.context;
+	process.env.UI5_MCP_SERVER_CDN_URL = "https://internal-mirror.corp.com///";
+
+	const url = getBaseUrl("OpenUI5");
+	t.is(url, "https://internal-mirror.corp.com");
+});
+
+test.serial("getBaseUrl throws for invalid custom CDN URL", (t) => {
+	const {getBaseUrl} = t.context;
+	process.env.UI5_MCP_SERVER_CDN_URL = "not-a-valid-url";
+
+	const error = t.throws(() => getBaseUrl("OpenUI5"));
+	t.true(error instanceof InvalidInputError);
+	t.regex(error.message, /Invalid URL 'not-a-valid-url' in UI5_MCP_SERVER_CDN_URL/);
+});
+
+test.serial("getBaseUrl ignores empty custom CDN URL and uses default", (t) => {
+	const {getBaseUrl, loggerMock} = t.context;
+	process.env.UI5_MCP_SERVER_CDN_URL = "";
+
+	const url = getBaseUrl("OpenUI5");
+	t.is(url, "https://sdk.openui5.org");
+	t.false(loggerMock.info.called);
+});
+
+test.serial("getBaseUrl trims whitespace from custom CDN URL", (t) => {
+	const {getBaseUrl} = t.context;
+	process.env.UI5_MCP_SERVER_CDN_URL = "  https://internal-mirror.corp.com  ";
+
+	const url = getBaseUrl("SAPUI5");
+	t.is(url, "https://internal-mirror.corp.com");
 });
 
 test.serial("fetchCdnRaw returns response on success", async (t) => {
