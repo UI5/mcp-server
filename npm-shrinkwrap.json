@@ -18,7 +18,7 @@
 				"async-mutex": "^0.5.0",
 				"ejs": "^5.0.1",
 				"execa": "^9.6.1",
-				"fast-xml-parser": "^5.4.2",
+				"fast-xml-parser": "^5.5.11",
 				"globby": "^16.1.1",
 				"lockfile": "^1.0.4",
 				"make-fetch-happen": "^15.0.4",
@@ -12223,9 +12223,9 @@
 			}
 		},
 		"node_modules/fast-xml-parser": {
-			"version": "5.5.9",
-			"resolved": "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-5.5.9.tgz",
-			"integrity": "sha512-jldvxr1MC6rtiZKgrFnDSvT8xuH+eJqxqOBThUVjYrxssYTo1avZLGql5l0a0BAERR01CadYzZ83kVEkbyDg+g==",
+			"version": "5.5.11",
+			"resolved": "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-5.5.11.tgz",
+			"integrity": "sha512-QL0eb0YbSTVWF6tTf1+LEMSgtCEjBYPpnAjoLC8SscESlAjXEIRJ7cHtLG0pLeDFaZLa4VKZLArtA/60ZS7vyA==",
 			"funding": [
 				{
 					"type": "github",
@@ -12235,8 +12235,8 @@
 			"license": "MIT",
 			"dependencies": {
 				"fast-xml-builder": "^1.1.4",
-				"path-expression-matcher": "^1.2.0",
-				"strnum": "^2.2.2"
+				"path-expression-matcher": "^1.4.0",
+				"strnum": "^2.2.3"
 			},
 			"bin": {
 				"fxparser": "src/cli/cli.js"
@@ -16303,9 +16303,9 @@
 			}
 		},
 		"node_modules/path-expression-matcher": {
-			"version": "1.2.0",
-			"resolved": "https://registry.npmjs.org/path-expression-matcher/-/path-expression-matcher-1.2.0.tgz",
-			"integrity": "sha512-DwmPWeFn+tq7TiyJ2CxezCAirXjFxvaiD03npak3cRjlP9+OjTmSy1EpIrEbh+l6JgUundniloMLDQ/6VTdhLQ==",
+			"version": "1.4.0",
+			"resolved": "https://registry.npmjs.org/path-expression-matcher/-/path-expression-matcher-1.4.0.tgz",
+			"integrity": "sha512-s4DQMxIdhj3jLFWd9LxHOplj4p9yQ4ffMGowFf3cpEgrrJjEhN0V5nxw4Ye1EViAGDoL4/1AeO6qHpqYPOzE4Q==",
 			"funding": [
 				{
 					"type": "github",
@@ -18232,9 +18232,9 @@
 			}
 		},
 		"node_modules/strnum": {
-			"version": "2.2.2",
-			"resolved": "https://registry.npmjs.org/strnum/-/strnum-2.2.2.tgz",
-			"integrity": "sha512-DnR90I+jtXNSTXWdwrEy9FakW7UX+qUZg28gj5fk2vxxl7uS/3bpI4fjFYVmdK9etptYBPNkpahuQnEwhwECqA==",
+			"version": "2.2.3",
+			"resolved": "https://registry.npmjs.org/strnum/-/strnum-2.2.3.tgz",
+			"integrity": "sha512-oKx6RUCuHfT3oyVjtnrmn19H1SiCqgJSg+54XqURKp5aCMbrXrhLjRN9TjuwMjiYstZ0MzDrHqkGZ5dFTKd+zg==",
 			"funding": [
 				{
 					"type": "github",
