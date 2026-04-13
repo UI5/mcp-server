@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.2.11](https://github.com/UI5/mcp-server/compare/v0.2.10...v0.2.11) (2026-04-13)
+
+
+### Features
+
+* Add UI5_MCP_SERVER_CDN_URL env var to override CDN base URL ([5fe2266](https://github.com/UI5/mcp-server/commit/5fe2266f9791a8eabb2dbc9033615d4268eba669))
+
+
+### Bug Fixes
+
+* **package.json:** Skip prepare script if installing from tarball ([f426f89](https://github.com/UI5/mcp-server/commit/f426f897ecc2152fd46a8de2eea3e673ff250e9c))
+
+
+### Dependencies
+
+* Bump ejs from 4.0.1 to 5.0.1 ([e14ab23](https://github.com/UI5/mcp-server/commit/e14ab23490c5f0187ed9ecf86a4b25ccf39ab6b7))
+* Bump fast-xml-parser from 5.5.9 to 5.5.11 ([38e2670](https://github.com/UI5/mcp-server/commit/38e26707d53eb9710aa4875f8175efdb83630c1c))
+
 ## [0.2.10](https://github.com/UI5/mcp-server/compare/v0.2.9...v0.2.10) (2026-04-02)
 
 
