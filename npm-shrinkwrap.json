@@ -18,7 +18,7 @@
 				"async-mutex": "^0.5.0",
 				"ejs": "^5.0.1",
 				"execa": "^9.6.1",
-				"fast-xml-parser": "^5.5.11",
+				"fast-xml-parser": "^5.5.12",
 				"globby": "^16.1.1",
 				"lockfile": "^1.0.4",
 				"make-fetch-happen": "^15.0.4",
@@ -12223,9 +12223,9 @@
 			}
 		},
 		"node_modules/fast-xml-parser": {
-			"version": "5.5.11",
-			"resolved": "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-5.5.11.tgz",
-			"integrity": "sha512-QL0eb0YbSTVWF6tTf1+LEMSgtCEjBYPpnAjoLC8SscESlAjXEIRJ7cHtLG0pLeDFaZLa4VKZLArtA/60ZS7vyA==",
+			"version": "5.5.12",
+			"resolved": "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-5.5.12.tgz",
+			"integrity": "sha512-nUR0q8PPfoA/svPM43Gup7vLOZWppaNrYgGmrVqrAVJa7cOH4hMG6FX9M4mQ8dZA1/ObGZHzES7Ed88hxEBSJg==",
 			"funding": [
 				{
 					"type": "github",
@@ -12235,7 +12235,7 @@
 			"license": "MIT",
 			"dependencies": {
 				"fast-xml-builder": "^1.1.4",
-				"path-expression-matcher": "^1.4.0",
+				"path-expression-matcher": "^1.5.0",
 				"strnum": "^2.2.3"
 			},
 			"bin": {
@@ -16303,9 +16303,9 @@
 			}
 		},
 		"node_modules/path-expression-matcher": {
-			"version": "1.4.0",
-			"resolved": "https://registry.npmjs.org/path-expression-matcher/-/path-expression-matcher-1.4.0.tgz",
-			"integrity": "sha512-s4DQMxIdhj3jLFWd9LxHOplj4p9yQ4ffMGowFf3cpEgrrJjEhN0V5nxw4Ye1EViAGDoL4/1AeO6qHpqYPOzE4Q==",
+			"version": "1.5.0",
+			"resolved": "https://registry.npmjs.org/path-expression-matcher/-/path-expression-matcher-1.5.0.tgz",
+			"integrity": "sha512-cbrerZV+6rvdQrrD+iGMcZFEiiSrbv9Tfdkvnusy6y0x0GKBXREFg/Y65GhIfm0tnLntThhzCnfKwp1WRjeCyQ==",
 			"funding": [
 				{
 					"type": "github",
