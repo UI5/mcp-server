@@ -34,7 +34,7 @@
 				"@eslint/js": "^9.39.2",
 				"@istanbuljs/esm-loader-hook": "^0.3.0",
 				"@istanbuljs/nyc-config-typescript": "^1.0.2",
-				"@modelcontextprotocol/inspector": "^0.21.1",
+				"@modelcontextprotocol/inspector": "^0.21.2",
 				"@stylistic/eslint-plugin": "^5.10.0",
 				"@types/ejs": "^3.1.5",
 				"@types/make-fetch-happen": "^10.0.4",
@@ -1922,9 +1922,9 @@
 			}
 		},
 		"node_modules/@modelcontextprotocol/ext-apps": {
-			"version": "1.5.0",
-			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/ext-apps/-/ext-apps-1.5.0.tgz",
-			"integrity": "sha512-q4fut89TOoP2LEPHSGfZErIf1K1xOTTzV+41h/bB2BqKw2gKb0uLKbHusOy1UtbY0puS16zBho/vFp3f5XMVbQ==",
+			"version": "1.6.0",
+			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/ext-apps/-/ext-apps-1.6.0.tgz",
+			"integrity": "sha512-j80Hv9kSALu7luR+DtoYERlRaehu6cY2wlHEjG3h36C98bbYzA/nxOEvtGhhKd2ssCwC0BG3+gdh7y3sE5m0tQ==",
 			"dev": true,
 			"license": "MIT",
 			"workspaces": [
@@ -1949,9 +1949,9 @@
 			}
 		},
 		"node_modules/@modelcontextprotocol/inspector": {
-			"version": "0.21.1",
-			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/inspector/-/inspector-0.21.1.tgz",
-			"integrity": "sha512-9d2zJ97Bg9hHj4Qz1b06aCmIu4/Ts84H8RqqJteORJUyxaK8DGfXQ3JoS0PsU8gHoHWabFAs4HAiy/ePU8Oa2A==",
+			"version": "0.21.2",
+			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/inspector/-/inspector-0.21.2.tgz",
+			"integrity": "sha512-f/zIzl6ccYjIxSTgmol9EKvd8AXsXkIaZX16kLGhrYwxrApvU3IL6IzgOqATKP/2kgyKdFUOVLlHMxX9e6BZZA==",
 			"dev": true,
 			"license": "SEE LICENSE IN LICENSE",
 			"workspaces": [
@@ -1960,9 +1960,9 @@
 				"cli"
 			],
 			"dependencies": {
-				"@modelcontextprotocol/inspector-cli": "^0.21.1",
-				"@modelcontextprotocol/inspector-client": "^0.21.1",
-				"@modelcontextprotocol/inspector-server": "^0.21.1",
+				"@modelcontextprotocol/inspector-cli": "^0.21.2",
+				"@modelcontextprotocol/inspector-client": "^0.21.2",
+				"@modelcontextprotocol/inspector-server": "^0.21.2",
 				"@modelcontextprotocol/sdk": "^1.25.2",
 				"concurrently": "^9.2.0",
 				"node-fetch": "^3.3.2",
@@ -1980,9 +1980,9 @@
 			}
 		},
 		"node_modules/@modelcontextprotocol/inspector-cli": {
-			"version": "0.21.1",
-			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/inspector-cli/-/inspector-cli-0.21.1.tgz",
-			"integrity": "sha512-IuBHJXEjuprPm+YtJGunAuqS3dnDtqf5VOVkzauRGICCEbT860YnDHNhxZARo5h0iMFYwEgRJvMQQwYayEE28w==",
+			"version": "0.21.2",
+			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/inspector-cli/-/inspector-cli-0.21.2.tgz",
+			"integrity": "sha512-Om2ApfIbkbfR7+PqJX0bO2Qwg0z55MgxquC+G0YL6x80ElpZMfxITsWQ1238kh3bv1zlwPSePc2kvDnCcU5tXw==",
 			"dev": true,
 			"license": "SEE LICENSE IN LICENSE",
 			"dependencies": {
@@ -1996,9 +1996,9 @@
 			}
 		},
 		"node_modules/@modelcontextprotocol/inspector-client": {
-			"version": "0.21.1",
-			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/inspector-client/-/inspector-client-0.21.1.tgz",
-			"integrity": "sha512-IZlriZkASr0nbObb4HmNY+dw6Q2/jb126Eh2D97xasuhMZNB1TTBrIt7QHNy2TjhH/qV3acx29rgzMBIys3FAQ==",
+			"version": "0.21.2",
+			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/inspector-client/-/inspector-client-0.21.2.tgz",
+			"integrity": "sha512-8us3hVXDgMHGb5jF1bBE/a6rRRlEaS+SKjbDFB56oE6+mNcAP9JgL8h6T0fYd3XQ3vL/CYxjVeQE+5yRdvhsVg==",
 			"dev": true,
 			"license": "SEE LICENSE IN LICENSE",
 			"dependencies": {
@@ -2069,9 +2069,9 @@
 			}
 		},
 		"node_modules/@modelcontextprotocol/inspector-server": {
-			"version": "0.21.1",
-			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/inspector-server/-/inspector-server-0.21.1.tgz",
-			"integrity": "sha512-dNPbz37aHMkuwwr/AZCnmoigDFSCbilMHkDQ2SVt0yORCgeoIX2li2La6XbmZIKAp14sCpJCKKKpmhwJ9uRiLA==",
+			"version": "0.21.2",
+			"resolved": "https://registry.npmjs.org/@modelcontextprotocol/inspector-server/-/inspector-server-0.21.2.tgz",
+			"integrity": "sha512-ASFNPFMnT0Vn5u6aYRwwMrwA/0qpxb1lg3sE5GjWii5bUfPNXuIaLOXuXKSOFIMG4o82RxpuipdqX1ZdsmTPUw==",
 			"dev": true,
 			"license": "SEE LICENSE IN LICENSE",
 			"dependencies": {
@@ -17370,9 +17370,9 @@
 			}
 		},
 		"node_modules/serve-handler/node_modules/brace-expansion": {
-			"version": "1.1.13",
-			"resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.13.tgz",
-			"integrity": "sha512-9ZLprWS6EENmhEOpjCYW2c8VkmOvckIJZfkr7rBW6dObmfgJ/L1GpSYW5Hpo9lDz4D1+n0Ckz8rU7FwHDQiG/w==",
+			"version": "1.1.14",
+			"resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.14.tgz",
+			"integrity": "sha512-MWPGfDxnyzKU7rNOW9SP/c50vi3xrmrua/+6hfPbCS2ABNWfx24vPidzvC7krjU/RTo235sV776ymlsMtGKj8g==",
 			"dev": true,
 			"license": "MIT",
 			"dependencies": {
@@ -17538,9 +17538,9 @@
 			}
 		},
 		"node_modules/shelljs/node_modules/brace-expansion": {
-			"version": "1.1.13",
-			"resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.13.tgz",
-			"integrity": "sha512-9ZLprWS6EENmhEOpjCYW2c8VkmOvckIJZfkr7rBW6dObmfgJ/L1GpSYW5Hpo9lDz4D1+n0Ckz8rU7FwHDQiG/w==",
+			"version": "1.1.14",
+			"resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.14.tgz",
+			"integrity": "sha512-MWPGfDxnyzKU7rNOW9SP/c50vi3xrmrua/+6hfPbCS2ABNWfx24vPidzvC7krjU/RTo235sV776ymlsMtGKj8g==",
 			"dev": true,
 			"license": "MIT",
 			"dependencies": {
