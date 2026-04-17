@@ -84,7 +84,7 @@
 		"ajv": "^8.17.1",
 		"ajv-formats": "^3.0.1",
 		"async-mutex": "^0.5.0",
-		"ejs": "^5.0.1",
+		"ejs": "^5.0.2",
 		"execa": "^9.6.1",
 		"fast-xml-parser": "^5.6.0",
 		"globby": "^16.1.1",
