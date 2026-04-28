@@ -66,7 +66,7 @@ test.serial("downloadFile downloads and saves file successfully", async (t) => {
 		statusText: "OK",
 		body,
 	};
-	fetchStub.resolves(mockResponse as unknown as Response);
+	fetchStub.resolves(mockResponse);
 
 	// Call the function
 	const result = await downloadFile(url, targetDir);
@@ -103,7 +103,7 @@ test.serial("downloadFile throws error for 404 response", async (t) => {
 		status: 404,
 		statusText: "Not Found",
 	};
-	fetchStub.resolves(mockResponse as unknown as Response);
+	fetchStub.resolves(mockResponse);
 
 	// Call the function and expect it to throw
 	await t.throwsAsync(async () => {
@@ -123,7 +123,7 @@ test.serial("downloadFile throws error for other HTTP errors", async (t) => {
 		status: 500,
 		statusText: "Server Error",
 	};
-	fetchStub.resolves(mockResponse as unknown as Response);
+	fetchStub.resolves(mockResponse);
 
 	// Call the function and expect it to throw
 	await t.throwsAsync(async () => {
@@ -148,7 +148,7 @@ test.serial("downloadFile extracts filename from URL", async (t) => {
 		statusText: "OK",
 		body,
 	};
-	fetchStub.resolves(mockResponse as unknown as Response);
+	fetchStub.resolves(mockResponse);
 
 	// Call the function
 	const result = await downloadFile(url, targetDir);

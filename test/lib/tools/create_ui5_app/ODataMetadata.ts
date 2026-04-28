@@ -327,7 +327,7 @@ test.serial("ODataMetadata.load fetches metadata from URL", async (t) => {
 		statusText: "OK",
 		text: t.context.sinon.stub().resolves("<xml>metadata</xml>"),
 	};
-	t.context.fetchStub.resolves(mockResponse as unknown as Response);
+	t.context.fetchStub.resolves(mockResponse);
 
 	// Call the load method
 	const metadata = await t.context.ODataMetadata.load("https://example.com/odata/");
@@ -352,7 +352,7 @@ test.serial("ODataMetadata.load handles 404 response", async (t) => {
 		statusText: "Not Found",
 		text: t.context.sinon.stub().resolves(""),
 	};
-	t.context.fetchStub.resolves(mockResponse as unknown as Response);
+	t.context.fetchStub.resolves(mockResponse);
 
 	// Call the load method
 	const metadata = await t.context.ODataMetadata.load("https://example.com/odata/");
@@ -379,7 +379,7 @@ test.serial("ODataMetadata.load handles other HTTP errors", async (t) => {
 		statusText: "Internal Server Error",
 		text: t.context.sinon.stub().resolves(""),
 	};
-	t.context.fetchStub.resolves(mockResponse as unknown as Response);
+	t.context.fetchStub.resolves(mockResponse);
 
 	// Call the load method
 	const metadata = await t.context.ODataMetadata.load("https://example.com/odata/");
