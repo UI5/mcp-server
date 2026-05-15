@@ -6,11 +6,15 @@ updates:
     interval: "weekly"
   commit-message:
     prefix: "ci(github-actions)"
+  cooldown:
+    default-days: 2
 - package-ecosystem: npm
   directory: "/"
   schedule:
-    interval: "daily"
+    interval: "weekly"
   versioning-strategy: increase
+  cooldown:
+    default-days: 2
   commit-message:
     prefix: "deps"
     prefix-development: "build(deps-dev)"
