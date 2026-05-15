@@ -7,8 +7,8 @@ on:
     branches:
       - main
 
-permissions:
-  contents: read
+# No permissions are required for this workflow
+permissions: {}
 
 jobs:
   test:
