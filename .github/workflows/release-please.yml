@@ -26,6 +26,8 @@ jobs:
     runs-on: ubuntu-24.04
     permissions:
       id-token: write # Required for trusted publishing via OIDC (https://docs.npmjs.com/trusted-publishers)
+    # The GitHub Actions Environment configured for the trusted publisher
+    environment: npmjs:@ui5/mcp-server
     steps:
     - name: Checkout
       uses: actions/checkout@v6
