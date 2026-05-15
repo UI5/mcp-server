@@ -16,6 +16,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
     - uses: actions/checkout@v6
+      with:
+        fetch-depth: 0
     - name: Use a Node.js version compatible with all tasks
       uses: actions/setup-node@v6
       with:
@@ -30,6 +32,14 @@ jobs:
     - name: Perform ESLint check
       run: npm run lint
 
+    - name: Validate current commit (last commit) with commitlint
+      if: github.event_name == 'push'
+      run: npm run lint:commit -- --last --verbose
+
+    - name: Validate PR commits with commitlint
+      if: github.event_name == 'pull_request'
+      run: npm run lint:commit -- --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+
     - name: Perform Licenses check
       run: npm run check-licenses
 
@@ -43,5 +53,5 @@ jobs:
       run: npm run coverage
 
     - name: Send report to Coveralls
-      uses: coverallsapp/github-action@v2
+      uses: coverallsapp/github-action@648a8eb78e6d50909eff900e4ec85cab4524a45b # v2.3.6
       continue-on-error: true # Do not fail the job if coverage reporting fails (e.g. service is down)
