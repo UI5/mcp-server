@@ -12,9 +12,9 @@
 
 ### 1.1 Data
 - **NEVER** modify the provided data under any circumstances.
-- **ALWAYS** include the service URL directly in the card manifest when one is supplied.
-- **ALWAYS** reference destinations by name when available. Configure the destination in the `sap.card/configuration/destinations/` and reuse it with binding syntax like `{{destinations.destinationName}}`.
+- **ALWAYS** wrap every external service URL in a destination under `sap.card/configuration/destinations/` and reference it as `{{destinations.destinationName}}`.
 - **NEVER** replace destination name with its URL.
+- **ALWAYS** ensure that the endpoint behind `sap.card/data/request` returns JSON. For OData services, append `$format=json` to the request URL or parameters.
 - **ALWAYS** place data configuration in: `"sap.card"/data/`
 - **NEVER** place data configuration in:
   - `"sap.card"/content/data/`
@@ -78,13 +78,15 @@ The `dt/Configuration.js` file defines the Configuration Editor's structure by s
 
 When creating or modifying Integration Cards, follow these guidelines for Configuration Editors:
 - Assume the role of Administrator persona when designing the Configuration Editor.
-- **ALWAYS** ensure that the Configuration Editor reflects the current structure and fields of the `manifest.json`.
+- **ALWAYS** ensure that the Configuration Editor reflects the current structure and fields of the `manifest.json`. The `manifestpath` of an editor field can target any existing path in the `manifest.json` — a `configuration/parameters/*/value` for parameterized fields, or a direct path like `/sap.card/header/icon/shape` for static manifest properties.
 - **ALWAYS** make the existing fields in the `manifest.json` configurable via the editor. For example manifest parameters, title, subtitle, icon of the header, etc.
 - **NEVER** add fields to the editor that do not exist in the `manifest.json`.
 - **ALWAYS** remove fields from the editor when removing them from the `manifest.json`.
 - **ALWAYS** add fields in the Configuration Editor when adding them to the `manifest.json`.
 
 ### 5.1 Example:
+This reference shows a complete pairing of a `manifest.json` and the corresponding `dt/Configuration.js` file for an Integration Card with a Configuration Editor.
+
 `manifest.json` file:
 ```json
 {
@@ -119,8 +121,8 @@ When creating or modifying Integration Cards, follow these guidelines for Config
         "dateContext": {
           "value": "2020-09-02"
         },
-        "Customers": {
-          "value": ["ALFKI"]
+        "Customer": {
+          "value": "ALFKI"
         },
         "northwindDestination": {
           "value": "northwind"
@@ -134,20 +136,21 @@ When creating or modifying Integration Cards, follow these guidelines for Config
       }
     },
     "data": {
-        "request": {
-          "url": "{{destinations.northwind}}/Customers",
-          "parameters": {
-            "$select": "CustomerID,CompanyName,ContactName",
-            "$top": "{parameters>/maxItems/value}"
-          }
+      "request": {
+        "url": "{{destinations.northwind}}/Customers",
+        "parameters": {
+          "$select": "CustomerID,CompanyName,ContactName",
+          "$top": "{parameters>/maxItems/value}"
         }
-      },
+      }
+    },
     "header": {
       "title": "{parameters>/cardTitle/value}",
       "subtitle": "As of {parameters>/dateContext/value}",
       "icon": {
         "src": "{parameters>/icon/value}",
-        "shape": "Circle"
+        "shape": "Circle",
+        "backgroundColor": "Transparent"
       }
     },
     "content": {
@@ -192,7 +195,7 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
 					},
 
 					icon: {
-						manifestpath: "/sap.card/header/icon/src",
+						manifestpath: "/sap.card/configuration/parameters/icon/value",
 						type: "string",
 						label: "Icon",
 						visualization: {
@@ -285,8 +288,8 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
 						label: "Customer Filter"
 					},
 
-					CustomerID: {
-						manifestpath: "/sap.card/configuration/parameters/CustomerID/value",
+					Customer: {
+						manifestpath: "/sap.card/configuration/parameters/Customer/value",
 						type: "string",
 						label: "Customer ID",
 						values: {
@@ -638,6 +641,7 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
 
 9. stacked_bar
     * UIDs: dataFrame, categoryAxis, color, valueAxis
+    * Note: Stacking requires a second dimension fed to `color`; without it the chart renders as a plain bar
     * Example:
         ```json
         {
@@ -651,6 +655,10 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
             {
               "name": "Region",
               "value": "{regionField}"
+            },
+            {
+              "name": "Product",
+              "value": "{productField}"
             }
           ],
           "feeds": [
@@ -663,6 +671,11 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
               "type": "Measure",
               "uid": "valueAxis",
               "values": ["Revenue"]
+            },
+            {
+              "type": "Dimension",
+              "uid": "color",
+              "values": ["Product"]
             }
           ]
         }
@@ -670,6 +683,7 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
 
 10. stacked_column
     * UIDs: dataFrame, categoryAxis, color, valueAxis
+    * Note: Stacking requires a second dimension fed to `color`; without it the chart renders as a plain column
     * Example:
         ```json
         {
@@ -683,6 +697,10 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
             {
               "name": "Sector",
               "value": "{sectorField}"
+            },
+            {
+              "name": "Product",
+              "value": "{productField}"
             }
           ],
           "feeds": [
@@ -695,6 +713,11 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
               "type": "Measure",
               "uid": "valueAxis",
               "values": ["Market Share"]
+            },
+            {
+              "type": "Dimension",
+              "uid": "color",
+              "values": ["Product"]
             }
           ]
         }
@@ -702,6 +725,7 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
 
 11. timeseries_stacked_column
     * UIDs: timeAxis, color, valueAxis
+    * Note: Stacking requires a second dimension fed to `color`; without it the chart renders as a plain timeseries_column
     * Example:
         ```json
         {
@@ -716,6 +740,10 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
               "name": "Year",
               "value": "{yearField}",
               "dataType": "date"
+            },
+            {
+              "name": "Sector",
+              "value": "{sectorField}"
             }
           ],
           "feeds": [
@@ -728,6 +756,11 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
               "type": "Measure",
               "uid": "valueAxis",
               "values": ["Investment"]
+            },
+            {
+              "type": "Dimension",
+              "uid": "color",
+              "values": ["Sector"]
             }
           ]
         }
@@ -735,6 +768,7 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
 
 12. 100_stacked_bar
     * UIDs: dataFrame, categoryAxis, color, valueAxis
+    * Note: Stacking requires a second dimension fed to `color`; without it the chart renders as a plain bar
     * Example:
         ```json
         {
@@ -748,6 +782,10 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
             {
               "name": "Region",
               "value": "{regionField}"
+            },
+            {
+              "name": "Category",
+              "value": "{categoryField}"
             }
           ],
           "feeds": [
@@ -760,6 +798,11 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
               "type": "Measure",
               "uid": "valueAxis",
               "values": ["Costs"]
+            },
+            {
+              "type": "Dimension",
+              "uid": "color",
+              "values": ["Category"]
             }
           ]
         }
@@ -767,6 +810,7 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
 
 13. 100_stacked_column
     * UIDs: dataFrame, categoryAxis, color, valueAxis
+    * Note: Stacking requires a second dimension fed to `color`; without it the chart renders as a plain column
     * Example:
         ```json
         {
@@ -780,6 +824,10 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
             {
               "name": "Product",
               "value": "{productField}"
+            },
+            {
+              "name": "Region",
+              "value": "{regionField}"
             }
           ],
           "feeds": [
@@ -792,6 +840,11 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
               "type": "Measure",
               "uid": "valueAxis",
               "values": ["Market Share"]
+            },
+            {
+              "type": "Dimension",
+              "uid": "color",
+              "values": ["Region"]
             }
           ]
         }
@@ -799,6 +852,7 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
 
 14. timeseries_100_stacked_column
     * UIDs: timeAxis, color, valueAxis
+    * Note: Stacking requires a second dimension fed to `color`; without it the chart renders as a plain timeseries_column
     * Example:
         ```json
         {
@@ -813,6 +867,10 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
               "name": "Year",
               "value": "{yearField}",
               "dataType": "date"
+            },
+            {
+              "name": "Sector",
+              "value": "{sectorField}"
             }
           ],
           "feeds": [
@@ -825,6 +883,11 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
               "type": "Measure",
               "uid": "valueAxis",
               "values": ["Investment"]
+            },
+            {
+              "type": "Dimension",
+              "uid": "color",
+              "values": ["Sector"]
             }
           ]
         }
@@ -1174,7 +1237,8 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
           "dimensions": [
             {
               "name": "Year",
-              "value": "{yearField}"
+              "value": "{yearField}",
+              "dataType": "date"
             },
             {
               "name": "Sector",
@@ -1404,6 +1468,7 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
 
 29. vertical_bullet
     * UIDs: categoryAxis, color, actualValues, additionalValues, targetValues, forecastValues
+    * Note: `targetValues` expects a measure (target value), not a dimension
     * Example:
         ```json
         {
@@ -1411,24 +1476,33 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
             {
               "name": "Achievement",
               "value": "{achievementField}"
+            },
+            {
+              "name": "Target",
+              "value": "{targetField}"
             }
           ],
           "dimensions": [
             {
-              "name": "Target",
-              "value": "{targetField}"
+              "name": "KPI Name",
+              "value": "{kpiNameField}"
             }
           ],
           "feeds": [
             {
               "type": "Dimension",
               "uid": "categoryAxis",
-              "values": ["Target"]
+              "values": ["KPI Name"]
             },
             {
               "type": "Measure",
               "uid": "actualValues",
               "values": ["Achievement"]
+            },
+            {
+              "type": "Measure",
+              "uid": "targetValues",
+              "values": ["Target"]
             }
           ]
         }
@@ -1436,6 +1510,7 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
 
 30. bullet
     * UIDs: categoryAxis, color, actualValues, additionalValues, targetValues, forecastValues
+    * Note: `targetValues` expects a measure (target value), not a dimension
     * Example:
         ```json
         {
@@ -1443,24 +1518,33 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
             {
               "name": "Achievement",
               "value": "{achievementField}"
+            },
+            {
+              "name": "Target",
+              "value": "{targetField}"
             }
           ],
           "dimensions": [
             {
-              "name": "Target",
-              "value": "{targetField}"
+              "name": "KPI Name",
+              "value": "{kpiNameField}"
             }
           ],
           "feeds": [
             {
               "type": "Dimension",
               "uid": "categoryAxis",
-              "values": ["Target"]
+              "values": ["KPI Name"]
             },
             {
               "type": "Measure",
               "uid": "actualValues",
               "values": ["Achievement"]
+            },
+            {
+              "type": "Measure",
+              "uid": "targetValues",
+              "values": ["Target"]
             }
           ]
         }
@@ -1501,6 +1585,7 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
 
 32. waterfall
     * UIDs: categoryAxis, waterfallType, valueAxis
+    * Note: `waterfallType` is optional but recommended; it distinguishes total bars from running positive/negative changes
     * Example:
         ```json
         {
@@ -1514,6 +1599,10 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
             {
               "name": "Phase",
               "value": "{phaseField}"
+            },
+            {
+              "name": "Type",
+              "value": "{typeField}"
             }
           ],
           "feeds": [
@@ -1526,6 +1615,11 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
               "type": "Measure",
               "uid": "valueAxis",
               "values": ["Change"]
+            },
+            {
+              "type": "Dimension",
+              "uid": "waterfallType",
+              "values": ["Type"]
             }
           ]
         }
@@ -1566,6 +1660,7 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
 
 34. horizontal_waterfall
     * UIDs: categoryAxis, waterfallType, valueAxis
+    * Note: `waterfallType` is optional but recommended; it distinguishes total bars from running positive/negative changes
     * Example:
         ```json
         {
@@ -1579,6 +1674,10 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
             {
               "name": "Milestone",
               "value": "{milestoneField}"
+            },
+            {
+              "name": "Type",
+              "value": "{typeField}"
             }
           ],
           "feeds": [
@@ -1591,6 +1690,11 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
               "type": "Measure",
               "uid": "valueAxis",
               "values": ["Growth"]
+            },
+            {
+              "type": "Dimension",
+              "uid": "waterfallType",
+              "values": ["Type"]
             }
           ]
         }
@@ -1987,3 +2091,4 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (Designtime) {
             }
           ]
         }
+        ```
