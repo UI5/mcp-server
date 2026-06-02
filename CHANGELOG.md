@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.12](https://github.com/UI5/mcp-server/compare/v0.2.11...v0.2.12) (2026-06-02)
+
+
+### Dependencies
+
+* Bump ejs from 5.0.1 to 5.0.2 ([c5154ab](https://github.com/UI5/mcp-server/commit/c5154abd5a830fb1a24a3001eb1c045e463b05e3))
+* Bump fast-xml-parser from 5.5.11 to 5.5.12 ([d21583c](https://github.com/UI5/mcp-server/commit/d21583c8f46c54f85ad4b295cb24576c068ec18b))
+* Bump fast-xml-parser from 5.5.12 to 5.6.0 ([26ead20](https://github.com/UI5/mcp-server/commit/26ead20161b9263412183deeedda324ac03d11bc))
+* Bump fast-xml-parser from 5.6.0 to 5.7.1 ([665b40c](https://github.com/UI5/mcp-server/commit/665b40ced9bdf72cb6648e519541a82ee8d138c2))
+* Update UI5 CLI dependencies ([bd26773](https://github.com/UI5/mcp-server/commit/bd2677309db459ce2e91ed6b202e39ef77242c83))
+* Update UI5 CLI dependencies / fast-xml-parser ([1df3528](https://github.com/UI5/mcp-server/commit/1df3528af9fe1821bb764c7efc64ecfd9ea111bc))
+
 ## [0.2.11](https://github.com/UI5/mcp-server/compare/v0.2.10...v0.2.11) (2026-04-13)
 
 
