@@ -25,7 +25,6 @@ const test = anyTest as TestFn<{
 	createIntegrationCard: typeof import(
 		"../../../../src/tools/create_integration_card/create_integration_card.js"
 	).createIntegrationCard;
-	copiedFiles: string[];
 }>;
 
 // Setup test context before each test
@@ -56,17 +55,11 @@ test.beforeEach(async (t) => {
 	);
 
 	t.context.createIntegrationCard = createIntegrationCard;
-	t.context.copiedFiles = [];
 });
 
 // Clean up after each test
-test.afterEach.always(async (t) => {
+test.afterEach.always((t) => {
 	t.context.sinon.restore();
-
-	// Clean up any copied common files
-	for (const copiedFile of t.context.copiedFiles) {
-		await rm(copiedFile, {force: true});
-	}
 });
 
 supportedCardTypes.forEach((cardType) => {
@@ -82,21 +75,16 @@ supportedCardTypes.forEach((cardType) => {
 		const normalizedResult = result.map((filePath) => filePath.replaceAll(path.sep, "/")).sort();
 		t.snapshot(normalizedResult, "Result of createIntegrationCard should match expected structure");
 
+		// Build the merged expected tree under test/tmp so we never mutate test/expected.
+		// findFiles(expectedPath) needs to see common/* alongside the card-type files.
 		const commonFilesPath = path.join(expectedBasePath, "common");
-		const expectedPath = path.join(expectedBasePath, cardType);
-		const commonFiles = await findFiles(commonFilesPath);
-
-		// Copy common files into the card-specific expected folder so findFiles(expectedPath)
-		// will include them as part of the expected set.
-		const destExpectedPath = path.join(expectedBasePath, cardType);
-		await cp(commonFilesPath, destExpectedPath, {recursive: true});
-
-		// Record all copied file paths relative to destExpectedPath
-		for (const commonFile of commonFiles) {
-			const relativePath = path.relative(commonFilesPath, commonFile);
-			const destFilePath = path.join(destExpectedPath, relativePath);
-			t.context.copiedFiles.push(destFilePath);
-		}
+		const cardTypeExpectedPath = path.join(expectedBasePath, cardType);
+		const expectedPath = path.join(
+			__dirname, "..", "..", "..", "tmp", "create_integration_card_expected", cardType
+		);
+		await rm(expectedPath, {recursive: true, force: true});
+		await cp(cardTypeExpectedPath, expectedPath, {recursive: true});
+		await cp(commonFilesPath, expectedPath, {recursive: true});
 
 		const expectedFiles = await findFiles(expectedPath);
 
