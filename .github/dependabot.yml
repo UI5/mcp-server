@@ -15,6 +15,8 @@ updates:
   versioning-strategy: increase
   cooldown:
     default-days: 2
+    exclude:
+      - "@ui5/*"
   commit-message:
     prefix: "deps"
     prefix-development: "build(deps-dev)"
