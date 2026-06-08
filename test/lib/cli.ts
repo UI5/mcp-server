@@ -91,6 +91,35 @@ test.serial("CLI handles server connection errors", async (t) => {
 	t.true(serverInstance.connect.calledOnce);
 });
 
+test.serial("CLI prints help when help flag is provided", async (t) => {
+	const {sinon, exitStub} = t.context;
+
+	// Mock stdout.write to capture help output
+	const stdoutWriteStub = sinon.stub(process.stdout, "write");
+
+	// Add help flag to process.argv
+	process.argv.push("--help");
+
+	// Mock the Server import in cli - it shouldn't be called
+	await esmock("../../src/cli.js", {
+		"../../src/server.js": {
+			default: t.context.ServerConstructor,
+		},
+	});
+
+	// Verify process.exit was called with code 0
+	t.true(exitStub.calledOnce);
+	t.true(exitStub.calledWith(0));
+
+	// Verify usage was written to stdout
+	t.true(stdoutWriteStub.calledWith("Usage: ui5mcp\n"));
+	t.true(stdoutWriteStub.calledWith("Options:\n"));
+	t.true(stdoutWriteStub.calledWith("  -h, --help  Show this help message\n"));
+
+	// Verify Server constructor was not called
+	t.false(t.context.ServerConstructor.called);
+});
+
 test.serial("CLI exits with error when arguments are provided", async (t) => {
 	const {sinon, exitStub} = t.context;
 
