@@ -16,7 +16,7 @@ test.beforeEach((t) => {
 	t.context.sinon = sinonGlobal.createSandbox();
 
 	// Store and mock process.argv
-	t.context.originalArgv = process.argv;
+	t.context.originalArgv = process.argv.slice();
 
 	// Create a mock Server instance with a connect method
 	const serverInstance = {
@@ -120,5 +120,43 @@ test.serial("CLI exits with error when arguments are provided", async (t) => {
 	t.true(stderrWriteStub.thirdCall.calledWith("Usage: ui5mcp\n"));
 
 	// Verify Server constructor was not called
+	t.false(t.context.ServerConstructor.called);
+});
+
+test.serial("CLI prints help and exits without starting the server", async (t) => {
+	const {sinon, exitStub} = t.context;
+
+	const stdoutWriteStub = sinon.stub(process.stdout, "write");
+
+	process.argv.push("--help");
+
+	await esmock("../../src/cli.js", {
+		"../../src/server.js": {
+			default: t.context.ServerConstructor,
+		},
+	});
+
+	t.true(exitStub.calledOnceWith(0));
+	t.true(stdoutWriteStub.calledOnce);
+	t.regex(stdoutWriteStub.firstCall.firstArg as string, /Usage: ui5mcp/);
+	t.regex(stdoutWriteStub.firstCall.firstArg as string, /--version/);
+	t.false(t.context.ServerConstructor.called);
+});
+
+test.serial("CLI prints version and exits without starting the server", async (t) => {
+	const {sinon, exitStub} = t.context;
+
+	const stdoutWriteStub = sinon.stub(process.stdout, "write");
+
+	process.argv.push("--version");
+
+	await esmock("../../src/cli.js", {
+		"../../src/server.js": {
+			default: t.context.ServerConstructor,
+		},
+	});
+
+	t.true(exitStub.calledOnceWith(0));
+	t.true(stdoutWriteStub.calledOnceWith("0.2.12\n"));
 	t.false(t.context.ServerConstructor.called);
 });
