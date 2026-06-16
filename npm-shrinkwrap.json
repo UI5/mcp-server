@@ -21,7 +21,7 @@
 				"fast-xml-parser": "^5.8.0",
 				"globby": "^16.1.1",
 				"lockfile": "^1.0.4",
-				"make-fetch-happen": "^15.0.4",
+				"make-fetch-happen": "^15.0.6",
 				"semver": "^7.7.4",
 				"zod": "^4.3.6"
 			},
@@ -15585,9 +15585,9 @@
 			"license": "ISC"
 		},
 		"node_modules/make-fetch-happen": {
-			"version": "15.0.5",
-			"resolved": "https://registry.npmjs.org/make-fetch-happen/-/make-fetch-happen-15.0.5.tgz",
-			"integrity": "sha512-uCbIa8jWWmQZt4dSnEStkVC6gdakiinAm4PiGsywIkguF0eWMdcjDz0ECYhUolFU3pFLOev9VNPCEygydXnddg==",
+			"version": "15.0.6",
+			"resolved": "https://registry.npmjs.org/make-fetch-happen/-/make-fetch-happen-15.0.6.tgz",
+			"integrity": "sha512-Je0fLJ0F5atA7F+eIlLzk+Wkcl57JDf4kf+EW8xiP5E31xOQxkIxTbgf1Oi1Lw9tRI9UEMRdI5Vz2xTzoNU1Jw==",
 			"license": "ISC",
 			"dependencies": {
 				"@gar/promise-retry": "^1.0.0",
