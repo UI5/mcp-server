@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.13](https://github.com/UI5/mcp-server/compare/v0.2.12...v0.2.13) (2026-06-23)
+
+
+### Dependencies
+
+* Bump @ui5/linter from 1.21.1 to 1.23.0 ([9e188eb](https://github.com/UI5/mcp-server/commit/9e188ebb3d72235085d091395fede2e558d7576c))
+* Bump @ui5/project from 4.0.16 to 4.0.17 ([8c50f1a](https://github.com/UI5/mcp-server/commit/8c50f1a0de55ad98885028ee0df1eca7e5724491))
+* Bump ejs from 5.0.2 to 6.0.1 ([35924f7](https://github.com/UI5/mcp-server/commit/35924f7e72e15717dbc22563629760a6f22199a0))
+* Bump fast-xml-parser from 5.8.0 to 5.9.3 ([cce3b69](https://github.com/UI5/mcp-server/commit/cce3b69f8402fcec0d213ba2c447d3d07c0749d6))
+* Bump make-fetch-happen from 15.0.5 to 15.0.6 ([246a3bf](https://github.com/UI5/mcp-server/commit/246a3bf81cae42672b73ac46377196dc9edbc49d))
+* Bump semver from 7.8.4 to 7.8.5 ([a3ca70e](https://github.com/UI5/mcp-server/commit/a3ca70e35603fb70a30956f83580d1befba04521))
+
 ## [0.2.12](https://github.com/UI5/mcp-server/compare/v0.2.11...v0.2.12) (2026-06-02)
 
 
