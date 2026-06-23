@@ -47,7 +47,7 @@
 				"check-engine-light": "0.4.0",
 				"eslint": "^9.39.2",
 				"eslint-plugin-ava": "^15.0.1",
-				"esmock": "^2.7.3",
+				"esmock": "^2.7.6",
 				"husky": "^9.1.7",
 				"knip": "^6.16.1",
 				"licensee": "^12.0.1",
@@ -13455,9 +13455,9 @@
 			}
 		},
 		"node_modules/esmock": {
-			"version": "2.7.3",
-			"resolved": "https://registry.npmjs.org/esmock/-/esmock-2.7.3.tgz",
-			"integrity": "sha512-/M/YZOjgyLaVoY6K83pwCsGE1AJQnj4S4GyXLYgi/Y79KL8EeW6WU7Rmjc89UO7jv6ec8+j34rKeWOfiLeEu0A==",
+			"version": "2.7.6",
+			"resolved": "https://registry.npmjs.org/esmock/-/esmock-2.7.6.tgz",
+			"integrity": "sha512-Moibxg8tl+wUeuDZZxHC9yVFi+rYITrPsu8/JDmO9AWVaXiWrFyvklruDv7pP7h3t0UqqPpZiCaZ51lzwVRK8A==",
 			"dev": true,
 			"license": "ISC",
 			"engines": {
