@@ -44,7 +44,7 @@
 		"clean-test-tmp": "rimraf test/tmp",
 		"lint": "eslint .",
 		"lint-fix": "eslint . --fix",
-		"test": "npm run lint && npm run build-test && npm run coverage && npm run knip && npm run check-licenses",
+		"test": "npm run lint && npm run build-test && npm run build && npm run coverage && npm run knip && npm run check-licenses",
 		"coverage": "npm run clean-coverage && nyc ava --node-arguments=\"--experimental-loader=@istanbuljs/esm-loader-hook\"",
 		"unit": "ava",
 		"unit-debug": "ava debug",
@@ -119,7 +119,7 @@
 		"rimraf": "^6.1.3",
 		"sinon": "^22.0.0",
 		"tsx": "4.21.0",
-		"typescript": "^5.9.3",
+		"typescript": "^6.0.3",
 		"typescript-eslint": "^8.61.1",
 		"yauzl-promise": "^4.0.0"
 	}

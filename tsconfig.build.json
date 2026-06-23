@@ -1,5 +1,8 @@
 {
 	// For creating a release build, only compile the src dir
 	"extends": "./tsconfig.base.json",
+	"compilerOptions": {
+		"rootDir": "./src"
+	},
 	"include": ["src/**/*"]
 }
