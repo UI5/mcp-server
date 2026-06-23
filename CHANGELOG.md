@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.14](https://github.com/UI5/mcp-server/compare/v0.2.13...v0.2.14) (2026-06-23)
+
+
+### Dependencies
+
+* Bump @ui5/linter from 1.23.0 to 1.23.1 ([41bcadb](https://github.com/UI5/mcp-server/commit/41bcadb40aa19735c9797cedb08d260bfe9485dc))
+* Update dependencies ([05f304e](https://github.com/UI5/mcp-server/commit/05f304e216c98ed932eafddbdac9b43611b75822))
+
 ## [0.2.13](https://github.com/UI5/mcp-server/compare/v0.2.12...v0.2.13) (2026-06-23)
 
 
