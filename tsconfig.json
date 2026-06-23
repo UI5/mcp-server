@@ -5,6 +5,9 @@
 	// For this reason however, it should not be used to emit JavaScript (except for linting purposes),
 	// since the output directory would then contain "src" and "test" directories instead of just the content of "src"
 	"extends": "./tsconfig.base.json",
+	"compilerOptions": {
+		"rootDir": "."
+	},
 	"include": [
 		"src/**/*",
 		"scripts/**/*",

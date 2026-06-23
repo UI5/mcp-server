@@ -46,8 +46,11 @@ jobs:
     - name: Perform dependency check
       run: npm run knip
 
-    - name: Perform build
+    - name: Perform test build
       run: npm run build-test
+
+    - name: Perform build
+      run: npm run build
 
     - name: Run unit tests
       run: npm run coverage
