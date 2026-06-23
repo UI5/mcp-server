@@ -89,7 +89,7 @@
 		"globby": "^16.1.1",
 		"lockfile": "^1.0.4",
 		"make-fetch-happen": "^15.0.6",
-		"semver": "^7.7.4",
+		"semver": "^7.8.5",
 		"zod": "^4.3.6"
 	},
 	"devDependencies": {
