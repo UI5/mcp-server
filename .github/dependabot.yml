@@ -22,3 +22,21 @@ updates:
     prefix-development: "build(deps-dev)"
   ignore:
     - dependency-name: "@types/node" # Should be manually kept in sync with the minimum supported Node.js version
+
+    # Major updates of dependencies that require a newer minimum Node.js version
+    # are blocked and can't be merged right now.
+    # Re-visit this list when the minimum supported Node.js version is increased.
+    - dependency-name: "@commitlint/cli"
+      update-types: ["version-update:semver-major"]
+    - dependency-name: "@commitlint/config-conventional"
+      update-types: ["version-update:semver-major"]
+    - dependency-name: "@eslint/js"
+      update-types: ["version-update:semver-major"]
+    - dependency-name: "ava"
+      update-types: ["version-update:semver-major"]
+    - dependency-name: "eslint-plugin-ava"
+      update-types: ["version-update:semver-major"]
+    - dependency-name: "eslint"
+      update-types: ["version-update:semver-major"]
+    - dependency-name: "make-fetch-happen"
+      update-types: ["version-update:semver-major"]
