@@ -120,7 +120,7 @@
 		"sinon": "^22.0.0",
 		"tsx": "4.21.0",
 		"typescript": "^6.0.3",
-		"typescript-eslint": "^8.61.1",
+		"typescript-eslint": "^8.62.0",
 		"yauzl-promise": "^4.0.0"
 	}
 }
