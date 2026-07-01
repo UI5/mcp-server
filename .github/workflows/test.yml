@@ -34,3 +34,18 @@ jobs:
 
     - name: Run unit tests
       run: npm run unit
+
+  # Aggregator so branch protection can require a single "Tests" check
+  # instead of every matrix combination.
+  tests:
+    name: Tests
+    needs: test
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+    - name: Check matrix result
+      run: |
+        if [ "${{ needs.test.result }}" != "success" ]; then
+          echo "Test matrix result: ${{ needs.test.result }}"
+          exit 1
+        fi
