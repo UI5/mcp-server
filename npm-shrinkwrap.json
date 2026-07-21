@@ -18,7 +18,7 @@
 				"async-mutex": "^0.5.0",
 				"ejs": "^6.0.1",
 				"execa": "^9.6.1",
-				"fast-xml-parser": "^5.10.0",
+				"fast-xml-parser": "^5.10.1",
 				"globby": "^16.2.1",
 				"lockfile": "^1.0.4",
 				"make-fetch-happen": "^15.0.6",
@@ -851,25 +851,6 @@
 			},
 			"funding": {
 				"url": "https://ko-fi.com/dangreen"
-			}
-		},
-		"node_modules/@commitlint/read/node_modules/conventional-commits-parser": {
-			"version": "7.1.0",
-			"resolved": "https://registry.npmjs.org/conventional-commits-parser/-/conventional-commits-parser-7.1.0.tgz",
-			"integrity": "sha512-DPp6hkUjvwIivxbkrTiLXeRswNv1A/4GFA2X6scXma0AMa9632V3TwxmrlkUIEtUktiM3Ln+RrSH2xlP3/jUTw==",
-			"dev": true,
-			"license": "MIT",
-			"optional": true,
-			"peer": true,
-			"dependencies": {
-				"@simple-libs/stream-utils": "^2.0.0",
-				"argue-cli": "^3.1.0"
-			},
-			"bin": {
-				"conventional-commits-parser": "dist/cli/index.js"
-			},
-			"engines": {
-				"node": ">=22"
 			}
 		},
 		"node_modules/@commitlint/resolve-extends": {
@@ -2370,9 +2351,9 @@
 			}
 		},
 		"node_modules/@nodable/entities": {
-			"version": "2.2.0",
-			"resolved": "https://registry.npmjs.org/@nodable/entities/-/entities-2.2.0.tgz",
-			"integrity": "sha512-9uGyhaQavEUMC8AIddIjau4NsnsXhou+j5sBAGojCM1oxmQpVKTWR/9JxABD6UAv12vpIms55fPZKFQEhG6uBg==",
+			"version": "3.0.0",
+			"resolved": "https://registry.npmjs.org/@nodable/entities/-/entities-3.0.0.tgz",
+			"integrity": "sha512-8L9xFeTYKhm49xfIypoe2W5wV1m/3Z58kT+7kR9A8OyFxcPduI4VmxaUMQyKYrRjUoLLSXv6EKKID5Tvj9cUVw==",
 			"funding": [
 				{
 					"type": "github",
@@ -11060,21 +11041,6 @@
 				"sprintf-js": "~1.0.2"
 			}
 		},
-		"node_modules/argue-cli": {
-			"version": "3.1.0",
-			"resolved": "https://registry.npmjs.org/argue-cli/-/argue-cli-3.1.0.tgz",
-			"integrity": "sha512-DhBpBfXL4SS2uC0N922MMajKR3CdrTG0u2or1PNYgXMsrSzViJrbtvT0nCLlLGUI0plam/ZZCs7aAauHtW9thw==",
-			"dev": true,
-			"license": "MIT",
-			"optional": true,
-			"peer": true,
-			"engines": {
-				"node": ">=22"
-			},
-			"funding": {
-				"url": "https://ko-fi.com/dangreen"
-			}
-		},
 		"node_modules/aria-hidden": {
 			"version": "1.2.6",
 			"resolved": "https://registry.npmjs.org/aria-hidden/-/aria-hidden-1.2.6.tgz",
@@ -13563,9 +13529,9 @@
 			}
 		},
 		"node_modules/fast-xml-parser": {
-			"version": "5.10.0",
-			"resolved": "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-5.10.0.tgz",
-			"integrity": "sha512-SLhnTEqE5QpJHq/6zl9bsmImEP2adv+y6Wy+cJa7nVTRzQh1OZfCe9k29M5xN74LWnu0xa1zrUrq3KnOKl92Fg==",
+			"version": "5.10.1",
+			"resolved": "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-5.10.1.tgz",
+			"integrity": "sha512-IEMIf7298kXuZSRFoGfMYrl7is8LpavODgbNz1cwIudv7KwVFnuU+UsMporfq6PD6aXSlawZlARiA3UywCTfMw==",
 			"funding": [
 				{
 					"type": "github",
@@ -13574,7 +13540,7 @@
 			],
 			"license": "MIT",
 			"dependencies": {
-				"@nodable/entities": "^2.2.0",
+				"@nodable/entities": "^3.0.0",
 				"fast-xml-builder": "^1.2.0",
 				"is-unsafe": "^2.0.0",
 				"path-expression-matcher": "^1.6.2",
