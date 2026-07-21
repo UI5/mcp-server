@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.2.15](https://github.com/UI5/mcp-server/compare/v0.2.14...v0.2.15) (2026-07-21)
+
+
+### Bug Fixes
+
+* Update properly shrinkwrap ([f6c125a](https://github.com/UI5/mcp-server/commit/f6c125a0d258ec50ea254f18d0b4cd7d1504791e))
+
+
+### Dependencies
+
+* Bump fast-xml-parser from 5.9.3 to 5.10.0 ([c2d1866](https://github.com/UI5/mcp-server/commit/c2d1866c04c271929c0fc0bad4c2bc2a49539491))
+* Bump globby from 16.2.0 to 16.2.1 ([6a6143e](https://github.com/UI5/mcp-server/commit/6a6143e74c83e9b7e3b3f74e081bc78b15e695a3))
+
 ## [0.2.14](https://github.com/UI5/mcp-server/compare/v0.2.13...v0.2.14) (2026-06-23)
 
 
