@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.16](https://github.com/UI5/mcp-server/compare/v0.2.15...v0.2.16) (2026-07-24)
+
+
+### Dependencies
+
+* Bump @hono/node-server to 1.19.15 ([ca87a51](https://github.com/UI5/mcp-server/commit/ca87a513ccfb1a34291c98e2119332b5f75fe6cf))
+
 ## [0.2.15](https://github.com/UI5/mcp-server/compare/v0.2.14...v0.2.15) (2026-07-21)
 
 
