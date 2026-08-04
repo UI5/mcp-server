@@ -1,5 +1,7 @@
 # UI5 MCP Server
 
+[![MCP Toplist](https://mcptoplist.com/badge/io.github.UI5%2Fmcp-server.svg)](https://mcptoplist.com/server/io.github.UI5%2Fmcp-server)
+
 A [Model Context Protocol](https://modelcontextprotocol.io/) server for UI5 application development.
 
 [![OpenUI5 Community Slack (#tooling channel)](https://img.shields.io/badge/slack-join-44cc11.svg)](https://ui5-slack-invite.cfapps.eu10.hana.ondemand.com/)
