@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.18](https://github.com/UI5/mcp-server/compare/v0.2.17...v0.2.18) (2026-08-13)
+
+
+### Dependencies
+
+* Bump @modelcontextprotocol/sdk from 1.29.0 to 1.30.0 ([a8337c3](https://github.com/UI5/mcp-server/commit/a8337c318da79052df0385622be4d2e6be5038f6))
+* Run 'npm audit fix' ([8d03f40](https://github.com/UI5/mcp-server/commit/8d03f4069286d26e27cdeb8b3abb7b3979ef75ef))
+
 ## [0.2.17](https://github.com/UI5/mcp-server/compare/v0.2.16...v0.2.17) (2026-07-27)
 
 
