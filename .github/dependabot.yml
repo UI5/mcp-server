@@ -3,23 +3,41 @@ updates:
 - package-ecosystem: "github-actions"
   directory: "/"
   schedule:
-    interval: "weekly"
+    interval: weekly
   commit-message:
     prefix: "ci(github-actions)"
   cooldown:
-    default-days: 2
+    default-days: 3
+  groups:
+    github-actions:
+      applies-to: version-updates
+      patterns:
+      - "*"
 - package-ecosystem: npm
   directory: "/"
   schedule:
-    interval: "weekly"
-  versioning-strategy: increase
+    interval: weekly
   cooldown:
-    default-days: 2
+    default-days: 3
     exclude:
-      - "@ui5/*"
+    - "@ui5/*"
+    - "less-openui5"
+  versioning-strategy: increase
   commit-message:
     prefix: "deps"
     prefix-development: "build(deps-dev)"
+  groups:
+    npm:
+      dependency-type: production
+      update-types:
+      - minor
+      - patch
+    npm-dev:
+      dependency-type: development
+      update-types:
+      - minor
+      - patch
+
   ignore:
     - dependency-name: "@types/node" # Should be manually kept in sync with the minimum supported Node.js version
 
@@ -38,5 +56,11 @@ updates:
       update-types: ["version-update:semver-major"]
     - dependency-name: "eslint"
       update-types: ["version-update:semver-major"]
+    - dependency-name: "execa"
+      update-types: ["version-update:semver-major"]
     - dependency-name: "make-fetch-happen"
+      update-types: ["version-update:semver-major"]
+
+    # TypeScript 7.x upgrade is blocked, see https://github.com/UI5/mcp-server/issues/422
+    - dependency-name: "typescript"
       update-types: ["version-update:semver-major"]
