@@ -55,8 +55,11 @@ jobs:
       run: |
         rm package.json
         mv package.json.bak package.json
-    - name: Publish to npm
-      run: npm publish --access public
+    - name: Pack and publish
+      run: |
+        TARBALL=$(npm pack 2>/dev/null)
+        echo "Publishing tarball: $TARBALL"
+        npm publish "$TARBALL" --access public
 
   publish-mcp-registry:
     needs: [pull-request, publish-package]
