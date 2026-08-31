@@ -34,7 +34,7 @@
 		"build": "npm run clean-lib && tsc -p tsconfig.build.json",
 		"build-test": "tsc --noEmit -p .",
 		"build-watch": "npm run clean-lib && tsc -w -p tsconfig.build.json",
-		"check-engine": "check-engine-light -f npm-shrinkwrap.json .",
+		"check-engine": "check-engine-light -f package-lock.json .",
 		"check-licenses": "licensee --errors-only",
 		"knip": "knip --config knip.config.js",
 		"lint:commit": "commitlint",
@@ -54,13 +54,13 @@
 		"try-create-ui5-ts-app": "tsx test/runCreateUi5TsApp.ts",
 		"update-docs": "tsx scripts/updateDocs.ts"
 	},
+	"bundleDependencies": true,
 	"files": [
 		"CHANGELOG.md",
 		"LICENSES/**",
 		"bin/**",
 		"lib/**",
 		"resources/**",
-		"npm-shrinkwrap.json",
 		".reuse/**",
 		"icon.png"
 	],
