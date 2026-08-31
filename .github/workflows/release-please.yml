@@ -49,17 +49,14 @@ jobs:
           pkg.devDependencies = {};
           fs.writeFileSync("package.json", JSON.stringify(pkg, null, "\t"), {encoding: "utf8"});
         EOM
-    - name: Pruning extraneous packages (also updates shrinkwrap)
+    - name: Pruning extraneous packages (also updates package-lock.json)
       run: npm prune --omit=dev
     - name: Restoring original package.json
       run: |
         rm package.json
         mv package.json.bak package.json
-    - name: Pack and publish
-      run: |
-        TARBALL=$(npm pack 2>/dev/null)
-        echo "Publishing tarball: $TARBALL"
-        npm publish "$TARBALL" --access public
+    - name: Publish to npm
+      run: npm publish --access public
 
   publish-mcp-registry:
     needs: [pull-request, publish-package]
