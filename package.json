@@ -85,12 +85,12 @@
 		"async-mutex": "^0.5.0",
 		"ejs": "^6.0.1",
 		"execa": "^9.6.1",
-		"fast-xml-parser": "^5.11.0",
+		"fast-xml-parser": "^5.11.1",
 		"globby": "^16.2.4",
 		"lockfile": "^1.0.4",
 		"make-fetch-happen": "^15.0.6",
 		"semver": "^7.8.5",
-		"zod": "^4.4.3"
+		"zod": "^4.5.2"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^21.2.2",
