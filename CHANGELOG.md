@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.19](https://github.com/UI5/mcp-server/compare/v0.2.18...v0.2.19) (2026-08-31)
+
+
+### Dependencies
+
+* Bump globby from 16.2.2 to 16.2.3 ([bca1280](https://github.com/UI5/mcp-server/commit/bca12801e362723aba2a987fcfc2b3ee6727f662))
+* Bump the npm group with 2 updates ([0cb06eb](https://github.com/UI5/mcp-server/commit/0cb06ebb1116e1cd92cecb2e302d15b34c84b143))
+
 ## [0.2.18](https://github.com/UI5/mcp-server/compare/v0.2.17...v0.2.18) (2026-08-13)
 
 
