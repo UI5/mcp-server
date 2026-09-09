@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.19](https://github.com/UI5/mcp-server/compare/v0.2.18...v0.2.19) (2026-09-09)
+
+
+### Dependencies
+
+* Bump globby from 16.2.2 to 16.2.3 ([bca1280](https://github.com/UI5/mcp-server/commit/bca12801e362723aba2a987fcfc2b3ee6727f662))
+* Bump hono from 4.13.1 to 4.13.7 ([b30c46d](https://github.com/UI5/mcp-server/commit/b30c46d1f742a1c0f5dbeb964fbad5a9194c12e1))
+* Bump js-yaml ([3ceeddd](https://github.com/UI5/mcp-server/commit/3ceeddd318f408d8e550485a375881e4c5fd2f52))
+* Bump the npm group with 2 updates ([27e0255](https://github.com/UI5/mcp-server/commit/27e0255c4c4770f01e32ba59b26fcd0c66c25a47))
+* Bump the npm group with 2 updates ([00bb006](https://github.com/UI5/mcp-server/commit/00bb006210c90532b7567dbce0c1be2a864a1c22))
+* Bump the npm group with 2 updates ([0cb06eb](https://github.com/UI5/mcp-server/commit/0cb06ebb1116e1cd92cecb2e302d15b34c84b143))
+
 ## [0.2.18](https://github.com/UI5/mcp-server/compare/v0.2.17...v0.2.18) (2026-08-13)
 
 
