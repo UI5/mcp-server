@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.20](https://github.com/UI5/mcp-server/compare/v0.2.19...v0.2.20) (2026-09-10)
+
+
+### Dependencies
+
+* Bump qs and fast-uri ([ca94d41](https://github.com/UI5/mcp-server/commit/ca94d4166411a61a5488c5750f0d72e1b902fbee))
+
 ## [0.2.19](https://github.com/UI5/mcp-server/compare/v0.2.18...v0.2.19) (2026-09-09)
 
 
