@@ -761,8 +761,6 @@ If the data passed through the tool-parameters can trigger actions other than th
 	* Parameters that are passed to templating engines should be strictly validated to prevent command- and template injection attacks.
 * **Path Restriction:** All input paths must be normalized and validated
 	* For most tools, the provided path is supposed to be a valid UI5 project directory. This must be validated, for example by checking whether `@ui5/project` can create a UI5 project for the given path.
-	* If the MCP client supports the ["roots"](https://modelcontextprotocol.io/specification/2025-06-18/client/roots#roots)capability, UI5 MCP server must restrict the paths that can be accessed by the tool to the provided roots.
-		* As an exception to this rule, the UI5 MCP server will still write to its own cache directory, typically located in the `~/.ui5/mcp-server/` directory. This is necessary to store downloaded resources and other temporary data. See [Cache Management](#cache-management) for more details.
 
 ## Building and Testing
 
