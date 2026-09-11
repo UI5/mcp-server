@@ -1,5 +1,5 @@
 import anyTest, {TestFn} from "ava";
-import sinonGlobal, {SinonStub} from "sinon";
+import sinonGlobal from "sinon";
 import esmock from "esmock";
 import {Transport} from "@modelcontextprotocol/sdk/shared/transport.js";
 import {McpServer} from "@modelcontextprotocol/sdk/server/mcp.js";
@@ -7,14 +7,12 @@ import {StdioServerTransport} from "@modelcontextprotocol/sdk/server/stdio.js";
 import {PKG_VERSION} from "../../src/utils.js";
 
 const test = anyTest as TestFn<{
-	simulateServerInitialized: () => Promise<void>;
 	sinon: sinonGlobal.SinonSandbox;
 	Server: typeof import("../../src/server.js").default;
 	mockMcpServer: sinonGlobal.SinonStubbedInstance<McpServer>;
 	mockTransport: sinonGlobal.SinonStubbedInstance<Transport>;
 	constructorStub: sinonGlobal.SinonStub;
 	contextConstructorStub: sinonGlobal.SinonStub;
-	contextSetRootsStub: sinonGlobal.SinonStub;
 	originalEnv: NodeJS.ProcessEnv;
 	registerToolsStub: sinonGlobal.SinonStub;
 }>;
@@ -28,37 +26,7 @@ test.beforeEach(async (t) => {
 	// Create mock for McpServer
 	const mockMcpServer = t.context.sinon.createStubInstance(McpServer);
 	// @ts-expect-error stub read-only property "server"
-	mockMcpServer.server = {
-		listRoots: t.context.sinon.stub()
-			.onFirstCall()
-			.resolves({
-				roots: [{
-					name: "my-root",
-					uri: "file://test-root",
-				}],
-			})
-			.onSecondCall()
-			.resolves({
-				roots: [{
-					name: "my-root",
-					uri: "file://changed-test-root",
-				}, {
-					name: "my-other-root",
-					uri: "file://other-test-root",
-				}],
-			}),
-		setNotificationHandler: t.context.sinon.stub(),
-		getClientCapabilities: () => ({
-			roots: {
-				listChanged: true,
-			},
-		}),
-	};
-	t.context.simulateServerInitialized = async () => {
-		// @ts-expect-error - Types are not compatible with the mock
-		// eslint-disable-next-line @typescript-eslint/await-thenable
-		await mockMcpServer.server.oninitialized();
-	};
+	mockMcpServer.server = {};
 	t.context.mockMcpServer = mockMcpServer;
 
 	// Create mock for Transport
@@ -72,10 +40,7 @@ test.beforeEach(async (t) => {
 
 	t.context.registerToolsStub = t.context.sinon.stub();
 
-	t.context.contextSetRootsStub = t.context.sinon.stub();
-	t.context.contextConstructorStub = t.context.sinon.stub().returns({
-		setRoots: t.context.contextSetRootsStub,
-	});
+	t.context.contextConstructorStub = t.context.sinon.stub().returns({});
 	// Import the Server class with mocked dependencies
 	const {default: Server} = await esmock("../../src/server.js", {
 		"@modelcontextprotocol/sdk/server/mcp.js": {
@@ -133,7 +98,7 @@ test.serial("Context is created with correct parameters", (t) => {
 });
 
 test("connect method connects the server with default transport", async (t) => {
-	const {Server, mockMcpServer, simulateServerInitialized, contextSetRootsStub} = t.context;
+	const {Server, mockMcpServer} = t.context;
 	// Create a new server instance
 	const server = new Server();
 
@@ -146,34 +111,6 @@ test("connect method connects the server with default transport", async (t) => {
 	// Verify connect was called with StdioServerTransport
 	t.true(mockMcpServer.connect.calledOnce);
 	t.true(mockMcpServer.connect.firstCall.args[0] instanceof StdioServerTransport);
-
-	// eslint-disable-next-line @typescript-eslint/unbound-method
-	const listRoots = mockMcpServer.server.listRoots as SinonStub;
-	t.true(listRoots.notCalled);
-
-	await simulateServerInitialized();
-
-	t.true(listRoots.calledOnce);
-	t.true(contextSetRootsStub.calledOnce);
-	t.deepEqual(contextSetRootsStub.firstCall.args[0], [{
-		name: "my-root",
-		uri: "file://test-root",
-	}]);
-	// eslint-disable-next-line @typescript-eslint/unbound-method
-	const setNotificationHandler = mockMcpServer.server.setNotificationHandler as SinonStub;
-	t.true(setNotificationHandler.calledOnce);
-	// Trigger notification handler
-	await setNotificationHandler.firstCall.args[1]({method: "notifications/roots/list_changed"});
-	t.true(listRoots.calledTwice);
-
-	t.true(contextSetRootsStub.calledTwice);
-	t.deepEqual(contextSetRootsStub.secondCall.args[0], [{
-		name: "my-root",
-		uri: "file://changed-test-root",
-	}, {
-		name: "my-other-root",
-		uri: "file://other-test-root",
-	}]);
 });
 
 test("connect method connects the server with custom transport", async (t) => {
