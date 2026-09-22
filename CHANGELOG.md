@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0](https://github.com/UI5/mcp-server/compare/v0.2.20...v0.3.0) (2026-09-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* The roots-based path restriction is removed. Tools no longer limit file access to client-provided roots and now accept any absolute path.
+
+### Features
+
+* Remove deprecated MCP roots feature ([b9413c4](https://github.com/UI5/mcp-server/commit/b9413c483f70609708fc8d4cd5246d2e38bdaf9d))
+
+
+### Dependencies
+
+* Bump zod from 4.5.4 to 4.6.2 in the npm group ([#443](https://github.com/UI5/mcp-server/issues/443)) ([28087e4](https://github.com/UI5/mcp-server/commit/28087e40f57343ff8e59ca152de1b291c3a59ebb))
+
 ## [0.2.20](https://github.com/UI5/mcp-server/compare/v0.2.19...v0.2.20) (2026-09-10)
 
 
