@@ -54,7 +54,6 @@
 		"try-create-ui5-ts-app": "tsx test/runCreateUi5TsApp.ts",
 		"update-docs": "tsx scripts/updateDocs.ts"
 	},
-	"bundleDependencies": true,
 	"files": [
 		"CHANGELOG.md",
 		"LICENSES/**",
