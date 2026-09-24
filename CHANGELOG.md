@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.1](https://github.com/UI5/mcp-server/compare/v0.3.0...v0.3.1) (2026-09-24)
+
+
+### Dependencies
+
+* Bump zod from 4.6.2 to 4.6.5 in the npm group ([#449](https://github.com/UI5/mcp-server/issues/449)) ([5f8ca09](https://github.com/UI5/mcp-server/commit/5f8ca09661f8e167fb8afc5d2cb03917d074b016))
+
+
+### Reverts
+
+* Migrate shrinkwrap to bundleDependencies ([#453](https://github.com/UI5/mcp-server/issues/453)) ([effeba3](https://github.com/UI5/mcp-server/commit/effeba383e4da1a18a52de87f22985416d18290c))
+
 ## [0.3.0](https://github.com/UI5/mcp-server/compare/v0.2.20...v0.3.0) (2026-09-22)
 
 
