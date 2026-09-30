@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.2](https://github.com/UI5/mcp-server/compare/v0.3.1...v0.3.2) (2026-09-30)
+
+
+### Dependencies
+
+* Bump fast-uri from 3.1.7 to 3.1.8 ([#460](https://github.com/UI5/mcp-server/issues/460)) ([e033fce](https://github.com/UI5/mcp-server/commit/e033fce51d995ef8171fb00ab9b815ffe96dd9ce))
+* Bump ip-address from 10.5.0 to 10.7.2 ([#455](https://github.com/UI5/mcp-server/issues/455)) ([f63d18d](https://github.com/UI5/mcp-server/commit/f63d18d952b5835a5819bd9946cccb7c9411b732))
+* Bump the npm group with 2 updates ([#456](https://github.com/UI5/mcp-server/issues/456)) ([12be441](https://github.com/UI5/mcp-server/commit/12be441497a28204205d670a781af0955b60cdb1))
+
 ## [0.3.1](https://github.com/UI5/mcp-server/compare/v0.3.0...v0.3.1) (2026-09-24)
 
 
