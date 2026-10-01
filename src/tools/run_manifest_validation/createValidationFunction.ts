@@ -11,6 +11,11 @@ const log = getLogger("tools:run_manifest_validation:createValidationFunction");
 const schemaCache = new Map<string, AnySchemaObject>();
 const fetchSchemaMutex = new Mutex();
 
+function isJsonSchemaDraft(uri: string, draft: "draft-06" | "draft-07"): boolean {
+	return /^https?:\/\/json-schema\.org\/draft/.test(uri) &&
+		uri.includes(`/${draft}/schema`);
+}
+
 const AJV_SCHEMA_PATHS = {
 	draft06: fileURLToPath(import.meta.resolve("ajv/dist/refs/json-schema-draft-06.json")),
 	draft07: fileURLToPath(import.meta.resolve("ajv/dist/refs/json-schema-draft-07.json")),
@@ -18,6 +23,13 @@ const AJV_SCHEMA_PATHS = {
 
 async function createUI5ManifestValidateFunction2020(ui5Schema: object) {
 	try {
+		const draft06MetaSchema = JSON.parse(
+			await readFile(AJV_SCHEMA_PATHS.draft06, "utf-8")
+		) as AnySchemaObject;
+		const draft07MetaSchema = JSON.parse(
+			await readFile(AJV_SCHEMA_PATHS.draft07, "utf-8")
+		) as AnySchemaObject;
+
 		const ajv = new Ajv2020.default({
 			// Collect all errors, not just the first one
 			allErrors: true,
@@ -28,6 +40,13 @@ async function createUI5ManifestValidateFunction2020(ui5Schema: object) {
 			// otherwise compilation fails with "Invalid escape" errors
 			unicodeRegExp: false,
 			loadSchema: async (uri) => {
+				if (isJsonSchemaDraft(uri, "draft-06")) {
+					return draft06MetaSchema;
+				}
+				if (isJsonSchemaDraft(uri, "draft-07")) {
+					return draft07MetaSchema;
+				}
+
 				const release = await fetchSchemaMutex.acquire();
 
 				try {
@@ -64,17 +83,8 @@ async function createUI5ManifestValidateFunction2020(ui5Schema: object) {
 
 		addFormats.default(ajv);
 
-		const draft06MetaSchema = JSON.parse(
-			await readFile(AJV_SCHEMA_PATHS.draft06, "utf-8")
-		) as AnySchemaObject;
-		const draft07MetaSchema = JSON.parse(
-			await readFile(AJV_SCHEMA_PATHS.draft07, "utf-8")
-		) as AnySchemaObject;
-
-		// Add meta-schemas for draft-06 and draft-07.
-		// These are required to support schemas that reference these drafts,
-		// for example the Adaptive Card schema and some sap.bpa.task properties.
-
+		// Register meta-schemas so AJV can validate external schemas against their own
+		// $schema declaration without falling into infinite loadSchema recursion.
 		ajv.addMetaSchema(draft06MetaSchema, "http://json-schema.org/draft-06/schema#");
 		ajv.addMetaSchema(draft07MetaSchema, "http://json-schema.org/draft-07/schema#");
 
@@ -117,6 +127,10 @@ async function createUI5ManifestValidateFunction2020(ui5Schema: object) {
 
 async function createUI5ManifestValidateFunctionDraft07(ui5Schema: object) {
 	try {
+		const draft06MetaSchema = JSON.parse(
+			await readFile(AJV_SCHEMA_PATHS.draft06, "utf-8")
+		) as AnySchemaObject;
+
 		const ajv = new Ajv.default({
 			// Collect all errors, not just the first one
 			allErrors: true,
@@ -127,6 +141,10 @@ async function createUI5ManifestValidateFunctionDraft07(ui5Schema: object) {
 			// otherwise compilation fails with "Invalid escape" errors
 			unicodeRegExp: false,
 			loadSchema: async (uri) => {
+				if (isJsonSchemaDraft(uri, "draft-06")) {
+					return draft06MetaSchema;
+				}
+
 				const release = await fetchSchemaMutex.acquire();
 
 				try {
@@ -163,13 +181,8 @@ async function createUI5ManifestValidateFunctionDraft07(ui5Schema: object) {
 
 		addFormats.default(ajv);
 
-		const draft06MetaSchema = JSON.parse(
-			await readFile(AJV_SCHEMA_PATHS.draft06, "utf-8")
-		) as AnySchemaObject;
-
-		// Add meta-schema for draft-06.
-		// This is required to support schemas that reference this draft,
-		// for example the Adaptive Card schema.
+		// Register meta-schema so AJV can validate external schemas against their own
+		// $schema declaration without falling into infinite loadSchema recursion.
 		ajv.addMetaSchema(draft06MetaSchema, "http://json-schema.org/draft-06/schema#");
 
 		const validate = await ajv.compileAsync(ui5Schema);
