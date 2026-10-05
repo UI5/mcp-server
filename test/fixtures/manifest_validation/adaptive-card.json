@@ -1,6 +1,7 @@
 {
-  "$schema": "http://json-schema.org/draft-06/schema#",
-  "id": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "$schema": "https://json-schema.org/draft-06/schema#",
+  "id": "https://adaptivecards.io/schemas/adaptive-card.json",
+  "description": "Adaptive Card Schema as supported by Open Source SDKs. This schema includes a subset of the capabilities of the full Adaptive Card schema as implemented by Microsoft products such as Teams.",
   "definitions": {
     "Action.Execute": {
       "description": "Gathers input fields, merges with optional data field, and sends an event to the client. Clients process the event by sending an Invoke activity of type adaptiveCard/action to the target Bot. The inputs that are gathered are those on the current card, and in the case of a show card those on any parent cards. See [Universal Action Model](https://docs.microsoft.com/en-us/adaptive-cards/authoring-cards/universal-action-model) documentation for more details.",
@@ -25,7 +26,7 @@
               "type": "object"
             }
           ],
-          "description": "Initial data that input fields will be combined with. These are essentially ‘hidden’ properties."
+          "description": "Initial data that input fields will be combined with. These are essentially \u2018hidden\u2019 properties."
         },
         "associatedInputs": {
           "$ref": "#/definitions/AssociatedInputs",
@@ -134,7 +135,7 @@
               "type": "object"
             }
           ],
-          "description": "Initial data that input fields will be combined with. These are essentially ‘hidden’ properties."
+          "description": "Initial data that input fields will be combined with. These are essentially \u2018hidden\u2019 properties."
         },
         "associatedInputs": {
           "$ref": "#/definitions/AssociatedInputs",
@@ -323,7 +324,7 @@
               "type": "null"
             }
           ],
-          "description":  "When `true` content in this Adaptive Card should be presented right to left. When 'false' content in this Adaptive Card should be presented left to right. If unset, the default platform behavior will apply.",
+          "description": "When `true` content in this Adaptive Card should be presented right to left. When 'false' content in this Adaptive Card should be presented left to right. If unset, the default platform behavior will apply.",
           "version": "1.5"
         },
         "speak": {

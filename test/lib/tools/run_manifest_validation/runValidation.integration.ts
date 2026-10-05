@@ -8,7 +8,7 @@ import {fileURLToPath} from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const fixturesPath = path.join(__dirname, "..", "..", "..", "fixtures", "manifest_validation");
 const schemaFixture = JSON.parse(await readFile(path.join(fixturesPath, "schema.json"), "utf-8"));
-const schemaFixture_169 = JSON.parse(await readFile(path.join(fixturesPath, "schema-1.69.0.json"), "utf-8"));
+const schemaFixture_149 = JSON.parse(await readFile(path.join(fixturesPath, "schema-1.49.0.json"), "utf-8"));
 const adaptiveCardSchema = JSON.parse(await readFile(path.join(fixturesPath, "adaptive-card.json"), "utf-8"));
 
 const test = anyTest as TestFn<{
@@ -103,7 +103,7 @@ test("runValidation successfully validates 1.49.0 manifest (minimum supported ve
 		});
 
 	fetchCdnStub.withArgs("https://raw.githubusercontent.com/UI5/manifest/v1.49.0/schema.json")
-		.resolves(schemaFixture_169);
+		.resolves(schemaFixture_149);
 
 	// Stub the fetchCdn function to return the adaptive-card.json schema when requested
 	fetchCdnStub.withArgs("https://adaptivecards.io/schemas/adaptive-card.json")
