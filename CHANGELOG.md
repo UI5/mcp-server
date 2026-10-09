@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.3.3](https://github.com/UI5/mcp-server/compare/v0.3.2...v0.3.3) (2026-10-09)
+
+
+### Dependencies
+
+* Bump ejs from 6.0.1 to 7.0.1 ([9f99fb4](https://github.com/UI5/mcp-server/commit/9f99fb4bc5b503c7ad5a2ba3498b38d440db421e))
+* Bump proxy-addr from 2.0.7 to 2.0.8 ([#464](https://github.com/UI5/mcp-server/issues/464)) ([e864854](https://github.com/UI5/mcp-server/commit/e8648545f89b2531815ad63a186e609fac1ae1ee))
+* Bump shell-quote from 1.10.0 to 1.12.0 ([0e0ab9f](https://github.com/UI5/mcp-server/commit/0e0ab9f103a6f6445fcc3fc1797e3d7a1d107fb6))
+* Bump the npm group with 2 updates ([#467](https://github.com/UI5/mcp-server/issues/467)) ([025bcf4](https://github.com/UI5/mcp-server/commit/025bcf42ac4653fae8604382924c986803ed65bb))
+
 ## [0.3.2](https://github.com/UI5/mcp-server/compare/v0.3.1...v0.3.2) (2026-10-05)
 
 
