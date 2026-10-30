@@ -75,8 +75,6 @@ export default class ODataMetadata {
 		properties: {name: string; type: string}[];
 	}> = {};
 
-	private static serviceUrl: URL;
-
 	constructor(serviceMetadata: ServiceMetadata) {
 		this.serviceMetadata = serviceMetadata;
 
@@ -112,9 +110,13 @@ export default class ODataMetadata {
 
 	static async load(serviceUrl: string): Promise<ODataMetadata | undefined> {
 		try {
-			this.serviceUrl = new URL(serviceUrl);
-			const url = `${this.serviceUrl.toString()}$metadata`;
-			const response = await fetch(url, {signal: AbortSignal.timeout(10000)} as unknown as fetch.FetchOptions);
+			const url = `${new URL(serviceUrl).toString()}$metadata`;
+			// The allowlist check in create_ui5_app.ts validates only the initial URL.
+			// A redirect target is never re-checked against it, so do not follow redirects.
+			const response = await fetch(url, {
+				redirect: "manual",
+				signal: AbortSignal.timeout(10000),
+			} as unknown as fetch.FetchOptions);
 			if (!response.ok) {
 				if (response.status === 404) {
 					log.info(`The requested resource does not exist: ${url}`);
