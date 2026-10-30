@@ -344,6 +344,14 @@ test.serial("ODataMetadata.load fetches metadata from URL", async (t) => {
 	t.truthy(metadata, "Metadata object was created");
 });
 
+test.serial("ODataMetadata.load rejects redirects without reading the response body", async (t) => {
+	const textStub = t.context.sinon.stub();
+	t.context.fetchStub.resolves({ok: false, status: 302, statusText: "Found", text: textStub});
+	t.is(await t.context.ODataMetadata.load("https://example.com/odata/"), undefined);
+	t.is(t.context.fetchStub.firstCall.args[1].redirect, "manual");
+	t.false(textStub.called);
+});
+
 test.serial("ODataMetadata.load handles 404 response", async (t) => {
 	// Setup fetch to return a 404 response
 	const mockResponse = {
