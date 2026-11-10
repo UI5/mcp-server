@@ -76,7 +76,7 @@
 	},
 	"dependencies": {
 		"@modelcontextprotocol/sdk": "^1.32.2",
-		"@ui5/linter": "^1.23.7",
+		"@ui5/linter": "^1.23.8",
 		"@ui5/logger": "^4.0.3",
 		"@ui5/project": "^4.0.19",
 		"ajv": "^8.20.0",
